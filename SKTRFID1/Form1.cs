@@ -325,6 +325,7 @@ namespace SKTRFID1
         private string truckType(int n)
         {
             List<string> trucks_type = new List<string>();
+            trucks_type.Add("");
             trucks_type.Add("รถเดี่ยว");
             trucks_type.Add("พ่วงแม่");
             trucks_type.Add("พ่วงลูก");
@@ -333,6 +334,7 @@ namespace SKTRFID1
         private string weightType(int n)
         {
             List<string> weights_type = new List<string>();
+            weights_type.Add("");
             weights_type.Add("ชั่งรวม");
             weights_type.Add("ชั่งแยก");
             return weights_type[n];
@@ -340,6 +342,7 @@ namespace SKTRFID1
         private string queueStatus(int n)
         {
             List<string> queues_status = new List<string>();
+            queues_status.Add("");
             queues_status.Add("แจ้งคิวแล้ว");
             queues_status.Add("ชั่งเข้าแล้ว");
             queues_status.Add("ดัมพ์แล้ว");

@@ -30,6 +30,59 @@ namespace SKTRFID1
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.truck_date7 = new System.Windows.Forms.Label();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.truck_date6 = new System.Windows.Forms.Label();
+            this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.truck_date5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.truck_date4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.truck_date3 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.truck_date2 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.truck_date1 = new System.Windows.Forms.Label();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.queue_status7 = new System.Windows.Forms.Label();
+            this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.queue_status6 = new System.Windows.Forms.Label();
+            this.groupBox40 = new System.Windows.Forms.GroupBox();
+            this.queue_status5 = new System.Windows.Forms.Label();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.queue_status4 = new System.Windows.Forms.Label();
+            this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.queue_status3 = new System.Windows.Forms.Label();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.queue_status2 = new System.Windows.Forms.Label();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.weight_type7 = new System.Windows.Forms.Label();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.weight_type6 = new System.Windows.Forms.Label();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.weight_type5 = new System.Windows.Forms.Label();
+            this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.weight_type4 = new System.Windows.Forms.Label();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.weight_type3 = new System.Windows.Forms.Label();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.weight_type2 = new System.Windows.Forms.Label();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.truck_type7 = new System.Windows.Forms.Label();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.truck_type6 = new System.Windows.Forms.Label();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.truck_type5 = new System.Windows.Forms.Label();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.truck_type4 = new System.Windows.Forms.Label();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.truck_type3 = new System.Windows.Forms.Label();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.truck_type2 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.cane_type7 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.cane_type6 = new System.Windows.Forms.Label();
@@ -48,6 +101,9 @@ namespace SKTRFID1
             this.panel15 = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.cane_type1 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.truck_license7 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.truck_license6 = new System.Windows.Forms.Label();
@@ -78,71 +134,42 @@ namespace SKTRFID1
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.truck_type1 = new System.Windows.Forms.Label();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.truck_type2 = new System.Windows.Forms.Label();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.truck_type3 = new System.Windows.Forms.Label();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.truck_type4 = new System.Windows.Forms.Label();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.truck_type5 = new System.Windows.Forms.Label();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.truck_type6 = new System.Windows.Forms.Label();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
             this.weight_type1 = new System.Windows.Forms.Label();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.weight_type2 = new System.Windows.Forms.Label();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.weight_type3 = new System.Windows.Forms.Label();
-            this.groupBox32 = new System.Windows.Forms.GroupBox();
-            this.weight_type4 = new System.Windows.Forms.Label();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.weight_type5 = new System.Windows.Forms.Label();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.weight_type6 = new System.Windows.Forms.Label();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
             this.queue_status1 = new System.Windows.Forms.Label();
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.queue_status2 = new System.Windows.Forms.Label();
-            this.groupBox38 = new System.Windows.Forms.GroupBox();
-            this.queue_status3 = new System.Windows.Forms.Label();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.queue_status4 = new System.Windows.Forms.Label();
-            this.groupBox40 = new System.Windows.Forms.GroupBox();
-            this.queue_status5 = new System.Windows.Forms.Label();
-            this.groupBox41 = new System.Windows.Forms.GroupBox();
-            this.queue_status6 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.truck_date1 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.truck_date2 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.truck_date3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.truck_date4 = new System.Windows.Forms.Label();
-            this.groupBox43 = new System.Windows.Forms.GroupBox();
-            this.truck_date5 = new System.Windows.Forms.Label();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.truck_date6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.truck_license7 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.cane_type7 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.truck_type7 = new System.Windows.Forms.Label();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.weight_type7 = new System.Windows.Forms.Label();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.queue_status7 = new System.Windows.Forms.Label();
-            this.groupBox42 = new System.Windows.Forms.GroupBox();
-            this.truck_date7 = new System.Windows.Forms.Label();
-            this.groupBox45 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox45.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            this.groupBox43.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox42.SuspendLayout();
+            this.groupBox41.SuspendLayout();
+            this.groupBox40.SuspendLayout();
+            this.groupBox39.SuspendLayout();
+            this.groupBox38.SuspendLayout();
+            this.groupBox37.SuspendLayout();
+            this.groupBox35.SuspendLayout();
+            this.groupBox34.SuspendLayout();
+            this.groupBox33.SuspendLayout();
+            this.groupBox32.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.panel20.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.panel19.SuspendLayout();
@@ -155,6 +182,8 @@ namespace SKTRFID1
             this.groupBox9.SuspendLayout();
             this.panel15.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.groupBox21.SuspendLayout();
             this.panel13.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -173,39 +202,10 @@ namespace SKTRFID1
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.groupBox22.SuspendLayout();
-            this.groupBox23.SuspendLayout();
-            this.groupBox24.SuspendLayout();
-            this.groupBox25.SuspendLayout();
-            this.groupBox26.SuspendLayout();
-            this.groupBox27.SuspendLayout();
-            this.groupBox29.SuspendLayout();
-            this.groupBox30.SuspendLayout();
-            this.groupBox31.SuspendLayout();
-            this.groupBox32.SuspendLayout();
-            this.groupBox33.SuspendLayout();
-            this.groupBox34.SuspendLayout();
-            this.groupBox36.SuspendLayout();
-            this.groupBox37.SuspendLayout();
-            this.groupBox38.SuspendLayout();
-            this.groupBox39.SuspendLayout();
-            this.groupBox40.SuspendLayout();
-            this.groupBox41.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox43.SuspendLayout();
-            this.groupBox44.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.groupBox21.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.groupBox28.SuspendLayout();
-            this.groupBox35.SuspendLayout();
-            this.groupBox42.SuspendLayout();
-            this.groupBox45.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            this.groupBox36.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -284,6 +284,665 @@ namespace SKTRFID1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1492, 883);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // groupBox45
+            // 
+            this.groupBox45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox45.Controls.Add(this.truck_date7);
+            this.groupBox45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox45.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox45.Location = new System.Drawing.Point(1281, 749);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Size = new System.Drawing.Size(208, 131);
+            this.groupBox45.TabIndex = 62;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "เวลาอัพเดท";
+            // 
+            // truck_date7
+            // 
+            this.truck_date7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_date7.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date7.ForeColor = System.Drawing.Color.Black;
+            this.truck_date7.Location = new System.Drawing.Point(3, 28);
+            this.truck_date7.Name = "truck_date7";
+            this.truck_date7.Size = new System.Drawing.Size(202, 100);
+            this.truck_date7.TabIndex = 4;
+            this.truck_date7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox44.Controls.Add(this.truck_date6);
+            this.groupBox44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox44.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox44.Location = new System.Drawing.Point(1068, 749);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Size = new System.Drawing.Size(207, 131);
+            this.groupBox44.TabIndex = 61;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "เวลาอัพเดท";
+            // 
+            // truck_date6
+            // 
+            this.truck_date6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_date6.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date6.ForeColor = System.Drawing.Color.Black;
+            this.truck_date6.Location = new System.Drawing.Point(3, 28);
+            this.truck_date6.Name = "truck_date6";
+            this.truck_date6.Size = new System.Drawing.Size(201, 100);
+            this.truck_date6.TabIndex = 4;
+            this.truck_date6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox43
+            // 
+            this.groupBox43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox43.Controls.Add(this.truck_date5);
+            this.groupBox43.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox43.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox43.Location = new System.Drawing.Point(855, 749);
+            this.groupBox43.Name = "groupBox43";
+            this.groupBox43.Size = new System.Drawing.Size(207, 131);
+            this.groupBox43.TabIndex = 60;
+            this.groupBox43.TabStop = false;
+            this.groupBox43.Text = "เวลาอัพเดท";
+            // 
+            // truck_date5
+            // 
+            this.truck_date5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_date5.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date5.ForeColor = System.Drawing.Color.Black;
+            this.truck_date5.Location = new System.Drawing.Point(3, 28);
+            this.truck_date5.Name = "truck_date5";
+            this.truck_date5.Size = new System.Drawing.Size(201, 100);
+            this.truck_date5.TabIndex = 4;
+            this.truck_date5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox3.Controls.Add(this.truck_date4);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox3.Location = new System.Drawing.Point(642, 749);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(207, 131);
+            this.groupBox3.TabIndex = 59;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "เวลาอัพเดท";
+            // 
+            // truck_date4
+            // 
+            this.truck_date4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_date4.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date4.ForeColor = System.Drawing.Color.Black;
+            this.truck_date4.Location = new System.Drawing.Point(3, 28);
+            this.truck_date4.Name = "truck_date4";
+            this.truck_date4.Size = new System.Drawing.Size(201, 100);
+            this.truck_date4.TabIndex = 4;
+            this.truck_date4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox4.Controls.Add(this.truck_date3);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox4.Location = new System.Drawing.Point(429, 749);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(207, 131);
+            this.groupBox4.TabIndex = 58;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "เวลาอัพเดท";
+            // 
+            // truck_date3
+            // 
+            this.truck_date3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_date3.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date3.ForeColor = System.Drawing.Color.Black;
+            this.truck_date3.Location = new System.Drawing.Point(3, 28);
+            this.truck_date3.Name = "truck_date3";
+            this.truck_date3.Size = new System.Drawing.Size(201, 100);
+            this.truck_date3.TabIndex = 4;
+            this.truck_date3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox7.Controls.Add(this.truck_date2);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox7.Location = new System.Drawing.Point(216, 749);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(207, 131);
+            this.groupBox7.TabIndex = 57;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "เวลาอัพเดท";
+            // 
+            // truck_date2
+            // 
+            this.truck_date2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_date2.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date2.ForeColor = System.Drawing.Color.Black;
+            this.truck_date2.Location = new System.Drawing.Point(3, 28);
+            this.truck_date2.Name = "truck_date2";
+            this.truck_date2.Size = new System.Drawing.Size(201, 100);
+            this.truck_date2.TabIndex = 4;
+            this.truck_date2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox6.Controls.Add(this.truck_date1);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox6.Location = new System.Drawing.Point(3, 749);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(207, 131);
+            this.groupBox6.TabIndex = 56;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "เวลาอัพเดท";
+            // 
+            // truck_date1
+            // 
+            this.truck_date1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_date1.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date1.ForeColor = System.Drawing.Color.Black;
+            this.truck_date1.Location = new System.Drawing.Point(3, 28);
+            this.truck_date1.Name = "truck_date1";
+            this.truck_date1.Size = new System.Drawing.Size(201, 100);
+            this.truck_date1.TabIndex = 4;
+            this.truck_date1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox42
+            // 
+            this.groupBox42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox42.Controls.Add(this.queue_status7);
+            this.groupBox42.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox42.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox42.Location = new System.Drawing.Point(1281, 618);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.Size = new System.Drawing.Size(208, 125);
+            this.groupBox42.TabIndex = 55;
+            this.groupBox42.TabStop = false;
+            this.groupBox42.Text = "สถานะคิว";
+            // 
+            // queue_status7
+            // 
+            this.queue_status7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.queue_status7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queue_status7.ForeColor = System.Drawing.Color.Black;
+            this.queue_status7.Location = new System.Drawing.Point(3, 28);
+            this.queue_status7.Name = "queue_status7";
+            this.queue_status7.Size = new System.Drawing.Size(202, 94);
+            this.queue_status7.TabIndex = 0;
+            this.queue_status7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox41
+            // 
+            this.groupBox41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox41.Controls.Add(this.queue_status6);
+            this.groupBox41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox41.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox41.Location = new System.Drawing.Point(1068, 618);
+            this.groupBox41.Name = "groupBox41";
+            this.groupBox41.Size = new System.Drawing.Size(207, 125);
+            this.groupBox41.TabIndex = 54;
+            this.groupBox41.TabStop = false;
+            this.groupBox41.Text = "สถานะคิว";
+            // 
+            // queue_status6
+            // 
+            this.queue_status6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.queue_status6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queue_status6.ForeColor = System.Drawing.Color.Black;
+            this.queue_status6.Location = new System.Drawing.Point(3, 28);
+            this.queue_status6.Name = "queue_status6";
+            this.queue_status6.Size = new System.Drawing.Size(201, 94);
+            this.queue_status6.TabIndex = 0;
+            this.queue_status6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox40
+            // 
+            this.groupBox40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox40.Controls.Add(this.queue_status5);
+            this.groupBox40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox40.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox40.Location = new System.Drawing.Point(855, 618);
+            this.groupBox40.Name = "groupBox40";
+            this.groupBox40.Size = new System.Drawing.Size(207, 125);
+            this.groupBox40.TabIndex = 53;
+            this.groupBox40.TabStop = false;
+            this.groupBox40.Text = "สถานะคิว";
+            // 
+            // queue_status5
+            // 
+            this.queue_status5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.queue_status5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queue_status5.ForeColor = System.Drawing.Color.Black;
+            this.queue_status5.Location = new System.Drawing.Point(3, 28);
+            this.queue_status5.Name = "queue_status5";
+            this.queue_status5.Size = new System.Drawing.Size(201, 94);
+            this.queue_status5.TabIndex = 0;
+            this.queue_status5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox39
+            // 
+            this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox39.Controls.Add(this.queue_status4);
+            this.groupBox39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox39.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox39.Location = new System.Drawing.Point(642, 618);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Size = new System.Drawing.Size(207, 125);
+            this.groupBox39.TabIndex = 52;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Text = "สถานะคิว";
+            // 
+            // queue_status4
+            // 
+            this.queue_status4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.queue_status4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queue_status4.ForeColor = System.Drawing.Color.Black;
+            this.queue_status4.Location = new System.Drawing.Point(3, 28);
+            this.queue_status4.Name = "queue_status4";
+            this.queue_status4.Size = new System.Drawing.Size(201, 94);
+            this.queue_status4.TabIndex = 0;
+            this.queue_status4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox38
+            // 
+            this.groupBox38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox38.Controls.Add(this.queue_status3);
+            this.groupBox38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox38.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox38.Location = new System.Drawing.Point(429, 618);
+            this.groupBox38.Name = "groupBox38";
+            this.groupBox38.Size = new System.Drawing.Size(207, 125);
+            this.groupBox38.TabIndex = 51;
+            this.groupBox38.TabStop = false;
+            this.groupBox38.Text = "สถานะคิว";
+            // 
+            // queue_status3
+            // 
+            this.queue_status3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.queue_status3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queue_status3.ForeColor = System.Drawing.Color.Black;
+            this.queue_status3.Location = new System.Drawing.Point(3, 28);
+            this.queue_status3.Name = "queue_status3";
+            this.queue_status3.Size = new System.Drawing.Size(201, 94);
+            this.queue_status3.TabIndex = 0;
+            this.queue_status3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox37
+            // 
+            this.groupBox37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox37.Controls.Add(this.queue_status2);
+            this.groupBox37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox37.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox37.Location = new System.Drawing.Point(216, 618);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Size = new System.Drawing.Size(207, 125);
+            this.groupBox37.TabIndex = 50;
+            this.groupBox37.TabStop = false;
+            this.groupBox37.Text = "สถานะคิว";
+            // 
+            // queue_status2
+            // 
+            this.queue_status2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.queue_status2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queue_status2.ForeColor = System.Drawing.Color.Black;
+            this.queue_status2.Location = new System.Drawing.Point(3, 28);
+            this.queue_status2.Name = "queue_status2";
+            this.queue_status2.Size = new System.Drawing.Size(201, 94);
+            this.queue_status2.TabIndex = 0;
+            this.queue_status2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox35.Controls.Add(this.weight_type7);
+            this.groupBox35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox35.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox35.Location = new System.Drawing.Point(1281, 487);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Size = new System.Drawing.Size(208, 125);
+            this.groupBox35.TabIndex = 48;
+            this.groupBox35.TabStop = false;
+            this.groupBox35.Text = "ประเภทชั่ง";
+            // 
+            // weight_type7
+            // 
+            this.weight_type7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weight_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_type7.ForeColor = System.Drawing.Color.Black;
+            this.weight_type7.Location = new System.Drawing.Point(3, 28);
+            this.weight_type7.Name = "weight_type7";
+            this.weight_type7.Size = new System.Drawing.Size(202, 94);
+            this.weight_type7.TabIndex = 0;
+            this.weight_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox34.Controls.Add(this.weight_type6);
+            this.groupBox34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox34.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox34.Location = new System.Drawing.Point(1068, 487);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(207, 125);
+            this.groupBox34.TabIndex = 47;
+            this.groupBox34.TabStop = false;
+            this.groupBox34.Text = "ประเภทชั่ง";
+            // 
+            // weight_type6
+            // 
+            this.weight_type6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weight_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_type6.ForeColor = System.Drawing.Color.Black;
+            this.weight_type6.Location = new System.Drawing.Point(3, 28);
+            this.weight_type6.Name = "weight_type6";
+            this.weight_type6.Size = new System.Drawing.Size(201, 94);
+            this.weight_type6.TabIndex = 0;
+            this.weight_type6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox33
+            // 
+            this.groupBox33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox33.Controls.Add(this.weight_type5);
+            this.groupBox33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox33.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox33.Location = new System.Drawing.Point(855, 487);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Size = new System.Drawing.Size(207, 125);
+            this.groupBox33.TabIndex = 46;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Text = "ประเภทชั่ง";
+            // 
+            // weight_type5
+            // 
+            this.weight_type5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weight_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_type5.ForeColor = System.Drawing.Color.Black;
+            this.weight_type5.Location = new System.Drawing.Point(3, 28);
+            this.weight_type5.Name = "weight_type5";
+            this.weight_type5.Size = new System.Drawing.Size(201, 94);
+            this.weight_type5.TabIndex = 0;
+            this.weight_type5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox32
+            // 
+            this.groupBox32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox32.Controls.Add(this.weight_type4);
+            this.groupBox32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox32.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox32.Location = new System.Drawing.Point(642, 487);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Size = new System.Drawing.Size(207, 125);
+            this.groupBox32.TabIndex = 45;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "ประเภทชั่ง";
+            // 
+            // weight_type4
+            // 
+            this.weight_type4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weight_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_type4.ForeColor = System.Drawing.Color.Black;
+            this.weight_type4.Location = new System.Drawing.Point(3, 28);
+            this.weight_type4.Name = "weight_type4";
+            this.weight_type4.Size = new System.Drawing.Size(201, 94);
+            this.weight_type4.TabIndex = 0;
+            this.weight_type4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox31.Controls.Add(this.weight_type3);
+            this.groupBox31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox31.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox31.Location = new System.Drawing.Point(429, 487);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(207, 125);
+            this.groupBox31.TabIndex = 44;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "ประเภทชั่ง";
+            // 
+            // weight_type3
+            // 
+            this.weight_type3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weight_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_type3.ForeColor = System.Drawing.Color.Black;
+            this.weight_type3.Location = new System.Drawing.Point(3, 28);
+            this.weight_type3.Name = "weight_type3";
+            this.weight_type3.Size = new System.Drawing.Size(201, 94);
+            this.weight_type3.TabIndex = 0;
+            this.weight_type3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox30.Controls.Add(this.weight_type2);
+            this.groupBox30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox30.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox30.Location = new System.Drawing.Point(216, 487);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(207, 125);
+            this.groupBox30.TabIndex = 43;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "ประเภทชั่ง";
+            // 
+            // weight_type2
+            // 
+            this.weight_type2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weight_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_type2.ForeColor = System.Drawing.Color.Black;
+            this.weight_type2.Location = new System.Drawing.Point(3, 28);
+            this.weight_type2.Name = "weight_type2";
+            this.weight_type2.Size = new System.Drawing.Size(201, 94);
+            this.weight_type2.TabIndex = 0;
+            this.weight_type2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox28
+            // 
+            this.groupBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox28.Controls.Add(this.truck_type7);
+            this.groupBox28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox28.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox28.Location = new System.Drawing.Point(1281, 356);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(208, 125);
+            this.groupBox28.TabIndex = 41;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "ประเภทรถ";
+            // 
+            // truck_type7
+            // 
+            this.truck_type7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type7.ForeColor = System.Drawing.Color.Black;
+            this.truck_type7.Location = new System.Drawing.Point(3, 28);
+            this.truck_type7.Name = "truck_type7";
+            this.truck_type7.Size = new System.Drawing.Size(202, 94);
+            this.truck_type7.TabIndex = 0;
+            this.truck_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox27
+            // 
+            this.groupBox27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox27.Controls.Add(this.truck_type6);
+            this.groupBox27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox27.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox27.Location = new System.Drawing.Point(1068, 356);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(207, 125);
+            this.groupBox27.TabIndex = 40;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "ประเภทรถ";
+            // 
+            // truck_type6
+            // 
+            this.truck_type6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type6.ForeColor = System.Drawing.Color.Black;
+            this.truck_type6.Location = new System.Drawing.Point(3, 28);
+            this.truck_type6.Name = "truck_type6";
+            this.truck_type6.Size = new System.Drawing.Size(201, 94);
+            this.truck_type6.TabIndex = 0;
+            this.truck_type6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox26.Controls.Add(this.truck_type5);
+            this.groupBox26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox26.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox26.Location = new System.Drawing.Point(855, 356);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(207, 125);
+            this.groupBox26.TabIndex = 39;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "ประเภทรถ";
+            // 
+            // truck_type5
+            // 
+            this.truck_type5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type5.ForeColor = System.Drawing.Color.Black;
+            this.truck_type5.Location = new System.Drawing.Point(3, 28);
+            this.truck_type5.Name = "truck_type5";
+            this.truck_type5.Size = new System.Drawing.Size(201, 94);
+            this.truck_type5.TabIndex = 0;
+            this.truck_type5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox25.Controls.Add(this.truck_type4);
+            this.groupBox25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox25.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox25.Location = new System.Drawing.Point(642, 356);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(207, 125);
+            this.groupBox25.TabIndex = 38;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "ประเภทรถ";
+            // 
+            // truck_type4
+            // 
+            this.truck_type4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type4.ForeColor = System.Drawing.Color.Black;
+            this.truck_type4.Location = new System.Drawing.Point(3, 28);
+            this.truck_type4.Name = "truck_type4";
+            this.truck_type4.Size = new System.Drawing.Size(201, 94);
+            this.truck_type4.TabIndex = 0;
+            this.truck_type4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox24.Controls.Add(this.truck_type3);
+            this.groupBox24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox24.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox24.Location = new System.Drawing.Point(429, 356);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(207, 125);
+            this.groupBox24.TabIndex = 37;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "ประเภทรถ";
+            // 
+            // truck_type3
+            // 
+            this.truck_type3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type3.ForeColor = System.Drawing.Color.Black;
+            this.truck_type3.Location = new System.Drawing.Point(3, 28);
+            this.truck_type3.Name = "truck_type3";
+            this.truck_type3.Size = new System.Drawing.Size(201, 94);
+            this.truck_type3.TabIndex = 0;
+            this.truck_type3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox23.Controls.Add(this.truck_type2);
+            this.groupBox23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox23.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox23.Location = new System.Drawing.Point(216, 356);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(207, 125);
+            this.groupBox23.TabIndex = 36;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "ประเภทรถ";
+            // 
+            // truck_type2
+            // 
+            this.truck_type2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type2.ForeColor = System.Drawing.Color.Black;
+            this.truck_type2.Location = new System.Drawing.Point(3, 28);
+            this.truck_type2.Name = "truck_type2";
+            this.truck_type2.Size = new System.Drawing.Size(201, 94);
+            this.truck_type2.TabIndex = 0;
+            this.truck_type2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel21.Controls.Add(this.groupBox14);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel21.Location = new System.Drawing.Point(1281, 225);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(208, 125);
+            this.panel21.TabIndex = 20;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.cane_type7);
+            this.groupBox14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox14.Location = new System.Drawing.Point(0, 0);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(208, 125);
+            this.groupBox14.TabIndex = 1;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "ประเภทอ้อย";
+            // 
+            // cane_type7
+            // 
+            this.cane_type7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cane_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cane_type7.ForeColor = System.Drawing.Color.Black;
+            this.cane_type7.Location = new System.Drawing.Point(3, 28);
+            this.cane_type7.Name = "cane_type7";
+            this.cane_type7.Size = new System.Drawing.Size(202, 94);
+            this.cane_type7.TabIndex = 3;
+            this.cane_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel20
             // 
@@ -488,6 +1147,40 @@ namespace SKTRFID1
             this.cane_type1.Size = new System.Drawing.Size(201, 94);
             this.cane_type1.TabIndex = 2;
             this.cane_type1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel14.Controls.Add(this.groupBox21);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(1281, 94);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(208, 125);
+            this.panel14.TabIndex = 13;
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.truck_license7);
+            this.groupBox21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox21.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox21.Location = new System.Drawing.Point(0, 0);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(208, 125);
+            this.groupBox21.TabIndex = 1;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "ทะเบียนรถ";
+            // 
+            // truck_license7
+            // 
+            this.truck_license7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truck_license7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_license7.ForeColor = System.Drawing.Color.Black;
+            this.truck_license7.Location = new System.Drawing.Point(3, 28);
+            this.truck_license7.Name = "truck_license7";
+            this.truck_license7.Size = new System.Drawing.Size(202, 94);
+            this.truck_license7.TabIndex = 3;
+            this.truck_license7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel13
             // 
@@ -825,6 +1518,28 @@ namespace SKTRFID1
             this.label6.Text = "DUMP 6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(1281, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(208, 85);
+            this.panel7.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(208, 85);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "DUMP 7";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox22
             // 
             this.groupBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -849,131 +1564,6 @@ namespace SKTRFID1
             this.truck_type1.Size = new System.Drawing.Size(201, 94);
             this.truck_type1.TabIndex = 0;
             this.truck_type1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox23.Controls.Add(this.truck_type2);
-            this.groupBox23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox23.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox23.Location = new System.Drawing.Point(216, 356);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(207, 125);
-            this.groupBox23.TabIndex = 36;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "ประเภทรถ";
-            // 
-            // truck_type2
-            // 
-            this.truck_type2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_type2.ForeColor = System.Drawing.Color.Black;
-            this.truck_type2.Location = new System.Drawing.Point(3, 28);
-            this.truck_type2.Name = "truck_type2";
-            this.truck_type2.Size = new System.Drawing.Size(201, 94);
-            this.truck_type2.TabIndex = 0;
-            this.truck_type2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox24.Controls.Add(this.truck_type3);
-            this.groupBox24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox24.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox24.Location = new System.Drawing.Point(429, 356);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(207, 125);
-            this.groupBox24.TabIndex = 37;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "ประเภทรถ";
-            // 
-            // truck_type3
-            // 
-            this.truck_type3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_type3.ForeColor = System.Drawing.Color.Black;
-            this.truck_type3.Location = new System.Drawing.Point(3, 28);
-            this.truck_type3.Name = "truck_type3";
-            this.truck_type3.Size = new System.Drawing.Size(201, 94);
-            this.truck_type3.TabIndex = 0;
-            this.truck_type3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox25.Controls.Add(this.truck_type4);
-            this.groupBox25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox25.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox25.Location = new System.Drawing.Point(642, 356);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(207, 125);
-            this.groupBox25.TabIndex = 38;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "ประเภทรถ";
-            // 
-            // truck_type4
-            // 
-            this.truck_type4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_type4.ForeColor = System.Drawing.Color.Black;
-            this.truck_type4.Location = new System.Drawing.Point(3, 28);
-            this.truck_type4.Name = "truck_type4";
-            this.truck_type4.Size = new System.Drawing.Size(201, 94);
-            this.truck_type4.TabIndex = 0;
-            this.truck_type4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox26.Controls.Add(this.truck_type5);
-            this.groupBox26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox26.Location = new System.Drawing.Point(855, 356);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(207, 125);
-            this.groupBox26.TabIndex = 39;
-            this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "ประเภทรถ";
-            // 
-            // truck_type5
-            // 
-            this.truck_type5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_type5.ForeColor = System.Drawing.Color.Black;
-            this.truck_type5.Location = new System.Drawing.Point(3, 28);
-            this.truck_type5.Name = "truck_type5";
-            this.truck_type5.Size = new System.Drawing.Size(201, 94);
-            this.truck_type5.TabIndex = 0;
-            this.truck_type5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox27
-            // 
-            this.groupBox27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox27.Controls.Add(this.truck_type6);
-            this.groupBox27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox27.Location = new System.Drawing.Point(1068, 356);
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(207, 125);
-            this.groupBox27.TabIndex = 40;
-            this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "ประเภทรถ";
-            // 
-            // truck_type6
-            // 
-            this.truck_type6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_type6.ForeColor = System.Drawing.Color.Black;
-            this.truck_type6.Location = new System.Drawing.Point(3, 28);
-            this.truck_type6.Name = "truck_type6";
-            this.truck_type6.Size = new System.Drawing.Size(201, 94);
-            this.truck_type6.TabIndex = 0;
-            this.truck_type6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox29
             // 
@@ -1000,131 +1590,6 @@ namespace SKTRFID1
             this.weight_type1.TabIndex = 0;
             this.weight_type1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox30
-            // 
-            this.groupBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox30.Controls.Add(this.weight_type2);
-            this.groupBox30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox30.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox30.Location = new System.Drawing.Point(216, 487);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(207, 125);
-            this.groupBox30.TabIndex = 43;
-            this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "ประเภทชั่ง";
-            // 
-            // weight_type2
-            // 
-            this.weight_type2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weight_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_type2.ForeColor = System.Drawing.Color.Black;
-            this.weight_type2.Location = new System.Drawing.Point(3, 28);
-            this.weight_type2.Name = "weight_type2";
-            this.weight_type2.Size = new System.Drawing.Size(201, 94);
-            this.weight_type2.TabIndex = 0;
-            this.weight_type2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox31
-            // 
-            this.groupBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox31.Controls.Add(this.weight_type3);
-            this.groupBox31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox31.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox31.Location = new System.Drawing.Point(429, 487);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(207, 125);
-            this.groupBox31.TabIndex = 44;
-            this.groupBox31.TabStop = false;
-            this.groupBox31.Text = "ประเภทชั่ง";
-            // 
-            // weight_type3
-            // 
-            this.weight_type3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weight_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_type3.ForeColor = System.Drawing.Color.Black;
-            this.weight_type3.Location = new System.Drawing.Point(3, 28);
-            this.weight_type3.Name = "weight_type3";
-            this.weight_type3.Size = new System.Drawing.Size(201, 94);
-            this.weight_type3.TabIndex = 0;
-            this.weight_type3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox32
-            // 
-            this.groupBox32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox32.Controls.Add(this.weight_type4);
-            this.groupBox32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox32.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox32.Location = new System.Drawing.Point(642, 487);
-            this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(207, 125);
-            this.groupBox32.TabIndex = 45;
-            this.groupBox32.TabStop = false;
-            this.groupBox32.Text = "ประเภทชั่ง";
-            // 
-            // weight_type4
-            // 
-            this.weight_type4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weight_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_type4.ForeColor = System.Drawing.Color.Black;
-            this.weight_type4.Location = new System.Drawing.Point(3, 28);
-            this.weight_type4.Name = "weight_type4";
-            this.weight_type4.Size = new System.Drawing.Size(201, 94);
-            this.weight_type4.TabIndex = 0;
-            this.weight_type4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox33
-            // 
-            this.groupBox33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox33.Controls.Add(this.weight_type5);
-            this.groupBox33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox33.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox33.Location = new System.Drawing.Point(855, 487);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(207, 125);
-            this.groupBox33.TabIndex = 46;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "ประเภทชั่ง";
-            // 
-            // weight_type5
-            // 
-            this.weight_type5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weight_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_type5.ForeColor = System.Drawing.Color.Black;
-            this.weight_type5.Location = new System.Drawing.Point(3, 28);
-            this.weight_type5.Name = "weight_type5";
-            this.weight_type5.Size = new System.Drawing.Size(201, 94);
-            this.weight_type5.TabIndex = 0;
-            this.weight_type5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox34
-            // 
-            this.groupBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox34.Controls.Add(this.weight_type6);
-            this.groupBox34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox34.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox34.Location = new System.Drawing.Point(1068, 487);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(207, 125);
-            this.groupBox34.TabIndex = 47;
-            this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "ประเภทชั่ง";
-            // 
-            // weight_type6
-            // 
-            this.weight_type6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weight_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_type6.ForeColor = System.Drawing.Color.Black;
-            this.weight_type6.Location = new System.Drawing.Point(3, 28);
-            this.weight_type6.Name = "weight_type6";
-            this.weight_type6.Size = new System.Drawing.Size(201, 94);
-            this.weight_type6.TabIndex = 0;
-            this.weight_type6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // groupBox36
             // 
             this.groupBox36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -1150,471 +1615,6 @@ namespace SKTRFID1
             this.queue_status1.TabIndex = 0;
             this.queue_status1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox37
-            // 
-            this.groupBox37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox37.Controls.Add(this.queue_status2);
-            this.groupBox37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox37.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox37.Location = new System.Drawing.Point(216, 618);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Size = new System.Drawing.Size(207, 125);
-            this.groupBox37.TabIndex = 50;
-            this.groupBox37.TabStop = false;
-            this.groupBox37.Text = "สถานะคิว";
-            // 
-            // queue_status2
-            // 
-            this.queue_status2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.queue_status2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queue_status2.ForeColor = System.Drawing.Color.Black;
-            this.queue_status2.Location = new System.Drawing.Point(3, 28);
-            this.queue_status2.Name = "queue_status2";
-            this.queue_status2.Size = new System.Drawing.Size(201, 94);
-            this.queue_status2.TabIndex = 0;
-            this.queue_status2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox38
-            // 
-            this.groupBox38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox38.Controls.Add(this.queue_status3);
-            this.groupBox38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox38.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox38.Location = new System.Drawing.Point(429, 618);
-            this.groupBox38.Name = "groupBox38";
-            this.groupBox38.Size = new System.Drawing.Size(207, 125);
-            this.groupBox38.TabIndex = 51;
-            this.groupBox38.TabStop = false;
-            this.groupBox38.Text = "สถานะคิว";
-            // 
-            // queue_status3
-            // 
-            this.queue_status3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.queue_status3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queue_status3.ForeColor = System.Drawing.Color.Black;
-            this.queue_status3.Location = new System.Drawing.Point(3, 28);
-            this.queue_status3.Name = "queue_status3";
-            this.queue_status3.Size = new System.Drawing.Size(201, 94);
-            this.queue_status3.TabIndex = 0;
-            this.queue_status3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox39.Controls.Add(this.queue_status4);
-            this.groupBox39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox39.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox39.Location = new System.Drawing.Point(642, 618);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Size = new System.Drawing.Size(207, 125);
-            this.groupBox39.TabIndex = 52;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "สถานะคิว";
-            // 
-            // queue_status4
-            // 
-            this.queue_status4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.queue_status4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queue_status4.ForeColor = System.Drawing.Color.Black;
-            this.queue_status4.Location = new System.Drawing.Point(3, 28);
-            this.queue_status4.Name = "queue_status4";
-            this.queue_status4.Size = new System.Drawing.Size(201, 94);
-            this.queue_status4.TabIndex = 0;
-            this.queue_status4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox40
-            // 
-            this.groupBox40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox40.Controls.Add(this.queue_status5);
-            this.groupBox40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox40.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox40.Location = new System.Drawing.Point(855, 618);
-            this.groupBox40.Name = "groupBox40";
-            this.groupBox40.Size = new System.Drawing.Size(207, 125);
-            this.groupBox40.TabIndex = 53;
-            this.groupBox40.TabStop = false;
-            this.groupBox40.Text = "สถานะคิว";
-            // 
-            // queue_status5
-            // 
-            this.queue_status5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.queue_status5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queue_status5.ForeColor = System.Drawing.Color.Black;
-            this.queue_status5.Location = new System.Drawing.Point(3, 28);
-            this.queue_status5.Name = "queue_status5";
-            this.queue_status5.Size = new System.Drawing.Size(201, 94);
-            this.queue_status5.TabIndex = 0;
-            this.queue_status5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox41
-            // 
-            this.groupBox41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox41.Controls.Add(this.queue_status6);
-            this.groupBox41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox41.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox41.Location = new System.Drawing.Point(1068, 618);
-            this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Size = new System.Drawing.Size(207, 125);
-            this.groupBox41.TabIndex = 54;
-            this.groupBox41.TabStop = false;
-            this.groupBox41.Text = "สถานะคิว";
-            // 
-            // queue_status6
-            // 
-            this.queue_status6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.queue_status6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queue_status6.ForeColor = System.Drawing.Color.Black;
-            this.queue_status6.Location = new System.Drawing.Point(3, 28);
-            this.queue_status6.Name = "queue_status6";
-            this.queue_status6.Size = new System.Drawing.Size(201, 94);
-            this.queue_status6.TabIndex = 0;
-            this.queue_status6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox6.Controls.Add(this.truck_date1);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox6.Location = new System.Drawing.Point(3, 749);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(207, 131);
-            this.groupBox6.TabIndex = 56;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "เวลาอัพเดท";
-            // 
-            // truck_date1
-            // 
-            this.truck_date1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date1.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_date1.ForeColor = System.Drawing.Color.Black;
-            this.truck_date1.Location = new System.Drawing.Point(3, 28);
-            this.truck_date1.Name = "truck_date1";
-            this.truck_date1.Size = new System.Drawing.Size(201, 100);
-            this.truck_date1.TabIndex = 4;
-            this.truck_date1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox7.Controls.Add(this.truck_date2);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox7.Location = new System.Drawing.Point(216, 749);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(207, 131);
-            this.groupBox7.TabIndex = 57;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "เวลาอัพเดท";
-            // 
-            // truck_date2
-            // 
-            this.truck_date2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date2.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_date2.ForeColor = System.Drawing.Color.Black;
-            this.truck_date2.Location = new System.Drawing.Point(3, 28);
-            this.truck_date2.Name = "truck_date2";
-            this.truck_date2.Size = new System.Drawing.Size(201, 100);
-            this.truck_date2.TabIndex = 4;
-            this.truck_date2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox4.Controls.Add(this.truck_date3);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox4.Location = new System.Drawing.Point(429, 749);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(207, 131);
-            this.groupBox4.TabIndex = 58;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "เวลาอัพเดท";
-            // 
-            // truck_date3
-            // 
-            this.truck_date3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date3.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_date3.ForeColor = System.Drawing.Color.Black;
-            this.truck_date3.Location = new System.Drawing.Point(3, 28);
-            this.truck_date3.Name = "truck_date3";
-            this.truck_date3.Size = new System.Drawing.Size(201, 100);
-            this.truck_date3.TabIndex = 4;
-            this.truck_date3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox3.Controls.Add(this.truck_date4);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox3.Location = new System.Drawing.Point(642, 749);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(207, 131);
-            this.groupBox3.TabIndex = 59;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "เวลาอัพเดท";
-            // 
-            // truck_date4
-            // 
-            this.truck_date4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date4.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_date4.ForeColor = System.Drawing.Color.Black;
-            this.truck_date4.Location = new System.Drawing.Point(3, 28);
-            this.truck_date4.Name = "truck_date4";
-            this.truck_date4.Size = new System.Drawing.Size(201, 100);
-            this.truck_date4.TabIndex = 4;
-            this.truck_date4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox43
-            // 
-            this.groupBox43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox43.Controls.Add(this.truck_date5);
-            this.groupBox43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox43.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox43.Location = new System.Drawing.Point(855, 749);
-            this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Size = new System.Drawing.Size(207, 131);
-            this.groupBox43.TabIndex = 60;
-            this.groupBox43.TabStop = false;
-            this.groupBox43.Text = "เวลาอัพเดท";
-            // 
-            // truck_date5
-            // 
-            this.truck_date5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date5.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_date5.ForeColor = System.Drawing.Color.Black;
-            this.truck_date5.Location = new System.Drawing.Point(3, 28);
-            this.truck_date5.Name = "truck_date5";
-            this.truck_date5.Size = new System.Drawing.Size(201, 100);
-            this.truck_date5.TabIndex = 4;
-            this.truck_date5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox44
-            // 
-            this.groupBox44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox44.Controls.Add(this.truck_date6);
-            this.groupBox44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox44.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox44.Location = new System.Drawing.Point(1068, 749);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Size = new System.Drawing.Size(207, 131);
-            this.groupBox44.TabIndex = 61;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "เวลาอัพเดท";
-            // 
-            // truck_date6
-            // 
-            this.truck_date6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date6.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_date6.ForeColor = System.Drawing.Color.Black;
-            this.truck_date6.Location = new System.Drawing.Point(3, 28);
-            this.truck_date6.Name = "truck_date6";
-            this.truck_date6.Size = new System.Drawing.Size(201, 100);
-            this.truck_date6.TabIndex = 4;
-            this.truck_date6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 85);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "DUMP 7";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(1281, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(208, 85);
-            this.panel7.TabIndex = 6;
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.truck_license7);
-            this.groupBox21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox21.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox21.Location = new System.Drawing.Point(0, 0);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(208, 125);
-            this.groupBox21.TabIndex = 1;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "ทะเบียนรถ";
-            // 
-            // truck_license7
-            // 
-            this.truck_license7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_license7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_license7.ForeColor = System.Drawing.Color.Black;
-            this.truck_license7.Location = new System.Drawing.Point(3, 28);
-            this.truck_license7.Name = "truck_license7";
-            this.truck_license7.Size = new System.Drawing.Size(202, 94);
-            this.truck_license7.TabIndex = 3;
-            this.truck_license7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel14.Controls.Add(this.groupBox21);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(1281, 94);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(208, 125);
-            this.panel14.TabIndex = 13;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.cane_type7);
-            this.groupBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox14.Location = new System.Drawing.Point(0, 0);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(208, 125);
-            this.groupBox14.TabIndex = 1;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "ประเภทอ้อย";
-            // 
-            // cane_type7
-            // 
-            this.cane_type7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cane_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cane_type7.ForeColor = System.Drawing.Color.Black;
-            this.cane_type7.Location = new System.Drawing.Point(3, 28);
-            this.cane_type7.Name = "cane_type7";
-            this.cane_type7.Size = new System.Drawing.Size(202, 94);
-            this.cane_type7.TabIndex = 3;
-            this.cane_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel21.Controls.Add(this.groupBox14);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(1281, 225);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(208, 125);
-            this.panel21.TabIndex = 20;
-            // 
-            // truck_type7
-            // 
-            this.truck_type7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_type7.ForeColor = System.Drawing.Color.Black;
-            this.truck_type7.Location = new System.Drawing.Point(3, 28);
-            this.truck_type7.Name = "truck_type7";
-            this.truck_type7.Size = new System.Drawing.Size(202, 94);
-            this.truck_type7.TabIndex = 0;
-            this.truck_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox28
-            // 
-            this.groupBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox28.Controls.Add(this.truck_type7);
-            this.groupBox28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox28.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox28.Location = new System.Drawing.Point(1281, 356);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(208, 125);
-            this.groupBox28.TabIndex = 41;
-            this.groupBox28.TabStop = false;
-            this.groupBox28.Text = "ประเภทรถ";
-            // 
-            // weight_type7
-            // 
-            this.weight_type7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weight_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_type7.ForeColor = System.Drawing.Color.Black;
-            this.weight_type7.Location = new System.Drawing.Point(3, 28);
-            this.weight_type7.Name = "weight_type7";
-            this.weight_type7.Size = new System.Drawing.Size(202, 94);
-            this.weight_type7.TabIndex = 0;
-            this.weight_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox35.Controls.Add(this.weight_type7);
-            this.groupBox35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox35.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox35.Location = new System.Drawing.Point(1281, 487);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(208, 125);
-            this.groupBox35.TabIndex = 48;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "ประเภทชั่ง";
-            // 
-            // queue_status7
-            // 
-            this.queue_status7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.queue_status7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queue_status7.ForeColor = System.Drawing.Color.Black;
-            this.queue_status7.Location = new System.Drawing.Point(3, 28);
-            this.queue_status7.Name = "queue_status7";
-            this.queue_status7.Size = new System.Drawing.Size(202, 94);
-            this.queue_status7.TabIndex = 0;
-            this.queue_status7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox42
-            // 
-            this.groupBox42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox42.Controls.Add(this.queue_status7);
-            this.groupBox42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox42.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox42.Location = new System.Drawing.Point(1281, 618);
-            this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Size = new System.Drawing.Size(208, 125);
-            this.groupBox42.TabIndex = 55;
-            this.groupBox42.TabStop = false;
-            this.groupBox42.Text = "สถานะคิว";
-            // 
-            // truck_date7
-            // 
-            this.truck_date7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date7.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_date7.ForeColor = System.Drawing.Color.Black;
-            this.truck_date7.Location = new System.Drawing.Point(3, 28);
-            this.truck_date7.Name = "truck_date7";
-            this.truck_date7.Size = new System.Drawing.Size(202, 100);
-            this.truck_date7.TabIndex = 4;
-            this.truck_date7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox45
-            // 
-            this.groupBox45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox45.Controls.Add(this.truck_date7);
-            this.groupBox45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox45.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox45.Location = new System.Drawing.Point(1281, 749);
-            this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Size = new System.Drawing.Size(208, 131);
-            this.groupBox45.TabIndex = 62;
-            this.groupBox45.TabStop = false;
-            this.groupBox45.Text = "เวลาอัพเดท";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1627,6 +1627,33 @@ namespace SKTRFID1
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox43.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox42.ResumeLayout(false);
+            this.groupBox41.ResumeLayout(false);
+            this.groupBox40.ResumeLayout(false);
+            this.groupBox39.ResumeLayout(false);
+            this.groupBox38.ResumeLayout(false);
+            this.groupBox37.ResumeLayout(false);
+            this.groupBox35.ResumeLayout(false);
+            this.groupBox34.ResumeLayout(false);
+            this.groupBox33.ResumeLayout(false);
+            this.groupBox32.ResumeLayout(false);
+            this.groupBox31.ResumeLayout(false);
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox23.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
@@ -1639,6 +1666,8 @@ namespace SKTRFID1
             this.groupBox9.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -1657,39 +1686,10 @@ namespace SKTRFID1
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.groupBox22.ResumeLayout(false);
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox27.ResumeLayout(false);
-            this.groupBox29.ResumeLayout(false);
-            this.groupBox30.ResumeLayout(false);
-            this.groupBox31.ResumeLayout(false);
-            this.groupBox32.ResumeLayout(false);
-            this.groupBox33.ResumeLayout(false);
-            this.groupBox34.ResumeLayout(false);
-            this.groupBox36.ResumeLayout(false);
-            this.groupBox37.ResumeLayout(false);
-            this.groupBox38.ResumeLayout(false);
-            this.groupBox39.ResumeLayout(false);
-            this.groupBox40.ResumeLayout(false);
-            this.groupBox41.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox43.ResumeLayout(false);
-            this.groupBox44.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.groupBox21.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
-            this.groupBox28.ResumeLayout(false);
-            this.groupBox35.ResumeLayout(false);
-            this.groupBox42.ResumeLayout(false);
-            this.groupBox45.ResumeLayout(false);
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox36.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
