@@ -21,9 +21,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-       
-
+     
         private void Form1_Load(object sender, EventArgs e)
         {
             cj2 = new CJ2Compolet();
@@ -102,6 +100,41 @@ namespace WindowsFormsApp1
         private void manual_button7_Click(object sender, EventArgs e)
         {
             cj2.WriteVariable("manual_dump07", true);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cj2.WriteVariable("auto_dump01", false);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cj2.WriteVariable("auto_dump02", false);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cj2.WriteVariable("auto_dump03", false);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cj2.WriteVariable("auto_dump04", false);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            cj2.WriteVariable("auto_dump05", false);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            cj2.WriteVariable("auto_dump06", false);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            cj2.WriteVariable("auto_dump07", false);
         }
     }
 }

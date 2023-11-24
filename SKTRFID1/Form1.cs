@@ -21,10 +21,14 @@ namespace SKTRFID1
     {
         CJ2Compolet cj2;
         private IRFID RFID;
+        List<string> windows_title;
+        LabelModel labels;
         public Form1()
         {
             InitializeComponent();
             RFID = new RFIDService();
+            windows_title = new List<string>();
+            labels = new LabelModel();
         }
 
         private  void Form1_Load(object sender, EventArgs e)
@@ -42,8 +46,6 @@ namespace SKTRFID1
         {
             try
             {
-                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("th-TH");
-
                 bool auto_d1 = (bool)cj2.ReadVariable("auto_dump01");
                 bool auto_d2 = (bool)cj2.ReadVariable("auto_dump02");
                 bool auto_d3 = (bool)cj2.ReadVariable("auto_dump03");
@@ -59,249 +61,164 @@ namespace SKTRFID1
                 bool manual_d5 = (bool)cj2.ReadVariable("manual_dump05");
                 bool manual_d6 = (bool)cj2.ReadVariable("manual_dump06");
                 bool manual_d7 = (bool)cj2.ReadVariable("manual_dump07");
+
+                windows_title = new List<string>();
+                Process[] process = Process.GetProcesses();
+                foreach(var p in process)
+                {
+                    if (p.MainWindowTitle != "")
+                    {
+                        windows_title.Add(p.MainWindowTitle);
+                    }
+                }
+
                 if (auto_d1)
                 {
-                    cj2.WriteVariable("auto_dump01", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                    p.StartInfo.Arguments = "192.168.1.253 1";
-                    p.Start();
-                    //p.WaitForExit();
-                    
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "BUTTON1" + " " + Environment.NewLine);
+                    StartProcess("192.168.1.253", "1");
                 }
                 if (auto_d2)
                 {
-                    cj2.WriteVariable("auto_dump02", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                    p.StartInfo.Arguments = "192.168.1.253 2";
-                    p.Start();
-                    //p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "BUTTON2" + " " + Environment.NewLine);
+                    StartProcess("192.168.1.253", "2");
                 }
                 if (auto_d3)
                 {
-                    cj2.WriteVariable("auto_dump03", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                    p.StartInfo.Arguments = "192.168.1.253 3";
-                    p.Start();
-                    //p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "BUTTON3" + " " + Environment.NewLine);
+                    StartProcess("192.168.1.253", "3");
                 }
                 if (auto_d4)
                 {
-                    cj2.WriteVariable("auto_dump04", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                    p.StartInfo.Arguments = "192.168.1.253 4";
-                    p.Start();
-                    //p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "BUTTON4" + " " + Environment.NewLine);
+                    StartProcess("192.168.1.253", "4");
                 }
                 if (auto_d5)
                 {
-                    cj2.WriteVariable("auto_dump05", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                    p.StartInfo.Arguments = "192.168.1.254 5";
-                    p.Start();
-                    //p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "BUTTON5" + " " + Environment.NewLine);
+                    StartProcess("192.168.1.254", "5");
                 }
                 if (auto_d6)
                 {
-                    cj2.WriteVariable("auto_dump06", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                    p.StartInfo.Arguments = "192.168.1.254 6";
-                    p.Start();
-                    //p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "BUTTON6" + " " + Environment.NewLine);
+                    StartProcess("192.168.1.254", "6");
                 }
 
                 if (auto_d7)
                 {
-                    cj2.WriteVariable("auto_dump07", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                    p.StartInfo.Arguments = "192.168.1.254 7";
-                    p.Start();
-                    //p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "BUTTON7" + " " + Environment.NewLine);
+                    StartProcess("192.168.1.254", "7");
                 }
 
                 if (manual_d1)
                 {
                     cj2.WriteVariable("manual_dump01", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-                    p.StartInfo.Arguments = "1";
-                    p.Start();
-                    p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "MANUAL BUTTON1" + " " + Environment.NewLine);
+                    StartProcessCommon("192.168.1.253", "1");
                 }
 
                 if (manual_d2)
                 {
                     cj2.WriteVariable("manual_dump02", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-                    p.StartInfo.Arguments = "2";
-                    p.Start();
-                    p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "MANUAL BUTTON2" + " " + Environment.NewLine);
+                    StartProcessCommon("192.168.1.253", "2");
                 }
 
                 if (manual_d3)
                 {
                     cj2.WriteVariable("manual_dump03", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-                    p.StartInfo.Arguments = "3";
-                    p.Start();
-                    p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "MANUAL BUTTON3" + " " + Environment.NewLine);
+                    StartProcessCommon("192.168.1.253", "3");
                 }
 
                 if (manual_d4)
                 {
                     cj2.WriteVariable("manual_dump04", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-                    p.StartInfo.Arguments = "4";
-                    p.Start();
-                    p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "MANUAL BUTTON4" + " " + Environment.NewLine);
+                    StartProcessCommon("192.168.1.253", "4");
                 }
 
                 if (manual_d5)
                 {
                     cj2.WriteVariable("manual_dump05", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-                    p.StartInfo.Arguments = "5";
-                    p.Start();
-                    p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "MANUAL BUTTON5" + " " + Environment.NewLine);
+                    StartProcessCommon("192.168.1.254", "5");
                 }
 
                 if (manual_d6)
                 {
                     cj2.WriteVariable("manual_dump06", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-                    p.StartInfo.Arguments = "6";
-                    p.Start();
-                    p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "MANUAL BUTTON6" + " " + Environment.NewLine);
+                    StartProcessCommon("192.168.1.254", "6");
                 }
 
                 if (manual_d7)
                 {
                     cj2.WriteVariable("manual_dump07", false);
-                    Process p = new Process();
-                    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-                    p.StartInfo.Arguments = "7";
-                    p.Start();
-                    p.WaitForExit();
-
-                    //Weite Data to text file
-                    string loca = @"D:\log_plc.txt";
-                    File.AppendAllText(loca, DateTime.Now + " " + "MANUAL BUTTON7" + " " + Environment.NewLine);
+                    StartProcessCommon("192.168.1.254", "7");
                 }
 
                 List<DataModel> datas = RFID.GetDatas();
                 if (datas.Count > 0)
                 {
-                    truck_license1.Text = datas[0].truck_number;
-                    truck_date1.Text = datas[0].rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type1.Text = CaneType(datas[0].cane_type);
-                    truck_type1.Text = truckType(datas[0].truck_type);
-                    weight_type1.Text = weightType(datas[0].weight_type);
-                    queue_status1.Text = queueStatus(datas[0].queue_status);
+                    ShowDisplay(truck_license1, truck_date1, cane_type1, datas, "1");
+                    ShowDisplay(truck_license2, truck_date2, cane_type2, datas, "2");
+                    ShowDisplay(truck_license3, truck_date3, cane_type3, datas, "3");
+                    ShowDisplay(truck_license4, truck_date4, cane_type4, datas, "4");
+                    ShowDisplay(truck_license5, truck_date5, cane_type5, datas, "5");
+                    ShowDisplay(truck_license6, truck_date6, cane_type6, datas, "6");
+                    ShowDisplay(truck_license7, truck_date7, cane_type7, datas, "7");
 
-                    truck_license2.Text = datas[1].truck_number;
-                    truck_date2.Text = datas[1].rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type2.Text = CaneType(datas[1].cane_type);
-                    truck_type2.Text = truckType(datas[1].truck_type);
-                    weight_type2.Text = weightType(datas[1].weight_type);
-                    queue_status2.Text = queueStatus(datas[1].queue_status);
+                    DataModel last_data = datas.OrderByDescending(o => o.rfid_lastdate).FirstOrDefault();
 
-                    truck_license3.Text = datas[2].truck_number;
-                    truck_date3.Text = datas[2].rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type3.Text = CaneType(datas[2].cane_type);
-                    truck_type3.Text = truckType(datas[2].truck_type);
-                    weight_type3.Text = weightType(datas[2].weight_type);
-                    queue_status3.Text = queueStatus(datas[2].queue_status);
+                    //Clear Label Dump Last Data Update
+                    if (labels.labelDump != null)
+                    {
+                        ClearLastDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
+                    }
 
-                    truck_license4.Text = datas[3].truck_number;
-                    truck_date4.Text = datas[3].rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type4.Text = CaneType(datas[3].cane_type);
-                    truck_type4.Text = truckType(datas[3].truck_type);
-                    weight_type4.Text = weightType(datas[3].weight_type);
-                    queue_status4.Text = queueStatus(datas[3].queue_status);
-
-                    truck_license5.Text = datas[4].truck_number;
-                    truck_date5.Text = datas[4].rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type5.Text = CaneType(datas[4].cane_type);
-                    truck_type5.Text = truckType(datas[4].truck_type);
-                    weight_type5.Text = weightType(datas[4].weight_type);
-                    queue_status5.Text = queueStatus(datas[4].queue_status);
-
-                    truck_license6.Text = datas[5].truck_number;
-                    truck_date6.Text = datas[5].rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type6.Text = CaneType(datas[5].cane_type);
-                    truck_type6.Text = truckType(datas[5].truck_type);
-                    weight_type6.Text = weightType(datas[5].weight_type);
-                    queue_status6.Text = queueStatus(datas[5].queue_status);
-
-                    truck_license7.Text = datas[6].truck_number;
-                    truck_date7.Text = datas[6].rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type7.Text = CaneType(datas[6].cane_type);
-                    truck_type7.Text = truckType(datas[6].truck_type);
-                    weight_type7.Text = weightType(datas[6].weight_type);
-                    queue_status7.Text = queueStatus(datas[6].queue_status);
+                    if (last_data.dump_id == "1")
+                    {
+                        labels.labelDump = labelDump1;
+                        labels.labelTruckLicense = truck_license1;
+                        labels.labelCaneType = cane_type1;
+                        labels.labelLastDate = truck_date1;
+                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
+                    }
+                    if (last_data.dump_id == "2")
+                    {
+                        labels.labelDump = labelDump2;
+                        labels.labelTruckLicense = truck_license2;
+                        labels.labelCaneType = cane_type2;
+                        labels.labelLastDate = truck_date2;
+                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
+                    }
+                    if (last_data.dump_id == "3")
+                    {
+                        labels.labelDump = labelDump3;
+                        labels.labelTruckLicense = truck_license3;
+                        labels.labelCaneType = cane_type3;
+                        labels.labelLastDate = truck_date3;
+                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
+                    }
+                    if (last_data.dump_id == "4")
+                    {
+                        labels.labelDump = labelDump4;
+                        labels.labelTruckLicense = truck_license4;
+                        labels.labelCaneType = cane_type4;
+                        labels.labelLastDate = truck_date4;
+                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
+                    }
+                    if (last_data.dump_id == "5")
+                    {
+                        labels.labelDump = labelDump5;
+                        labels.labelTruckLicense = truck_license5;
+                        labels.labelCaneType = cane_type5;
+                        labels.labelLastDate = truck_date5;                        
+                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);                        
+                    }
+                    if (last_data.dump_id == "6")
+                    {
+                        labels.labelDump = labelDump6;
+                        labels.labelTruckLicense = truck_license6;
+                        labels.labelCaneType = cane_type6;
+                        labels.labelLastDate = truck_date6;
+                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
+                    }
+                    if (last_data.dump_id == "7")
+                    {
+                        labels.labelDump = labelDump7;
+                        labels.labelTruckLicense = truck_license7;
+                        labels.labelCaneType = cane_type7;
+                        labels.labelLastDate = truck_date7;
+                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
+                    }
                 }
 
             }
@@ -311,6 +228,57 @@ namespace SKTRFID1
                 string loca = @"D:\log_plc.txt";
                 File.AppendAllText(loca, DateTime.Now + " " + ex.Message + " " + Environment.NewLine);
             }
+        }
+
+        private void ShowDisplay(Label truck_license, Label truck_date, Label cane_type, List<DataModel> datas ,string dump)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("th-TH");
+            var data = datas.Where(w => w.dump_id == dump).FirstOrDefault();
+            if (data != null)
+            {
+                truck_license.Text = data.truck_number;
+                truck_date.Text = data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
+                cane_type.Text = CaneType(data.cane_type);
+            }
+            else
+            {
+                truck_license.Text = "";
+                truck_date.Text = "";
+                cane_type.Text = "";
+            }
+        }
+        private void LastUpdateDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType, Label labelLastDate)
+        {
+            labelDump.BackColor = Color.FromArgb(47, 216, 54);
+            labelTruckLicense.ForeColor = Color.Red;
+            labelCaneType.ForeColor = Color.Red;
+            labelLastDate.ForeColor = Color.Red;
+        }
+        private void ClearLastDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType, Label labelLastDate)
+        {
+            labelDump.BackColor = Color.FromArgb(28, 184, 185);
+            labelTruckLicense.ForeColor = Color.Black;
+            labelCaneType.ForeColor = Color.Black;
+            labelLastDate.ForeColor = Color.Black;
+        }
+        private void StartProcess(string server,string dump)
+        {
+            string title = server + " : " + dump;
+            if (!windows_title.Any(a => a == title))
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
+                p.StartInfo.Arguments = server + " " + dump;
+                p.Start();
+            }
+        }
+        private void StartProcessCommon(string server , string dump)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
+            p.StartInfo.Arguments = dump;
+            p.Start();
+            p.WaitForExit();
         }
         private string CaneType(int n)
         {
@@ -322,31 +290,31 @@ namespace SKTRFID1
 
             return canes_type[n];
         }
-        private string truckType(int n)
-        {
-            List<string> trucks_type = new List<string>();
-            trucks_type.Add("");
-            trucks_type.Add("รถเดี่ยว");
-            trucks_type.Add("พ่วงแม่");
-            trucks_type.Add("พ่วงลูก");
-            return trucks_type[n];
-        }
-        private string weightType(int n)
-        {
-            List<string> weights_type = new List<string>();
-            weights_type.Add("");
-            weights_type.Add("ชั่งรวม");
-            weights_type.Add("ชั่งแยก");
-            return weights_type[n];
-        }
-        private string queueStatus(int n)
-        {
-            List<string> queues_status = new List<string>();
-            queues_status.Add("");
-            queues_status.Add("แจ้งคิวแล้ว");
-            queues_status.Add("ชั่งเข้าแล้ว");
-            queues_status.Add("ดัมพ์แล้ว");
-            return queues_status[n];
-        }
+        //private string truckType(int n)
+        //{
+        //    List<string> trucks_type = new List<string>();
+        //    trucks_type.Add("");
+        //    trucks_type.Add("รถเดี่ยว");
+        //    trucks_type.Add("พ่วงแม่");
+        //    trucks_type.Add("พ่วงลูก");
+        //    return trucks_type[n];
+        //}
+        //private string weightType(int n)
+        //{
+        //    List<string> weights_type = new List<string>();
+        //    weights_type.Add("");
+        //    weights_type.Add("ชั่งรวม");
+        //    weights_type.Add("ชั่งแยก");
+        //    return weights_type[n];
+        //}
+        //private string queueStatus(int n)
+        //{
+        //    List<string> queues_status = new List<string>();
+        //    queues_status.Add("");
+        //    queues_status.Add("แจ้งคิวแล้ว");
+        //    queues_status.Add("ชั่งเข้าแล้ว");
+        //    queues_status.Add("ดัมพ์แล้ว");
+        //    return queues_status[n];
+        //}
     }
 }

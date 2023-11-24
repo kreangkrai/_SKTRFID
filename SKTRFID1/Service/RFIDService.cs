@@ -80,18 +80,22 @@ namespace SKTRFID1.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT dump_id,
-                                             area_id,
-                                             crop_year,
-                                             rfid,
-                                             barcode,
-                                             cane_type,
-                                             truck_number,
-                                             truck_type,
-                                             weight_type,
-                                             queue_status,
-                                             convert(nvarchar,rfid_lastdate,120) as rfid_lastdate
-                                    from dbo.tb_rfid", cn);
+                    //SqlCommand cmd = new SqlCommand($@"SELECT dump_id,
+                    //                         area_id,
+                    //                         crop_year,
+                    //                         rfid,
+                    //                         barcode,
+                    //                         cane_type,
+                    //                         truck_number,
+                    //                         truck_type,
+                    //                         weight_type,
+                    //                         queue_status,
+                    //                         convert(nvarchar,rfid_lastdate,120) as rfid_lastdate
+                    //                from dbo.tb_rfid", cn);
+
+                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM (SELECT * , RANK() OVER(partition by truck_number ORDER BY rfid_lastdate DESC) as rank  
+                                                       from tb_rfid) as temp
+                                                       WHERE temp.rank = 1", cn);
 
                     SqlDataReader dr = cmd.ExecuteReader();
 
