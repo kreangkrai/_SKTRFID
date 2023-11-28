@@ -23,6 +23,7 @@ namespace SKTRFID1
         private IRFID RFID;
         List<string> windows_title;
         LabelModel labels;
+        string phase = "1";
         public Form1()
         {
             InitializeComponent();
@@ -74,74 +75,74 @@ namespace SKTRFID1
 
                 if (auto_d1)
                 {
-                    StartProcess("192.168.1.253", "1");
+                    StartProcess("192.168.1.253", "1", phase);
                 }
                 if (auto_d2)
                 {
-                    StartProcess("192.168.1.253", "2");
+                    StartProcess("192.168.1.253", "2", phase);
                 }
                 if (auto_d3)
                 {
-                    StartProcess("192.168.1.253", "3");
+                    StartProcess("192.168.1.253", "3", phase);
                 }
                 if (auto_d4)
                 {
-                    StartProcess("192.168.1.253", "4");
+                    StartProcess("192.168.1.253", "4", phase);
                 }
                 if (auto_d5)
                 {
-                    StartProcess("192.168.1.254", "5");
+                    StartProcess("192.168.1.254", "5", phase);
                 }
                 if (auto_d6)
                 {
-                    StartProcess("192.168.1.254", "6");
+                    StartProcess("192.168.1.254", "6", phase);
                 }
 
                 if (auto_d7)
                 {
-                    StartProcess("192.168.1.254", "7");
+                    StartProcess("192.168.1.254", "7", phase);
                 }
 
                 if (manual_d1)
                 {
                     cj2.WriteVariable("manual_dump01", false);
-                    StartProcessCommon("192.168.1.253", "1");
+                    StartProcessCommon("1", phase);
                 }
 
                 if (manual_d2)
                 {
                     cj2.WriteVariable("manual_dump02", false);
-                    StartProcessCommon("192.168.1.253", "2");
+                    StartProcessCommon("2", phase);
                 }
 
                 if (manual_d3)
                 {
                     cj2.WriteVariable("manual_dump03", false);
-                    StartProcessCommon("192.168.1.253", "3");
+                    StartProcessCommon("3", phase);
                 }
 
                 if (manual_d4)
                 {
                     cj2.WriteVariable("manual_dump04", false);
-                    StartProcessCommon("192.168.1.253", "4");
+                    StartProcessCommon("4", phase);
                 }
 
                 if (manual_d5)
                 {
                     cj2.WriteVariable("manual_dump05", false);
-                    StartProcessCommon("192.168.1.254", "5");
+                    StartProcessCommon("5", phase);
                 }
 
                 if (manual_d6)
                 {
                     cj2.WriteVariable("manual_dump06", false);
-                    StartProcessCommon("192.168.1.254", "6");
+                    StartProcessCommon("6", phase);
                 }
 
                 if (manual_d7)
                 {
                     cj2.WriteVariable("manual_dump07", false);
-                    StartProcessCommon("192.168.1.254", "7");
+                    StartProcessCommon("7", phase);
                 }
 
                 List<DataModel> datas = RFID.GetDatas();
@@ -261,22 +262,22 @@ namespace SKTRFID1
             labelCaneType.ForeColor = Color.Black;
             labelLastDate.ForeColor = Color.Black;
         }
-        private void StartProcess(string server,string dump)
+        private void StartProcess(string server,string dump,string phase)
         {
             string title = server + " : " + dump;
             if (!windows_title.Any(a => a == title))
             {
                 Process p = new Process();
                 p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                p.StartInfo.Arguments = server + " " + dump;
+                p.StartInfo.Arguments = server + " " + dump + " " + phase;
                 p.Start();
             }
         }
-        private void StartProcessCommon(string server , string dump)
+        private void StartProcessCommon(string dump,string phase)
         {
             Process p = new Process();
             p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-            p.StartInfo.Arguments = dump;
+            p.StartInfo.Arguments = dump + " " + phase;
             p.Start();
             p.WaitForExit();
         }
