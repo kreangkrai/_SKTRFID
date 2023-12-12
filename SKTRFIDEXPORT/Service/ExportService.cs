@@ -44,6 +44,7 @@ namespace SKTRFIDEXPORT.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
+                                contaminants = Convert.ToInt32(dr["contaminants"].ToString()),
                                 truck_number = dr["truck_number"].ToString(),
                                 rfid_lastdate = Convert.ToDateTime(dr["rfid_lastdate"].ToString())
                             };
@@ -82,6 +83,7 @@ namespace SKTRFIDEXPORT.Service
                         crop_year = datas[i].crop_year,
                         barcode = datas[i].barcode,
                         cane_type = datas[i].cane_type,
+                        contaminants = datas[i].contaminants,
                         rfid = datas[i].rfid,
                         truck_number = datas[i].truck_number,
                         round = current_round
@@ -111,8 +113,9 @@ namespace SKTRFIDEXPORT.Service
                             worksheet.Cells["E" + (i + startRows)].Value = _reports[i].crop_year;
                             worksheet.Cells["F" + (i + startRows)].Value = _reports[i].barcode;
                             worksheet.Cells["G" + (i + startRows)].Value = CaneType(_reports[i].cane_type);
-                            worksheet.Cells["H" + (i + startRows)].Value = _reports[i].truck_number;
-                            worksheet.Cells["I" + (i + startRows)].Value = _reports[i].rfid;
+                            worksheet.Cells["H" + (i + startRows)].Value = ContaminantsType(_reports[i].contaminants);
+                            worksheet.Cells["I" + (i + startRows)].Value = _reports[i].truck_number;
+                            worksheet.Cells["J" + (i + startRows)].Value = _reports[i].rfid;
                         }
                     }
                     package.SaveAs(new FileInfo("D:\\Report\\skt_report_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsm"));
@@ -133,6 +136,13 @@ namespace SKTRFIDEXPORT.Service
             canes_type.Add("ไฟไหม้ลำ");
 
             return canes_type[n];
+        }
+        private string ContaminantsType(int n)
+        {
+            List<string> contams = new List<string>();
+            contams.Add("ไม่มี");
+            contams.Add("มี");
+            return contams[n];
         }
     }
 }

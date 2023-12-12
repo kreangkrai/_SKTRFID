@@ -221,7 +221,6 @@ namespace SKTRFID1
                         LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
                     }
                 }
-
             }
             catch (Exception ex)
             {

@@ -31,6 +31,7 @@ namespace SKTRFID1.Service
                                              rfid,
                                              barcode,
                                              cane_type,
+                                             contaminants,
                                              truck_number,
                                              truck_type,
                                              weight_type,
@@ -50,6 +51,7 @@ namespace SKTRFID1.Service
                             data.rfid = dr["rfid"].ToString();
                             data.barcode = dr["barcode"].ToString();
                             data.cane_type = Convert.ToInt32(dr["cane_type"].ToString());
+                            data.contaminants = Convert.ToInt32(dr["contaminants"].ToString());
                             data.truck_number = dr["truck_number"].ToString();
                             data.truck_type = Convert.ToInt32(dr["truck_type"].ToString());
                             data.weight_type = Convert.ToInt32(dr["weight_type"].ToString());
@@ -111,6 +113,7 @@ namespace SKTRFID1.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
+                                contaminants = Convert.ToInt32(dr["contaminants"].ToString()),
                                 truck_number = dr["truck_number"].ToString(),
                                 truck_type = Convert.ToInt32(dr["truck_type"].ToString()),
                                 weight_type = Convert.ToInt32(dr["weight_type"].ToString()),
