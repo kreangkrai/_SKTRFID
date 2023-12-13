@@ -35,5 +35,10 @@ namespace SKTRFIDEXPORT
         {
             Process.Start(Environment.GetEnvironmentVariable("WINDIR") + @"\explorer.exe", "D:\\Report");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

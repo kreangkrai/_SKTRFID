@@ -35,7 +35,7 @@ namespace SKTRFIDEDIT.Service
                                                                 barcode,
 			                                                    rfid,
 			                                                    cane_type,
-			                                                    contaminants,
+			                                                    allergen,
 			                                                    rfid_lastdate
                                                     from tb_rfid_log
                                                     WHERE dump_id LIKE '{dump}%' AND truck_number LIKE N'%{truck_number}%' AND CONVERT(VARCHAR(25), rfid_lastdate, 126) LIKE '{date}%'ORDER BY rfid_lastdate DESC", cn);
@@ -54,7 +54,7 @@ namespace SKTRFIDEDIT.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
-                                contaminants = Convert.ToInt32(dr["contaminants"].ToString()),
+                                allergen = Convert.ToInt32(dr["allergen"].ToString()),
                                 truck_number = dr["truck_number"].ToString(),
                                 truck_type = Convert.ToInt32(dr["truck_type"].ToString()),
                                 weight_type = Convert.ToInt32(dr["weight_type"].ToString()),
@@ -87,7 +87,7 @@ namespace SKTRFIDEDIT.Service
                     }
 
                     SqlCommand cmd = new SqlCommand($@"UPDATE tb_rfid_log SET cane_type='{data.cane_type}',
-                                                                          contaminants='{data.contaminants}'      
+                                                                          allergen='{data.allergen}'      
                                                                           WHERE dump_id='{data.dump_id}' AND
                                                                                 truck_number=N'{data.truck_number}' AND
                                                                                 rfid_lastdate='{data.rfid_lastdate}'", cn);

@@ -38,7 +38,7 @@ namespace SKTRFIDEDIT
                 truck_number = s.truck_number,
                 rfid_lastdate = s.rfid_lastdate,
                 cane_type = caneType(s.cane_type),
-                contaminants = contaminantsType(s.contaminants)
+                contaminants = contaminantsType(s.allergen)
             }).ToList();
             for (int i = 0; i < sub_datas.Count; i++)
             {
@@ -99,7 +99,7 @@ namespace SKTRFIDEDIT
                     {
                         dump_id = _data.dump_id,
                         cane_type = typeCaneIndex(dataGridView1.Rows[e.RowIndex].Cells["cane_type"].Value.ToString()),
-                        contaminants = typeContaminantsIndex(dataGridView1.Rows[e.RowIndex].Cells["contaminants"].Value.ToString()),
+                        allergen = typeContaminantsIndex(dataGridView1.Rows[e.RowIndex].Cells["allergen"].Value.ToString()),
                         rfid_lastdate =  _data.rfid_lastdate,
                         truck_number = _data.truck_number
                     };

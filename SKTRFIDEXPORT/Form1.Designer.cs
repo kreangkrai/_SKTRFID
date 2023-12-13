@@ -112,6 +112,7 @@ namespace SKTRFIDEXPORT
             this.Controls.Add(this.dateTimePickerStat);
             this.Name = "Form1";
             this.Text = "SKT RFID EXPORT";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
