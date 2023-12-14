@@ -1,4 +1,5 @@
 ﻿using SKTRFIDEXPORT.Interface;
+using SKTRFIDEXPORT.Model;
 using SKTRFIDEXPORT.Service;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,8 @@ namespace SKTRFIDEXPORT
             DialogResult dialogResult = MessageBox.Show("Do you want to export data?", "SKT Report", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.OK)
             {
-                string message =  Export.Export(dateTimePickerStat.Value.ToString("yyyy-MM-dd 00:00:00"), dateTimePickerStop.Value.ToString("yyyy-MM-dd 23:59:59"));
+                List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date);
+                string message =  Export.Export(reports);
                 MessageBox.Show(message);
             }
         }
@@ -39,6 +41,46 @@ namespace SKTRFIDEXPORT
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date);
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < reports.Count; i++)
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
+                row.Height = 35;
+                row.Cells[0].Value = (i+1);
+                row.Cells[1].Value = reports[i].dump_id;
+                row.Cells[2].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
+                row.Cells[3].Value = reports[i].round;
+                row.Cells[4].Value = reports[i].area_id;
+                row.Cells[5].Value = reports[i].crop_year;
+                row.Cells[6].Value = reports[i].barcode;
+                row.Cells[7].Value = CaneType(reports[i].cane_type);
+                row.Cells[8].Value = allergenType(reports[i].allergen);
+                row.Cells[9].Value = reports[i].truck_number;
+                row.Cells[10].Value = reports[i].rfid;
+                dataGridView1.Rows.Add(row);
+            }
+        }
+        private string CaneType(int n)
+        {
+            List<string> canes_type = new List<string>();
+            canes_type.Add("สดท่อน");
+            canes_type.Add("ไฟไหม้ท่อน");
+            canes_type.Add("สดลำ");
+            canes_type.Add("ไฟไหม้ลำ");
+
+            return canes_type[n];
+        }
+        private string allergenType(int n)
+        {
+            List<string> contams = new List<string>();
+            contams.Add("ไม่มี");
+            contams.Add("มี");
+            return contams[n];
         }
     }
 }

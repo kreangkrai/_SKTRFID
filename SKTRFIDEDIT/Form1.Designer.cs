@@ -37,6 +37,9 @@ namespace SKTRFIDEDIT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +51,9 @@ namespace SKTRFIDEDIT
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dump_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.area_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crop_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.truck_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cane_type = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.allergen = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -71,6 +77,9 @@ namespace SKTRFIDEDIT
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.no,
             this.dump_no,
+            this.area_id,
+            this.crop_year,
+            this.barcode,
             this.truck_number,
             this.cane_type,
             this.allergen,
@@ -80,7 +89,7 @@ namespace SKTRFIDEDIT
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(12, 56);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1099, 547);
+            this.dataGridView1.Size = new System.Drawing.Size(1458, 658);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -163,8 +172,9 @@ namespace SKTRFIDEDIT
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(776, 13);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(135, 32);
@@ -180,6 +190,7 @@ namespace SKTRFIDEDIT
             this.no.HeaderText = "ลำดับ";
             this.no.Name = "no";
             this.no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.no.Width = 80;
             // 
             // dump_no
             // 
@@ -188,16 +199,47 @@ namespace SKTRFIDEDIT
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Blue;
             this.dump_no.DefaultCellStyle = dataGridViewCellStyle3;
             this.dump_no.HeaderText = "ดัมพ์";
-            this.dump_no.MinimumWidth = 10;
             this.dump_no.Name = "dump_no";
             this.dump_no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dump_no.Width = 80;
+            // 
+            // area_id
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.area_id.DefaultCellStyle = dataGridViewCellStyle4;
+            this.area_id.HeaderText = "พื้นที่";
+            this.area_id.Name = "area_id";
+            this.area_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // crop_year
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crop_year.DefaultCellStyle = dataGridViewCellStyle5;
+            this.crop_year.HeaderText = "ปี";
+            this.crop_year.MinimumWidth = 10;
+            this.crop_year.Name = "crop_year";
+            this.crop_year.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.crop_year.Width = 150;
+            // 
+            // barcode
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barcode.DefaultCellStyle = dataGridViewCellStyle6;
+            this.barcode.HeaderText = "บาร์โค้ด";
+            this.barcode.MinimumWidth = 10;
+            this.barcode.Name = "barcode";
+            this.barcode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.barcode.Width = 150;
             // 
             // truck_number
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Blue;
-            this.truck_number.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Blue;
+            this.truck_number.DefaultCellStyle = dataGridViewCellStyle7;
             this.truck_number.HeaderText = "ทะเบียนรถ";
             this.truck_number.MinimumWidth = 10;
             this.truck_number.Name = "truck_number";
@@ -206,10 +248,10 @@ namespace SKTRFIDEDIT
             // 
             // cane_type
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Blue;
-            this.cane_type.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Blue;
+            this.cane_type.DefaultCellStyle = dataGridViewCellStyle8;
             this.cane_type.HeaderText = "ชนิดอ้อย";
             this.cane_type.Items.AddRange(new object[] {
             "สดท่อน",
@@ -223,10 +265,10 @@ namespace SKTRFIDEDIT
             // 
             // allergen
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Blue;
-            this.allergen.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Blue;
+            this.allergen.DefaultCellStyle = dataGridViewCellStyle9;
             this.allergen.HeaderText = "สารปนเปื้อน";
             this.allergen.Items.AddRange(new object[] {
             "ไม่มี",
@@ -238,23 +280,23 @@ namespace SKTRFIDEDIT
             // 
             // rfid_lastdate
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Blue;
-            this.rfid_lastdate.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Blue;
+            this.rfid_lastdate.DefaultCellStyle = dataGridViewCellStyle10;
             this.rfid_lastdate.HeaderText = "เวลา";
             this.rfid_lastdate.MinimumWidth = 15;
             this.rfid_lastdate.Name = "rfid_lastdate";
             this.rfid_lastdate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.rfid_lastdate.Width = 300;
+            this.rfid_lastdate.Width = 280;
             // 
             // save
             // 
             this.save.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Blue;
-            this.save.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Blue;
+            this.save.DefaultCellStyle = dataGridViewCellStyle11;
             this.save.HeaderText = "บันทึก";
             this.save.Name = "save";
             this.save.Text = "บันทึก";
@@ -263,7 +305,7 @@ namespace SKTRFIDEDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 615);
+            this.ClientSize = new System.Drawing.Size(1480, 720);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLicensePlate);
@@ -275,7 +317,8 @@ namespace SKTRFIDEDIT
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SKT RFID CHECK";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -296,6 +339,9 @@ namespace SKTRFIDEDIT
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn no;
         private System.Windows.Forms.DataGridViewTextBoxColumn dump_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn area_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn crop_year;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn truck_number;
         private System.Windows.Forms.DataGridViewComboBoxColumn cane_type;
         private System.Windows.Forms.DataGridViewComboBoxColumn allergen;

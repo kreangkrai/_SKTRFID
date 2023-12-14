@@ -1,6 +1,6 @@
-﻿using SKTRFIDShift.Interface;
-using SKTRFIDShift.Model;
-using SKTRFIDShift.Service;
+﻿using SKTRFIDSHIFT.Interface;
+using SKTRFIDSHIFT.Model;
+using SKTRFIDSHIFT.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SKTRFIDShift
+namespace SKTRFIDSHIFT
 {
     public partial class Form1 : Form
     {
@@ -66,7 +66,7 @@ namespace SKTRFIDShift
             datas = Shift.GetShifts(dateTimePickerStart.Value.Date, dateTimePickerStop.Value.Date);    
 
             int i = 0;            
-            for (DateTime date = dateTimePickerStart.Value; date < dateTimePickerStop.Value.AddDays(1); date = date.AddDays(1))
+            for (DateTime date = dateTimePickerStart.Value; date < dateTimePickerStop.Value; date = date.AddDays(1))
             {
                 ShiftModel shift = new ShiftModel();
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
@@ -143,71 +143,15 @@ namespace SKTRFIDShift
             if (messagesInsert.Count > 0)
             {
                 bool check_message = messagesInsert.All(a => a == "Success");
-                if (check_message)
-                {
-                    MessageBox.Show("Insert Success");
-                }
-                else
-                {
-                    MessageBox.Show("Insert Fail");
-                }
+                //if (check_message)
+                //{
+                //    MessageBox.Show("Insert Success");
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Insert Fail");
+                //}
             }
         }
-  
-        //private void btnConfirm_Click(object sender, EventArgs e)
-        //{
-        //    //Update
-        //    List<ShiftModel> update = datas.Where(w => new_shift.Select(s => s.date.Date).Contains(w.date.Date)).ToList();
-        //    List<string> messageUpdate = new List<string>();
-        //    for (int i=0;i< update.Count; i++)
-        //    {
-        //        ShiftModel data = new ShiftModel()
-        //        {
-        //            date = update[i].date,
-        //            date_start = update[i].date_start,
-        //            date_stop = update[i].date_stop,
-        //        };
-        //        string message = Shift.Update(data);
-        //        messageUpdate.Add(message);
-        //    }
-        //    if (messageUpdate.Count > 0)
-        //    {
-        //        bool check_message_update = messageUpdate.All(a => a == "Success");
-        //        if (check_message_update)
-        //        {
-        //            MessageBox.Show("Update Success");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Update Fail");
-        //        }
-        //    }
-        //    //Insert
-        //    List<ShiftModel> insert = new_shift.Where(w => !datas.Select(s => s.date.Date).Contains(w.date.Date)).ToList();
-        //    List<string> messagesInsert = new List<string>();
-        //    for (int i = 0; i < insert.Count; i++)
-        //    {
-        //        ShiftModel data = new ShiftModel()
-        //        {
-        //            date = insert[i].date,
-        //            date_start = insert[i].date_start,
-        //            date_stop = insert[i].date_stop,
-        //        };
-        //        string message = Shift.Insert(data);
-        //        messagesInsert.Add(message);                
-        //    }
-        //    if (messagesInsert.Count > 0)
-        //    {
-        //        bool check_message = messagesInsert.All(a => a == "Success");
-        //        if (check_message)
-        //        {
-        //            MessageBox.Show("Insert Success");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Insert Fail");
-        //        }
-        //    }
-        //}
     }
 }

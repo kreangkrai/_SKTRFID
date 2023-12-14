@@ -1,5 +1,5 @@
-﻿using SKTRFIDShift.Interface;
-using SKTRFIDShift.Model;
+﻿using SKTRFIDSHIFT.Interface;
+using SKTRFIDSHIFT.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SKTRFIDShift.Service
+namespace SKTRFIDSHIFT.Service
 {
     class ShiftService : IShift
     {

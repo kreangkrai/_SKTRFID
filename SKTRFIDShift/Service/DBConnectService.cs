@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SKTRFIDShift.Service
+namespace SKTRFIDSHIFT.Service
 {
     public static class DBConnectService
     {

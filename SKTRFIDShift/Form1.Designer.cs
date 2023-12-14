@@ -1,5 +1,5 @@
 ﻿
-namespace SKTRFIDShift
+namespace SKTRFIDSHIFT
 {
     partial class Form1
     {

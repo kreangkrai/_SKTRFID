@@ -15,8 +15,55 @@ namespace SKTRFIDEXPORT.Service
 {
     class ExportService : IExport
     {
-        public string Export(string start, string stop)
+        private IShift Shift;
+        public ExportService()
         {
+            Shift = new ShiftService();
+        }
+        public string Export(List<ReportModel> reports)
+        {
+            try { 
+                string fileName = "skt_report.xlsm";
+                string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                List<string> dates = reports.GroupBy(g => g.date.Date).Select(s => s.Key.Date.ToString("dd/MM/yyyy")).ToList();
+                FileInfo template = new FileInfo(Path.Combine(path, fileName));
+                using (var package = new ExcelPackage(template))
+                {
+                    for (int k = 0; k < dates.Count; k++)
+                    {
+                        List<ReportModel> _reports = reports.Where(w => w.date.ToString("dd/MM/yyyy") == dates[k]).ToList();
+                        var workbook = package.Workbook;
+                        var worksheet = workbook.Worksheets.Copy("template", dates[k]);
+                        int startRows = 3;
+                        for (int i = 0; i < _reports.Count; i++)
+                        {
+                            worksheet.Cells["A" + (i + startRows)].Value = _reports[i].dump_id;
+                            worksheet.Cells["B" + (i + startRows)].Value = _reports[i].date;
+                            worksheet.Cells["C" + (i + startRows)].Value = _reports[i].round;
+                            worksheet.Cells["D" + (i + startRows)].Value = _reports[i].area_id;
+                            worksheet.Cells["E" + (i + startRows)].Value = _reports[i].crop_year;
+                            worksheet.Cells["F" + (i + startRows)].Value = _reports[i].barcode;
+                            worksheet.Cells["G" + (i + startRows)].Value = CaneType(_reports[i].cane_type);
+                            worksheet.Cells["H" + (i + startRows)].Value = allergenType(_reports[i].allergen);
+                            worksheet.Cells["I" + (i + startRows)].Value = _reports[i].truck_number;
+                            worksheet.Cells["J" + (i + startRows)].Value = _reports[i].rfid;
+                        }
+                    }
+                    package.SaveAs(new FileInfo("D:\\Report\\skt_report_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsm"));
+                }
+                return "เรียบร้อย";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public List<ReportModel> GetReportByDate(DateTime start, DateTime stop)
+        {
+            List<ShiftModel> shifts = Shift.GetShiftByDate(start.Date, stop.Date);
+
+            List<ReportModel> reports = new List<ReportModel>();
             try
             {
                 List<DataModel> datas = new List<DataModel>();
@@ -29,7 +76,7 @@ namespace SKTRFIDEXPORT.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM tb_rfid_log WHERE rfid_lastdate BETWEEN '{start}' AND '{stop}' ORDER BY rfid_lastdate,dump_id ", cn);
+                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM tb_rfid_log WHERE rfid_lastdate BETWEEN '{start.Date}' AND '{stop.Date}' ORDER BY rfid_lastdate,dump_id ", cn);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     if (dr.HasRows)
@@ -44,7 +91,7 @@ namespace SKTRFIDEXPORT.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
-                                contaminants = Convert.ToInt32(dr["contaminants"].ToString()),
+                                allergen = Convert.ToInt32(dr["allergen"].ToString()),
                                 truck_number = dr["truck_number"].ToString(),
                                 rfid_lastdate = Convert.ToDateTime(dr["rfid_lastdate"].ToString())
                             };
@@ -55,78 +102,55 @@ namespace SKTRFIDEXPORT.Service
                 }
 
                 datas = datas.OrderBy(o => o.rfid_lastdate).ThenBy(t => t.dump_id).ToList();
-                List<string> dates = datas.GroupBy(g => g.rfid_lastdate.ToString("dd-MM-yyyy")).Select(s => s.Key).ToList();
-                List<ReportModel> reports = new List<ReportModel>();
+
                 int current_round = 1;
-                string last_date = "";
-                for (int i = 0; i < datas.Count; i++)
+                for (int i = 0; i < shifts.Count; i++)
                 {
-                    var last_round = reports.Where(w => w.round == current_round).ToList();
-                    bool check_dump_less = last_round
-                                            .Where(w => w.date.ToString("dd-MM-yyyy").Equals(datas[i].rfid_lastdate.ToString("dd-MM-yyyy")))
-                                            .Any(a => a.dump_id >= datas[i].dump_id);
-
-                    if (check_dump_less)
+                    DateTime _start = shifts[i].date_start;
+                    DateTime _stop = shifts[i].date_stop;
+                    List<DataModel> _datas = datas.Where(w => w.rfid_lastdate >= _start && w.rfid_lastdate <= _stop).ToList();
+                    current_round = 1;
+                    string last_date = "";
+                    for (int j = 0; j < _datas.Count; j++)
                     {
-                        current_round++;
-                    }
-                    if (last_date != datas[i].rfid_lastdate.ToString("dd-MM-yyyy"))
-                    {
-                        current_round = 1;
-                    }
+                        
+                        var last_round = reports.Where(w => w.round == current_round).ToList();
+                        bool check_dump_less = last_round
+                                                .Where(w => w.date.ToString("dd-MM-yyyy").Equals(_datas[j].rfid_lastdate.ToString("dd-MM-yyyy")))
+                                                .Any(a => a.dump_id >= _datas[j].dump_id);
 
-                    reports.Add(new ReportModel()
-                    {
-                        dump_id = datas[i].dump_id,
-                        date = datas[i].rfid_lastdate,
-                        area_id = datas[i].area_id,
-                        crop_year = datas[i].crop_year,
-                        barcode = datas[i].barcode,
-                        cane_type = datas[i].cane_type,
-                        contaminants = datas[i].contaminants,
-                        rfid = datas[i].rfid,
-                        truck_number = datas[i].truck_number,
-                        round = current_round
-                    });
-
-                    last_date = datas[i].rfid_lastdate.ToString("dd-MM-yyyy");
-                }
-
-                string fileName = "skt_report.xlsm";
-                string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
-                FileInfo template = new FileInfo(Path.Combine(path, fileName));
-                using (var package = new ExcelPackage(template))
-                {
-                    for (int k = 0; k < dates.Count; k++)
-                    {
-                        List<ReportModel> _reports = reports.Where(w => w.date.ToString("dd-MM-yyyy") == dates[k]).ToList();
-                        var workbook = package.Workbook;
-                        var worksheet = workbook.Worksheets.Copy("template", dates[k]);
-                        int startRows = 3;
-                        for (int i = 0; i < _reports.Count; i++)
+                        if (check_dump_less)
                         {
-                            worksheet.Cells["A" + (i + startRows)].Value = _reports[i].dump_id;
-                            worksheet.Cells["B" + (i + startRows)].Value = _reports[i].date;
-                            worksheet.Cells["C" + (i + startRows)].Value = _reports[i].round;
-                            worksheet.Cells["D" + (i + startRows)].Value = _reports[i].area_id;
-                            worksheet.Cells["E" + (i + startRows)].Value = _reports[i].crop_year;
-                            worksheet.Cells["F" + (i + startRows)].Value = _reports[i].barcode;
-                            worksheet.Cells["G" + (i + startRows)].Value = CaneType(_reports[i].cane_type);
-                            worksheet.Cells["H" + (i + startRows)].Value = ContaminantsType(_reports[i].contaminants);
-                            worksheet.Cells["I" + (i + startRows)].Value = _reports[i].truck_number;
-                            worksheet.Cells["J" + (i + startRows)].Value = _reports[i].rfid;
+                            current_round++;
                         }
+                        if (last_date != _datas[j].rfid_lastdate.ToString("dd-MM-yyyy"))
+                        {
+                            current_round = 1;
+                        }
+                        reports.Add(new ReportModel()
+                        {
+                            dump_id = _datas[j].dump_id,
+                            date = _datas[j].rfid_lastdate,
+                            area_id = _datas[j].area_id,
+                            crop_year = _datas[j].crop_year,
+                            barcode = _datas[j].barcode,
+                            cane_type = _datas[j].cane_type,
+                            allergen = _datas[j].allergen,
+                            rfid = _datas[j].rfid,
+                            truck_number = _datas[j].truck_number,
+                            round = current_round
+                        });
+                        last_date = _datas[j].rfid_lastdate.ToString("dd-MM-yyyy");
                     }
-                    package.SaveAs(new FileInfo("D:\\Report\\skt_report_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsm"));
-                }
-                return "เรียบร้อย";
+                }              
+                return reports;
             }
-            catch (Exception ex)
+            catch
             {
-                return ex.Message;
+                return reports;
             }
         }
+
         private string CaneType(int n)
         {
             List<string> canes_type = new List<string>();
@@ -137,7 +161,7 @@ namespace SKTRFIDEXPORT.Service
 
             return canes_type[n];
         }
-        private string ContaminantsType(int n)
+        private string allergenType(int n)
         {
             List<string> contams = new List<string>();
             contams.Add("ไม่มี");

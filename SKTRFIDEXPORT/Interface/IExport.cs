@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SKTRFIDEXPORT.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace SKTRFIDEXPORT.Interface
 {
     interface IExport
     {
-        string Export(string start, string stop);
+        string Export(List<ReportModel> reports);
+        List<ReportModel> GetReportByDate(DateTime start, DateTime stop);
     }
 }

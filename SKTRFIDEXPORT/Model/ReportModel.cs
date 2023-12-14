@@ -15,7 +15,7 @@ namespace SKTRFIDEXPORT.Model
         public string rfid { get; set; }
         public string barcode { get; set; }
         public int cane_type { get; set; }
-        public int contaminants { get; set; }
+        public int allergen { get; set; }
         public string truck_number { get; set; }
         public int round { get; set; }
     }

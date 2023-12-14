@@ -1,6 +1,6 @@
-﻿using SKTRFIDShift.Interface;
-using SKTRFIDShift.Model;
-using SKTRFIDShift.Service;
+﻿using SKTRFIDSHIFT.Interface;
+using SKTRFIDSHIFT.Model;
+using SKTRFIDSHIFT.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SKTRFIDShift
+namespace SKTRFIDSHIFT
 {
     public partial class DateForm : Form
     {
