@@ -1,0 +1,142 @@
+USE [SKT]
+GO
+
+/****** Object:  Table [dbo].[tb_rfid]    Script Date: 12/15/2023 3:03:46 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tb_rfid](
+	[dump_id] [nvarchar](50) NOT NULL,
+	[area_id] [int] NULL,
+	[crop_year] [nvarchar](50) NULL,
+	[rfid] [nvarchar](50) NULL,
+	[barcode] [nvarchar](50) NULL,
+	[cane_type] [int] NULL,
+	[allergen] [int] NULL,
+	[truck_number] [nvarchar](50) NULL,
+	[truck_type] [int] NULL,
+	[weight_type] [int] NULL,
+	[queue_status] [nchar](10) NULL,
+	[rfid_lastdate] [datetime] NULL,
+ CONSTRAINT [PK_tb_rfid] PRIMARY KEY CLUSTERED 
+(
+	[dump_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+=================================================================================
+
+USE [SKT]
+GO
+
+/****** Object:  Table [dbo].[tb_rfid_log]    Script Date: 12/15/2023 3:04:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tb_rfid_log](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[dump_id] [nvarchar](50) NULL,
+	[area_id] [int] NULL,
+	[crop_year] [nvarchar](50) NULL,
+	[rfid] [nvarchar](50) NULL,
+	[barcode] [nvarchar](50) NULL,
+	[cane_type] [int] NULL,
+	[allergen] [int] NULL,
+	[truck_number] [nvarchar](50) NULL,
+	[truck_type] [int] NULL,
+	[weight_type] [int] NULL,
+	[queue_status] [int] NULL,
+	[rfid_lastdate] [datetime] NULL,
+ CONSTRAINT [PK_tb_rfid_log_1] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+==========================================================================================
+
+USE [SKT]
+GO
+
+/****** Object:  Table [dbo].[tb_setting]    Script Date: 12/15/2023 3:05:08 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tb_setting](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[no] [int] NULL,
+	[area_id] [int] NULL,
+	[crop_year] [nvarchar](50) NULL,
+	[ip1] [nvarchar](50) NULL,
+	[ip2] [nvarchar](50) NULL,
+	[ip_plc] [nvarchar](50) NULL,
+ CONSTRAINT [PK_tb_setting] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+==============================================================================
+
+USE [SKT]
+GO
+
+/****** Object:  Table [dbo].[tb_shift]    Script Date: 12/15/2023 3:05:33 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tb_shift](
+	[date] [datetime] NOT NULL,
+	[date_start] [datetime] NULL,
+	[date_stop] [datetime] NULL,
+ CONSTRAINT [PK_tb_shift] PRIMARY KEY CLUSTERED 
+(
+	[date] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+========================================================================================================
+
+USE [SKT]
+GO
+/****** Object:  Trigger [dbo].[log_rfid]    Script Date: 12/15/2023 3:05:53 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER TRIGGER [dbo].[log_rfid] 
+   ON  [dbo].[tb_rfid]
+   AFTER UPDATE
+AS 
+BEGIN
+
+	SET NOCOUNT ON;
+	INSERT INTO tb_rfid_log(dump_id,area_id,crop_year,rfid,barcode,cane_type,allergen,truck_number,rfid_lastdate) 
+	SELECT TOP 1 dump_id,area_id,crop_year,rfid,barcode,cane_type,allergen,truck_number,rfid_lastdate FROM tb_rfid order by rfid_lastdate desc
+
+END
+
+===========================================================================

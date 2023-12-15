@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OMRON.Compolet.CIP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SKTRFIDCSS2
+namespace SKTRFIDCCS2
 {
     public partial class Form1 : Form
     {
+        CJ2Compolet cj2;
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -48,6 +51,30 @@ namespace SKTRFIDCSS2
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             pictureBox1.Cursor = Cursors.Arrow;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cj2 = new CJ2Compolet();
+            cj2.HeartBeatTimer = 5000;
+            cj2.ConnectionType = ConnectionType.UCMM;
+            cj2.UseRoutePath = false;
+            cj2.PeerAddress = "192.168.1.250";
+            cj2.LocalPort = 2;
+            cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
+            cj2.Active = true;
+        }
+
+        private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
+        {
+            try
+            {
+                bool manual_d1 = (bool)cj2.ReadVariable("manual_dump01");
+            }
+            catch
+            {
+
+            }
         }
     }
 }

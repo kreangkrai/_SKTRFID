@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SKTRFIDCSS2.Properties {
+namespace SKTRFIDCCS2.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SKTRFIDCSS2.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SKTRFIDCSS2.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SKTRFIDCCS2.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,19 @@ namespace SKTRFIDCSS2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap graphic_Dump8_13 {
+        internal static System.Drawing.Bitmap green_red {
             get {
-                object obj = ResourceManager.GetObject("graphic Dump8-13", resourceCulture);
+                object obj = ResourceManager.GetObject("green_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phase2 {
+            get {
+                object obj = ResourceManager.GetObject("phase2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
