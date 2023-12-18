@@ -18,6 +18,7 @@ namespace SKTRFID2
 {
     public partial class Form1 : Form
     {
+        private ISetting Setting;
         CJ2Compolet cj2;
         private IRFID RFID;
         List<string> windows_title;
@@ -29,15 +30,17 @@ namespace SKTRFID2
             RFID = new RFIDService();
             windows_title = new List<string>();
             labels = new LabelModel();
+            Setting = new SettingService();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SettingModel setting = Setting.GetSetting();
             cj2 = new CJ2Compolet();
             cj2.HeartBeatTimer = 3000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
-            cj2.PeerAddress = "192.168.1.250";
+            cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
             cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
             cj2.Active = true;
@@ -71,29 +74,31 @@ namespace SKTRFID2
                     }
                 }
 
+                SettingModel setting = Setting.GetSetting();
+
                 if (auto_d8)
                 {
-                    StartProcess("192.168.1.253", "8", phase);
+                    StartProcess(setting.ip1, "8", phase);
                 }
                 if (auto_d9)
                 {
-                    StartProcess("192.168.1.253", "9", phase);
+                    StartProcess(setting.ip1, "9", phase);
                 }
                 if (auto_d10)
                 {
-                    StartProcess("192.168.1.253", "10", phase);
+                    StartProcess(setting.ip1, "10", phase);
                 }
                 if (auto_d11)
                 {
-                    StartProcess("192.168.1.253", "11", phase);
+                    StartProcess(setting.ip1, "11", phase);
                 }
                 if (auto_d12)
                 {
-                    StartProcess("192.168.1.254", "12", phase);
+                    StartProcess(setting.ip2, "12", phase);
                 }
                 if (auto_d13)
                 {
-                    StartProcess("192.168.1.254", "13", phase);
+                    StartProcess(setting.ip2, "13", phase);
                 }
 
                 // Button Common

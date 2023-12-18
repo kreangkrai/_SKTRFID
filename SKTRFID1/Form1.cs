@@ -19,6 +19,7 @@ namespace SKTRFID1
 {
     public partial class Form1 : Form
     {
+        private ISetting Setting;
         CJ2Compolet cj2;
         private IRFID RFID;
         List<string> windows_title;
@@ -30,95 +31,20 @@ namespace SKTRFID1
             RFID = new RFIDService();
             windows_title = new List<string>();
             labels = new LabelModel();
+            Setting = new SettingService();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SettingModel setting = Setting.GetSetting();
             //cj2 = new CJ2Compolet();
             //cj2.HeartBeatTimer = 3000;
             //cj2.ConnectionType = ConnectionType.UCMM;
             //cj2.UseRoutePath = false;
-            //cj2.PeerAddress = "192.168.1.250";
+            //cj2.PeerAddress = setting.ip_plc;
             //cj2.LocalPort = 2;
             //cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
             //cj2.Active = true;
-
-            List<DataModel> datas = RFID.GetDatas();
-            if (datas.Count > 0)
-            {
-                ShowDisplay(truck_license1, truck_date1, cane_type1, datas, "1");
-                ShowDisplay(truck_license2, truck_date2, cane_type2, datas, "2");
-                ShowDisplay(truck_license3, truck_date3, cane_type3, datas, "3");
-                ShowDisplay(truck_license4, truck_date4, cane_type4, datas, "4");
-                ShowDisplay(truck_license5, truck_date5, cane_type5, datas, "5");
-                ShowDisplay(truck_license6, truck_date6, cane_type6, datas, "6");
-                ShowDisplay(truck_license7, truck_date7, cane_type7, datas, "7");
-
-                DataModel last_data = datas.OrderByDescending(o => o.rfid_lastdate).FirstOrDefault();
-
-                //Clear Label Dump Last Data Update
-                if (labels.labelDump != null)
-                {
-                    ClearLastDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-
-                if (last_data.dump_id == "1")
-                {
-                    labels.labelDump = labelDump1;
-                    labels.labelTruckLicense = truck_license1;
-                    labels.labelCaneType = cane_type1;
-                    labels.labelLastDate = truck_date1;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "2")
-                {
-                    labels.labelDump = labelDump2;
-                    labels.labelTruckLicense = truck_license2;
-                    labels.labelCaneType = cane_type2;
-                    labels.labelLastDate = truck_date2;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "3")
-                {
-                    labels.labelDump = labelDump3;
-                    labels.labelTruckLicense = truck_license3;
-                    labels.labelCaneType = cane_type3;
-                    labels.labelLastDate = truck_date3;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "4")
-                {
-                    labels.labelDump = labelDump4;
-                    labels.labelTruckLicense = truck_license4;
-                    labels.labelCaneType = cane_type4;
-                    labels.labelLastDate = truck_date4;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "5")
-                {
-                    labels.labelDump = labelDump5;
-                    labels.labelTruckLicense = truck_license5;
-                    labels.labelCaneType = cane_type5;
-                    labels.labelLastDate = truck_date5;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "6")
-                {
-                    labels.labelDump = labelDump6;
-                    labels.labelTruckLicense = truck_license6;
-                    labels.labelCaneType = cane_type6;
-                    labels.labelLastDate = truck_date6;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "7")
-                {
-                    labels.labelDump = labelDump7;
-                    labels.labelTruckLicense = truck_license7;
-                    labels.labelCaneType = cane_type7;
-                    labels.labelLastDate = truck_date7;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelLastDate);
-                }
-            }
         }
         private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
         {
@@ -150,34 +76,35 @@ namespace SKTRFID1
                     }
                 }
 
+                SettingModel setting = Setting.GetSetting();
                 if (auto_d1)
                 {
-                    StartProcess("192.168.250.102", "1", phase);
+                    StartProcess(setting.ip1, "1", phase);
                 }
                 if (auto_d2)
                 {
-                    StartProcess("192.168.250.102", "2", phase);
+                    StartProcess(setting.ip1, "2", phase);
                 }
                 if (auto_d3)
                 {
-                    StartProcess("192.168.250.102", "3", phase);
+                    StartProcess(setting.ip1, "3", phase);
                 }
                 if (auto_d4)
                 {
-                    StartProcess("192.168.250.102", "4", phase);
+                    StartProcess(setting.ip1, "4", phase);
                 }
                 if (auto_d5)
                 {
-                    StartProcess("192.168.250.103", "5", phase);
+                    StartProcess(setting.ip2, "5", phase);
                 }
                 if (auto_d6)
                 {
-                    StartProcess("192.168.250.103", "6", phase);
+                    StartProcess(setting.ip2, "6", phase);
                 }
 
                 if (auto_d7)
                 {
-                    StartProcess("192.168.250.103", "7", phase);
+                    StartProcess(setting.ip2, "7", phase);
                 }
 
                 if (manual_d1)
