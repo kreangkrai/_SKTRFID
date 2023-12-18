@@ -214,13 +214,13 @@ namespace SKTRFID1
             // truck_date7
             // 
             this.truck_date7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date7.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date7.ForeColor = System.Drawing.Color.Black;
             this.truck_date7.Location = new System.Drawing.Point(3, 34);
             this.truck_date7.Name = "truck_date7";
             this.truck_date7.Size = new System.Drawing.Size(264, 263);
             this.truck_date7.TabIndex = 4;
-            this.truck_date7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.truck_date7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox44
             // 
@@ -239,13 +239,13 @@ namespace SKTRFID1
             // truck_date6
             // 
             this.truck_date6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date6.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date6.ForeColor = System.Drawing.Color.Black;
             this.truck_date6.Location = new System.Drawing.Point(3, 34);
             this.truck_date6.Name = "truck_date6";
             this.truck_date6.Size = new System.Drawing.Size(262, 263);
             this.truck_date6.TabIndex = 4;
-            this.truck_date6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.truck_date6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox43
             // 
@@ -264,13 +264,13 @@ namespace SKTRFID1
             // truck_date5
             // 
             this.truck_date5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date5.Font = new System.Drawing.Font("Angsana New", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date5.ForeColor = System.Drawing.Color.Black;
             this.truck_date5.Location = new System.Drawing.Point(3, 34);
             this.truck_date5.Name = "truck_date5";
             this.truck_date5.Size = new System.Drawing.Size(262, 263);
             this.truck_date5.TabIndex = 4;
-            this.truck_date5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.truck_date5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox3
             // 
@@ -289,13 +289,13 @@ namespace SKTRFID1
             // truck_date4
             // 
             this.truck_date4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date4.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date4.ForeColor = System.Drawing.Color.Black;
             this.truck_date4.Location = new System.Drawing.Point(3, 34);
             this.truck_date4.Name = "truck_date4";
             this.truck_date4.Size = new System.Drawing.Size(262, 263);
             this.truck_date4.TabIndex = 4;
-            this.truck_date4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.truck_date4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox4
             // 
@@ -314,13 +314,13 @@ namespace SKTRFID1
             // truck_date3
             // 
             this.truck_date3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date3.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date3.ForeColor = System.Drawing.Color.Black;
             this.truck_date3.Location = new System.Drawing.Point(3, 34);
             this.truck_date3.Name = "truck_date3";
             this.truck_date3.Size = new System.Drawing.Size(262, 263);
             this.truck_date3.TabIndex = 4;
-            this.truck_date3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.truck_date3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox7
             // 
@@ -339,13 +339,13 @@ namespace SKTRFID1
             // truck_date2
             // 
             this.truck_date2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date2.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date2.ForeColor = System.Drawing.Color.Black;
             this.truck_date2.Location = new System.Drawing.Point(3, 34);
             this.truck_date2.Name = "truck_date2";
             this.truck_date2.Size = new System.Drawing.Size(262, 263);
             this.truck_date2.TabIndex = 4;
-            this.truck_date2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.truck_date2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox6
             // 
@@ -364,13 +364,13 @@ namespace SKTRFID1
             // truck_date1
             // 
             this.truck_date1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_date1.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_date1.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date1.ForeColor = System.Drawing.Color.Black;
             this.truck_date1.Location = new System.Drawing.Point(3, 34);
             this.truck_date1.Name = "truck_date1";
             this.truck_date1.Size = new System.Drawing.Size(262, 263);
             this.truck_date1.TabIndex = 4;
-            this.truck_date1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.truck_date1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel21
             // 
