@@ -28,7 +28,7 @@ namespace SKTRFIDEXPORT
             DialogResult dialogResult = MessageBox.Show("Do you want to export data?", "SKT Report", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.OK)
             {
-                List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date);
+                List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date.AddDays(1));
                 string message =  Export.Export(reports);
                 MessageBox.Show(message);
             }
@@ -45,7 +45,8 @@ namespace SKTRFIDEXPORT
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date);
+            txtSearchBarcode.Text = "";
+            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date.AddDays(1));
             dataGridView1.Rows.Clear();
             for (int i = 0; i < reports.Count; i++)
             {
@@ -59,7 +60,16 @@ namespace SKTRFIDEXPORT
                 row.Cells[5].Value = reports[i].crop_year;
                 row.Cells[6].Value = reports[i].barcode;
                 row.Cells[7].Value = CaneType(reports[i].cane_type);
-                row.Cells[8].Value = allergenType(reports[i].allergen);
+                int allergen = reports[i].allergen;
+                row.Cells[8].Value = allergenType(allergen);
+                if (allergen == 0)
+                {
+                    row.Cells[8].Style.BackColor = Color.GreenYellow;
+                }
+                else
+                {
+                    row.Cells[8].Style.BackColor = Color.Red;
+                }
                 row.Cells[9].Value = reports[i].truck_number;
                 row.Cells[10].Value = reports[i].rfid;
                 dataGridView1.Rows.Add(row);
@@ -81,6 +91,45 @@ namespace SKTRFIDEXPORT
             contams.Add("ไม่มี");
             contams.Add("มี");
             return contams[n];
+        }
+
+        private void txtSearchBarcode_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearchBarcode.Text.Trim() != "")
+            {
+                List<ReportModel> reports = Export.GetReportByDBarCode(txtSearchBarcode.Text);
+                dataGridView1.Rows.Clear();
+                for (int i = 0; i < reports.Count; i++)
+                {
+                    DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
+                    row.Height = 35;
+                    row.Cells[0].Value = (i + 1);
+                    row.Cells[1].Value = reports[i].dump_id;
+                    row.Cells[2].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
+                    row.Cells[3].Value = reports[i].round;
+                    row.Cells[4].Value = reports[i].area_id;
+                    row.Cells[5].Value = reports[i].crop_year;
+                    row.Cells[6].Value = reports[i].barcode;
+                    row.Cells[7].Value = CaneType(reports[i].cane_type);
+                    int allergen = reports[i].allergen;
+                    row.Cells[8].Value = allergenType(allergen);
+                    if (allergen == 0)
+                    {
+                        row.Cells[8].Style.BackColor = Color.GreenYellow;
+                    }
+                    else
+                    {
+                        row.Cells[8].Style.BackColor = Color.Red;
+                    }
+                    row.Cells[9].Value = reports[i].truck_number;
+                    row.Cells[10].Value = reports[i].rfid;
+                    dataGridView1.Rows.Add(row);
+                }
+            }
+            else
+            {
+                dataGridView1.Rows.Clear();
+            }
         }
     }
 }

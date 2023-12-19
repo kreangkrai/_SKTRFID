@@ -10,7 +10,7 @@ namespace SKTRFIDEXPORT.Service
     {
         public static string data_source()
         {
-            return "Data Source=OPT3050-01\\MEEDB;Initial Catalog=SKT;User ID=sa;Password=Meeci50026;Trusted_Connection=False;MultipleActiveResultSets=true;integrated security=SSPI";
+            return "Data Source=DESKTOP-M6NATK6;Initial Catalog=SKT;User ID=sa;Password=contrologic;Trusted_Connection=False;MultipleActiveResultSets=true;integrated security=SSPI";
         }
     }
 }

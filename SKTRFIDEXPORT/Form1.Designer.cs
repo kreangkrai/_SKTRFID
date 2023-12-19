@@ -61,6 +61,8 @@ namespace SKTRFIDEXPORT
             this.allergen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.truck_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rfid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearchBarcode = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -301,11 +303,32 @@ namespace SKTRFIDEXPORT
             this.rfid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.rfid.Width = 150;
             // 
+            // txtSearchBarcode
+            // 
+            this.txtSearchBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBarcode.Location = new System.Drawing.Point(929, 18);
+            this.txtSearchBarcode.Name = "txtSearchBarcode";
+            this.txtSearchBarcode.Size = new System.Drawing.Size(152, 29);
+            this.txtSearchBarcode.TabIndex = 8;
+            this.txtSearchBarcode.TextChanged += new System.EventHandler(this.txtSearchBarcode_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(845, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 26);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "บาร์โค้ด";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1491, 760);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtSearchBarcode);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label2);
@@ -346,6 +369,8 @@ namespace SKTRFIDEXPORT
         private System.Windows.Forms.DataGridViewTextBoxColumn allergen;
         private System.Windows.Forms.DataGridViewTextBoxColumn truck_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn rfid;
+        private System.Windows.Forms.TextBox txtSearchBarcode;
+        private System.Windows.Forms.Label label3;
     }
 }
 
