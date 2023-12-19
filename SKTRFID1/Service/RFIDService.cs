@@ -51,7 +51,7 @@ namespace SKTRFID1.Service
                             data.rfid = dr["rfid"].ToString();
                             data.barcode = dr["barcode"].ToString();
                             data.cane_type = Convert.ToInt32(dr["cane_type"].ToString());
-                            data.allergen = Convert.ToInt32(dr["allergen"].ToString());
+                            data.allergen = dr["allergen"].ToString();
                             data.truck_number = dr["truck_number"].ToString();
                             data.truck_type = Convert.ToInt32(dr["truck_type"].ToString());
                             data.weight_type = Convert.ToInt32(dr["weight_type"].ToString());
@@ -82,19 +82,6 @@ namespace SKTRFID1.Service
                         cn.Open();
                     }
 
-                    //SqlCommand cmd = new SqlCommand($@"SELECT dump_id,
-                    //                         area_id,
-                    //                         crop_year,
-                    //                         rfid,
-                    //                         barcode,
-                    //                         cane_type,
-                    //                         truck_number,
-                    //                         truck_type,
-                    //                         weight_type,
-                    //                         queue_status,
-                    //                         convert(nvarchar,rfid_lastdate,120) as rfid_lastdate
-                    //                from dbo.tb_rfid", cn);
-
                     SqlCommand cmd = new SqlCommand($@"SELECT * FROM (SELECT * , RANK() OVER(partition by truck_number ORDER BY rfid_lastdate DESC) as rank  
                                                        from tb_rfid) as temp
                                                        WHERE temp.rank = 1", cn);
@@ -113,7 +100,7 @@ namespace SKTRFID1.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
-                                allergen = Convert.ToInt32(dr["allergen"].ToString()),
+                                allergen = dr["allergen"].ToString(),
                                 truck_number = dr["truck_number"].ToString(),
                                 truck_type = Convert.ToInt32(dr["truck_type"].ToString()),
                                 weight_type = Convert.ToInt32(dr["weight_type"].ToString()),

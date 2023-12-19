@@ -54,7 +54,7 @@ namespace SKTRFIDEDIT.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
-                                allergen = Convert.ToInt32(dr["allergen"].ToString()),
+                                allergen = dr["allergen"].ToString(),
                                 truck_number = dr["truck_number"].ToString(),
                                 truck_type = Convert.ToInt32(dr["truck_type"].ToString()),
                                 weight_type = Convert.ToInt32(dr["weight_type"].ToString()),
