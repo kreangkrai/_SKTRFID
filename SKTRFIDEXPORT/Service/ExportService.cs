@@ -92,7 +92,7 @@ namespace SKTRFIDEXPORT.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
-                                allergen = Convert.ToInt32(dr["allergen"].ToString()),
+                                allergen = dr["allergen"].ToString(),
                                 truck_number = dr["truck_number"].ToString(),
                                 rfid_lastdate = Convert.ToDateTime(dr["rfid_lastdate"].ToString())
                             };
@@ -163,12 +163,16 @@ namespace SKTRFIDEXPORT.Service
 
             return canes_type[n];
         }
-        private string allergenType(int n)
+        private string allergenType(string n)
         {
-            List<string> contams = new List<string>();
-            contams.Add("ไม่มี");
-            contams.Add("มี");
-            return contams[n];
+            if(n == "No")
+            {
+                return "ไม่มี";
+            }
+            else
+            {
+                return "มี";
+            }
         }
         int typeCaneIndex(string s)
         {
@@ -218,7 +222,7 @@ namespace SKTRFIDEXPORT.Service
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
-                                allergen = Convert.ToInt32(dr["allergen"].ToString()),
+                                allergen = dr["allergen"].ToString(),
                                 truck_number = dr["truck_number"].ToString(),
                                 rfid_lastdate = Convert.ToDateTime(dr["rfid_lastdate"].ToString())
                             };

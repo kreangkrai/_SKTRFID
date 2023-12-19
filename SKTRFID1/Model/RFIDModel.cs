@@ -23,6 +23,8 @@ namespace SKTRFID1.Model
 
         [JsonProperty("TruckNumber")]
         public string TruckNumber { get; set; }
+        [JsonProperty("Allergen")]
+        public string Allergen { get; set; }
     }
 }
 

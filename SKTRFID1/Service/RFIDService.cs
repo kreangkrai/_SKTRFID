@@ -31,7 +31,7 @@ namespace SKTRFID1.Service
                                              rfid,
                                              barcode,
                                              cane_type,
-                                             contaminants,
+                                             allergen,
                                              truck_number,
                                              truck_type,
                                              weight_type,

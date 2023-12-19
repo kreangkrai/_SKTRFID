@@ -60,9 +60,9 @@ namespace SKTRFIDEXPORT
                 row.Cells[5].Value = reports[i].crop_year;
                 row.Cells[6].Value = reports[i].barcode;
                 row.Cells[7].Value = CaneType(reports[i].cane_type);
-                int allergen = reports[i].allergen;
+                string allergen = reports[i].allergen;
                 row.Cells[8].Value = allergenType(allergen);
-                if (allergen == 0)
+                if (allergen == "No")
                 {
                     row.Cells[8].Style.BackColor = Color.GreenYellow;
                 }
@@ -85,12 +85,16 @@ namespace SKTRFIDEXPORT
 
             return canes_type[n];
         }
-        private string allergenType(int n)
+        private string allergenType(string n)
         {
-            List<string> contams = new List<string>();
-            contams.Add("ไม่มี");
-            contams.Add("มี");
-            return contams[n];
+            if (n == "No")
+            {
+                return "ไม่มี";
+            }
+            else
+            {
+                return "มี";
+            }
         }
 
         private void txtSearchBarcode_TextChanged(object sender, EventArgs e)
@@ -111,9 +115,9 @@ namespace SKTRFIDEXPORT
                     row.Cells[5].Value = reports[i].crop_year;
                     row.Cells[6].Value = reports[i].barcode;
                     row.Cells[7].Value = CaneType(reports[i].cane_type);
-                    int allergen = reports[i].allergen;
+                    string allergen = reports[i].allergen;
                     row.Cells[8].Value = allergenType(allergen);
-                    if (allergen == 0)
+                    if (allergen == "No")
                     {
                         row.Cells[8].Style.BackColor = Color.GreenYellow;
                     }

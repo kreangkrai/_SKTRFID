@@ -52,14 +52,14 @@ namespace SKTRFIDCCS1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //cj2 = new CJ2Compolet();
-            //cj2.HeartBeatTimer = 3000;
-            //cj2.ConnectionType = ConnectionType.UCMM;
-            //cj2.UseRoutePath = false;
-            //cj2.PeerAddress = "192.168.250.10";
-            //cj2.LocalPort = 2;
-            //cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
-            //cj2.Active = true;
+            cj2 = new CJ2Compolet();
+            cj2.HeartBeatTimer = 3000;
+            cj2.ConnectionType = ConnectionType.UCMM;
+            cj2.UseRoutePath = false;
+            cj2.PeerAddress = "192.168.250.10";
+            cj2.LocalPort = 2;
+            cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
+            cj2.Active = true;
         }
 
         private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
