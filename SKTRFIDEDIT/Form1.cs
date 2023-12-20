@@ -72,12 +72,15 @@ namespace SKTRFIDEDIT
             canes.Add("ไฟไหม้ลำ");
             return canes[n];
         }
-        string allergenType(int n)
+        string allergenType(string n)
         {
-            List<string> contaminants = new List<string>();
-            contaminants.Add("ไม่มี");
-            contaminants.Add("มี");
-            return contaminants[n];
+            if (n == "No")
+            {
+                return "ไม่มี";
+            }
+            else{
+                return "มี";
+            }
         }
 
         int typeCaneIndex(string s)
@@ -110,7 +113,7 @@ namespace SKTRFIDEDIT
                         crop_year = _data.crop_year,
                         barcode = _data.barcode,
                         cane_type = typeCaneIndex(dataGridView1.Rows[e.RowIndex].Cells["cane_type"].Value.ToString()),
-                        allergen = typeAllergenIndex(dataGridView1.Rows[e.RowIndex].Cells["allergen"].Value.ToString()),
+                        allergen = dataGridView1.Rows[e.RowIndex].Cells["allergen"].Value.ToString(),
                         rfid_lastdate =  _data.rfid_lastdate,
                         truck_number = _data.truck_number
                     };

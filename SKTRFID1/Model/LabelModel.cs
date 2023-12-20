@@ -12,6 +12,7 @@ namespace SKTRFID1.Model
         public Label labelDump { get; set; }
         public Label labelTruckLicense { get; set; }
         public Label labelCaneType { get; set; }
+        public Label labelTruckType { get; set; }
         public Label labelLastDate { get; set; }
     }
 }
