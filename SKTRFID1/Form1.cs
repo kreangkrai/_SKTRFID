@@ -36,99 +36,16 @@ namespace SKTRFID1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //SettingModel setting = Setting.GetSetting();
-            //cj2 = new CJ2Compolet();
-            //cj2.HeartBeatTimer = 3000;
-            //cj2.ConnectionType = ConnectionType.UCMM;
-            //cj2.UseRoutePath = false;
-            //cj2.PeerAddress = setting.ip_plc;
-            //cj2.LocalPort = 2;
-            //cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
-            //cj2.Active = true;
-            List<DataModel> datas = RFID.GetDatas();
-            if (datas.Count > 0)
-            {
-                ShowDisplay(truck_license1, truck_date1, cane_type1, truck_type1, datas, "1");
-                ShowDisplay(truck_license2, truck_date2, cane_type2, truck_type2, datas, "2");
-                ShowDisplay(truck_license3, truck_date3, cane_type3, truck_type3, datas, "3");
-                ShowDisplay(truck_license4, truck_date4, cane_type4, truck_type4, datas, "4");
-                ShowDisplay(truck_license5, truck_date5, cane_type5, truck_type5, datas, "5");
-                ShowDisplay(truck_license6, truck_date6, cane_type6, truck_type6, datas, "6");
-                ShowDisplay(truck_license7, truck_date7, cane_type7, truck_type7, datas, "7");
-
-                DataModel last_data = datas.OrderByDescending(o => o.rfid_lastdate).FirstOrDefault();
-
-                //Clear Label Dump Last Data Update
-                if (labels.labelDump != null)
-                {
-                    ClearLastDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-
-                if (last_data.dump_id == "1")
-                {
-                    labels.labelDump = labelDump1;
-                    labels.labelTruckLicense = truck_license1;
-                    labels.labelCaneType = cane_type1;
-                    labels.labelTruckType = truck_type1;
-                    labels.labelLastDate = truck_date1;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "2")
-                {
-                    labels.labelDump = labelDump2;
-                    labels.labelTruckLicense = truck_license2;
-                    labels.labelCaneType = cane_type2;
-                    labels.labelTruckType = truck_type2;
-                    labels.labelLastDate = truck_date2;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "3")
-                {
-                    labels.labelDump = labelDump3;
-                    labels.labelTruckLicense = truck_license3;
-                    labels.labelCaneType = cane_type3;
-                    labels.labelTruckType = truck_type3;
-                    labels.labelLastDate = truck_date3;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "4")
-                {
-                    labels.labelDump = labelDump4;
-                    labels.labelTruckLicense = truck_license4;
-                    labels.labelCaneType = cane_type4;
-                    labels.labelTruckType = truck_type4;
-                    labels.labelLastDate = truck_date4;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "5")
-                {
-                    labels.labelDump = labelDump5;
-                    labels.labelTruckLicense = truck_license5;
-                    labels.labelCaneType = cane_type5;
-                    labels.labelTruckType = truck_type5;
-                    labels.labelLastDate = truck_date5;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "6")
-                {
-                    labels.labelDump = labelDump6;
-                    labels.labelTruckLicense = truck_license6;
-                    labels.labelCaneType = cane_type6;
-                    labels.labelTruckType = truck_type6;
-                    labels.labelLastDate = truck_date6;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-                if (last_data.dump_id == "7")
-                {
-                    labels.labelDump = labelDump7;
-                    labels.labelTruckLicense = truck_license7;
-                    labels.labelCaneType = cane_type7;
-                    labels.labelTruckType = truck_type7;
-                    labels.labelLastDate = truck_date7;
-                    LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                }
-            }
-            }
+            SettingModel setting = Setting.GetSetting();
+            cj2 = new CJ2Compolet();
+            cj2.HeartBeatTimer = 3000;
+            cj2.ConnectionType = ConnectionType.UCMM;
+            cj2.UseRoutePath = false;
+            cj2.PeerAddress = setting.ip_plc;
+            cj2.LocalPort = 2;
+            cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
+            cj2.Active = true;
+        }
         private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
         {
             try

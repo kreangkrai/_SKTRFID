@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
             cj2 = new CJ2Compolet();
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
-            cj2.PeerAddress = "192.168.1.250";
+            cj2.PeerAddress = "192.168.250.104";
             cj2.LocalPort = 2;
             cj2.Active = true;
         }

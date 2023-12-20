@@ -243,7 +243,7 @@ namespace SKTRFID1
             // truck_type7
             // 
             this.truck_type7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type7.ForeColor = System.Drawing.Color.Black;
             this.truck_type7.Location = new System.Drawing.Point(3, 34);
             this.truck_type7.Name = "truck_type7";
@@ -268,7 +268,7 @@ namespace SKTRFID1
             // truck_type6
             // 
             this.truck_type6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type6.ForeColor = System.Drawing.Color.Black;
             this.truck_type6.Location = new System.Drawing.Point(3, 34);
             this.truck_type6.Name = "truck_type6";
@@ -293,7 +293,7 @@ namespace SKTRFID1
             // truck_type5
             // 
             this.truck_type5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type5.ForeColor = System.Drawing.Color.Black;
             this.truck_type5.Location = new System.Drawing.Point(3, 34);
             this.truck_type5.Name = "truck_type5";
@@ -318,7 +318,7 @@ namespace SKTRFID1
             // truck_type4
             // 
             this.truck_type4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type4.ForeColor = System.Drawing.Color.Black;
             this.truck_type4.Location = new System.Drawing.Point(3, 34);
             this.truck_type4.Name = "truck_type4";
@@ -343,7 +343,7 @@ namespace SKTRFID1
             // truck_type3
             // 
             this.truck_type3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type3.ForeColor = System.Drawing.Color.Black;
             this.truck_type3.Location = new System.Drawing.Point(3, 34);
             this.truck_type3.Name = "truck_type3";
@@ -368,7 +368,7 @@ namespace SKTRFID1
             // truck_type2
             // 
             this.truck_type2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type2.ForeColor = System.Drawing.Color.Black;
             this.truck_type2.Location = new System.Drawing.Point(3, 34);
             this.truck_type2.Name = "truck_type2";
@@ -1198,7 +1198,7 @@ namespace SKTRFID1
             // truck_type1
             // 
             this.truck_type1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truck_type1.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truck_type1.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type1.ForeColor = System.Drawing.Color.Black;
             this.truck_type1.Location = new System.Drawing.Point(3, 34);
             this.truck_type1.Name = "truck_type1";
