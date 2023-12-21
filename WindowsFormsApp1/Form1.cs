@@ -27,44 +27,44 @@ namespace WindowsFormsApp1
             cj2 = new CJ2Compolet();
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
-            cj2.PeerAddress = "192.168.250.104";
+            cj2.PeerAddress = "192.168.250.1";
             cj2.LocalPort = 2;
             cj2.Active = true;
         }
 
         private void auto_button1_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump01",true);
+            cj2.WriteVariable("Call_D1", true);
         }
 
         private void auto_button2_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump02", true);
+            cj2.WriteVariable("Call_D2", true);
         }
 
         private void auto_button3_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump03", true);
+            cj2.WriteVariable("Call_D3", true);
         }
 
         private void auto_button4_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump04", true);
+            cj2.WriteVariable("Call_D4", true);
         }
 
         private void auto_button5_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump05", true);
+            cj2.WriteVariable("Call_D5", true);
         }
 
         private void auto_button6_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump06", true);
+            cj2.WriteVariable("Call_D6", true);
         }
 
         private void auto_button7_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump07", true);
+            cj2.WriteVariable("Call_D7", true);
         }
 
         private void manual_button1_Click(object sender, EventArgs e)
@@ -104,37 +104,37 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump01", false);
+            cj2.WriteVariable("Call_D1", false);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump02", false);
+            cj2.WriteVariable("Call_D2", false);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump03", false);
+            cj2.WriteVariable("Call_D3", false);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump04", false);
+            cj2.WriteVariable("Call_D4", false);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump05", false);
+            cj2.WriteVariable("Call_D5", false);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump06", false);
+            cj2.WriteVariable("Call_D6", false);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            cj2.WriteVariable("auto_dump07", false);
+            cj2.WriteVariable("Call_D7", false);
         }
     }
 }

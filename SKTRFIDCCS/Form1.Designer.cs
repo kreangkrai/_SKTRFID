@@ -30,7 +30,6 @@ namespace SKTRFIDCCS1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -48,6 +47,22 @@ namespace SKTRFIDCCS1
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblDSP_02 = new System.Windows.Forms.Label();
+            this.lblDSP_01 = new System.Windows.Forms.Label();
+            this.lblDSP_03 = new System.Windows.Forms.Label();
+            this.lblDSP_04 = new System.Windows.Forms.Label();
+            this.lblDSP_05 = new System.Windows.Forms.Label();
+            this.lblDSP_06 = new System.Windows.Forms.Label();
+            this.lblDSP_07 = new System.Windows.Forms.Label();
+            this.lblDSP_08 = new System.Windows.Forms.Label();
+            this.lblDSP_09 = new System.Windows.Forms.Label();
+            this.lblDSP_10 = new System.Windows.Forms.Label();
+            this.lblDSP_11 = new System.Windows.Forms.Label();
+            this.lblDSP_12 = new System.Windows.Forms.Label();
+            this.lblDSP_13 = new System.Windows.Forms.Label();
+            this.lblDSP_14 = new System.Windows.Forms.Label();
+            this.lblDSP_15 = new System.Windows.Forms.Label();
+            this.lblDSP_16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -65,18 +80,6 @@ namespace SKTRFIDCCS1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(230, 171);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 63);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "99";
             // 
             // pictureBox17
             // 
@@ -269,12 +272,204 @@ namespace SKTRFIDCCS1
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblDSP_02
+            // 
+            this.lblDSP_02.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_02.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_02.Location = new System.Drawing.Point(240, 808);
+            this.lblDSP_02.Name = "lblDSP_02";
+            this.lblDSP_02.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_02.TabIndex = 22;
+            this.lblDSP_02.Text = "99";
+            // 
+            // lblDSP_01
+            // 
+            this.lblDSP_01.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_01.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_01.Location = new System.Drawing.Point(240, 872);
+            this.lblDSP_01.Name = "lblDSP_01";
+            this.lblDSP_01.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_01.TabIndex = 23;
+            this.lblDSP_01.Text = "99";
+            // 
+            // lblDSP_03
+            // 
+            this.lblDSP_03.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_03.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_03.Location = new System.Drawing.Point(240, 743);
+            this.lblDSP_03.Name = "lblDSP_03";
+            this.lblDSP_03.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_03.TabIndex = 24;
+            this.lblDSP_03.Text = "99";
+            // 
+            // lblDSP_04
+            // 
+            this.lblDSP_04.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_04.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_04.Location = new System.Drawing.Point(240, 677);
+            this.lblDSP_04.Name = "lblDSP_04";
+            this.lblDSP_04.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_04.TabIndex = 25;
+            this.lblDSP_04.Text = "99";
+            // 
+            // lblDSP_05
+            // 
+            this.lblDSP_05.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_05.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_05.Location = new System.Drawing.Point(240, 610);
+            this.lblDSP_05.Name = "lblDSP_05";
+            this.lblDSP_05.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_05.TabIndex = 26;
+            this.lblDSP_05.Text = "99";
+            // 
+            // lblDSP_06
+            // 
+            this.lblDSP_06.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_06.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_06.Location = new System.Drawing.Point(240, 539);
+            this.lblDSP_06.Name = "lblDSP_06";
+            this.lblDSP_06.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_06.TabIndex = 27;
+            this.lblDSP_06.Text = "99";
+            // 
+            // lblDSP_07
+            // 
+            this.lblDSP_07.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_07.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_07.Location = new System.Drawing.Point(240, 452);
+            this.lblDSP_07.Name = "lblDSP_07";
+            this.lblDSP_07.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_07.TabIndex = 28;
+            this.lblDSP_07.Text = "99";
+            // 
+            // lblDSP_08
+            // 
+            this.lblDSP_08.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_08.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_08.Location = new System.Drawing.Point(240, 358);
+            this.lblDSP_08.Name = "lblDSP_08";
+            this.lblDSP_08.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_08.TabIndex = 29;
+            this.lblDSP_08.Text = "99";
+            // 
+            // lblDSP_09
+            // 
+            this.lblDSP_09.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_09.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_09.Location = new System.Drawing.Point(240, 273);
+            this.lblDSP_09.Name = "lblDSP_09";
+            this.lblDSP_09.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_09.TabIndex = 30;
+            this.lblDSP_09.Text = "99";
+            // 
+            // lblDSP_10
+            // 
+            this.lblDSP_10.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_10.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_10.Location = new System.Drawing.Point(240, 172);
+            this.lblDSP_10.Name = "lblDSP_10";
+            this.lblDSP_10.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_10.TabIndex = 31;
+            this.lblDSP_10.Text = "99";
+            // 
+            // lblDSP_11
+            // 
+            this.lblDSP_11.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_11.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_11.Location = new System.Drawing.Point(359, 156);
+            this.lblDSP_11.Name = "lblDSP_11";
+            this.lblDSP_11.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_11.TabIndex = 32;
+            this.lblDSP_11.Text = "99";
+            // 
+            // lblDSP_12
+            // 
+            this.lblDSP_12.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_12.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_12.Location = new System.Drawing.Point(521, 137);
+            this.lblDSP_12.Name = "lblDSP_12";
+            this.lblDSP_12.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_12.TabIndex = 33;
+            this.lblDSP_12.Text = "99";
+            // 
+            // lblDSP_13
+            // 
+            this.lblDSP_13.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_13.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_13.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_13.Location = new System.Drawing.Point(680, 103);
+            this.lblDSP_13.Name = "lblDSP_13";
+            this.lblDSP_13.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_13.TabIndex = 34;
+            this.lblDSP_13.Text = "99";
+            // 
+            // lblDSP_14
+            // 
+            this.lblDSP_14.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_14.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_14.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_14.Location = new System.Drawing.Point(838, 69);
+            this.lblDSP_14.Name = "lblDSP_14";
+            this.lblDSP_14.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_14.TabIndex = 35;
+            this.lblDSP_14.Text = "99";
+            // 
+            // lblDSP_15
+            // 
+            this.lblDSP_15.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_15.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_15.Location = new System.Drawing.Point(968, 333);
+            this.lblDSP_15.Name = "lblDSP_15";
+            this.lblDSP_15.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_15.TabIndex = 36;
+            this.lblDSP_15.Text = "99";
+            // 
+            // lblDSP_16
+            // 
+            this.lblDSP_16.BackColor = System.Drawing.Color.Black;
+            this.lblDSP_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_16.ForeColor = System.Drawing.Color.White;
+            this.lblDSP_16.Location = new System.Drawing.Point(1505, 238);
+            this.lblDSP_16.Name = "lblDSP_16";
+            this.lblDSP_16.Size = new System.Drawing.Size(75, 60);
+            this.lblDSP_16.TabIndex = 37;
+            this.lblDSP_16.Text = "99";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.lblDSP_16);
+            this.Controls.Add(this.lblDSP_15);
+            this.Controls.Add(this.lblDSP_14);
+            this.Controls.Add(this.lblDSP_13);
+            this.Controls.Add(this.lblDSP_12);
+            this.Controls.Add(this.lblDSP_11);
+            this.Controls.Add(this.lblDSP_10);
+            this.Controls.Add(this.lblDSP_09);
+            this.Controls.Add(this.lblDSP_08);
+            this.Controls.Add(this.lblDSP_07);
+            this.Controls.Add(this.lblDSP_06);
+            this.Controls.Add(this.lblDSP_05);
+            this.Controls.Add(this.lblDSP_04);
+            this.Controls.Add(this.lblDSP_03);
+            this.Controls.Add(this.lblDSP_01);
+            this.Controls.Add(this.lblDSP_02);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox16);
@@ -291,7 +486,6 @@ namespace SKTRFIDCCS1
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -317,14 +511,12 @@ namespace SKTRFIDCCS1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -341,6 +533,22 @@ namespace SKTRFIDCCS1
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblDSP_02;
+        private System.Windows.Forms.Label lblDSP_01;
+        private System.Windows.Forms.Label lblDSP_03;
+        private System.Windows.Forms.Label lblDSP_04;
+        private System.Windows.Forms.Label lblDSP_05;
+        private System.Windows.Forms.Label lblDSP_06;
+        private System.Windows.Forms.Label lblDSP_07;
+        private System.Windows.Forms.Label lblDSP_08;
+        private System.Windows.Forms.Label lblDSP_09;
+        private System.Windows.Forms.Label lblDSP_10;
+        private System.Windows.Forms.Label lblDSP_11;
+        private System.Windows.Forms.Label lblDSP_12;
+        private System.Windows.Forms.Label lblDSP_13;
+        private System.Windows.Forms.Label lblDSP_14;
+        private System.Windows.Forms.Label lblDSP_15;
+        private System.Windows.Forms.Label lblDSP_16;
     }
 }
 

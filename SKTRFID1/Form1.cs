@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace SKTRFID1
     {
         private ISetting Setting;
         CJ2Compolet cj2;
+        CJ2Compolet cj1;
         private IRFID RFID;
         List<string> windows_title;
         LabelModel labels;
@@ -45,26 +47,202 @@ namespace SKTRFID1
             cj2.LocalPort = 2;
             cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
             cj2.Active = true;
+
+            cj1 = new CJ2Compolet();
+            cj1.HeartBeatTimer = 3000;
+            cj1.ConnectionType = ConnectionType.UCMM;
+            cj1.UseRoutePath = false;
+            cj1.PeerAddress = "192.168.250.104";
+            cj1.LocalPort = 2;
+            cj1.OnHeartBeatTimer += Cj1_OnHeartBeatTimer;
+            cj1.Active = true;
         }
+
+        private void Cj1_OnHeartBeatTimer(object sender, EventArgs e)
+        {
+            bool manual_d1 = (bool)cj1.ReadVariable("MN_SCAN_D1");
+            bool manual_d2 = (bool)cj1.ReadVariable("MN_SCAN_D2");
+            bool manual_d3 = (bool)cj1.ReadVariable("MN_SCAN_D3");
+            bool manual_d4 = (bool)cj1.ReadVariable("MN_SCAN_D4");
+            bool manual_d5 = (bool)cj1.ReadVariable("MN_SCAN_D5");
+            bool manual_d6 = (bool)cj1.ReadVariable("MN_SCAN_D6");
+            bool manual_d7 = (bool)cj1.ReadVariable("MN_SCAN_D7");
+
+            if (manual_d1)
+            {
+                cj1.WriteVariable("MN_SCAN_D1", false);
+                StartProcessCommon("1", phase);
+            }
+
+            if (manual_d2)
+            {
+                cj1.WriteVariable("MN_SCAN_D2", false);
+                StartProcessCommon("2", phase);
+            }
+
+            if (manual_d3)
+            {
+                cj1.WriteVariable("MN_SCAN_D3", false);
+                StartProcessCommon("3", phase);
+            }
+
+            if (manual_d4)
+            {
+                cj1.WriteVariable("MN_SCAN_D4", false);
+                StartProcessCommon("4", phase);
+            }
+
+            if (manual_d5)
+            {
+                cj1.WriteVariable("MN_SCAN_D5", false);
+                StartProcessCommon("5", phase);
+            }
+
+            if (manual_d6)
+            {
+                cj1.WriteVariable("MN_SCAN_D6", false);
+                StartProcessCommon("6", phase);
+            }
+
+            if (manual_d7)
+            {
+                cj1.WriteVariable("MN_SCAN_D7", false);
+                StartProcessCommon("7", phase);
+            }
+        }
+
         private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
         {
             try
             {
-                bool auto_d1 = (bool)cj2.ReadVariable("auto_dump01");
-                bool auto_d2 = (bool)cj2.ReadVariable("auto_dump02");
-                bool auto_d3 = (bool)cj2.ReadVariable("auto_dump03");
-                bool auto_d4 = (bool)cj2.ReadVariable("auto_dump04");
-                bool auto_d5 = (bool)cj2.ReadVariable("auto_dump05");
-                bool auto_d6 = (bool)cj2.ReadVariable("auto_dump06");
-                bool auto_d7 = (bool)cj2.ReadVariable("auto_dump07");
+                bool auto_d1 = (bool)cj2.ReadVariable("Call_D1");
+                bool auto_d2 = (bool)cj2.ReadVariable("Call_D2");
+                bool auto_d3 = (bool)cj2.ReadVariable("Call_D3");
+                bool auto_d4 = (bool)cj2.ReadVariable("Call_D4");
+                bool auto_d5 = (bool)cj2.ReadVariable("Call_D5");
+                bool auto_d6 = (bool)cj2.ReadVariable("Call_D6");
+                bool auto_d7 = (bool)cj2.ReadVariable("Call_D7");
+             
 
-                bool manual_d1 = (bool)cj2.ReadVariable("manual_dump01");
-                bool manual_d2 = (bool)cj2.ReadVariable("manual_dump02");
-                bool manual_d3 = (bool)cj2.ReadVariable("manual_dump03");
-                bool manual_d4 = (bool)cj2.ReadVariable("manual_dump04");
-                bool manual_d5 = (bool)cj2.ReadVariable("manual_dump05");
-                bool manual_d6 = (bool)cj2.ReadVariable("manual_dump06");
-                bool manual_d7 = (bool)cj2.ReadVariable("manual_dump07");
+                //bool sound_d1 = (bool)cj2.ReadVariable("SOUND_D1");
+                //bool sound_d2 = (bool)cj2.ReadVariable("SOUND_D2");
+                //bool sound_d3 = (bool)cj2.ReadVariable("SOUND_D3");
+                //bool sound_d4 = (bool)cj2.ReadVariable("SOUND_D4");
+                //bool sound_d5 = (bool)cj2.ReadVariable("SOUND_D5");
+                //bool sound_d6 = (bool)cj2.ReadVariable("SOUND_D6");
+                //bool sound_d7 = (bool)cj2.ReadVariable("SOUND_D7");
+
+                //if (sound_d1)
+                //{
+                //    // Call Dump
+                //    try
+                //    {
+                //        string path = Directory.GetCurrentDirectory();
+                //        SoundPlayer dump_wave_file = new SoundPlayer();
+                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump1.wav");
+                //        dump_wave_file.PlaySync();
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
+                //if (sound_d2)
+                //{
+                //    // Call Dump
+                //    try
+                //    {
+                //        string path = Directory.GetCurrentDirectory();
+                //        SoundPlayer dump_wave_file = new SoundPlayer();
+                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump2.wav");
+                //        dump_wave_file.PlaySync();
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
+                //if (sound_d3)
+                //{
+                //    // Call Dump
+                //    try
+                //    {
+                //        string path = Directory.GetCurrentDirectory();
+                //        SoundPlayer dump_wave_file = new SoundPlayer();
+                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump3.wav");
+                //        dump_wave_file.PlaySync();
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
+
+                //if (sound_d4)
+                //{
+                //    // Call Dump
+                //    try
+                //    {
+                //        string path = Directory.GetCurrentDirectory();
+                //        SoundPlayer dump_wave_file = new SoundPlayer();
+                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump4.wav");
+                //        dump_wave_file.PlaySync();
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
+
+                //if (sound_d5)
+                //{
+                //    // Call Dump
+                //    try
+                //    {
+                //        string path = Directory.GetCurrentDirectory();
+                //        SoundPlayer dump_wave_file = new SoundPlayer();
+                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump5.wav");
+                //        dump_wave_file.PlaySync();
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
+
+
+                //if (sound_d6)
+                //{
+                //    // Call Dump
+                //    try
+                //    {
+                //        string path = Directory.GetCurrentDirectory();
+                //        SoundPlayer dump_wave_file = new SoundPlayer();
+                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump6.wav");
+                //        dump_wave_file.PlaySync();
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
+
+                //if (sound_d7)
+                //{
+                //    // Call Dump
+                //    try
+                //    {
+                //        string path = Directory.GetCurrentDirectory();
+                //        SoundPlayer dump_wave_file = new SoundPlayer();
+                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump7.wav");
+                //        dump_wave_file.PlaySync();
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
+
 
                 windows_title = new List<string>();
                 Process[] process = Process.GetProcesses();
@@ -105,48 +283,6 @@ namespace SKTRFID1
                 if (auto_d7)
                 {
                     StartProcess(setting.ip2, "7", phase);
-                }
-
-                if (manual_d1)
-                {
-                    cj2.WriteVariable("manual_dump01", false);
-                    StartProcessCommon("1", phase);
-                }
-
-                if (manual_d2)
-                {
-                    cj2.WriteVariable("manual_dump02", false);
-                    StartProcessCommon("2", phase);
-                }
-
-                if (manual_d3)
-                {
-                    cj2.WriteVariable("manual_dump03", false);
-                    StartProcessCommon("3", phase);
-                }
-
-                if (manual_d4)
-                {
-                    cj2.WriteVariable("manual_dump04", false);
-                    StartProcessCommon("4", phase);
-                }
-
-                if (manual_d5)
-                {
-                    cj2.WriteVariable("manual_dump05", false);
-                    StartProcessCommon("5", phase);
-                }
-
-                if (manual_d6)
-                {
-                    cj2.WriteVariable("manual_dump06", false);
-                    StartProcessCommon("6", phase);
-                }
-
-                if (manual_d7)
-                {
-                    cj2.WriteVariable("manual_dump07", false);
-                    StartProcessCommon("7", phase);
                 }
 
                 List<DataModel> datas = RFID.GetDatas();

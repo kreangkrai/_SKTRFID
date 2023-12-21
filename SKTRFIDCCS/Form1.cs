@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using OMRON.Compolet.CIP;
 using System.Windows.Forms;
+using SKTRFIDCCS1.Interface;
+using SKTRFIDCCS1.Service;
+using SKTRFIDCCS1.Model;
 
 namespace SKTRFIDCCS1
 {
     public partial class Form1 : Form
     {
+        private ISetting Setting;
         CJ2Compolet cj2;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -24,6 +28,7 @@ namespace SKTRFIDCCS1
         public Form1()
         {
             InitializeComponent();
+            Setting = new SettingService();
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -52,11 +57,12 @@ namespace SKTRFIDCCS1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SettingModel setting = Setting.GetSetting();
             cj2 = new CJ2Compolet();
             cj2.HeartBeatTimer = 3000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
-            cj2.PeerAddress = "192.168.250.10";
+            cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
             cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
             cj2.Active = true;
@@ -66,36 +72,45 @@ namespace SKTRFIDCCS1
         {
             try
             {
-                //bool manual_d1 = (bool)cj2.ReadVariable("manual_dump01");
-                //if (manual_d1)
-                //{
-                //    //cj2.WriteVariable("manual_dump01", false);
-                //    button2.BackColor = Color.FromArgb(255, 0, 0);
-                //}
-                //else
-                //{
-                //    //cj2.WriteVariable("manual_dump01", true);
-                //    button2.BackColor = Color.FromArgb(0, 255, 0);
-                //}
+                int DSP_01 = (int)cj2.ReadVariable("DSP_01");
+                int DSP_02 = (int)cj2.ReadVariable("DSP_02");
+                int DSP_03 = (int)cj2.ReadVariable("DSP_03");
+                int DSP_04 = (int)cj2.ReadVariable("DSP_04");
+                int DSP_05 = (int)cj2.ReadVariable("DSP_05");
+                int DSP_06 = (int)cj2.ReadVariable("DSP_06");
+                int DSP_07 = (int)cj2.ReadVariable("DSP_07");
+                int DSP_08 = (int)cj2.ReadVariable("DSP_08");
+                int DSP_09 = (int)cj2.ReadVariable("DSP_09");
+                int DSP_10 = (int)cj2.ReadVariable("DSP_10");
+                int DSP_11 = (int)cj2.ReadVariable("DSP_11");
+                int DSP_12 = (int)cj2.ReadVariable("DSP_12");
+                int DSP_13 = (int)cj2.ReadVariable("DSP_13");
+                int DSP_14 = (int)cj2.ReadVariable("DSP_14");
+                int DSP_15 = (int)cj2.ReadVariable("DSP_15");
+                int DSP_16 = (int)cj2.ReadVariable("DSP_16");
+
+                lblDSP_01.Text = DSP_01.ToString();
+                lblDSP_02.Text = DSP_02.ToString();
+                lblDSP_03.Text = DSP_03.ToString();
+                lblDSP_04.Text = DSP_04.ToString();
+                lblDSP_05.Text = DSP_05.ToString();
+                lblDSP_06.Text = DSP_06.ToString();
+                lblDSP_07.Text = DSP_07.ToString();
+                lblDSP_08.Text = DSP_08.ToString();
+                lblDSP_09.Text = DSP_09.ToString();
+                lblDSP_10.Text = DSP_10.ToString();
+                lblDSP_11.Text = DSP_11.ToString();
+                lblDSP_12.Text = DSP_12.ToString();
+                lblDSP_13.Text = DSP_13.ToString();
+                lblDSP_14.Text = DSP_14.ToString();
+                lblDSP_15.Text = DSP_15.ToString();
+                lblDSP_16.Text = DSP_16.ToString();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //cj2.WriteVariable("manual_dump01", true);
-            cj2.WriteVariable("Bar_ID1", "999999");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //cj2.WriteVariable("manual_dump01", false);
-            cj2.WriteVariable("Bar_ID1", 888888);
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Do you want to exit?", "SKT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
