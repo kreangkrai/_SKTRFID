@@ -388,7 +388,7 @@ namespace SKTRFID1
             this.groupBox45.Size = new System.Drawing.Size(270, 314);
             this.groupBox45.TabIndex = 62;
             this.groupBox45.TabStop = false;
-            this.groupBox45.Text = "เวลาอัพเดท";
+            this.groupBox45.Text = "เวลาสแกน";
             // 
             // truck_date7
             // 
@@ -413,7 +413,7 @@ namespace SKTRFID1
             this.groupBox44.Size = new System.Drawing.Size(268, 314);
             this.groupBox44.TabIndex = 61;
             this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "เวลาอัพเดท";
+            this.groupBox44.Text = "เวลาสแกน";
             // 
             // truck_date6
             // 
@@ -438,7 +438,7 @@ namespace SKTRFID1
             this.groupBox43.Size = new System.Drawing.Size(268, 314);
             this.groupBox43.TabIndex = 60;
             this.groupBox43.TabStop = false;
-            this.groupBox43.Text = "เวลาอัพเดท";
+            this.groupBox43.Text = "เวลาสแกน";
             // 
             // truck_date5
             // 
@@ -463,7 +463,7 @@ namespace SKTRFID1
             this.groupBox3.Size = new System.Drawing.Size(268, 314);
             this.groupBox3.TabIndex = 59;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "เวลาอัพเดท";
+            this.groupBox3.Text = "เวลาสแกน";
             // 
             // truck_date4
             // 
@@ -488,7 +488,7 @@ namespace SKTRFID1
             this.groupBox4.Size = new System.Drawing.Size(268, 314);
             this.groupBox4.TabIndex = 58;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "เวลาอัพเดท";
+            this.groupBox4.Text = "เวลาสแกน";
             // 
             // truck_date3
             // 
@@ -513,7 +513,7 @@ namespace SKTRFID1
             this.groupBox7.Size = new System.Drawing.Size(268, 314);
             this.groupBox7.TabIndex = 57;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "เวลาอัพเดท";
+            this.groupBox7.Text = "เวลาสแกน";
             // 
             // truck_date2
             // 
@@ -538,7 +538,7 @@ namespace SKTRFID1
             this.groupBox6.Size = new System.Drawing.Size(268, 314);
             this.groupBox6.TabIndex = 56;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "เวลาอัพเดท";
+            this.groupBox6.Text = "เวลาสแกน";
             // 
             // truck_date1
             // 
@@ -1046,7 +1046,7 @@ namespace SKTRFID1
             this.labelDump1.Name = "labelDump1";
             this.labelDump1.Size = new System.Drawing.Size(268, 121);
             this.labelDump1.TabIndex = 0;
-            this.labelDump1.Text = "DUMP 1";
+            this.labelDump1.Text = "ดัมพ์ 1";
             this.labelDump1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -1068,7 +1068,7 @@ namespace SKTRFID1
             this.labelDump2.Name = "labelDump2";
             this.labelDump2.Size = new System.Drawing.Size(268, 121);
             this.labelDump2.TabIndex = 1;
-            this.labelDump2.Text = "DUMP 2";
+            this.labelDump2.Text = "ดัมพ์ 2";
             this.labelDump2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
@@ -1090,7 +1090,7 @@ namespace SKTRFID1
             this.labelDump3.Name = "labelDump3";
             this.labelDump3.Size = new System.Drawing.Size(268, 121);
             this.labelDump3.TabIndex = 1;
-            this.labelDump3.Text = "DUMP 3";
+            this.labelDump3.Text = "ดัมพ์ 3";
             this.labelDump3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
@@ -1112,7 +1112,7 @@ namespace SKTRFID1
             this.labelDump4.Name = "labelDump4";
             this.labelDump4.Size = new System.Drawing.Size(268, 121);
             this.labelDump4.TabIndex = 1;
-            this.labelDump4.Text = "DUMP 4";
+            this.labelDump4.Text = "ดัมพ์ 4";
             this.labelDump4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
@@ -1134,7 +1134,7 @@ namespace SKTRFID1
             this.labelDump5.Name = "labelDump5";
             this.labelDump5.Size = new System.Drawing.Size(268, 121);
             this.labelDump5.TabIndex = 1;
-            this.labelDump5.Text = "DUMP 5";
+            this.labelDump5.Text = "ดัมพ์ 5";
             this.labelDump5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
@@ -1156,7 +1156,7 @@ namespace SKTRFID1
             this.labelDump6.Name = "labelDump6";
             this.labelDump6.Size = new System.Drawing.Size(268, 121);
             this.labelDump6.TabIndex = 1;
-            this.labelDump6.Text = "DUMP 6";
+            this.labelDump6.Text = "ดัมพ์ 6";
             this.labelDump6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
@@ -1178,7 +1178,7 @@ namespace SKTRFID1
             this.labelDump7.Name = "labelDump7";
             this.labelDump7.Size = new System.Drawing.Size(270, 121);
             this.labelDump7.TabIndex = 1;
-            this.labelDump7.Text = "DUMP 7";
+            this.labelDump7.Text = "ดัมพ์ 7";
             this.labelDump7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1

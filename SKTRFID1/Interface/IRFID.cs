@@ -11,5 +11,6 @@ namespace SKTRFID1.Interface
     {
         DataModel GetDataByDump(int dump);
         List<DataModel> GetDatas();
+        string UpdateRFID(DataModel data);
     }
 }

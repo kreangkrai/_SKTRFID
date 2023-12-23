@@ -94,9 +94,9 @@ namespace SKTRFIDCCS1
                 lblDSP_03.Text = DSP_03.ToString();
                 lblDSP_04.Text = DSP_04.ToString();
                 lblDSP_05.Text = DSP_05.ToString();
-                lblDSP_06.Text = DSP_06.ToString();
-                lblDSP_07.Text = DSP_07.ToString();
-                lblDSP_08.Text = DSP_08.ToString();
+                lblDSP_07.Text = DSP_06.ToString();
+                lblDSP_08.Text = DSP_07.ToString();
+                lblDSP_09.Text = DSP_08.ToString();
                 lblDSP_09.Text = DSP_09.ToString();
                 lblDSP_10.Text = DSP_10.ToString();
                 lblDSP_11.Text = DSP_11.ToString();
@@ -118,6 +118,11 @@ namespace SKTRFIDCCS1
             {
                 Application.Exit();
             }
+        }
+
+        private void lblDSP_10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

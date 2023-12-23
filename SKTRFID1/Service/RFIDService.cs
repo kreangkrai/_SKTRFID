@@ -105,7 +105,7 @@ namespace SKTRFID1.Service
                                 truck_type = Convert.ToInt32(dr["truck_type"].ToString()),
                                 weight_type = Convert.ToInt32(dr["weight_type"].ToString()),
                                 queue_status = Convert.ToInt32(dr["queue_status"].ToString()),
-                                rfid_lastdate = Convert.ToDateTime(dr["rfid_lastdate"].ToString())
+                                rfid_lastdate = dr["rfid_lastdate"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dr["rfid_lastdate"].ToString())
                             };
                             datas.Add(data);
                         }
@@ -117,6 +117,37 @@ namespace SKTRFID1.Service
             catch
             {
                 return datas;
+            }
+        }
+        public string UpdateRFID(DataModel data)
+        {
+            try
+            {
+                string connectionString = DBConnectService.data_source();
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+                    SqlCommand cmd = new SqlCommand($@"UPDATE tb_rfid SET rfid=N'{data.rfid}',
+                                                                          barcode=N'{data.barcode}',
+                                                                          cane_type='{data.cane_type}',
+                                                                          allergen='{data.allergen}',
+                                                                          truck_number=N'{data.truck_number}', 
+                                                                          rfid_lastdate='{data.rfid_lastdate}',
+                                                                          truck_type='{data.truck_type}',
+                                                                          weight_type='{data.weight_type}',
+                                                                          queue_status='{data.queue_status}'
+                                                                          WHERE dump_id='{data.dump_id}' ", cn);
+                    
+                    cmd.ExecuteNonQuery();
+                }
+                return "Success";
+            }
+            catch
+            {
+                return "Fail";
             }
         }
     }

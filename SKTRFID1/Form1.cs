@@ -13,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnifiedAutomation.UaClient;
@@ -49,10 +50,10 @@ namespace SKTRFID1
             cj2.Active = true;
 
             cj1 = new CJ2Compolet();
-            cj1.HeartBeatTimer = 3000;
+            cj1.HeartBeatTimer = 1000;
             cj1.ConnectionType = ConnectionType.UCMM;
             cj1.UseRoutePath = false;
-            cj1.PeerAddress = "192.168.250.104";
+            cj1.PeerAddress = setting.ip_plc_common;
             cj1.LocalPort = 2;
             cj1.OnHeartBeatTimer += Cj1_OnHeartBeatTimer;
             cj1.Active = true;
@@ -115,6 +116,42 @@ namespace SKTRFID1
         {
             try
             {
+                //Read Barcode
+                bool b_D1 = true;
+                bool b_D2 = true;
+                bool b_D3 = true;
+                bool b_D4 = true;
+                bool b_D5 = true;
+                bool b_D6 = true;
+                bool b_D7 = true;
+                string bar_D1 = (string)cj2.ReadVariable("Bar_ID1");
+                string bar_D2 = (string)cj2.ReadVariable("Bar_ID2");
+                string bar_D3 = (string)cj2.ReadVariable("Bar_ID3");
+                string bar_D4 = (string)cj2.ReadVariable("Bar_ID4");
+                string bar_D5 = (string)cj2.ReadVariable("Bar_ID5");
+                string bar_D6 = (string)cj2.ReadVariable("Bar_ID6");
+                string bar_D7 = (string)cj2.ReadVariable("Bar_ID7");
+
+                b_D1 = bar_D1 == "" ? false : true;
+                b_D2 = bar_D2 == "" ? false : true;
+                b_D3 = bar_D3 == "" ? false : true;
+                b_D4 = bar_D4 == "" ? false : true;
+                b_D5 = bar_D5 == "" ? false : true;
+                b_D6 = bar_D6 == "" ? false : true;
+                b_D7 = bar_D7 == "" ? false : true;
+
+                List<DataModel> datas = RFID.GetDatas();
+                if (datas.Count > 0)
+                {
+                    ShowDisplay(truck_license1, truck_date1, cane_type1, truck_type1, datas, "1", b_D1);
+                    ShowDisplay(truck_license2, truck_date2, cane_type2, truck_type2, datas, "2", b_D2);
+                    ShowDisplay(truck_license3, truck_date3, cane_type3, truck_type3, datas, "3", b_D3);
+                    ShowDisplay(truck_license4, truck_date4, cane_type4, truck_type4, datas, "4", b_D4);
+                    ShowDisplay(truck_license5, truck_date5, cane_type5, truck_type5, datas, "5", b_D5);
+                    ShowDisplay(truck_license6, truck_date6, cane_type6, truck_type6, datas, "6", b_D6);
+                    ShowDisplay(truck_license7, truck_date7, cane_type7, truck_type7, datas, "7", b_D7);
+                }
+
                 bool auto_d1 = (bool)cj2.ReadVariable("Call_D1");
                 bool auto_d2 = (bool)cj2.ReadVariable("Call_D2");
                 bool auto_d3 = (bool)cj2.ReadVariable("Call_D3");
@@ -122,127 +159,27 @@ namespace SKTRFID1
                 bool auto_d5 = (bool)cj2.ReadVariable("Call_D5");
                 bool auto_d6 = (bool)cj2.ReadVariable("Call_D6");
                 bool auto_d7 = (bool)cj2.ReadVariable("Call_D7");
-             
-
-                //bool sound_d1 = (bool)cj2.ReadVariable("SOUND_D1");
-                //bool sound_d2 = (bool)cj2.ReadVariable("SOUND_D2");
-                //bool sound_d3 = (bool)cj2.ReadVariable("SOUND_D3");
-                //bool sound_d4 = (bool)cj2.ReadVariable("SOUND_D4");
-                //bool sound_d5 = (bool)cj2.ReadVariable("SOUND_D5");
-                //bool sound_d6 = (bool)cj2.ReadVariable("SOUND_D6");
-                //bool sound_d7 = (bool)cj2.ReadVariable("SOUND_D7");
-
-                //if (sound_d1)
-                //{
-                //    // Call Dump
-                //    try
-                //    {
-                //        string path = Directory.GetCurrentDirectory();
-                //        SoundPlayer dump_wave_file = new SoundPlayer();
-                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump1.wav");
-                //        dump_wave_file.PlaySync();
-                //    }
-                //    catch
-                //    {
-
-                //    }
-                //}
-                //if (sound_d2)
-                //{
-                //    // Call Dump
-                //    try
-                //    {
-                //        string path = Directory.GetCurrentDirectory();
-                //        SoundPlayer dump_wave_file = new SoundPlayer();
-                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump2.wav");
-                //        dump_wave_file.PlaySync();
-                //    }
-                //    catch
-                //    {
-
-                //    }
-                //}
-                //if (sound_d3)
-                //{
-                //    // Call Dump
-                //    try
-                //    {
-                //        string path = Directory.GetCurrentDirectory();
-                //        SoundPlayer dump_wave_file = new SoundPlayer();
-                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump3.wav");
-                //        dump_wave_file.PlaySync();
-                //    }
-                //    catch
-                //    {
-
-                //    }
-                //}
-
-                //if (sound_d4)
-                //{
-                //    // Call Dump
-                //    try
-                //    {
-                //        string path = Directory.GetCurrentDirectory();
-                //        SoundPlayer dump_wave_file = new SoundPlayer();
-                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump4.wav");
-                //        dump_wave_file.PlaySync();
-                //    }
-                //    catch
-                //    {
-
-                //    }
-                //}
-
-                //if (sound_d5)
-                //{
-                //    // Call Dump
-                //    try
-                //    {
-                //        string path = Directory.GetCurrentDirectory();
-                //        SoundPlayer dump_wave_file = new SoundPlayer();
-                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump5.wav");
-                //        dump_wave_file.PlaySync();
-                //    }
-                //    catch
-                //    {
-
-                //    }
-                //}
 
 
-                //if (sound_d6)
-                //{
-                //    // Call Dump
-                //    try
-                //    {
-                //        string path = Directory.GetCurrentDirectory();
-                //        SoundPlayer dump_wave_file = new SoundPlayer();
-                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump6.wav");
-                //        dump_wave_file.PlaySync();
-                //    }
-                //    catch
-                //    {
+                int sound_d = (int)cj2.ReadVariable("NUM_SOUND_D");
 
-                //    }
-                //}
+                
 
-                //if (sound_d7)
-                //{
-                //    // Call Dump
-                //    try
-                //    {
-                //        string path = Directory.GetCurrentDirectory();
-                //        SoundPlayer dump_wave_file = new SoundPlayer();
-                //        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump7.wav");
-                //        dump_wave_file.PlaySync();
-                //    }
-                //    catch
-                //    {
+                if (sound_d > 0)
+                {
+                    // Call Dump
+                    try
+                    {
+                        string path = Directory.GetCurrentDirectory();
+                        SoundPlayer dump_wave_file = new SoundPlayer();
+                        dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump{sound_d}.wav");
+                        dump_wave_file.PlaySync();
+                    }
+                    catch
+                    {
 
-                //    }
-                //}
-
+                    }
+                }
 
                 windows_title = new List<string>();
                 Process[] process = Process.GetProcesses();
@@ -259,113 +196,104 @@ namespace SKTRFID1
                 {
                     StartProcess(setting.ip1, "1", phase);
                 }
+                else
+                {
+                    foreach (var p in process)
+                    {
+                        if (p.MainWindowTitle == setting.ip1 + " : 1")
+                        {
+                            p.Kill();
+                        }
+                    }
+                }
+
                 if (auto_d2)
                 {
                     StartProcess(setting.ip1, "2", phase);
                 }
+                else
+                {
+                    foreach (var p in process)
+                    {
+                        if (p.MainWindowTitle == setting.ip1 + " : 2")
+                        {
+                            p.Kill();
+                        }
+                    }
+                }
+
                 if (auto_d3)
                 {
                     StartProcess(setting.ip1, "3", phase);
                 }
+                else
+                {
+                    foreach (var p in process)
+                    {
+                        if (p.MainWindowTitle == setting.ip1 + " : 3")
+                        {
+                            p.Kill();
+                        }
+                    }
+                }
+
                 if (auto_d4)
                 {
                     StartProcess(setting.ip1, "4", phase);
                 }
+                else
+                {
+                    foreach (var p in process)
+                    {
+                        if (p.MainWindowTitle == setting.ip1 + " : 4")
+                        {
+                            p.Kill();
+                        }
+                    }
+                }
+
                 if (auto_d5)
                 {
                     StartProcess(setting.ip2, "5", phase);
                 }
+                else
+                {
+                    foreach (var p in process)
+                    {
+                        if (p.MainWindowTitle == setting.ip2 + " : 5")
+                        {
+                            p.Kill();
+                        }
+                    }
+                }
+
                 if (auto_d6)
                 {
                     StartProcess(setting.ip2, "6", phase);
+                }
+                else
+                {
+                    foreach (var p in process)
+                    {
+                        if (p.MainWindowTitle == setting.ip2 + " : 6")
+                        {
+                            p.Kill();
+                        }
+                    }
                 }
 
                 if (auto_d7)
                 {
                     StartProcess(setting.ip2, "7", phase);
                 }
-
-                List<DataModel> datas = RFID.GetDatas();
-                if (datas.Count > 0)
+                else
                 {
-                    ShowDisplay(truck_license1, truck_date1, cane_type1, truck_type1, datas, "1");
-                    ShowDisplay(truck_license2, truck_date2, cane_type2, truck_type2, datas, "2");
-                    ShowDisplay(truck_license3, truck_date3, cane_type3, truck_type3, datas, "3");
-                    ShowDisplay(truck_license4, truck_date4, cane_type4, truck_type4, datas, "4");
-                    ShowDisplay(truck_license5, truck_date5, cane_type5, truck_type5, datas, "5");
-                    ShowDisplay(truck_license6, truck_date6, cane_type6, truck_type6, datas, "6");
-                    ShowDisplay(truck_license7, truck_date7, cane_type7, truck_type7, datas, "7");
-
-                    DataModel last_data = datas.OrderByDescending(o => o.rfid_lastdate).FirstOrDefault();
-
-                    //Clear Label Dump Last Data Update
-                    if (labels.labelDump != null)
+                    foreach (var p in process)
                     {
-                        ClearLastDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType,labels.labelTruckType, labels.labelLastDate);
-                    }
-
-                    if (last_data.dump_id == "1")
-                    {
-                        labels.labelDump = labelDump1;
-                        labels.labelTruckLicense = truck_license1;
-                        labels.labelCaneType = cane_type1;
-                        labels.labelTruckType = truck_type1;
-                        labels.labelLastDate = truck_date1;
-                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType,labels.labelTruckType, labels.labelLastDate);
-                    }
-                    if (last_data.dump_id == "2")
-                    {
-                        labels.labelDump = labelDump2;
-                        labels.labelTruckLicense = truck_license2;
-                        labels.labelCaneType = cane_type2;
-                        labels.labelTruckType = truck_type2;
-                        labels.labelLastDate = truck_date2;
-                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                    }
-                    if (last_data.dump_id == "3")
-                    {
-                        labels.labelDump = labelDump3;
-                        labels.labelTruckLicense = truck_license3;
-                        labels.labelCaneType = cane_type3;
-                        labels.labelTruckType = truck_type3;
-                        labels.labelLastDate = truck_date3;
-                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                    }
-                    if (last_data.dump_id == "4")
-                    {
-                        labels.labelDump = labelDump4;
-                        labels.labelTruckLicense = truck_license4;
-                        labels.labelCaneType = cane_type4;
-                        labels.labelTruckType = truck_type4;
-                        labels.labelLastDate = truck_date4;
-                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                    }
-                    if (last_data.dump_id == "5")
-                    {
-                        labels.labelDump = labelDump5;
-                        labels.labelTruckLicense = truck_license5;
-                        labels.labelCaneType = cane_type5;
-                        labels.labelTruckType = truck_type5;
-                        labels.labelLastDate = truck_date5;                        
-                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);                        
-                    }
-                    if (last_data.dump_id == "6")
-                    {
-                        labels.labelDump = labelDump6;
-                        labels.labelTruckLicense = truck_license6;
-                        labels.labelCaneType = cane_type6;
-                        labels.labelTruckType = truck_type6;
-                        labels.labelLastDate = truck_date6;
-                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
-                    }
-                    if (last_data.dump_id == "7")
-                    {
-                        labels.labelDump = labelDump7;
-                        labels.labelTruckLicense = truck_license7;
-                        labels.labelCaneType = cane_type7;
-                        labels.labelTruckType = truck_type7;
-                        labels.labelLastDate = truck_date7;
-                        LastUpdateDisplay(labels.labelDump, labels.labelTruckLicense, labels.labelCaneType, labels.labelTruckType, labels.labelLastDate);
+                        if (p.MainWindowTitle == setting.ip2 + " : 7")
+                        {
+                            p.Kill();
+                        }
                     }
                 }
             }
@@ -377,16 +305,26 @@ namespace SKTRFID1
             }
         }
 
-        private void ShowDisplay(Label truck_license, Label truck_date, Label cane_type,Label truck_type, List<DataModel> datas ,string dump)
+        private void ShowDisplay(Label truck_license, Label truck_date, Label cane_type,Label truck_type, List<DataModel> datas ,string dump,bool isShow)
         {
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("th-TH");
-            var data = datas.Where(w => w.dump_id == dump).FirstOrDefault();
-            if (data != null)
+            if (isShow)
             {
-                truck_license.Text = data.truck_number;
-                truck_date.Text = data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                cane_type.Text = CaneType(data.cane_type);
-                truck_type.Text = truckType(data.truck_type);
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("th-TH");
+                var data = datas.Where(w => w.dump_id == dump).FirstOrDefault();
+                if (data != null)
+                {
+                    truck_license.Text = data.truck_number;
+                    truck_date.Text = data.rfid_lastdate == DateTime.MinValue ? "" : data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
+                    cane_type.Text = CaneType(data.cane_type);
+                    truck_type.Text = truckType(data.truck_type);
+                }
+                else
+                {
+                    truck_license.Text = "";
+                    truck_date.Text = "";
+                    cane_type.Text = "";
+                    truck_type.Text = "";
+                }
             }
             else
             {
@@ -396,22 +334,22 @@ namespace SKTRFID1
                 truck_type.Text = "";
             }
         }
-        private void LastUpdateDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType,Label labelTruckType, Label labelLastDate)
-        {
-            labelDump.BackColor = Color.FromArgb(47, 216, 54);
-            labelTruckLicense.ForeColor = Color.Red;
-            labelCaneType.ForeColor = Color.Red;
-            labelTruckType.ForeColor = Color.Red;
-            labelLastDate.ForeColor = Color.Red;
-        }
-        private void ClearLastDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType, Label labelTruckType, Label labelLastDate)
-        {
-            labelDump.BackColor = Color.FromArgb(28, 184, 185);
-            labelTruckLicense.ForeColor = Color.Black;
-            labelCaneType.ForeColor = Color.Black;
-            labelTruckType.ForeColor = Color.Black;
-            labelLastDate.ForeColor = Color.Black;
-        }
+        //private void LastUpdateDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType,Label labelTruckType, Label labelLastDate)
+        //{
+        //    labelDump.BackColor = Color.FromArgb(47, 216, 54);
+        //    labelTruckLicense.ForeColor = Color.Red;
+        //    labelCaneType.ForeColor = Color.Red;
+        //    labelTruckType.ForeColor = Color.Red;
+        //    labelLastDate.ForeColor = Color.Red;
+        //}
+        //private void ClearLastDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType, Label labelTruckType, Label labelLastDate)
+        //{
+        //    labelDump.BackColor = Color.FromArgb(28, 184, 185);
+        //    labelTruckLicense.ForeColor = Color.Black;
+        //    labelCaneType.ForeColor = Color.Black;
+        //    labelTruckType.ForeColor = Color.Black;
+        //    labelLastDate.ForeColor = Color.Black;
+        //}
         private void StartProcess(string server,string dump,string phase)
         {
             string title = server + " : " + dump;
@@ -433,6 +371,10 @@ namespace SKTRFID1
         }
         private string CaneType(int n)
         {
+            if (n == -1)
+            {
+                return "";
+            }
             List<string> canes_type = new List<string>();
             canes_type.Add("สดท่อน");
             canes_type.Add("ไฟไหม้ท่อน");
@@ -443,6 +385,10 @@ namespace SKTRFID1
         }
         private string truckType(int n)
         {
+            if (n == -1)
+            {
+                return "";
+            }
             List<string> trucks_type = new List<string>();
             trucks_type.Add("");
             trucks_type.Add("รถเดี่ยว");

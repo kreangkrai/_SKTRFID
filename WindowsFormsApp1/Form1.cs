@@ -136,5 +136,11 @@ namespace WindowsFormsApp1
         {
             cj2.WriteVariable("Call_D7", false);
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string x = int.Parse("29E82", System.Globalization.NumberStyles.HexNumber).ToString();
+
+        }
     }
 }
