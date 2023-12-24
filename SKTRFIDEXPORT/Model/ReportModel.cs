@@ -8,6 +8,7 @@ namespace SKTRFIDEXPORT.Model
 {
     class ReportModel
     {
+        public int queue { get; set; }
         public int dump_id { get; set; }
         public DateTime date { get; set; }
         public int area_id { get; set; }

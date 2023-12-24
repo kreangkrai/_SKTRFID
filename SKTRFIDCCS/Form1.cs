@@ -106,9 +106,9 @@ namespace SKTRFIDCCS1
                 lblDSP_15.Text = DSP_15 == 0 ? "" : DSP_15.ToString();
                 lblDSP_16.Text = DSP_16 == 0 ? "" : DSP_16.ToString();
             }
-            catch(Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                
             }
         }
         private void btnExit_Click(object sender, EventArgs e)
@@ -118,11 +118,6 @@ namespace SKTRFIDCCS1
             {
                 Application.Exit();
             }
-        }
-
-        private void lblDSP_10_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

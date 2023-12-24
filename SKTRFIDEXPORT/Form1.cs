@@ -52,7 +52,7 @@ namespace SKTRFIDEXPORT
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
                 row.Height = 35;
-                row.Cells[0].Value = (i+1);
+                row.Cells[0].Value = reports[i].queue;
                 row.Cells[1].Value = reports[i].dump_id;
                 row.Cells[2].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
                 row.Cells[3].Value = reports[i].round;

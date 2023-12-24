@@ -9,6 +9,7 @@ namespace SKTRFIDEXPORT.Model
     class DataModel
     {
         public int dump_id { get; set; }
+        public int queue { get; set; }
         public int area_id { get; set; }
         public string crop_year { get; set; }
         public string rfid { get; set; }

@@ -28,6 +28,8 @@ namespace SKTRFID1
         List<string> windows_title;
         LabelModel labels;
         string phase = "1";
+        bool isManual = false;
+        List<bool> isManuals;
         public Form1()
         {
             InitializeComponent();
@@ -50,7 +52,7 @@ namespace SKTRFID1
             cj2.Active = true;
 
             cj1 = new CJ2Compolet();
-            cj1.HeartBeatTimer = 3000;
+            cj1.HeartBeatTimer = 1000;
             cj1.ConnectionType = ConnectionType.UCMM;
             cj1.UseRoutePath = false;
             cj1.PeerAddress = setting.ip_plc_common;
@@ -61,6 +63,8 @@ namespace SKTRFID1
 
         private void Cj1_OnHeartBeatTimer(object sender, EventArgs e)
         {
+            isManuals = new List<bool>();
+            
             bool manual_d1 = (bool)cj1.ReadVariable("MN_SCAN_D1");
             bool manual_d2 = (bool)cj1.ReadVariable("MN_SCAN_D2");
             bool manual_d3 = (bool)cj1.ReadVariable("MN_SCAN_D3");
@@ -71,42 +75,49 @@ namespace SKTRFID1
 
             if (manual_d1)
             {
+                isManuals.Add(manual_d1);
                 cj1.WriteVariable("MN_SCAN_D1", false);
                 StartProcessCommon("1", phase);
             }
 
             if (manual_d2)
             {
+                isManuals.Add(manual_d2);
                 cj1.WriteVariable("MN_SCAN_D2", false);
                 StartProcessCommon("2", phase);
             }
 
             if (manual_d3)
             {
+                isManuals.Add(manual_d3);
                 cj1.WriteVariable("MN_SCAN_D3", false);
                 StartProcessCommon("3", phase);
             }
 
             if (manual_d4)
             {
+                isManuals.Add(manual_d4);
                 cj1.WriteVariable("MN_SCAN_D4", false);
                 StartProcessCommon("4", phase);
             }
 
             if (manual_d5)
             {
+                isManuals.Add(manual_d5);
                 cj1.WriteVariable("MN_SCAN_D5", false);
                 StartProcessCommon("5", phase);
             }
 
             if (manual_d6)
             {
+                isManuals.Add(manual_d6);
                 cj1.WriteVariable("MN_SCAN_D6", false);
                 StartProcessCommon("6", phase);
             }
 
             if (manual_d7)
             {
+                isManuals.Add(manual_d7);
                 cj1.WriteVariable("MN_SCAN_D7", false);
                 StartProcessCommon("7", phase);
             }
@@ -179,105 +190,124 @@ namespace SKTRFID1
                     }
                 }
 
-                windows_title = new List<string>();
-                Process[] process = Process.GetProcesses();
-                foreach(var p in process)
+                //Check Manual except kill program ; false
+                isManual = isManuals.Any(a => a == true);
+                if (!isManual)
                 {
-                    if (p.MainWindowTitle != "")
+                    windows_title = new List<string>();
+                    Process[] process = Process.GetProcesses();
+                    foreach (var p in process)
                     {
-                        windows_title.Add(p.MainWindowTitle);
+                        if (p.MainWindowTitle != "" && p.MainWindowTitle.Contains("192.168"))
+                        {
+                            windows_title.Add(p.MainWindowTitle);
+                        }
                     }
-                }
 
-                SettingModel setting = Setting.GetSetting();
-                if (auto_d1)
-                {
-                    StartProcess(setting.ip1, "1", phase);
-                }
-                else
-                {
-                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 1").FirstOrDefault();
-                    if (p != null)
+                    SettingModel setting = Setting.GetSetting();
+                    if (auto_d1)
                     {
-                        p.Kill();
-                    }                   
-                }
-
-                if (auto_d2)
-                {
-                    StartProcess(setting.ip1, "2", phase);
-                }
-                else
-                {
-                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 2").FirstOrDefault();
-                    if (p != null)
-                    {
-                        p.Kill();
+                        StartProcess(setting.ip1, "1", phase);
                     }
-                }
-
-                if (auto_d3)
-                {
-                    StartProcess(setting.ip1, "3", phase);
-                }
-                else
-                {
-                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 3").FirstOrDefault();
-                    if (p != null)
+                    else
                     {
-                        p.Kill();
+                        foreach (var p in process)
+                        {
+                            if (p.MainWindowTitle == setting.ip1 + " : 1")
+                            {
+                                p.Kill();
+                            }
+                        }
                     }
-                }
 
-                if (auto_d4)
-                {
-                    StartProcess(setting.ip1, "4", phase);
-                }
-                else
-                {
-                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 4").FirstOrDefault();
-                    if (p != null)
+                    if (auto_d2)
                     {
-                        p.Kill();
+                        StartProcess(setting.ip1, "2", phase);
                     }
-                }
-
-                if (auto_d5)
-                {
-                    StartProcess(setting.ip2, "5", phase);
-                }
-                else
-                {
-                    Process p = process.Where(w => w.MainWindowTitle == setting.ip2 + " : 5").FirstOrDefault();
-                    if (p != null)
+                    else
                     {
-                        p.Kill();
+                        foreach (var p in process)
+                        {
+                            if (p.MainWindowTitle == setting.ip1 + " : 2")
+                            {
+                                p.Kill();
+                            }
+                        }
                     }
-                }
 
-                if (auto_d6)
-                {
-                    StartProcess(setting.ip2, "6", phase);
-                }
-                else
-                {
-                    Process p = process.Where(w => w.MainWindowTitle == setting.ip2 + " : 6").FirstOrDefault();
-                    if (p != null)
+                    if (auto_d3)
                     {
-                        p.Kill();
+                        StartProcess(setting.ip1, "3", phase);
                     }
-                }
-
-                if (auto_d7)
-                {
-                    StartProcess(setting.ip2, "7", phase);
-                }
-                else
-                {
-                    Process p = process.Where(w => w.MainWindowTitle == setting.ip2 + " : 7").FirstOrDefault();
-                    if (p != null)
+                    else
                     {
-                        p.Kill();
+                        foreach (var p in process)
+                        {
+                            if (p.MainWindowTitle == setting.ip1 + " : 3")
+                            {
+                                p.Kill();
+                            }
+                        }
+                    }
+
+                    if (auto_d4)
+                    {
+                        StartProcess(setting.ip1, "4", phase);
+                    }
+                    else
+                    {
+                        foreach (var p in process)
+                        {
+                            if (p.MainWindowTitle == setting.ip1 + " : 4")
+                            {
+                                p.Kill();
+                            }
+                        }
+                    }
+
+                    if (auto_d5)
+                    {
+                        StartProcess(setting.ip2, "5", phase);
+                    }
+                    else
+                    {
+                        foreach (var p in process)
+                        {
+                            if (p.MainWindowTitle == setting.ip2 + " : 5")
+                            {
+                                p.Kill();
+                            }
+                        }
+                    }
+
+                    if (auto_d6)
+                    {
+                        StartProcess(setting.ip2, "6", phase);
+                    }
+                    else
+                    {
+                        foreach (var p in process)
+                        {
+                            if (p.MainWindowTitle == setting.ip2 + " : 6")
+                            {
+                                p.Kill();
+                            }
+                        }
+                    }
+
+                    if (auto_d7)
+                    {
+                        StartProcess(setting.ip2, "7", phase);
+                    }
+                    else
+                    {
+                        foreach (var p in process)
+                        {
+                            if (p.MainWindowTitle == setting.ip2 + " : 7")
+                            {
+                                p.Kill();
+                            }
+                        }
                     }
                 }
             }
@@ -318,22 +348,6 @@ namespace SKTRFID1
                 truck_type.Text = "";
             }
         }
-        //private void LastUpdateDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType,Label labelTruckType, Label labelLastDate)
-        //{
-        //    labelDump.BackColor = Color.FromArgb(47, 216, 54);
-        //    labelTruckLicense.ForeColor = Color.Red;
-        //    labelCaneType.ForeColor = Color.Red;
-        //    labelTruckType.ForeColor = Color.Red;
-        //    labelLastDate.ForeColor = Color.Red;
-        //}
-        //private void ClearLastDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType, Label labelTruckType, Label labelLastDate)
-        //{
-        //    labelDump.BackColor = Color.FromArgb(28, 184, 185);
-        //    labelTruckLicense.ForeColor = Color.Black;
-        //    labelCaneType.ForeColor = Color.Black;
-        //    labelTruckType.ForeColor = Color.Black;
-        //    labelLastDate.ForeColor = Color.Black;
-        //}
         private void StartProcess(string server,string dump,string phase)
         {
             string title = server + " : " + dump;
@@ -380,22 +394,5 @@ namespace SKTRFID1
             trucks_type.Add("พ่วงลูก");
             return trucks_type[n];
         }
-        //private string weightType(int n)
-        //{
-        //    List<string> weights_type = new List<string>();
-        //    weights_type.Add("");
-        //    weights_type.Add("ชั่งรวม");
-        //    weights_type.Add("ชั่งแยก");
-        //    return weights_type[n];
-        //}
-        //private string queueStatus(int n)
-        //{
-        //    List<string> queues_status = new List<string>();
-        //    queues_status.Add("");
-        //    queues_status.Add("แจ้งคิวแล้ว");
-        //    queues_status.Add("ชั่งเข้าแล้ว");
-        //    queues_status.Add("ดัมพ์แล้ว");
-        //    return queues_status[n];
-        //}
     }
 }

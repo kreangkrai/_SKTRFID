@@ -19,9 +19,9 @@ namespace SKTRFIDCCS1
             //Application.Run(new Form1());
             Form1 f = new Form1();
             Screen[] screen = Screen.AllScreens;
-            if (screen.Length > 2)
+            if (screen.Length > 1)
             {
-                f.Location = Screen.AllScreens[2].WorkingArea.Location;
+                f.Location = Screen.AllScreens[1].WorkingArea.Location;
             }
             else
             {

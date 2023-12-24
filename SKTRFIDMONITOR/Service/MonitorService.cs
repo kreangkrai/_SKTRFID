@@ -154,7 +154,7 @@ namespace SKTRFIDMONITOR.Service
                     }
 
                     SqlCommand cmd = new SqlCommand($@"SELECT rfid.dump_id,
-	                                                   CCS.Queue,
+	                                                   CCS.Queue as queue,
 	                                                   rfid.area_id,
 	                                                   rfid.barcode,
 	                                                   rfid.crop_year,

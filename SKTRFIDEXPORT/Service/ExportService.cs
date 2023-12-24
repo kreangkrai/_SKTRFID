@@ -78,7 +78,20 @@ namespace SKTRFIDEXPORT.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM tb_rfid_log WHERE rfid_lastdate BETWEEN '{start.Date.Date}' AND '{stop.Date.Date}' ORDER BY rfid_lastdate,dump_id ", cn);
+                    SqlCommand cmd = new SqlCommand($@"SELECT rfid.dump_id,
+	                                                   CCS.Queue as queue,
+	                                                   rfid.area_id,
+	                                                   rfid.barcode,
+	                                                   rfid.crop_year,
+	                                                   rfid.cane_type,
+	                                                   rfid.rfid,
+	                                                   rfid.truck_number,
+	                                                   rfid.allergen,
+	                                                   rfid.rfid_lastdate FROM tb_rfid_log as rfid 
+                                                LEFT JOIN
+                                                (SELECT * FROM [192.168.250.2,1798].[CCS].[dbo].[Loading]) as CCS ON rfid.barcode = CCS.Barcode
+                                                WHERE rfid.rfid_lastdate BETWEEN '{start.ToString("yyyy-MM-dd 00:00:00")}' AND '{stop.Date.ToString("yyyy-MM-dd 23:59:59")}'
+                                                ORDER BY rfid.rfid_lastdate", cn);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     if (dr.HasRows)
@@ -87,6 +100,7 @@ namespace SKTRFIDEXPORT.Service
                         {
                             DataModel data = new DataModel()
                             {
+                                queue = Convert.ToInt32(dr["queue"].ToString()),
                                 dump_id = Convert.ToInt32(dr["dump_id"].ToString()),
                                 area_id = Convert.ToInt32(dr["area_id"].ToString()),
                                 crop_year = dr["crop_year"].ToString(),
@@ -131,6 +145,7 @@ namespace SKTRFIDEXPORT.Service
                         }
                         reports.Add(new ReportModel()
                         {
+                            queue = _datas[j].queue,
                             dump_id = _datas[j].dump_id,
                             date = _datas[j].rfid_lastdate,
                             area_id = _datas[j].area_id,

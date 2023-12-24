@@ -50,8 +50,7 @@ namespace SKTCLEARBARCODE
             DialogResult dialog = MessageBox.Show("ต้องการยืนยันหรือไม่ ?", "SKT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {
-                string x = "";
-                cj2.WriteVariable("Bar_ID2", x);
+                cj2.WriteVariable("Bar_ID2", "");
             }
         }
 
@@ -69,7 +68,7 @@ namespace SKTCLEARBARCODE
             DialogResult dialog = MessageBox.Show("ต้องการยืนยันหรือไม่ ?", "SKT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {
-                cj2.WriteVariable("Bar_ID4", "000000000000000");
+                cj2.WriteVariable("Bar_ID4", "");
             }
         }
 
