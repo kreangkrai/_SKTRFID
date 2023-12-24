@@ -59,12 +59,13 @@ namespace SKTRFID1
             cj1.LocalPort = 2;
             cj1.OnHeartBeatTimer += Cj1_OnHeartBeatTimer;
             cj1.Active = true;
+
+            isManuals = new List<bool>();
         }
 
         private void Cj1_OnHeartBeatTimer(object sender, EventArgs e)
         {
-            isManuals = new List<bool>();
-            
+
             bool manual_d1 = (bool)cj1.ReadVariable("MN_SCAN_D1");
             bool manual_d2 = (bool)cj1.ReadVariable("MN_SCAN_D2");
             bool manual_d3 = (bool)cj1.ReadVariable("MN_SCAN_D3");
@@ -310,12 +311,18 @@ namespace SKTRFID1
                         }
                     }
                 }
+
+                isManuals = new List<bool>();
             }
             catch (Exception ex)
             {
                 //Weite Data to text file
                 string loca = @"D:\log_plc.txt";
                 File.AppendAllText(loca, DateTime.Now + " " + ex.Message + " " + Environment.NewLine);
+            }
+            finally
+            {
+                isManuals = new List<bool>();
             }
         }
 
