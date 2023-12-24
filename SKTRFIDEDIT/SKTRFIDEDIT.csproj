@@ -61,7 +61,6 @@
     <Compile Include="Model\SubDataModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\DBConnectService.cs" />
     <Compile Include="Service\RFIDLogService.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -89,6 +88,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SKTDATABASE\SKTDATABASE.csproj">
+      <Project>{911A97E6-B63C-4C20-9E5F-0A3563A766E8}</Project>
+      <Name>SKTDATABASE</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

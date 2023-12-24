@@ -70,7 +70,6 @@
     <Compile Include="Model\SettingModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\DBConnectService.cs" />
     <Compile Include="Service\RFIDService.cs" />
     <Compile Include="Service\SettingService.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -168,6 +167,11 @@
     <Content Include="Voice\อ.wav" />
     <Content Include="Voice\ฮ.wav" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SKTDATABASE\SKTDATABASE.csproj">
+      <Project>{911a97e6-b63c-4c20-9e5f-0a3563a766e8}</Project>
+      <Name>SKTDATABASE</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

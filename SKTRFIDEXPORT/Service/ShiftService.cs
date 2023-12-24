@@ -1,4 +1,5 @@
-﻿using SKTRFIDEXPORT.Interface;
+﻿using SKTDATABASE;
+using SKTRFIDEXPORT.Interface;
 using SKTRFIDEXPORT.Model;
 using System;
 using System.Collections.Generic;

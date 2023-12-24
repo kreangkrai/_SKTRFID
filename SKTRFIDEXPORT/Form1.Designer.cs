@@ -75,6 +75,7 @@ namespace SKTRFIDEXPORT
             this.dateTimePickerStat.Name = "dateTimePickerStat";
             this.dateTimePickerStat.Size = new System.Drawing.Size(143, 32);
             this.dateTimePickerStat.TabIndex = 0;
+            this.dateTimePickerStat.ValueChanged += new System.EventHandler(this.dateTimePickerStat_ValueChanged);
             // 
             // dateTimePickerStop
             // 
@@ -85,6 +86,7 @@ namespace SKTRFIDEXPORT
             this.dateTimePickerStop.Name = "dateTimePickerStop";
             this.dateTimePickerStop.Size = new System.Drawing.Size(156, 32);
             this.dateTimePickerStop.TabIndex = 1;
+            this.dateTimePickerStop.ValueChanged += new System.EventHandler(this.dateTimePickerStop_ValueChanged);
             // 
             // btnExport
             // 
@@ -121,6 +123,7 @@ namespace SKTRFIDEXPORT
             this.label1.Size = new System.Drawing.Size(93, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "วันเริ่มต้น";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -131,6 +134,7 @@ namespace SKTRFIDEXPORT
             this.label2.Size = new System.Drawing.Size(87, 26);
             this.label2.TabIndex = 5;
             this.label2.Text = "วันสิ้นสุด";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnRefresh
             // 
@@ -183,6 +187,7 @@ namespace SKTRFIDEXPORT
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1463, 642);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // no
             // 
@@ -321,6 +326,7 @@ namespace SKTRFIDEXPORT
             this.label3.Size = new System.Drawing.Size(78, 26);
             this.label3.TabIndex = 9;
             this.label3.Text = "บาร์โค้ด";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Form1
             // 

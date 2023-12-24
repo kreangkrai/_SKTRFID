@@ -1,4 +1,5 @@
-﻿using SKTRFIDSHIFT.Interface;
+﻿using SKTDATABASE;
+using SKTRFIDSHIFT.Interface;
 using SKTRFIDSHIFT.Model;
 using System;
 using System.Collections.Generic;

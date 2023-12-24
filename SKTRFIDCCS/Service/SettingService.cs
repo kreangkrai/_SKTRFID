@@ -1,4 +1,5 @@
-﻿using SKTRFIDCCS1.Interface;
+﻿using SKTDATABASE;
+using SKTRFIDCCS1.Interface;
 using SKTRFIDCCS1.Model;
 using System;
 using System.Collections.Generic;

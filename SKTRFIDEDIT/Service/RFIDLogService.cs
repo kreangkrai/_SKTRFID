@@ -1,4 +1,5 @@
-﻿using SKTRFIDEDIT.Interface;
+﻿using SKTDATABASE;
+using SKTRFIDEDIT.Interface;
 using SKTRFIDEDIT.Model;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,5 @@
-﻿using SKTRFIDSETTING.Interface;
+﻿using SKTDATABASE;
+using SKTRFIDSETTING.Interface;
 using SKTRFIDSETTING.Model;
 using System;
 using System.Collections.Generic;
