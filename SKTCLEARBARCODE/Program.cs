@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SKTRFID1
+namespace SKTCLEARBARCODE
 {
     static class Program
     {
@@ -16,19 +16,7 @@ namespace SKTRFID1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-
-            Form1 f = new Form1();
-            Screen[] screen = Screen.AllScreens;
-            if (screen.Length > 1)
-            {
-                f.Location = Screen.AllScreens[1].WorkingArea.Location;
-            }
-            else
-            {
-                f.Location = Screen.AllScreens[screen.Length - 1].WorkingArea.Location;
-            }
-            Application.Run(f);
+            Application.Run(new Form1());
         }
     }
 }

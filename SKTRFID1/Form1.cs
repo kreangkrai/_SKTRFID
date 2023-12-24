@@ -50,7 +50,7 @@ namespace SKTRFID1
             cj2.Active = true;
 
             cj1 = new CJ2Compolet();
-            cj1.HeartBeatTimer = 1000;
+            cj1.HeartBeatTimer = 3000;
             cj1.ConnectionType = ConnectionType.UCMM;
             cj1.UseRoutePath = false;
             cj1.PeerAddress = setting.ip_plc_common;
@@ -163,8 +163,6 @@ namespace SKTRFID1
 
                 int sound_d = (int)cj2.ReadVariable("NUM_SOUND_D");
 
-                
-
                 if (sound_d > 0)
                 {
                     // Call Dump
@@ -198,13 +196,11 @@ namespace SKTRFID1
                 }
                 else
                 {
-                    foreach (var p in process)
+                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 1").FirstOrDefault();
+                    if (p != null)
                     {
-                        if (p.MainWindowTitle == setting.ip1 + " : 1")
-                        {
-                            p.Kill();
-                        }
-                    }
+                        p.Kill();
+                    }                   
                 }
 
                 if (auto_d2)
@@ -213,12 +209,10 @@ namespace SKTRFID1
                 }
                 else
                 {
-                    foreach (var p in process)
+                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 2").FirstOrDefault();
+                    if (p != null)
                     {
-                        if (p.MainWindowTitle == setting.ip1 + " : 2")
-                        {
-                            p.Kill();
-                        }
+                        p.Kill();
                     }
                 }
 
@@ -228,12 +222,10 @@ namespace SKTRFID1
                 }
                 else
                 {
-                    foreach (var p in process)
+                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 3").FirstOrDefault();
+                    if (p != null)
                     {
-                        if (p.MainWindowTitle == setting.ip1 + " : 3")
-                        {
-                            p.Kill();
-                        }
+                        p.Kill();
                     }
                 }
 
@@ -243,12 +235,10 @@ namespace SKTRFID1
                 }
                 else
                 {
-                    foreach (var p in process)
+                    Process p = process.Where(w => w.MainWindowTitle == setting.ip1 + " : 4").FirstOrDefault();
+                    if (p != null)
                     {
-                        if (p.MainWindowTitle == setting.ip1 + " : 4")
-                        {
-                            p.Kill();
-                        }
+                        p.Kill();
                     }
                 }
 
@@ -258,12 +248,10 @@ namespace SKTRFID1
                 }
                 else
                 {
-                    foreach (var p in process)
+                    Process p = process.Where(w => w.MainWindowTitle == setting.ip2 + " : 5").FirstOrDefault();
+                    if (p != null)
                     {
-                        if (p.MainWindowTitle == setting.ip2 + " : 5")
-                        {
-                            p.Kill();
-                        }
+                        p.Kill();
                     }
                 }
 
@@ -273,12 +261,10 @@ namespace SKTRFID1
                 }
                 else
                 {
-                    foreach (var p in process)
+                    Process p = process.Where(w => w.MainWindowTitle == setting.ip2 + " : 6").FirstOrDefault();
+                    if (p != null)
                     {
-                        if (p.MainWindowTitle == setting.ip2 + " : 6")
-                        {
-                            p.Kill();
-                        }
+                        p.Kill();
                     }
                 }
 
@@ -288,12 +274,10 @@ namespace SKTRFID1
                 }
                 else
                 {
-                    foreach (var p in process)
+                    Process p = process.Where(w => w.MainWindowTitle == setting.ip2 + " : 7").FirstOrDefault();
+                    if (p != null)
                     {
-                        if (p.MainWindowTitle == setting.ip2 + " : 7")
-                        {
-                            p.Kill();
-                        }
+                        p.Kill();
                     }
                 }
             }

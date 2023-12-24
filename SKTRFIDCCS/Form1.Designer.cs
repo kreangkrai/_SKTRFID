@@ -33,7 +33,6 @@ namespace SKTRFIDCCS1
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -66,7 +65,6 @@ namespace SKTRFIDCCS1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -96,7 +94,7 @@ namespace SKTRFIDCCS1
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.Black;
             this.pictureBox16.Image = global::SKTRFIDCCS1.Properties.Resources.green_red;
-            this.pictureBox16.Location = new System.Drawing.Point(1628, 239);
+            this.pictureBox16.Location = new System.Drawing.Point(1629, 239);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(26, 23);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,29 +105,18 @@ namespace SKTRFIDCCS1
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Black;
             this.pictureBox15.Image = global::SKTRFIDCCS1.Properties.Resources.green_red;
-            this.pictureBox15.Location = new System.Drawing.Point(1630, 272);
+            this.pictureBox15.Location = new System.Drawing.Point(1631, 273);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(23, 22);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 15;
             this.pictureBox15.TabStop = false;
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Black;
-            this.pictureBox13.Image = global::SKTRFIDCCS1.Properties.Resources.green_red;
-            this.pictureBox13.Location = new System.Drawing.Point(319, 780);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 13;
-            this.pictureBox13.TabStop = false;
-            // 
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Black;
             this.pictureBox12.Image = global::SKTRFIDCCS1.Properties.Resources.green_red;
-            this.pictureBox12.Location = new System.Drawing.Point(319, 915);
+            this.pictureBox12.Location = new System.Drawing.Point(319, 913);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(23, 22);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +160,7 @@ namespace SKTRFIDCCS1
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Black;
             this.pictureBox8.Image = global::SKTRFIDCCS1.Properties.Resources.green_red;
-            this.pictureBox8.Location = new System.Drawing.Point(355, 256);
+            this.pictureBox8.Location = new System.Drawing.Point(354, 255);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(23, 22);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -281,7 +268,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_09.Name = "lblDSP_09";
             this.lblDSP_09.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_09.TabIndex = 30;
-            this.lblDSP_09.Text = "0";
             this.lblDSP_09.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_10
@@ -293,7 +279,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_10.Name = "lblDSP_10";
             this.lblDSP_10.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_10.TabIndex = 31;
-            this.lblDSP_10.Text = "0";
             this.lblDSP_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDSP_10.Click += new System.EventHandler(this.lblDSP_10_Click);
             // 
@@ -306,7 +291,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_01.Name = "lblDSP_01";
             this.lblDSP_01.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_01.TabIndex = 38;
-            this.lblDSP_01.Text = "0";
             this.lblDSP_01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_16
@@ -318,7 +302,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_16.Name = "lblDSP_16";
             this.lblDSP_16.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_16.TabIndex = 39;
-            this.lblDSP_16.Text = "0";
             this.lblDSP_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_14
@@ -330,7 +313,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_14.Name = "lblDSP_14";
             this.lblDSP_14.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_14.TabIndex = 40;
-            this.lblDSP_14.Text = "0";
             this.lblDSP_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_13
@@ -342,7 +324,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_13.Name = "lblDSP_13";
             this.lblDSP_13.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_13.TabIndex = 41;
-            this.lblDSP_13.Text = "0";
             this.lblDSP_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_12
@@ -354,7 +335,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_12.Name = "lblDSP_12";
             this.lblDSP_12.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_12.TabIndex = 42;
-            this.lblDSP_12.Text = "0";
             this.lblDSP_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_15
@@ -366,7 +346,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_15.Name = "lblDSP_15";
             this.lblDSP_15.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_15.TabIndex = 43;
-            this.lblDSP_15.Text = "0";
             this.lblDSP_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_11
@@ -378,7 +357,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_11.Name = "lblDSP_11";
             this.lblDSP_11.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_11.TabIndex = 44;
-            this.lblDSP_11.Text = "0";
             this.lblDSP_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_08
@@ -390,7 +368,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_08.Name = "lblDSP_08";
             this.lblDSP_08.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_08.TabIndex = 45;
-            this.lblDSP_08.Text = "0";
             this.lblDSP_08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_07
@@ -402,7 +379,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_07.Name = "lblDSP_07";
             this.lblDSP_07.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_07.TabIndex = 46;
-            this.lblDSP_07.Text = "0";
             this.lblDSP_07.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_06
@@ -414,7 +390,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_06.Name = "lblDSP_06";
             this.lblDSP_06.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_06.TabIndex = 47;
-            this.lblDSP_06.Text = "0";
             this.lblDSP_06.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_05
@@ -426,7 +401,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_05.Name = "lblDSP_05";
             this.lblDSP_05.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_05.TabIndex = 48;
-            this.lblDSP_05.Text = "0";
             this.lblDSP_05.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_04
@@ -438,7 +412,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_04.Name = "lblDSP_04";
             this.lblDSP_04.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_04.TabIndex = 49;
-            this.lblDSP_04.Text = "0";
             this.lblDSP_04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_03
@@ -450,7 +423,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_03.Name = "lblDSP_03";
             this.lblDSP_03.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_03.TabIndex = 50;
-            this.lblDSP_03.Text = "0";
             this.lblDSP_03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_02
@@ -462,7 +434,6 @@ namespace SKTRFIDCCS1
             this.lblDSP_02.Name = "lblDSP_02";
             this.lblDSP_02.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_02.TabIndex = 51;
-            this.lblDSP_02.Text = "0";
             this.lblDSP_02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
@@ -491,7 +462,6 @@ namespace SKTRFIDCCS1
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
@@ -514,7 +484,6 @@ namespace SKTRFIDCCS1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -545,7 +514,6 @@ namespace SKTRFIDCCS1
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;

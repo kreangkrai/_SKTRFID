@@ -89,22 +89,22 @@ namespace SKTRFIDCCS1
                 int DSP_15 = (int)cj2.ReadVariable("DSP_15");
                 int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
-                lblDSP_01.Text = DSP_01.ToString();
-                lblDSP_02.Text = DSP_02.ToString();
-                lblDSP_03.Text = DSP_03.ToString();
-                lblDSP_04.Text = DSP_04.ToString();
-                lblDSP_05.Text = DSP_05.ToString();
-                lblDSP_07.Text = DSP_06.ToString();
-                lblDSP_08.Text = DSP_07.ToString();
-                lblDSP_09.Text = DSP_08.ToString();
-                lblDSP_09.Text = DSP_09.ToString();
-                lblDSP_10.Text = DSP_10.ToString();
-                lblDSP_11.Text = DSP_11.ToString();
-                lblDSP_12.Text = DSP_12.ToString();
-                lblDSP_13.Text = DSP_13.ToString();
-                lblDSP_14.Text = DSP_14.ToString();
-                lblDSP_15.Text = DSP_15.ToString();
-                lblDSP_16.Text = DSP_16.ToString();
+                lblDSP_01.Text = DSP_01 == 0 ? "" : DSP_01.ToString();
+                lblDSP_02.Text = DSP_02 == 0 ? "" : DSP_02.ToString();
+                lblDSP_03.Text = DSP_03 == 0 ? "" : DSP_03.ToString();
+                lblDSP_04.Text = DSP_04 == 0 ? "" : DSP_04.ToString();
+                lblDSP_05.Text = DSP_05 == 0 ? "" : DSP_05.ToString();
+                lblDSP_06.Text = DSP_06 == 0 ? "" : DSP_06.ToString();
+                lblDSP_07.Text = DSP_07 == 0 ? "" : DSP_07.ToString();
+                lblDSP_08.Text = DSP_08 == 0 ? "" : DSP_08.ToString();
+                lblDSP_09.Text = DSP_09 == 0 ? "" : DSP_09.ToString();
+                lblDSP_10.Text = DSP_10 == 0 ? "" : DSP_10.ToString();
+                lblDSP_11.Text = DSP_11 == 0 ? "" : DSP_11.ToString();
+                lblDSP_12.Text = DSP_12 == 0 ? "" : DSP_12.ToString();
+                lblDSP_13.Text = DSP_13 == 0 ? "" : DSP_13.ToString();
+                lblDSP_14.Text = DSP_14 == 0 ? "" : DSP_14.ToString();
+                lblDSP_15.Text = DSP_15 == 0 ? "" : DSP_15.ToString();
+                lblDSP_16.Text = DSP_16 == 0 ? "" : DSP_16.ToString();
             }
             catch(Exception ex)
             {

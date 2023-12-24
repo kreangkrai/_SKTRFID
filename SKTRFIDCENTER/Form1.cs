@@ -21,7 +21,7 @@ namespace SKTRFIDCENTER
         private void btnCropYear_AreaId_Click(object sender, EventArgs e)
         {
             Process p = new Process();
-            p.StartInfo.FileName = "Program\\CropYear_AreaId\\SKTRFIDSETTING.exe";
+            p.StartInfo.FileName = "Program\\SETTING\\SKTRFIDSETTING.exe";
             p.Start();
             p.WaitForExit();
         }
@@ -29,7 +29,7 @@ namespace SKTRFIDCENTER
         private void btnReport_Click(object sender, EventArgs e)
         {
             Process p = new Process();
-            p.StartInfo.FileName = "Program\\Report\\SKTRFIDEXPORT.exe";
+            p.StartInfo.FileName = "Program\\EXPORT\\SKTRFIDEXPORT.exe";
             p.Start();
             p.WaitForExit();
         }
@@ -37,7 +37,7 @@ namespace SKTRFIDCENTER
         private void btnShift_Click(object sender, EventArgs e)
         {
             Process p = new Process();
-            p.StartInfo.FileName = "Program\\Shift\\SKTRFIDSHIFT.exe";
+            p.StartInfo.FileName = "Program\\SHIFT\\SKTRFIDSHIFT.exe";
             p.Start();
             p.WaitForExit();
         }
@@ -45,7 +45,15 @@ namespace SKTRFIDCENTER
         private void btnEditDump_Click(object sender, EventArgs e)
         {
             Process p = new Process();
-            p.StartInfo.FileName = "Program\\Edit\\SKTRFIDEDIT.exe";
+            p.StartInfo.FileName = "Program\\BARCODE\\SKTCLEARBARCODE.exe";
+            p.Start();
+            p.WaitForExit();
+        }
+
+        private void btnMonitor_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Program\\MONITOR\\SKTRFIDMONITOR.exe";
             p.Start();
             p.WaitForExit();
         }

@@ -33,6 +33,7 @@ namespace SKTRFIDCENTER
             this.btnReport = new System.Windows.Forms.Button();
             this.btnShift = new System.Windows.Forms.Button();
             this.btnEditDump = new System.Windows.Forms.Button();
+            this.btnMonitor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCropYear_AreaId
@@ -83,15 +84,29 @@ namespace SKTRFIDCENTER
             this.btnEditDump.Name = "btnEditDump";
             this.btnEditDump.Size = new System.Drawing.Size(192, 123);
             this.btnEditDump.TabIndex = 3;
-            this.btnEditDump.Text = "แก้ไขข้อมูลการดัมพ์";
+            this.btnEditDump.Text = "ลบข้อมูลดัมพ์";
             this.btnEditDump.UseVisualStyleBackColor = false;
             this.btnEditDump.Click += new System.EventHandler(this.btnEditDump_Click);
+            // 
+            // btnMonitor
+            // 
+            this.btnMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnMonitor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMonitor.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonitor.Location = new System.Drawing.Point(40, 334);
+            this.btnMonitor.Name = "btnMonitor";
+            this.btnMonitor.Size = new System.Drawing.Size(192, 123);
+            this.btnMonitor.TabIndex = 4;
+            this.btnMonitor.Text = "Monitor";
+            this.btnMonitor.UseVisualStyleBackColor = false;
+            this.btnMonitor.Click += new System.EventHandler(this.btnMonitor_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 364);
+            this.ClientSize = new System.Drawing.Size(478, 468);
+            this.Controls.Add(this.btnMonitor);
             this.Controls.Add(this.btnEditDump);
             this.Controls.Add(this.btnShift);
             this.Controls.Add(this.btnReport);
@@ -110,6 +125,7 @@ namespace SKTRFIDCENTER
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnShift;
         private System.Windows.Forms.Button btnEditDump;
+        private System.Windows.Forms.Button btnMonitor;
     }
 }
 

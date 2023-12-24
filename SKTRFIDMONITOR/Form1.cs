@@ -36,7 +36,7 @@ namespace SKTRFIDMONITOR
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<DataModel> datas = Monitor.GetDatas();
+            List<DataModel> datas = Monitor.GetDatasByDate(DateTime.Now.Date,DateTime.Now.Date);
             LoadData(datas);
         }
 
