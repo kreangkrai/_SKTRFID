@@ -52,7 +52,7 @@ namespace SKTRFID1
             cj2.Active = true;
 
             cj1 = new CJ2Compolet();
-            cj1.HeartBeatTimer = 1000;
+            cj1.HeartBeatTimer = 2000;
             cj1.ConnectionType = ConnectionType.UCMM;
             cj1.UseRoutePath = false;
             cj1.PeerAddress = setting.ip_plc_common;
@@ -128,6 +128,8 @@ namespace SKTRFID1
         {
             try
             {
+                List<DataModel> datas = RFID.GetDatas();
+
                 //Read Barcode
                 bool b_D1 = true;
                 bool b_D2 = true;
@@ -152,7 +154,7 @@ namespace SKTRFID1
                 b_D6 = bar_D6 == "" ? false : true;
                 b_D7 = bar_D7 == "" ? false : true;
 
-                List<DataModel> datas = RFID.GetDatas();
+                
                 if (datas.Count > 0)
                 {
                     ShowDisplay(truck_license1, truck_date1, cane_type1, truck_type1, datas, "1", b_D1);
