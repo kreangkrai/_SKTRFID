@@ -15,13 +15,16 @@ namespace SKTRFIDSHIFT
 {
     public partial class Form1 : Form
     {
+        int phase = 0;
         private IShift Shift;
         List<ShiftModel> datas = new List<ShiftModel> ();
         List<ShiftModel> old_shift = new List<ShiftModel>();
-        public Form1()
+        public Form1(string _phase)
         {
             InitializeComponent();
             Shift = new ShiftService();
+            phase = Int32.Parse(_phase);
+            this.Text = "SKT RFID SHIFT PHASE " + phase;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

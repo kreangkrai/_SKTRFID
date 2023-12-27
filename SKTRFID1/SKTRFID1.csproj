@@ -62,16 +62,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IRFID.cs" />
-    <Compile Include="Interface\ISetting.cs" />
-    <Compile Include="Model\DataModel.cs" />
-    <Compile Include="Model\LabelModel.cs" />
-    <Compile Include="Model\RFIDModel.cs" />
-    <Compile Include="Model\SettingModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\RFIDService.cs" />
-    <Compile Include="Service\SettingService.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,79 +91,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Voice\0.wav" />
-    <Content Include="Voice\1.wav" />
-    <Content Include="Voice\2.wav" />
-    <Content Include="Voice\3.wav" />
-    <Content Include="Voice\4.wav" />
-    <Content Include="Voice\5.wav" />
-    <Content Include="Voice\6.wav" />
-    <Content Include="Voice\7.wav" />
-    <Content Include="Voice\8.wav" />
-    <Content Include="Voice\9.wav" />
+    <ProjectReference Include="..\SKTDATABASE\SKTDATABASE.csproj">
+      <Project>{911a97e6-b63c-4c20-9e5f-0a3563a766e8}</Project>
+      <Name>SKTDATABASE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SKTRFIDLIBRARY\SKTRFIDLIBRARY.csproj">
+      <Project>{dd8d93ae-145a-46cd-bb6f-22b931ea4453}</Project>
+      <Name>SKTRFIDLIBRARY</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Voice\dump1.wav" />
+    <Content Include="Voice\dump10.wav" />
+    <Content Include="Voice\dump11.wav" />
+    <Content Include="Voice\dump12.wav" />
+    <Content Include="Voice\dump13.wav" />
     <Content Include="Voice\dump2.wav" />
     <Content Include="Voice\dump3.wav" />
     <Content Include="Voice\dump4.wav" />
     <Content Include="Voice\dump5.wav" />
     <Content Include="Voice\dump6.wav" />
     <Content Include="Voice\dump7.wav" />
+    <Content Include="Voice\dump8.wav" />
+    <Content Include="Voice\dump9.wav" />
     <Content Include="Voice\no.wav" />
     <Content Include="Voice\noread.wav" />
     <Content Include="Voice\noscan.wav" />
     <Content Include="Voice\noserver.wav" />
     <Content Include="Voice\nowrite.wav" />
+    <Content Include="Voice\no_plc.wav" />
+    <Content Include="Voice\no_rfid.wav" />
     <Content Include="Voice\save.wav" />
-    <Content Include="Voice\ก.wav" />
-    <Content Include="Voice\ข.wav" />
-    <Content Include="Voice\ฃ.wav" />
-    <Content Include="Voice\ค.wav" />
-    <Content Include="Voice\ฅ.wav" />
-    <Content Include="Voice\ฆ.wav" />
-    <Content Include="Voice\ง.wav" />
-    <Content Include="Voice\จ.wav" />
-    <Content Include="Voice\ฉ.wav" />
-    <Content Include="Voice\ช.wav" />
-    <Content Include="Voice\ซ.wav" />
-    <Content Include="Voice\ฌ.wav" />
-    <Content Include="Voice\ญ.wav" />
-    <Content Include="Voice\ฎ.wav" />
-    <Content Include="Voice\ฏ.wav" />
-    <Content Include="Voice\ฐ.wav" />
-    <Content Include="Voice\ฑ.wav" />
-    <Content Include="Voice\ฒ.wav" />
-    <Content Include="Voice\ณ.wav" />
-    <Content Include="Voice\ด.wav" />
-    <Content Include="Voice\ต.wav" />
-    <Content Include="Voice\ถ.wav" />
-    <Content Include="Voice\ท.wav" />
-    <Content Include="Voice\ธ.wav" />
-    <Content Include="Voice\น.wav" />
-    <Content Include="Voice\บ.wav" />
-    <Content Include="Voice\ป.wav" />
-    <Content Include="Voice\ผ.wav" />
-    <Content Include="Voice\ฝ.wav" />
-    <Content Include="Voice\พ.wav" />
-    <Content Include="Voice\ฟ.wav" />
-    <Content Include="Voice\ภ.wav" />
-    <Content Include="Voice\ม.wav" />
-    <Content Include="Voice\ย.wav" />
-    <Content Include="Voice\ร.wav" />
-    <Content Include="Voice\ล.wav" />
-    <Content Include="Voice\ว.wav" />
-    <Content Include="Voice\ศ.wav" />
-    <Content Include="Voice\ษ.wav" />
-    <Content Include="Voice\ส.wav" />
-    <Content Include="Voice\ห.wav" />
-    <Content Include="Voice\ฬ.wav" />
-    <Content Include="Voice\อ.wav" />
-    <Content Include="Voice\ฮ.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SKTDATABASE\SKTDATABASE.csproj">
-      <Project>{911a97e6-b63c-4c20-9e5f-0a3563a766e8}</Project>
-      <Name>SKTDATABASE</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -98,5 +98,11 @@
   <ItemGroup>
     <None Include="Resources\phase21.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SKTRFIDLIBRARY\SKTRFIDLIBRARY.csproj">
+      <Project>{dd8d93ae-145a-46cd-bb6f-22b931ea4453}</Project>
+      <Name>SKTRFIDLIBRARY</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

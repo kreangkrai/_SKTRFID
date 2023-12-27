@@ -1,5 +1,5 @@
 ﻿
-namespace SKTCLEARBARCODE
+namespace SKTCLEARBARCODE1
 {
     partial class Form1
     {
@@ -45,7 +45,7 @@ namespace SKTCLEARBARCODE
             this.btnDump1.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump1.ForeColor = System.Drawing.Color.Blue;
             this.btnDump1.Location = new System.Drawing.Point(16, 15);
-            this.btnDump1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDump1.Margin = new System.Windows.Forms.Padding(4);
             this.btnDump1.Name = "btnDump1";
             this.btnDump1.Size = new System.Drawing.Size(224, 116);
             this.btnDump1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace SKTCLEARBARCODE
             this.btnDump4.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump4.ForeColor = System.Drawing.Color.Blue;
             this.btnDump4.Location = new System.Drawing.Point(248, 138);
-            this.btnDump4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDump4.Margin = new System.Windows.Forms.Padding(4);
             this.btnDump4.Name = "btnDump4";
             this.btnDump4.Size = new System.Drawing.Size(224, 116);
             this.btnDump4.TabIndex = 1;
@@ -75,7 +75,7 @@ namespace SKTCLEARBARCODE
             this.btnDump2.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump2.ForeColor = System.Drawing.Color.Blue;
             this.btnDump2.Location = new System.Drawing.Point(248, 15);
-            this.btnDump2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDump2.Margin = new System.Windows.Forms.Padding(4);
             this.btnDump2.Name = "btnDump2";
             this.btnDump2.Size = new System.Drawing.Size(224, 116);
             this.btnDump2.TabIndex = 2;
@@ -90,7 +90,7 @@ namespace SKTCLEARBARCODE
             this.btnDump5.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump5.ForeColor = System.Drawing.Color.Blue;
             this.btnDump5.Location = new System.Drawing.Point(16, 261);
-            this.btnDump5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDump5.Margin = new System.Windows.Forms.Padding(4);
             this.btnDump5.Name = "btnDump5";
             this.btnDump5.Size = new System.Drawing.Size(224, 116);
             this.btnDump5.TabIndex = 3;
@@ -105,7 +105,7 @@ namespace SKTCLEARBARCODE
             this.btnDump6.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump6.ForeColor = System.Drawing.Color.Blue;
             this.btnDump6.Location = new System.Drawing.Point(248, 261);
-            this.btnDump6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDump6.Margin = new System.Windows.Forms.Padding(4);
             this.btnDump6.Name = "btnDump6";
             this.btnDump6.Size = new System.Drawing.Size(224, 116);
             this.btnDump6.TabIndex = 4;
@@ -120,7 +120,7 @@ namespace SKTCLEARBARCODE
             this.btnDump3.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump3.ForeColor = System.Drawing.Color.Blue;
             this.btnDump3.Location = new System.Drawing.Point(16, 138);
-            this.btnDump3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDump3.Margin = new System.Windows.Forms.Padding(4);
             this.btnDump3.Name = "btnDump3";
             this.btnDump3.Size = new System.Drawing.Size(224, 116);
             this.btnDump3.TabIndex = 5;
@@ -135,7 +135,7 @@ namespace SKTCLEARBARCODE
             this.btnDump7.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump7.ForeColor = System.Drawing.Color.Blue;
             this.btnDump7.Location = new System.Drawing.Point(16, 384);
-            this.btnDump7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDump7.Margin = new System.Windows.Forms.Padding(4);
             this.btnDump7.Name = "btnDump7";
             this.btnDump7.Size = new System.Drawing.Size(224, 116);
             this.btnDump7.TabIndex = 6;
@@ -155,10 +155,10 @@ namespace SKTCLEARBARCODE
             this.Controls.Add(this.btnDump2);
             this.Controls.Add(this.btnDump4);
             this.Controls.Add(this.btnDump1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SKT RFID CLEAR BARCODE";
+            this.Text = "SKT RFID CLEAR BARCODE PHASE 1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

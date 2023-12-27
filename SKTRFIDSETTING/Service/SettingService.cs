@@ -13,12 +13,23 @@ namespace SKTRFIDSETTING.Service
 {
     class SettingService : ISetting
     {
+        string connectionString = "";
+        public SettingService(int phase)
+        {
+            if (phase == 1)
+            {
+                connectionString = DBPHASE1ConnectService.data_source();
+            }
+            if (phase == 2)
+            {
+                connectionString = DBPHASE2ConnectService.data_source();
+            }
+        }
         public DataModel GetData()
         {
             DataModel data = new DataModel();
             try
             {
-                    string connectionString = DBConnectService.data_source();
                     using (SqlConnection cn = new SqlConnection(connectionString))
                     {
                         if (cn.State == ConnectionState.Closed)
@@ -56,7 +67,6 @@ namespace SKTRFIDSETTING.Service
         {
             try
             {
-                string connectionString = DBConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)

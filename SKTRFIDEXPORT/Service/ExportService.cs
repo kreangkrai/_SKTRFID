@@ -18,9 +18,18 @@ namespace SKTRFIDEXPORT.Service
     class ExportService : IExport
     {
         private IShift Shift;
-        public ExportService()
+        string connectionString = "";
+        public ExportService(int phase)
         {
             Shift = new ShiftService();
+            if (phase == 1)
+            {
+                connectionString = DBPHASE1ConnectService.data_source();
+            }
+            if (phase == 2)
+            {
+                connectionString = DBPHASE2ConnectService.data_source();
+            }
         }
         public string Export(List<ReportModel> reports)
         {
@@ -45,10 +54,11 @@ namespace SKTRFIDEXPORT.Service
                             worksheet.Cells["D" + (i + startRows)].Value = _reports[i].area_id;
                             worksheet.Cells["E" + (i + startRows)].Value = _reports[i].crop_year;
                             worksheet.Cells["F" + (i + startRows)].Value = _reports[i].barcode;
-                            worksheet.Cells["G" + (i + startRows)].Value = CaneType(_reports[i].cane_type);
-                            worksheet.Cells["H" + (i + startRows)].Value = allergenType(_reports[i].allergen);
-                            worksheet.Cells["I" + (i + startRows)].Value = _reports[i].truck_number;
-                            worksheet.Cells["J" + (i + startRows)].Value = _reports[i].rfid;
+                            worksheet.Cells["G" + (i + startRows)].Value = _reports[i].farmer_name;
+                            worksheet.Cells["H" + (i + startRows)].Value = CaneType(_reports[i].cane_type);
+                            worksheet.Cells["I" + (i + startRows)].Value = allergenType(_reports[i].allergen);
+                            worksheet.Cells["J" + (i + startRows)].Value = _reports[i].truck_number;
+                            worksheet.Cells["K" + (i + startRows)].Value = _reports[i].rfid;
                         }
                     }
                     package.SaveAs(new FileInfo("D:\\Report\\skt_report_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsm"));
@@ -70,7 +80,7 @@ namespace SKTRFIDEXPORT.Service
             {
                 List<DataModel> datas = new List<DataModel>();
 
-                string connectionString = DBConnectService.data_source();
+                
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -82,6 +92,7 @@ namespace SKTRFIDEXPORT.Service
 	                                                   CCS.Queue as queue,
 	                                                   rfid.area_id,
 	                                                   rfid.barcode,
+                                                       rfid.farmer_name,
 	                                                   rfid.crop_year,
 	                                                   rfid.cane_type,
 	                                                   rfid.rfid,
@@ -106,6 +117,7 @@ namespace SKTRFIDEXPORT.Service
                                 crop_year = dr["crop_year"].ToString(),
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
+                                farmer_name = dr["farmer_name"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
                                 allergen = dr["allergen"].ToString(),
                                 truck_number = dr["truck_number"].ToString(),
@@ -151,6 +163,7 @@ namespace SKTRFIDEXPORT.Service
                             area_id = _datas[j].area_id,
                             crop_year = _datas[j].crop_year,
                             barcode = _datas[j].barcode,
+                            farmer_name = _datas[j].farmer_name,
                             cane_type = _datas[j].cane_type,
                             allergen = _datas[j].allergen,
                             rfid = _datas[j].rfid,
@@ -215,7 +228,6 @@ namespace SKTRFIDEXPORT.Service
             {
                 List<DataModel> datas = new List<DataModel>();
 
-                string connectionString = DBConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)

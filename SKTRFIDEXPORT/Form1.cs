@@ -16,11 +16,14 @@ namespace SKTRFIDEXPORT
 {
     public partial class Form1 : Form
     {
+        int phase = 0;
         private IExport Export;
-        public Form1()
+        public Form1(string _phase)
         {
             InitializeComponent();
-            Export = new ExportService();
+            phase = Int32.Parse(_phase);
+            Export = new ExportService(phase);
+            this.Text = "SKT RFID EXPORT PHASE " + phase;
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -47,12 +50,17 @@ namespace SKTRFIDEXPORT
         {
             txtSearchBarcode.Text = "";
             List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date.AddDays(1));
+
+            LoadData(reports);
+        }
+        void LoadData(List<ReportModel> reports)
+        {
             dataGridView1.Rows.Clear();
             for (int i = 0; i < reports.Count; i++)
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
                 row.Height = 35;
-                row.Cells[0].Value = reports[i].queue;
+                row.Cells[0].Value = (i + 1);
                 row.Cells[1].Value = reports[i].dump_id;
                 row.Cells[2].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
                 row.Cells[3].Value = reports[i].round;
@@ -102,68 +110,12 @@ namespace SKTRFIDEXPORT
             if (txtSearchBarcode.Text.Trim() != "")
             {
                 List<ReportModel> reports = Export.GetReportByDBarCode(txtSearchBarcode.Text);
-                dataGridView1.Rows.Clear();
-                for (int i = 0; i < reports.Count; i++)
-                {
-                    DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
-                    row.Height = 35;
-                    row.Cells[0].Value = (i + 1);
-                    row.Cells[1].Value = reports[i].dump_id;
-                    row.Cells[2].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
-                    row.Cells[3].Value = reports[i].round;
-                    row.Cells[4].Value = reports[i].area_id;
-                    row.Cells[5].Value = reports[i].crop_year;
-                    row.Cells[6].Value = reports[i].barcode;
-                    row.Cells[7].Value = CaneType(reports[i].cane_type);
-                    string allergen = reports[i].allergen;
-                    row.Cells[8].Value = allergenType(allergen);
-                    if (allergen == "No")
-                    {
-                        row.Cells[8].Style.BackColor = Color.GreenYellow;
-                    }
-                    else
-                    {
-                        row.Cells[8].Style.BackColor = Color.Red;
-                    }
-                    row.Cells[9].Value = reports[i].truck_number;
-                    row.Cells[10].Value = reports[i].rfid;
-                    dataGridView1.Rows.Add(row);
-                }
+                LoadData(reports);
             }
             else
             {
                 dataGridView1.Rows.Clear();
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerStat_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerStop_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

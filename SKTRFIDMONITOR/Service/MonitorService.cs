@@ -13,12 +13,23 @@ namespace SKTRFIDMONITOR.Service
 {
     class MonitorService : IMonitor
     {
+        string connectionString = "";
+        public MonitorService(int phase)
+        {
+            if (phase == 1)
+            {
+                connectionString = DBPHASE1ConnectService.data_source();
+            }
+            if (phase == 2)
+            {
+                connectionString = DBPHASE2ConnectService.data_source();
+            }
+        }
         public List<DataModel> GetDatas()
         {
             List<DataModel> datas = new List<DataModel>();
             try
             {
-                string connectionString = DBConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -31,6 +42,7 @@ namespace SKTRFIDMONITOR.Service
 	                                                   rfid.area_id,
 	                                                   rfid.barcode,
 	                                                   rfid.crop_year,
+                                                       rfid.farmer_name,
 	                                                   rfid.cane_type,
 	                                                   rfid.rfid,
 	                                                   rfid.truck_number,
@@ -54,6 +66,7 @@ namespace SKTRFIDMONITOR.Service
                                 area_id = Int32.Parse(dr["area_id"].ToString()),
                                 allergen = dr["allergen"].ToString(),
                                 barcode = dr["barcode"].ToString(),
+                                farmer_name = dr["farmer_name"].ToString(),
                                 cane_type = Int32.Parse(dr["cane_type"].ToString()),
                                 crop_year = dr["crop_year"].ToString(),
                                 rfid = dr["rfid"].ToString(),
@@ -73,7 +86,6 @@ namespace SKTRFIDMONITOR.Service
                 return datas;
             }
         }
-
         public List<DataModel> GetDatasByBarCode(string barcode)
         {
             List<DataModel> datas = new List<DataModel>();
@@ -83,7 +95,6 @@ namespace SKTRFIDMONITOR.Service
             }
             try
             {
-                string connectionString = DBConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -95,6 +106,7 @@ namespace SKTRFIDMONITOR.Service
 	                                                   CCS.Queue as queue,
 	                                                   rfid.area_id,
 	                                                   rfid.barcode,
+                                                       rfid.farmer_name,
 	                                                   rfid.crop_year,
 	                                                   rfid.cane_type,
 	                                                   rfid.rfid,
@@ -120,6 +132,7 @@ namespace SKTRFIDMONITOR.Service
                                 area_id = Int32.Parse(dr["area_id"].ToString()),
                                 allergen = dr["allergen"].ToString(),
                                 barcode = dr["barcode"].ToString(),
+                                farmer_name = dr["farmer_name"].ToString(),
                                 cane_type = Int32.Parse(dr["cane_type"].ToString()),
                                 crop_year = dr["crop_year"].ToString(),
                                 rfid = dr["rfid"].ToString(),
@@ -145,7 +158,6 @@ namespace SKTRFIDMONITOR.Service
             List<DataModel> datas = new List<DataModel>();
             try
             {
-                string connectionString = DBConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -157,6 +169,7 @@ namespace SKTRFIDMONITOR.Service
 	                                                   CCS.Queue as queue,
 	                                                   rfid.area_id,
 	                                                   rfid.barcode,
+                                                       rfid.farmer_name,
 	                                                   rfid.crop_year,
 	                                                   rfid.cane_type,
 	                                                   rfid.rfid,
@@ -182,6 +195,7 @@ namespace SKTRFIDMONITOR.Service
                                 area_id = Int32.Parse(dr["area_id"].ToString()),
                                 allergen = dr["allergen"].ToString(),
                                 barcode = dr["barcode"].ToString(),
+                                farmer_name = dr["farmer_name"].ToString(),
                                 cane_type = Int32.Parse(dr["cane_type"].ToString()),
                                 crop_year = dr["crop_year"].ToString(),
                                 rfid = dr["rfid"].ToString(),

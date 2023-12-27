@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using OMRON.Compolet.CIP;
 using System.Windows.Forms;
-using SKTRFIDCCS1.Interface;
-using SKTRFIDCCS1.Service;
-using SKTRFIDCCS1.Model;
+using SKTRFIDLIBRARY.Interface;
+using SKTRFIDLIBRARY.Service;
+using SKTRFIDLIBRARY.Model;
 
 namespace SKTRFIDCCS1
 {
@@ -28,7 +28,7 @@ namespace SKTRFIDCCS1
         public Form1()
         {
             InitializeComponent();
-            Setting = new SettingService();
+            Setting = new SettingService(1);
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {

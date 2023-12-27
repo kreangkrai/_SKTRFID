@@ -18,7 +18,7 @@ namespace SKTRFIDSHIFT.Service
             ShiftModel data = new ShiftModel();
             try
             {
-                string connectionString = DBConnectService.data_source();
+                string connectionString = DBPHASE1ConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -54,7 +54,7 @@ namespace SKTRFIDSHIFT.Service
             List<ShiftModel> datas = new List<ShiftModel>();
             try
             {
-                string connectionString = DBConnectService.data_source();
+                string connectionString = DBPHASE1ConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -93,7 +93,7 @@ namespace SKTRFIDSHIFT.Service
         {
             try
             {
-                string connectionString = DBConnectService.data_source();
+                string connectionString = DBPHASE1ConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -116,7 +116,7 @@ namespace SKTRFIDSHIFT.Service
         {
             try
             {
-                string connectionString = DBConnectService.data_source();
+                string connectionString = DBPHASE1ConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)

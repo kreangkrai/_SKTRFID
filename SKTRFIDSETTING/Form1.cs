@@ -15,12 +15,15 @@ namespace SKTRFIDSETTING
 {
     public partial class Form1 : Form
     {
+        int phase = 0;
         private ISetting Settings;
         DataModel data = new DataModel();
-        public Form1()
+        public Form1(string _phase)
         {
             InitializeComponent();
-            Settings = new SettingService();
+            phase = Int32.Parse(_phase);
+            Settings = new SettingService(phase);
+            this.Text = "SKT RFID SETTING PHASE " + phase;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

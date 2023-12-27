@@ -13,12 +13,23 @@ namespace SKTRFIDEDIT.Service
 {
     class RFIDLogService : IRFIDLog
     {
+        string connectionString = "";
+        public RFIDLogService(int phase)
+        {
+            if (phase == 1)
+            {
+                connectionString = DBPHASE1ConnectService.data_source();
+            }
+            if (phase == 2)
+            {
+                connectionString = DBPHASE2ConnectService.data_source();
+            }
+        }
         public List<DataModel> GetRFID(int n,string dump,string truck_number,string date)
         {
             List<DataModel> datas = new List<DataModel>();
             try
             {
-                string connectionString = DBConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)
@@ -79,7 +90,6 @@ namespace SKTRFIDEDIT.Service
         {
             try
             {
-                string connectionString = DBConnectService.data_source();
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
                     if (cn.State == ConnectionState.Closed)

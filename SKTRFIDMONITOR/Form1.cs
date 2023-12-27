@@ -16,11 +16,14 @@ namespace SKTRFIDMONITOR
 {
     public partial class Form1 : Form
     {
+        int phase = 0;
         private IMonitor Monitor;
-        public Form1()
+        public Form1(string _phase)
         {
             InitializeComponent();
-            Monitor = new MonitorService();
+            phase = Int32.Parse(_phase);
+            Monitor = new MonitorService(phase);
+            this.Text = "SKT RFID MONITOR PHASE " + phase;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -54,19 +57,20 @@ namespace SKTRFIDMONITOR
                 row.Cells[3].Value = datas[i].area_id;
                 row.Cells[4].Value = datas[i].crop_year;
                 row.Cells[5].Value = datas[i].barcode;
-                row.Cells[6].Value = CaneType(datas[i].cane_type);
+                row.Cells[6].Value = datas[i].farmer_name;
+                row.Cells[7].Value = CaneType(datas[i].cane_type);
                 string allergen = datas[i].allergen;
-                row.Cells[7].Value = allergenType(allergen);
+                row.Cells[8].Value = allergenType(allergen);
                 if (allergen == "No")
                 {
-                    row.Cells[7].Style.BackColor = Color.GreenYellow;
+                    row.Cells[8].Style.BackColor = Color.GreenYellow;
                 }
                 else
                 {
-                    row.Cells[7].Style.BackColor = Color.Red;
+                    row.Cells[8].Style.BackColor = Color.Red;
                 }
-                row.Cells[8].Value = datas[i].truck_number;
-                row.Cells[9].Value = datas[i].rfid;
+                row.Cells[9].Value = datas[i].truck_number;
+                row.Cells[10].Value = datas[i].rfid;
                 dataGridView1.Rows.Add(row);
             }
         }

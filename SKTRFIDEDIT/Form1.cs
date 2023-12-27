@@ -17,12 +17,15 @@ namespace SKTRFIDEDIT
 {
     public partial class Form1 : Form
     {
+        int phase = 0;
         private IRFIDLog RFIDLog;
         List<SubDataModel> sub_datas;
-        public Form1()
+        public Form1(string _phase)
         {
             InitializeComponent();
-            RFIDLog = new RFIDLogService();
+            phase = Int32.Parse(_phase);
+            RFIDLog = new RFIDLogService(phase);
+            this.Text = "SKT RFID CHECK PHASE " + phase;
         }
 
         private void Form1_Load(object sender, EventArgs e)

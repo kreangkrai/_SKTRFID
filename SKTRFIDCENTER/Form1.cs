@@ -22,6 +22,7 @@ namespace SKTRFIDCENTER
         {
             Process p = new Process();
             p.StartInfo.FileName = "Program\\SETTING\\SKTRFIDSETTING.exe";
+            p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
             p.WaitForExit();
         }
@@ -30,6 +31,7 @@ namespace SKTRFIDCENTER
         {
             Process p = new Process();
             p.StartInfo.FileName = "Program\\EXPORT\\SKTRFIDEXPORT.exe";
+            p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
             p.WaitForExit();
         }
@@ -38,6 +40,7 @@ namespace SKTRFIDCENTER
         {
             Process p = new Process();
             p.StartInfo.FileName = "Program\\SHIFT\\SKTRFIDSHIFT.exe";
+            p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
             p.WaitForExit();
         }
@@ -45,7 +48,7 @@ namespace SKTRFIDCENTER
         private void btnEditDump_Click(object sender, EventArgs e)
         {
             Process p = new Process();
-            p.StartInfo.FileName = "Program\\BARCODE\\SKTCLEARBARCODE.exe";
+            p.StartInfo.FileName = "Program\\BARCODE\\SKTCLEARBARCODE1.exe";
             p.Start();
             p.WaitForExit();
         }
@@ -54,6 +57,16 @@ namespace SKTRFIDCENTER
         {
             Process p = new Process();
             p.StartInfo.FileName = "Program\\MONITOR\\SKTRFIDMONITOR.exe";
+            p.StartInfo.Arguments = txtPhase.Text;
+            p.Start();
+            p.WaitForExit();
+        }
+
+        private void btnReadWriteRFID_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Program\\TAG\\SKTRFIDTAG.exe";
+            p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
             p.WaitForExit();
         }

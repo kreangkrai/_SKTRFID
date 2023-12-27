@@ -1,7 +1,7 @@
 ﻿using OMRON.Compolet.CIP;
-using SKTCLEARBARCODE.Interface;
-using SKTCLEARBARCODE.Model;
-using SKTCLEARBARCODE.Service;
+using SKTRFIDLIBRARY.Interface;
+using SKTRFIDLIBRARY.Model;
+using SKTRFIDLIBRARY.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SKTCLEARBARCODE
+namespace SKTCLEARBARCODE1
 {
     public partial class Form1 : Form
     {
@@ -21,7 +21,7 @@ namespace SKTCLEARBARCODE
         public Form1()
         {
             InitializeComponent();
-            Setting = new SettingService();
+            Setting = new SettingService(1);
         }
 
         private void Form1_Load(object sender, EventArgs e)
