@@ -1,5 +1,5 @@
 ﻿
-namespace SKTRFIDEXPORT
+namespace SKTRFIDREPORT
 {
     partial class Form1
     {

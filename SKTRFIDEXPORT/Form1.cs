@@ -1,6 +1,6 @@
-﻿using SKTRFIDEXPORT.Interface;
-using SKTRFIDEXPORT.Model;
-using SKTRFIDEXPORT.Service;
+﻿using SKTRFIDREPORT.Interface;
+using SKTRFIDREPORT.Model;
+using SKTRFIDREPORT.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SKTRFIDEXPORT
+namespace SKTRFIDREPORT
 {
     public partial class Form1 : Form
     {

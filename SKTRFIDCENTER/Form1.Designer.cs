@@ -127,7 +127,7 @@ namespace SKTRFIDCENTER
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 9);
+            this.label1.Location = new System.Drawing.Point(235, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 39);
             this.label1.TabIndex = 6;
@@ -137,7 +137,7 @@ namespace SKTRFIDCENTER
             // 
             this.txtPhase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhase.Location = new System.Drawing.Point(187, 9);
+            this.txtPhase.Location = new System.Drawing.Point(380, 9);
             this.txtPhase.Name = "txtPhase";
             this.txtPhase.ReadOnly = true;
             this.txtPhase.Size = new System.Drawing.Size(26, 38);
@@ -161,7 +161,7 @@ namespace SKTRFIDCENTER
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SKT RFID CENTER";
+            this.Text = "SKT RFID CENTER PHASE 1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

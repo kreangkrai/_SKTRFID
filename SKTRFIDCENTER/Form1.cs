@@ -30,7 +30,7 @@ namespace SKTRFIDCENTER
         private void btnReport_Click(object sender, EventArgs e)
         {
             Process p = new Process();
-            p.StartInfo.FileName = "Program\\EXPORT\\SKTRFIDEXPORT.exe";
+            p.StartInfo.FileName = "Program\\EXPORT\\SKTRFIDREPORT.exe";
             p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
             p.WaitForExit();

@@ -1,7 +1,7 @@
 ﻿using OfficeOpenXml;
 using SKTDATABASE;
-using SKTRFIDEXPORT.Interface;
-using SKTRFIDEXPORT.Model;
+using SKTRFIDREPORT.Interface;
+using SKTRFIDREPORT.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SKTRFIDEXPORT.Service
+namespace SKTRFIDREPORT.Service
 {
     class ExportService : IExport
     {
@@ -308,53 +308,6 @@ namespace SKTRFIDEXPORT.Service
             {
                 MessageBox.Show(ex.Message);
                 return reports;
-            }
-        }
-
-        public string Export(DataGridView data)
-        {
-            try
-            {
-                List<DateTime> _dates = new List<DateTime>();
-                for (int i=0;i<data.Rows.Count;i++)
-                {
-                    _dates.Add(Convert.ToDateTime(data.Rows[i].Cells["rfid_lastdate"].Value.ToString()));
-                }
-
-
-                string fileName = "skt_report.xlsm";
-                string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                List<string> dates = _dates.GroupBy(g => g).Select(s => s.Key.Date.ToString("dd/MM/yyyy")).ToList();
-                FileInfo template = new FileInfo(Path.Combine(path, fileName));
-                using (var package = new ExcelPackage(template))
-                {
-                    for (int k = 0; k < dates.Count; k++)
-                    {
-                        //List<ReportModel> _reports = reports.Where(w => w.date.ToString("dd/MM/yyyy") == dates[k]).ToList();
-                        var workbook = package.Workbook;
-                        var worksheet = workbook.Worksheets.Copy("template", dates[k]);
-                        int startRows = 3;
-                        for (int i = 0; i < data.Rows.Count; i++)
-                        {
-                            worksheet.Cells["A" + (i + startRows)].Value = data.Rows[i].Cells["dump_no"].Value;
-                            worksheet.Cells["B" + (i + startRows)].Value = dates[k];
-                            worksheet.Cells["C" + (i + startRows)].Value = data.Rows[i].Cells["dump_no"].Value;
-                            worksheet.Cells["D" + (i + startRows)].Value = data.Rows[i].Cells["dump_no"].Value;
-                            worksheet.Cells["E" + (i + startRows)].Value = data.Rows[i].Cells["dump_no"].Value;
-                            worksheet.Cells["F" + (i + startRows)].Value = data.Rows[i].Cells["dump_no"].Value;
-                            //worksheet.Cells["G" + (i + startRows)].Value = CaneType(data.Rows[i].Cells["dump_no"].Value);
-                            //worksheet.Cells["H" + (i + startRows)].Value = allergenType(data.Rows[i].Cells["dump_no"].Value);
-                            worksheet.Cells["I" + (i + startRows)].Value = data.Rows[i].Cells["dump_no"].Value;
-                    worksheet.Cells["J" + (i + startRows)].Value = data.Rows[i].Cells["dump_no"].Value;
-                }
-                    }
-                    package.SaveAs(new FileInfo("D:\\Report\\skt_report_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsm"));
-                }
-                return "เรียบร้อย";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
             }
         }
     }

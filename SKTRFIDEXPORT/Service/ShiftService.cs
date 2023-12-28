@@ -1,6 +1,6 @@
 ﻿using SKTDATABASE;
-using SKTRFIDEXPORT.Interface;
-using SKTRFIDEXPORT.Model;
+using SKTRFIDREPORT.Interface;
+using SKTRFIDREPORT.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SKTRFIDEXPORT.Service
+namespace SKTRFIDREPORT.Service
 {
     class ShiftService : IShift
     {
