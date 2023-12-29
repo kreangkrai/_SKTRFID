@@ -42,6 +42,7 @@ namespace SKTCLEARBARCODE2
             if (dialog == DialogResult.OK)
             {
                 cj2.WriteVariable("Bar_ID8", "000000");
+                RefreshBarcode();
             }
         }
 
@@ -51,6 +52,7 @@ namespace SKTCLEARBARCODE2
             if (dialog == DialogResult.OK)
             {
                 cj2.WriteVariable("Bar_ID9", "000000");
+                RefreshBarcode();
             }
         }
 
@@ -60,6 +62,7 @@ namespace SKTCLEARBARCODE2
             if (dialog == DialogResult.OK)
             {
                 cj2.WriteVariable("Bar_ID10", "000000");
+                RefreshBarcode();
             }
         }
 
@@ -69,6 +72,7 @@ namespace SKTCLEARBARCODE2
             if (dialog == DialogResult.OK)
             {
                 cj2.WriteVariable("Bar_ID11", "000000");
+                RefreshBarcode();
             }
         }
 
@@ -78,6 +82,7 @@ namespace SKTCLEARBARCODE2
             if (dialog == DialogResult.OK)
             {
                 cj2.WriteVariable("Bar_ID12", "000000");
+                RefreshBarcode();
             }
         }
 
@@ -87,7 +92,75 @@ namespace SKTCLEARBARCODE2
             if (dialog == DialogResult.OK)
             {
                 cj2.WriteVariable("Bar_ID13", "000000");
+                RefreshBarcode();
             }
+        }
+        private void RefreshBarcode()
+        {
+            string barcode8 = (string)cj2.ReadVariable("Bar_ID8");
+            string barcode9 = (string)cj2.ReadVariable("Bar_ID9");
+            string barcode10 = (string)cj2.ReadVariable("Bar_ID10");
+            string barcode11 = (string)cj2.ReadVariable("Bar_ID11");
+            string barcode12 = (string)cj2.ReadVariable("Bar_ID12");
+            string barcode13 = (string)cj2.ReadVariable("Bar_ID13");
+
+            if (barcode8 != "" && barcode8 != "000000")
+            {
+                btnDump8.Enabled = true;
+            }
+            else
+            {
+                btnDump8.Enabled = false;
+            }
+
+            if (barcode9 != "" && barcode9 != "000000")
+            {
+                btnDump9.Enabled = true;
+            }
+            else
+            {
+                btnDump9.Enabled = false;
+            }
+
+            if (barcode10 != "" && barcode10 != "000000")
+            {
+                btnDump10.Enabled = true;
+            }
+            else
+            {
+                btnDump10.Enabled = false;
+            }
+
+            if (barcode11 != "" && barcode11 != "000000")
+            {
+                btnDump11.Enabled = true;
+            }
+            else
+            {
+                btnDump11.Enabled = false;
+            }
+
+            if (barcode12 != "" && barcode12 != "000000")
+            {
+                btnDump12.Enabled = true;
+            }
+            else
+            {
+                btnDump12.Enabled = false;
+            }
+
+            if (barcode13 != "" && barcode13 != "000000")
+            {
+                btnDump13.Enabled = true;
+            }
+            else
+            {
+                btnDump13.Enabled = false;
+            }
+        }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshBarcode();
         }
     }
 }

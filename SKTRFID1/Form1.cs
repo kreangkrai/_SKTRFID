@@ -208,7 +208,7 @@ namespace SKTRFID1
             }
         }
 
-        private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
+        private void Cj3_OnHeartBeatTimer(object sender, EventArgs e)
         {
             try
             {
@@ -518,7 +518,7 @@ namespace SKTRFID1
             }
         }
 
-        private void Cj3_OnHeartBeatTimer(object sender, EventArgs e)
+        private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
         {
             try
             {
