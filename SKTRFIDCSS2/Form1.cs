@@ -1,4 +1,7 @@
 ﻿using OMRON.Compolet.CIP;
+using SKTRFIDLIBRARY.Interface;
+using SKTRFIDLIBRARY.Model;
+using SKTRFIDLIBRARY.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +17,7 @@ namespace SKTRFIDCCS2
     public partial class Form1 : Form
     {
         CJ2Compolet cj2;
-
+        private ISetting Setting;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -25,6 +28,7 @@ namespace SKTRFIDCCS2
         public Form1()
         {
             InitializeComponent();
+            Setting = new SettingService(2);
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -55,11 +59,12 @@ namespace SKTRFIDCCS2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SettingModel setting = Setting.GetSetting();
             cj2 = new CJ2Compolet();
-            cj2.HeartBeatTimer = 5000;
+            cj2.HeartBeatTimer = 3000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
-            cj2.PeerAddress = "192.168.1.250";
+            cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
             cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
             cj2.Active = true;
@@ -69,11 +74,197 @@ namespace SKTRFIDCCS2
         {
             try
             {
-                bool manual_d1 = (bool)cj2.ReadVariable("manual_dump01");
+                int DSP_01 = (int)cj2.ReadVariable("DSP_01");
+                int DSP_02 = (int)cj2.ReadVariable("DSP_02");
+                int DSP_03 = (int)cj2.ReadVariable("DSP_03");
+                int DSP_04 = (int)cj2.ReadVariable("DSP_04");
+                int DSP_05 = (int)cj2.ReadVariable("DSP_05");
+                int DSP_06 = (int)cj2.ReadVariable("DSP_06");
+                int DSP_07 = (int)cj2.ReadVariable("DSP_07");
+                int DSP_08 = (int)cj2.ReadVariable("DSP_08");
+                int DSP_09 = (int)cj2.ReadVariable("DSP_09");
+                int DSP_10 = (int)cj2.ReadVariable("DSP_10");
+                int DSP_11 = (int)cj2.ReadVariable("DSP_11");
+                int DSP_12 = (int)cj2.ReadVariable("DSP_12");
+                int DSP_13 = (int)cj2.ReadVariable("DSP_13");
+                int DSP_14 = (int)cj2.ReadVariable("DSP_14");
+                int DSP_15 = (int)cj2.ReadVariable("DSP_15");
+                int DSP_16 = (int)cj2.ReadVariable("DSP_16");
+
+                if (DSP_01 > 9)
+                {
+                    lblDSP_01.Font =  new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_01.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_02 > 9)
+                {
+                    lblDSP_02.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_02.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_03 > 9)
+                {
+                    lblDSP_03.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_03.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_04 > 9)
+                {
+                    lblDSP_04.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_04.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_05 > 9)
+                {
+                    lblDSP_05.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_05.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_06 > 9)
+                {
+                    lblDSP_06.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_06.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_07 > 9)
+                {
+                    lblDSP_07.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_07.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_08 > 9)
+                {
+                    lblDSP_08.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_08.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_09 > 9)
+                {
+                    lblDSP_09.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_09.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_10 > 9)
+                {
+                    lblDSP_10.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_10.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_11 > 9)
+                {
+                    lblDSP_11.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_11.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_12 > 9)
+                {
+                    lblDSP_12.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_12.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_13 > 9)
+                {
+                    lblDSP_13.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_13.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_14 > 9)
+                {
+                    lblDSP_14.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_14.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_15 > 9)
+                {
+                    lblDSP_15.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_15.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+                if (DSP_16 > 9)
+                {
+                    lblDSP_16.Font = new Font("Microsoft Sans Serif", 20);
+                }
+                else
+                {
+                    lblDSP_16.Font = new Font("Microsoft Sans Serif", 30);
+                }
+
+
+                lblDSP_01.Text = DSP_01 == 0 ? "" : DSP_01.ToString();
+                lblDSP_02.Text = DSP_02 == 0 ? "" : DSP_02.ToString();
+                lblDSP_03.Text = DSP_03 == 0 ? "" : DSP_03.ToString();
+                lblDSP_04.Text = DSP_04 == 0 ? "" : DSP_04.ToString();
+                lblDSP_05.Text = DSP_05 == 0 ? "" : DSP_05.ToString();
+                lblDSP_06.Text = DSP_06 == 0 ? "" : DSP_06.ToString();
+                lblDSP_07.Text = DSP_07 == 0 ? "" : DSP_07.ToString();
+                lblDSP_08.Text = DSP_08 == 0 ? "" : DSP_08.ToString();
+                lblDSP_09.Text = DSP_09 == 0 ? "" : DSP_09.ToString();
+                lblDSP_10.Text = DSP_10 == 0 ? "" : DSP_10.ToString();
+                lblDSP_11.Text = DSP_11 == 0 ? "" : DSP_11.ToString();
+                lblDSP_12.Text = DSP_12 == 0 ? "" : DSP_12.ToString();
+                lblDSP_13.Text = DSP_13 == 0 ? "" : DSP_13.ToString();
+                lblDSP_14.Text = DSP_14 == 0 ? "" : DSP_14.ToString();
+                lblDSP_15.Text = DSP_15 == 0 ? "" : DSP_15.ToString();
+                lblDSP_16.Text = DSP_16 == 0 ? "" : DSP_16.ToString();
             }
             catch
             {
 
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you want to exit?", "SKT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialog == DialogResult.OK)
+            {
+                Application.Exit();
             }
         }
     }

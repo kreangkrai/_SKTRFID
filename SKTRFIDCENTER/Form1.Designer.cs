@@ -148,7 +148,7 @@ namespace SKTRFIDCENTER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 597);
+            this.ClientSize = new System.Drawing.Size(637, 603);
             this.Controls.Add(this.txtPhase);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReadWriteRFID);

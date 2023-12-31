@@ -17,15 +17,16 @@ namespace SKTRFIDCCS1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
+
             Form1 f = new Form1();
-            Screen[] screen = Screen.AllScreens;
+            Screen[] screen = Screen.AllScreens.OrderBy(o => o.WorkingArea.X).ToArray();
             if (screen.Length > 1)
             {
-                f.Location = Screen.AllScreens[1].WorkingArea.Location;
+                f.Location = screen[1].WorkingArea.Location;
             }
             else
             {
-                f.Location = Screen.AllScreens[screen.Length - 1].WorkingArea.Location;
+                f.Location = screen[screen.Length - 1].WorkingArea.Location;
             }
             Application.Run(f);
         }
