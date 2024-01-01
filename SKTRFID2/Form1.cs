@@ -366,7 +366,17 @@ namespace SKTRFID2
                 var data = datas.Where(w => w.dump_id == dump).FirstOrDefault();
                 if (data != null)
                 {
-                    truck_license.Text = data.truck_number;
+                    int check_trailer_truck = data.truck_number.IndexOf('/');
+                    if (check_trailer_truck == -1) // truck
+                    {
+                        truck_license.Text = data.truck_number;
+                    }
+                    else // trailer truck
+                    {
+                        truck_license.Text = data.truck_number.Substring(0, check_trailer_truck) +
+                            Environment.NewLine +
+                            data.truck_number.Substring(check_trailer_truck + 1, data.truck_number.Length - (check_trailer_truck + 1));
+                    }
                     truck_date.Text = data.rfid_lastdate == DateTime.MinValue ? "" : data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
                     cane_type.Text = CaneType(data.cane_type);
                     truck_type.Text = truckType(data.truck_type);

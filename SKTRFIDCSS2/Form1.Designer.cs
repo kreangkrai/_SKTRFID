@@ -85,10 +85,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.Black;
             this.pictureBox16.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox16.Location = new System.Drawing.Point(2165, 299);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox16.Location = new System.Drawing.Point(1624, 243);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox16.Size = new System.Drawing.Size(23, 22);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 17;
             this.pictureBox16.TabStop = false;
@@ -97,10 +96,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Black;
             this.pictureBox15.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox15.Location = new System.Drawing.Point(735, 283);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Location = new System.Drawing.Point(551, 230);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox15.Size = new System.Drawing.Size(23, 22);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 16;
             this.pictureBox15.TabStop = false;
@@ -109,10 +107,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Black;
             this.pictureBox14.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox14.Location = new System.Drawing.Point(1315, 366);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Location = new System.Drawing.Point(986, 297);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox14.Size = new System.Drawing.Size(27, 26);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 15;
             this.pictureBox14.TabStop = false;
@@ -121,10 +118,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Black;
             this.pictureBox13.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox13.Location = new System.Drawing.Point(1397, 513);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Location = new System.Drawing.Point(1048, 417);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox13.Size = new System.Drawing.Size(23, 22);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 14;
             this.pictureBox13.TabStop = false;
@@ -133,10 +129,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Black;
             this.pictureBox12.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox12.Location = new System.Drawing.Point(464, 318);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Location = new System.Drawing.Point(348, 258);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox12.Size = new System.Drawing.Size(23, 22);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 13;
             this.pictureBox12.TabStop = false;
@@ -145,10 +140,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Black;
             this.pictureBox11.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox11.Location = new System.Drawing.Point(417, 346);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Location = new System.Drawing.Point(313, 281);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox11.Size = new System.Drawing.Size(23, 22);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 12;
             this.pictureBox11.TabStop = false;
@@ -157,10 +151,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Black;
             this.pictureBox10.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox10.Location = new System.Drawing.Point(416, 384);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Location = new System.Drawing.Point(312, 312);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox10.Size = new System.Drawing.Size(23, 22);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 11;
             this.pictureBox10.TabStop = false;
@@ -169,10 +162,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Black;
             this.pictureBox9.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox9.Location = new System.Drawing.Point(416, 1088);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Location = new System.Drawing.Point(312, 884);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox9.Size = new System.Drawing.Size(23, 22);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 10;
             this.pictureBox9.TabStop = false;
@@ -181,10 +173,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Black;
             this.pictureBox8.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox8.Location = new System.Drawing.Point(417, 1127);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(313, 916);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox8.Size = new System.Drawing.Size(23, 22);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 9;
             this.pictureBox8.TabStop = false;
@@ -193,10 +184,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Black;
             this.pictureBox7.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox7.Location = new System.Drawing.Point(2040, 391);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(1530, 318);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox7.Size = new System.Drawing.Size(23, 22);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 8;
             this.pictureBox7.TabStop = false;
@@ -205,10 +195,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
             this.pictureBox6.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox6.Location = new System.Drawing.Point(2165, 340);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(1624, 276);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox6.Size = new System.Drawing.Size(23, 22);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
@@ -217,10 +206,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Black;
             this.pictureBox5.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox5.Location = new System.Drawing.Point(1377, 140);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(1033, 114);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox5.Size = new System.Drawing.Size(23, 22);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
@@ -229,10 +217,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
             this.pictureBox4.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox4.Location = new System.Drawing.Point(1223, 171);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(917, 139);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox4.Size = new System.Drawing.Size(23, 22);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -241,10 +228,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox3.Location = new System.Drawing.Point(967, 233);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(725, 189);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox3.Size = new System.Drawing.Size(23, 22);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -253,10 +239,9 @@ namespace SKTRFIDCCS2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.Image = global::SKTRFIDCCS2.Properties.Resources.green_red;
-            this.pictureBox2.Location = new System.Drawing.Point(1376, 100);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1032, 81);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -266,9 +251,8 @@ namespace SKTRFIDCCS2
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2400, 1350);
+            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -279,12 +263,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_01.BackColor = System.Drawing.Color.Black;
             this.lblDSP_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_01.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_01.Location = new System.Drawing.Point(248, 873);
-            this.lblDSP_01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_01.Location = new System.Drawing.Point(249, 878);
             this.lblDSP_01.Name = "lblDSP_01";
-            this.lblDSP_01.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_01.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_01.TabIndex = 39;
-            this.lblDSP_01.Text = "12";
             this.lblDSP_01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_02
@@ -292,12 +274,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_02.BackColor = System.Drawing.Color.Black;
             this.lblDSP_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_02.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_02.Location = new System.Drawing.Point(248, 804);
-            this.lblDSP_02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_02.Location = new System.Drawing.Point(250, 815);
             this.lblDSP_02.Name = "lblDSP_02";
-            this.lblDSP_02.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_02.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_02.TabIndex = 40;
-            this.lblDSP_02.Text = "12";
             this.lblDSP_02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_14
@@ -305,12 +285,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_14.BackColor = System.Drawing.Color.Black;
             this.lblDSP_14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_14.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_14.Location = new System.Drawing.Point(839, 59);
-            this.lblDSP_14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_14.Location = new System.Drawing.Point(847, 74);
             this.lblDSP_14.Name = "lblDSP_14";
-            this.lblDSP_14.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_14.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_14.TabIndex = 41;
-            this.lblDSP_14.Text = "12";
             this.lblDSP_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_13
@@ -318,12 +296,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_13.BackColor = System.Drawing.Color.Black;
             this.lblDSP_13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_13.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_13.Location = new System.Drawing.Point(677, 100);
-            this.lblDSP_13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_13.Location = new System.Drawing.Point(682, 110);
             this.lblDSP_13.Name = "lblDSP_13";
-            this.lblDSP_13.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_13.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_13.TabIndex = 42;
-            this.lblDSP_13.Text = "12";
             this.lblDSP_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_12
@@ -331,12 +307,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_12.BackColor = System.Drawing.Color.Black;
             this.lblDSP_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_12.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_12.Location = new System.Drawing.Point(522, 140);
-            this.lblDSP_12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_12.Location = new System.Drawing.Point(529, 145);
             this.lblDSP_12.Name = "lblDSP_12";
-            this.lblDSP_12.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_12.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_12.TabIndex = 43;
-            this.lblDSP_12.Text = "12";
             this.lblDSP_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_11
@@ -344,12 +318,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_11.BackColor = System.Drawing.Color.Black;
             this.lblDSP_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_11.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_11.Location = new System.Drawing.Point(360, 157);
-            this.lblDSP_11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_11.Location = new System.Drawing.Point(366, 162);
             this.lblDSP_11.Name = "lblDSP_11";
-            this.lblDSP_11.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_11.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_11.TabIndex = 44;
-            this.lblDSP_11.Text = "12";
             this.lblDSP_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_10
@@ -357,12 +329,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_10.BackColor = System.Drawing.Color.Black;
             this.lblDSP_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_10.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_10.Location = new System.Drawing.Point(238, 171);
-            this.lblDSP_10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_10.Location = new System.Drawing.Point(249, 180);
             this.lblDSP_10.Name = "lblDSP_10";
-            this.lblDSP_10.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_10.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_10.TabIndex = 45;
-            this.lblDSP_10.Text = "12";
             this.lblDSP_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_09
@@ -370,12 +340,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_09.BackColor = System.Drawing.Color.Black;
             this.lblDSP_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_09.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_09.Location = new System.Drawing.Point(238, 266);
-            this.lblDSP_09.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_09.Location = new System.Drawing.Point(250, 280);
             this.lblDSP_09.Name = "lblDSP_09";
-            this.lblDSP_09.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_09.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_09.TabIndex = 46;
-            this.lblDSP_09.Text = "12";
             this.lblDSP_09.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_08
@@ -383,12 +351,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_08.BackColor = System.Drawing.Color.Black;
             this.lblDSP_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_08.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_08.Location = new System.Drawing.Point(248, 352);
-            this.lblDSP_08.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_08.Location = new System.Drawing.Point(249, 365);
             this.lblDSP_08.Name = "lblDSP_08";
-            this.lblDSP_08.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_08.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_08.TabIndex = 47;
-            this.lblDSP_08.Text = "12";
             this.lblDSP_08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_07
@@ -396,12 +362,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_07.BackColor = System.Drawing.Color.Black;
             this.lblDSP_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_07.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_07.Location = new System.Drawing.Point(248, 444);
-            this.lblDSP_07.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_07.Location = new System.Drawing.Point(250, 455);
             this.lblDSP_07.Name = "lblDSP_07";
-            this.lblDSP_07.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_07.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_07.TabIndex = 48;
-            this.lblDSP_07.Text = "12";
             this.lblDSP_07.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_06
@@ -409,12 +373,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_06.BackColor = System.Drawing.Color.Black;
             this.lblDSP_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_06.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_06.Location = new System.Drawing.Point(248, 528);
-            this.lblDSP_06.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_06.Location = new System.Drawing.Point(249, 543);
             this.lblDSP_06.Name = "lblDSP_06";
-            this.lblDSP_06.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_06.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_06.TabIndex = 49;
-            this.lblDSP_06.Text = "12";
             this.lblDSP_06.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_05
@@ -422,12 +384,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_05.BackColor = System.Drawing.Color.Black;
             this.lblDSP_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_05.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_05.Location = new System.Drawing.Point(248, 597);
-            this.lblDSP_05.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_05.Location = new System.Drawing.Point(249, 610);
             this.lblDSP_05.Name = "lblDSP_05";
-            this.lblDSP_05.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_05.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_05.TabIndex = 50;
-            this.lblDSP_05.Text = "12";
             this.lblDSP_05.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_04
@@ -435,12 +395,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_04.BackColor = System.Drawing.Color.Black;
             this.lblDSP_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_04.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_04.Location = new System.Drawing.Point(248, 666);
-            this.lblDSP_04.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_04.Location = new System.Drawing.Point(250, 679);
             this.lblDSP_04.Name = "lblDSP_04";
-            this.lblDSP_04.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_04.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_04.TabIndex = 51;
-            this.lblDSP_04.Text = "12";
             this.lblDSP_04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_03
@@ -448,12 +406,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_03.BackColor = System.Drawing.Color.Black;
             this.lblDSP_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_03.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_03.Location = new System.Drawing.Point(248, 735);
-            this.lblDSP_03.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_03.Location = new System.Drawing.Point(250, 748);
             this.lblDSP_03.Name = "lblDSP_03";
-            this.lblDSP_03.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_03.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_03.TabIndex = 52;
-            this.lblDSP_03.Text = "12";
             this.lblDSP_03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_15
@@ -461,12 +417,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_15.BackColor = System.Drawing.Color.Black;
             this.lblDSP_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_15.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_15.Location = new System.Drawing.Point(971, 330);
-            this.lblDSP_15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_15.Location = new System.Drawing.Point(976, 337);
             this.lblDSP_15.Name = "lblDSP_15";
-            this.lblDSP_15.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_15.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_15.TabIndex = 53;
-            this.lblDSP_15.Text = "12";
             this.lblDSP_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_16
@@ -474,12 +428,10 @@ namespace SKTRFIDCCS2
             this.lblDSP_16.BackColor = System.Drawing.Color.Black;
             this.lblDSP_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_16.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_16.Location = new System.Drawing.Point(1509, 237);
-            this.lblDSP_16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSP_16.Location = new System.Drawing.Point(1510, 242);
             this.lblDSP_16.Name = "lblDSP_16";
-            this.lblDSP_16.Size = new System.Drawing.Size(60, 68);
+            this.lblDSP_16.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_16.TabIndex = 54;
-            this.lblDSP_16.Text = "12";
             this.lblDSP_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
@@ -487,9 +439,10 @@ namespace SKTRFIDCCS2
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(1849, 415);
+            this.btnExit.Location = new System.Drawing.Point(1896, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(32, 35);
+            this.btnExit.Size = new System.Drawing.Size(24, 28);
             this.btnExit.TabIndex = 55;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -497,9 +450,9 @@ namespace SKTRFIDCCS2
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2400, 1350);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblDSP_16);
             this.Controls.Add(this.lblDSP_15);
@@ -534,7 +487,6 @@ namespace SKTRFIDCCS2
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
