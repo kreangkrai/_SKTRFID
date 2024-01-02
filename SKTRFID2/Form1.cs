@@ -85,7 +85,7 @@ namespace SKTRFID2
         {
             try
             {
-                List<DataModel> datas = RFID.GetDatas();
+                List<DataModel> datas = RFID.GetDatas(setting.crop_year);
 
                 //Read Barcode
                 bool b_D8 = true;

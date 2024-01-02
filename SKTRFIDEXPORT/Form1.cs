@@ -67,24 +67,29 @@ namespace SKTRFIDREPORT
                 row.Cells[4].Value = reports[i].area_id;
                 row.Cells[5].Value = reports[i].crop_year;
                 row.Cells[6].Value = reports[i].barcode;
-                row.Cells[7].Value = CaneType(reports[i].cane_type);
+                row.Cells[7].Value = reports[i].farmer_name;
+                row.Cells[8].Value = CaneType(reports[i].cane_type);
                 string allergen = reports[i].allergen;
-                row.Cells[8].Value = allergenType(allergen);
+                row.Cells[9].Value = allergenType(allergen);
                 if (allergen == "No")
                 {
-                    row.Cells[8].Style.BackColor = Color.GreenYellow;
+                    row.Cells[9].Style.BackColor = Color.GreenYellow;
                 }
                 else
                 {
-                    row.Cells[8].Style.BackColor = Color.Red;
+                    row.Cells[9].Style.BackColor = Color.Red;
                 }
-                row.Cells[9].Value = reports[i].truck_number;
-                row.Cells[10].Value = reports[i].rfid;
+                row.Cells[10].Value = reports[i].truck_number;
+                row.Cells[11].Value = reports[i].rfid;
                 dataGridView1.Rows.Add(row);
             }
         }
         private string CaneType(int n)
         {
+            if (n < 0)
+            {
+                return "";
+            }
             List<string> canes_type = new List<string>();
             canes_type.Add("สดท่อน");
             canes_type.Add("ไฟไหม้ท่อน");

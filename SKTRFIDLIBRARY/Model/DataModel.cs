@@ -8,6 +8,7 @@ namespace SKTRFIDLIBRARY.Model
 {
     public class DataModel
     {
+        public int queue { get; set; }
         public string dump_id { get; set; }
         public int area_id { get; set; }
         public string crop_year { get; set; }

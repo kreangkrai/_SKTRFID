@@ -37,7 +37,8 @@ namespace SKTRFIDLIBRARY.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT dump_id,
+                    SqlCommand cmd = new SqlCommand($@"SELECT queue,
+                                             dump_id,
                                              area_id,
                                              crop_year,
                                              rfid,
@@ -58,6 +59,7 @@ namespace SKTRFIDLIBRARY.Service
                     {
                         while (dr.Read())
                         {
+                            data.queue = Int32.Parse(dr["queue"].ToString());
                             data.dump_id = dr["dump_id"].ToString();
                             data.area_id = Convert.ToInt32(dr["area_id"].ToString());
                             data.crop_year = dr["crop_year"].ToString();
@@ -83,7 +85,7 @@ namespace SKTRFIDLIBRARY.Service
             }
         }
 
-        public List<DataModel> GetDatas()
+        public List<DataModel> GetDatas(string crop_year)
         {
             List<DataModel> datas = new List<DataModel>();
             try
@@ -96,7 +98,7 @@ namespace SKTRFIDLIBRARY.Service
                     }
 
                     SqlCommand cmd = new SqlCommand($@"SELECT * FROM (SELECT * , RANK() OVER(partition by truck_number ORDER BY rfid_lastdate DESC) as rank  
-                                                       from tb_rfid) as temp
+                                                       from tb_rfid where crop_year='{crop_year}') as temp
                                                        WHERE temp.rank = 1", cn);
 
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -146,12 +148,13 @@ namespace SKTRFIDLIBRARY.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT dump_id,
+                    SqlCommand cmd = new SqlCommand($@"SELECT
+                                             dump_id,
                                              area_id,
                                              crop_year,
                                              rfid,
                                              barcode,
-                                             farmer_name
+                                             farmer_name,
                                              cane_type,
                                              allergen,
                                              truck_number,
@@ -208,7 +211,7 @@ namespace SKTRFIDLIBRARY.Service
                     }
                     for (int i = 0; i < datas.Count; i++)
                     {
-                        SqlCommand cmd = new SqlCommand($@"INSERT INTO tb_rfid_log VALUES('{datas[i].dump_id}','{datas[i].area_id}',
+                        SqlCommand cmd = new SqlCommand($@"INSERT INTO tb_rfid_log VALUES('{datas[i].queue}', '{datas[i].dump_id}','{datas[i].area_id}',
                                                                                       '{datas[i].crop_year}','{datas[i].rfid}','{datas[i].barcode}',N'{datas[i].farmer_name}',
                                                                                       '{datas[i].cane_type}','{datas[i].allergen}',N'{datas[i].truck_number}',
                                                                                       '{datas[i].truck_type}','{datas[i].weight_type}','{datas[i].queue_status}','{datas[i].rfid_lastdate}')", cn);

@@ -19,7 +19,7 @@ namespace SKTRFID1
             //Application.Run(new Form1());
 
             Form1 f = new Form1();
-            Screen[] screen = Screen.AllScreens.OrderBy(o=>o.WorkingArea.X).ToArray();
+            Screen[] screen = Screen.AllScreens.OrderBy(o => o.WorkingArea.X).ToArray();
             if (screen.Length > 2)
             {
                 f.Location = screen[2].WorkingArea.Location;

@@ -73,10 +73,9 @@ namespace SKTRFIDREPORT
             this.dateTimePickerStat.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerStat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerStat.Location = new System.Drawing.Point(148, 25);
-            this.dateTimePickerStat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerStat.Location = new System.Drawing.Point(111, 20);
             this.dateTimePickerStat.Name = "dateTimePickerStat";
-            this.dateTimePickerStat.Size = new System.Drawing.Size(189, 38);
+            this.dateTimePickerStat.Size = new System.Drawing.Size(143, 32);
             this.dateTimePickerStat.TabIndex = 0;
             // 
             // dateTimePickerStop
@@ -84,10 +83,9 @@ namespace SKTRFIDREPORT
             this.dateTimePickerStop.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerStop.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerStop.Location = new System.Drawing.Point(509, 25);
-            this.dateTimePickerStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerStop.Location = new System.Drawing.Point(382, 20);
             this.dateTimePickerStop.Name = "dateTimePickerStop";
-            this.dateTimePickerStop.Size = new System.Drawing.Size(207, 38);
+            this.dateTimePickerStop.Size = new System.Drawing.Size(156, 32);
             this.dateTimePickerStop.TabIndex = 1;
             // 
             // btnExport
@@ -95,10 +93,9 @@ namespace SKTRFIDREPORT
             this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(1404, 869);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExport.Location = new System.Drawing.Point(1352, 706);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(280, 66);
+            this.btnExport.Size = new System.Drawing.Size(210, 54);
             this.btnExport.TabIndex = 2;
             this.btnExport.Text = "ส่งออกไฟล์ Excel";
             this.btnExport.UseVisualStyleBackColor = false;
@@ -109,10 +106,9 @@ namespace SKTRFIDREPORT
             this.btnFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnFolder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFolder.Location = new System.Drawing.Point(1693, 869);
-            this.btnFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFolder.Location = new System.Drawing.Point(1568, 706);
             this.btnFolder.Name = "btnFolder";
-            this.btnFolder.Size = new System.Drawing.Size(280, 66);
+            this.btnFolder.Size = new System.Drawing.Size(210, 54);
             this.btnFolder.TabIndex = 3;
             this.btnFolder.Text = "เปิดดูแฟ้มเอกสาร";
             this.btnFolder.UseVisualStyleBackColor = false;
@@ -122,10 +118,9 @@ namespace SKTRFIDREPORT
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 31);
+            this.label1.Size = new System.Drawing.Size(93, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "วันเริ่มต้น";
             // 
@@ -133,10 +128,9 @@ namespace SKTRFIDREPORT
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(372, 25);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(279, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 31);
+            this.label2.Size = new System.Drawing.Size(87, 26);
             this.label2.TabIndex = 5;
             this.label2.Text = "วันสิ้นสุด";
             // 
@@ -145,10 +139,9 @@ namespace SKTRFIDREPORT
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(739, 15);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Location = new System.Drawing.Point(554, 12);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(280, 49);
+            this.btnRefresh.Size = new System.Drawing.Size(210, 40);
             this.btnRefresh.TabIndex = 6;
             this.btnRefresh.Text = "รีเฟรช";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -188,21 +181,19 @@ namespace SKTRFIDREPORT
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 71);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1902, 790);
+            this.dataGridView1.Size = new System.Drawing.Size(1763, 642);
             this.dataGridView1.TabIndex = 7;
             // 
             // txtSearchBarcode
             // 
             this.txtSearchBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBarcode.Location = new System.Drawing.Point(1239, 22);
-            this.txtSearchBarcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchBarcode.Location = new System.Drawing.Point(929, 18);
             this.txtSearchBarcode.Name = "txtSearchBarcode";
-            this.txtSearchBarcode.Size = new System.Drawing.Size(201, 34);
+            this.txtSearchBarcode.Size = new System.Drawing.Size(152, 29);
             this.txtSearchBarcode.TabIndex = 8;
             this.txtSearchBarcode.TextChanged += new System.EventHandler(this.txtSearchBarcode_TextChanged);
             // 
@@ -210,10 +201,9 @@ namespace SKTRFIDREPORT
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1127, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(845, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 31);
+            this.label3.Size = new System.Drawing.Size(78, 26);
             this.label3.TabIndex = 9;
             this.label3.Text = "บาร์โค้ด";
             // 
@@ -261,7 +251,6 @@ namespace SKTRFIDREPORT
             this.round.Name = "round";
             this.round.ReadOnly = true;
             this.round.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.round.Width = 125;
             // 
             // area_id
             // 
@@ -273,7 +262,6 @@ namespace SKTRFIDREPORT
             this.area_id.Name = "area_id";
             this.area_id.ReadOnly = true;
             this.area_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.area_id.Width = 125;
             // 
             // crop_year
             // 
@@ -285,7 +273,6 @@ namespace SKTRFIDREPORT
             this.crop_year.Name = "crop_year";
             this.crop_year.ReadOnly = true;
             this.crop_year.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.crop_year.Width = 125;
             // 
             // barcode
             // 
@@ -309,7 +296,7 @@ namespace SKTRFIDREPORT
             this.farmer_name.Name = "farmer_name";
             this.farmer_name.ReadOnly = true;
             this.farmer_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.farmer_name.Width = 350;
+            this.farmer_name.Width = 300;
             // 
             // cane_type
             // 
@@ -361,9 +348,9 @@ namespace SKTRFIDREPORT
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 935);
+            this.ClientSize = new System.Drawing.Size(1790, 760);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearchBarcode);
             this.Controls.Add(this.dataGridView1);
@@ -374,7 +361,6 @@ namespace SKTRFIDREPORT
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.dateTimePickerStop);
             this.Controls.Add(this.dateTimePickerStat);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

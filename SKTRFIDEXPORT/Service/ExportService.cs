@@ -88,8 +88,23 @@ namespace SKTRFIDREPORT.Service
                         cn.Open();
                     }
 
+                    //SqlCommand cmd = new SqlCommand($@"SELECT rfid.dump_id,
+	                   //                                CCS.Queue as queue,
+	                   //                                rfid.area_id,
+	                   //                                rfid.barcode,
+                    //                                   rfid.farmer_name,
+	                   //                                rfid.crop_year,
+	                   //                                rfid.cane_type,
+	                   //                                rfid.rfid,
+	                   //                                rfid.truck_number,
+	                   //                                rfid.allergen,
+	                   //                                rfid.rfid_lastdate FROM tb_rfid_log as rfid 
+                    //                            LEFT JOIN
+                    //                            (SELECT * FROM [192.168.250.2,1798].[CCS].[dbo].[Loading]) as CCS ON rfid.barcode = CCS.Barcode
+                    //                            WHERE rfid.rfid_lastdate BETWEEN '{start.ToString("yyyy-MM-dd 00:00:00")}' AND '{stop.Date.ToString("yyyy-MM-dd 23:59:59")}' AND CCS.queue IS NOT NULL
+                    //                            ORDER BY rfid.rfid_lastdate", cn);
                     SqlCommand cmd = new SqlCommand($@"SELECT rfid.dump_id,
-	                                                   CCS.Queue as queue,
+	                                                   rfid.queue,
 	                                                   rfid.area_id,
 	                                                   rfid.barcode,
                                                        rfid.farmer_name,
@@ -99,8 +114,6 @@ namespace SKTRFIDREPORT.Service
 	                                                   rfid.truck_number,
 	                                                   rfid.allergen,
 	                                                   rfid.rfid_lastdate FROM tb_rfid_log as rfid 
-                                                LEFT JOIN
-                                                (SELECT * FROM [192.168.250.2,1798].[CCS].[dbo].[Loading]) as CCS ON rfid.barcode = CCS.Barcode
                                                 WHERE rfid.rfid_lastdate BETWEEN '{start.ToString("yyyy-MM-dd 00:00:00")}' AND '{stop.Date.ToString("yyyy-MM-dd 23:59:59")}'
                                                 ORDER BY rfid.rfid_lastdate", cn);
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -132,47 +145,79 @@ namespace SKTRFIDREPORT.Service
                 datas = datas.OrderBy(o => o.rfid_lastdate).ThenBy(t => t.dump_id).ToList();
 
                 int current_round = 1;
-                for (int i = 0; i < shifts.Count; i++)
+                int current_dump = datas[0].dump_id;
+                for (int i = 0; i < datas.Count; i++)
                 {
-                    DateTime _start = shifts[i].date_start;
-                    DateTime _stop = shifts[i].date_stop;
-                    List<DataModel> _datas = datas.Where(w => w.rfid_lastdate >= _start && w.rfid_lastdate <= _stop).ToList();
-                    current_round = 1;
-                    string last_date = "";
-                    for (int j = 0; j < _datas.Count; j++)
+                   
+                    int last_dump = reports.Count> 0 ? reports.LastOrDefault().dump_id : current_dump;
+                    if (current_dump > last_dump)
                     {
                         
-                        var last_round = reports.Where(w => w.round == current_round).ToList();
-                        bool check_dump_less = last_round
-                                                .Where(w => w.date.ToString("dd-MM-yyyy").Equals(_datas[j].rfid_lastdate.ToString("dd-MM-yyyy")))
-                                                .Any(a => a.dump_id >= _datas[j].dump_id);
-
-                        if (check_dump_less)
-                        {
-                            current_round++;
-                        }
-                        if (last_date != _datas[j].rfid_lastdate.ToString("dd-MM-yyyy"))
-                        {
-                            current_round = 1;
-                        }
-                        reports.Add(new ReportModel()
-                        {
-                            queue = _datas[j].queue,
-                            dump_id = _datas[j].dump_id,
-                            date = _datas[j].rfid_lastdate,
-                            area_id = _datas[j].area_id,
-                            crop_year = _datas[j].crop_year,
-                            barcode = _datas[j].barcode,
-                            farmer_name = _datas[j].farmer_name,
-                            cane_type = _datas[j].cane_type,
-                            allergen = _datas[j].allergen,
-                            rfid = _datas[j].rfid,
-                            truck_number = _datas[j].truck_number,
-                            round = current_round
-                        });
-                        last_date = _datas[j].rfid_lastdate.ToString("dd-MM-yyyy");
+                        current_round++;
                     }
-                }              
+                    else
+                    {
+                        current_round = 1;
+                    }
+                    reports.Add(new ReportModel()
+                    {
+                        queue = datas[i].queue,
+                        dump_id = datas[i].dump_id,
+                        date = datas[i].rfid_lastdate,
+                        area_id = datas[i].area_id,
+                        crop_year = datas[i].crop_year,
+                        barcode = datas[i].barcode,
+                        farmer_name = datas[i].farmer_name,
+                        cane_type = datas[i].cane_type,
+                        allergen = datas[i].allergen,
+                        rfid = datas[i].rfid,
+                        truck_number = datas[i].truck_number,
+                        round = current_round
+                    });
+
+                }
+                //int current_round = 1;
+                //for (int i = 0; i < shifts.Count; i++)
+                //{
+                //    DateTime _start = shifts[i].date_start;
+                //    DateTime _stop = shifts[i].date_stop;
+                //    List<DataModel> _datas = datas.Where(w => w.rfid_lastdate >= _start && w.rfid_lastdate <= _stop).ToList();
+                //    current_round = 1;
+                //    string last_date = "";
+                //    for (int j = 0; j < _datas.Count; j++)
+                //    {
+
+                //        var last_round = reports.Where(w => w.round == current_round).ToList();
+                //        bool check_dump_less = last_round
+                //                                .Where(w => w.date.ToString("dd-MM-yyyy").Equals(_datas[j].rfid_lastdate.ToString("dd-MM-yyyy")))
+                //                                .Any(a => a.dump_id >= _datas[j].dump_id);
+
+                //        if (check_dump_less)
+                //        {
+                //            current_round++;
+                //        }
+                //        if (last_date != _datas[j].rfid_lastdate.ToString("dd-MM-yyyy"))
+                //        {
+                //            current_round = 1;
+                //        }
+                //        reports.Add(new ReportModel()
+                //        {
+                //            queue = _datas[j].queue,
+                //            dump_id = _datas[j].dump_id,
+                //            date = _datas[j].rfid_lastdate,
+                //            area_id = _datas[j].area_id,
+                //            crop_year = _datas[j].crop_year,
+                //            barcode = _datas[j].barcode,
+                //            farmer_name = _datas[j].farmer_name,
+                //            cane_type = _datas[j].cane_type,
+                //            allergen = _datas[j].allergen,
+                //            rfid = _datas[j].rfid,
+                //            truck_number = _datas[j].truck_number,
+                //            round = current_round
+                //        });
+                //        last_date = _datas[j].rfid_lastdate.ToString("dd-MM-yyyy");
+                //    }
+                //}              
                 return reports;
             }
             catch(Exception ex)
@@ -184,6 +229,10 @@ namespace SKTRFIDREPORT.Service
 
         private string CaneType(int n)
         {
+            if (n < 1)
+            {
+                return "";
+            }
             List<string> canes_type = new List<string>();
             canes_type.Add("สดท่อน");
             canes_type.Add("ไฟไหม้ท่อน");
@@ -244,11 +293,13 @@ namespace SKTRFIDREPORT.Service
                         {
                             DataModel data = new DataModel()
                             {
+                                queue = Convert.ToInt32(dr["queue"].ToString()),
                                 dump_id = Convert.ToInt32(dr["dump_id"].ToString()),
                                 area_id = Convert.ToInt32(dr["area_id"].ToString()),
                                 crop_year = dr["crop_year"].ToString(),
                                 rfid = dr["rfid"].ToString(),
                                 barcode = dr["barcode"].ToString(),
+                                farmer_name = dr["farmer_name"].ToString(),
                                 cane_type = Convert.ToInt32(dr["cane_type"].ToString()),
                                 allergen = dr["allergen"].ToString(),
                                 truck_number = dr["truck_number"].ToString(),

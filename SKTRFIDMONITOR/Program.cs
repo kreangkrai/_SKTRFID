@@ -17,6 +17,7 @@ namespace SKTRFIDMONITOR
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1(args[0])); // Phase
+            //Application.Run(new Form1("1")); // Phase
         }
     }
 }
