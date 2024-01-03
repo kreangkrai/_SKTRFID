@@ -14,5 +14,6 @@ namespace SKTRFIDLIBRARY.Interface
         List<DataModel> GetDatasByAreaYear(int area_id,string crop_year);
         string UpdateRFID(DataModel data);
         string InsertRFID(List<DataModel> datas);
+        string InsertRFIDLog(DataModel data);
     }
 }

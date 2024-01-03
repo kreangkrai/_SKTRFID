@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,13 +22,15 @@ namespace SKTRFID1
     {
         private ISetting Setting;
         CJ2Compolet cj2;
-        //CJ2Compolet cj1;
         private IRFID RFID;
         LabelModel labels;
         string phase = "1";
         bool isManual = false;
         List<bool> isManuals;
         SettingModel setting;
+        private IAPI API;
+
+        string last_queue = string.Empty;
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +38,7 @@ namespace SKTRFID1
             labels = new LabelModel();
             Setting = new SettingService(1);
             setting = Setting.GetSetting();
+            API = new APIService();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,20 +74,12 @@ namespace SKTRFID1
 
             setting = Setting.GetSetting();
 
-            //cj2 = new CJ2Compolet();
-            //cj2.HeartBeatTimer = 3000;
-            //cj2.ConnectionType = ConnectionType.UCMM;
-            //cj2.UseRoutePath = false;
-            //cj2.PeerAddress = setting.ip_plc;
-            //cj2.LocalPort = 2;
-            //cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
-            //cj2.Active = true;
 
             cj2 = new CJ2Compolet();
             cj2.HeartBeatTimer = 3000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
-            cj2.PeerAddress = setting.ip_plc_common;
+            cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
             cj2.OnHeartBeatTimer += Cj3_OnHeartBeatTimer;
             cj2.Active = true;
@@ -91,129 +87,63 @@ namespace SKTRFID1
             isManuals = new List<bool>();
         }
 
-        //private void Cj1_OnHeartBeatTimer(object sender, EventArgs e)
-        //{
-        //    bool manual_d1 = (bool)cj1.ReadVariable("MN_SCAN_D1");
-        //    bool manual_d2 = (bool)cj1.ReadVariable("MN_SCAN_D2");
-        //    bool manual_d3 = (bool)cj1.ReadVariable("MN_SCAN_D3");
-        //    bool manual_d4 = (bool)cj1.ReadVariable("MN_SCAN_D4");
-        //    bool manual_d5 = (bool)cj1.ReadVariable("MN_SCAN_D5");
-        //    bool manual_d6 = (bool)cj1.ReadVariable("MN_SCAN_D6");
-        //    bool manual_d7 = (bool)cj1.ReadVariable("MN_SCAN_D7");
-
-        //    Process[] process = Process.GetProcesses().Where(w=>w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
-
-        //    if (manual_d1)
-        //    {
-        //        foreach (var p in process)
-        //        {
-        //            if (p.MainWindowTitle != "COMMON DUMP 1")
-        //            {
-        //                p.Kill();
-        //            }
-        //        }
-
-        //        isManuals.Add(manual_d1);
-        //        cj1.WriteVariable("MN_SCAN_D1", false);
-        //        StartProcess("COMMON",setting.ip2,"1", phase);
-        //    }
-
-        //    if (manual_d2)
-        //    {
-        //        foreach (var p in process)
-        //        {
-        //            if (p.MainWindowTitle != "COMMON DUMP 2")
-        //            {
-        //                p.Kill();
-        //            }
-        //        }
-
-        //        isManuals.Add(manual_d2);
-        //        cj1.WriteVariable("MN_SCAN_D2", false);
-        //        StartProcess("COMMON", setting.ip2, "2", phase);
-        //    }
-
-        //    if (manual_d3)
-        //    {
-        //        foreach (var p in process)
-        //        {
-        //            if (p.MainWindowTitle != "COMMON DUMP 3")
-        //            {
-        //                p.Kill();
-        //            }
-        //        }
-
-        //        isManuals.Add(manual_d3);
-        //        cj1.WriteVariable("MN_SCAN_D3", false);
-        //        StartProcess("COMMON", setting.ip2, "3", phase);
-        //    }
-
-        //    if (manual_d4)
-        //    {
-        //        foreach (var p in process)
-        //        {
-        //            if (p.MainWindowTitle != "COMMON DUMP 4")
-        //            {
-        //                p.Kill();
-        //            }
-        //        }
-
-        //        isManuals.Add(manual_d4);
-        //        cj1.WriteVariable("MN_SCAN_D4", false);
-        //        StartProcess("COMMON", setting.ip2, "4", phase);
-        //    }
-
-        //    if (manual_d5)
-        //    {
-        //        foreach (var p in process)
-        //        {
-        //            if (p.MainWindowTitle != "COMMON DUMP 5")
-        //            {
-        //                p.Kill();
-        //            }
-        //        }
-
-        //        isManuals.Add(manual_d5);
-        //        cj1.WriteVariable("MN_SCAN_D5", false);
-        //        StartProcess("COMMON", setting.ip2, "5", phase);
-        //    }
-
-        //    if (manual_d6)
-        //    {
-        //        foreach (var p in process)
-        //        {
-        //            if (p.MainWindowTitle != "COMMON DUMP 6")
-        //            {
-        //                p.Kill();
-        //            }
-        //        }
-
-        //        isManuals.Add(manual_d6);
-        //        cj1.WriteVariable("MN_SCAN_D6", false);
-        //        StartProcess("COMMON", setting.ip2, "6", phase);
-        //    }
-
-        //    if (manual_d7)
-        //    {
-        //        foreach (var p in process)
-        //        {
-        //            if (p.MainWindowTitle != "COMMON DUMP 7")
-        //            {
-        //                p.Kill();
-        //            }
-        //        }
-
-        //        isManuals.Add(manual_d7);
-        //        cj1.WriteVariable("MN_SCAN_D7", false);
-        //        StartProcess("COMMON", setting.ip2, "7", phase);
-        //    }
-        //}
 
         private void Cj3_OnHeartBeatTimer(object sender, EventArgs e)
         {
             try
             {
                 List<DataModel> datas = RFID.GetDatas(setting.crop_year);
+
+                string queue_trig = (string)cj2.ReadVariable("Queue_Running");
+                if (last_queue != queue_trig)
+                {
+                    bool trig_D1 = (bool)cj2.ReadVariable("Trig_D1");
+                    bool trig_D2 = (bool)cj2.ReadVariable("Trig_D2");
+                    bool trig_D3 = (bool)cj2.ReadVariable("Trig_D3");
+                    bool trig_D4 = (bool)cj2.ReadVariable("Trig_D4");
+                    bool trig_D5 = (bool)cj2.ReadVariable("Trig_D5");
+                    bool trig_D6 = (bool)cj2.ReadVariable("Trig_D6");
+                    bool trig_D7 = (bool)cj2.ReadVariable("Trig_D7");
+
+
+                    DataModel data_trig = new DataModel();
+                    if (trig_D1)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "1").FirstOrDefault();
+                        SendData(Int32.Parse(queue_trig), data_trig, 1, 1);
+                    }
+                    else if (trig_D2)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "2").FirstOrDefault();
+                        SendData(Int32.Parse(queue_trig), data_trig, 1, 2);
+                    }
+                    else if(trig_D3)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "3").FirstOrDefault();
+                        SendData(Int32.Parse(queue_trig), data_trig, 1, 3);
+                    }
+                    else if (trig_D4)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "4").FirstOrDefault();
+                        SendData(Int32.Parse(queue_trig), data_trig, 1, 4);
+                    }
+                    else if (trig_D5)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "5").FirstOrDefault();
+                        SendData(Int32.Parse(queue_trig), data_trig, 1, 5);
+                    }
+                    else if (trig_D6)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "6").FirstOrDefault();
+                        SendData(Int32.Parse(queue_trig), data_trig, 1, 6);
+                    }
+                    else if (trig_D7)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "7").FirstOrDefault();
+                        SendData(Int32.Parse(queue_trig), data_trig, 1, 7);
+                    }
+                }
+                last_queue = queue_trig;
 
                 //Read Barcode
                 bool b_D1 = true;
@@ -402,7 +332,6 @@ namespace SKTRFID1
                     if (auto_d1) // Detect AUTO 1
                     {
                         StartProcess("AUTO",setting.ip1, "1", phase);
-                        Console.WriteLine("=================== OPEN DUMP 1 ==================");
                     }
                     else // NOT Detect AUTO 1
                     {
@@ -411,7 +340,7 @@ namespace SKTRFID1
                             if (p.MainWindowTitle == "AUTO DUMP 1")
                             {
                                 p.Kill();
-                                Console.WriteLine("=================== KILL DUMP 1 ==================");
+ 
                             }
                         }
                     }
@@ -419,7 +348,6 @@ namespace SKTRFID1
                     if (auto_d2)
                     {
                         StartProcess("AUTO", setting.ip1, "2", phase);
-                        Console.WriteLine("=================== DUMP 2 ==================");
                     }
                     else
                     {
@@ -428,7 +356,6 @@ namespace SKTRFID1
                             if (p.MainWindowTitle == "AUTO DUMP 2")
                             {
                                 p.Kill();
-                                Console.WriteLine("=================== KILL DUMP 2 ==================");
                             }
                         }
                     }
@@ -523,203 +450,67 @@ namespace SKTRFID1
             }
         }
 
-        //private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        List<DataModel> datas = RFID.GetDatas();
+        private async void SendData(int queue, DataModel rfid, int phase, int dump)
+        {
+            bool CheckInternet = checkInternet();
+            //Check Local Internet
+            if (CheckInternet)  // Online Read data from api
+            {
+                //Insert Data to API
+                DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
+                if (dataInsert.Data[0].StatusDb != 0) // Send Complete
+                {
 
-        //        //Read Barcode
-        //        bool b_D1 = true;
-        //        bool b_D2 = true;
-        //        bool b_D3 = true;
-        //        bool b_D4 = true;
-        //        bool b_D5 = true;
-        //        bool b_D6 = true;
-        //        bool b_D7 = true;
-        //        string bar_D1 = (string)cj2.ReadVariable("Bar_ID1");
-        //        string bar_D2 = (string)cj2.ReadVariable("Bar_ID2");
-        //        string bar_D3 = (string)cj2.ReadVariable("Bar_ID3");
-        //        string bar_D4 = (string)cj2.ReadVariable("Bar_ID4");
-        //        string bar_D5 = (string)cj2.ReadVariable("Bar_ID5");
-        //        string bar_D6 = (string)cj2.ReadVariable("Bar_ID6");
-        //        string bar_D7 = (string)cj2.ReadVariable("Bar_ID7");
+                }
+            }
+            else
+            {
+                string path = Directory.GetCurrentDirectory();
+                try
+                {
+                    SoundPlayer dump_wave_file = new SoundPlayer();
+                    dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\d{dump}.wav");
+                    dump_wave_file.PlaySync();
+                }
+                catch
+                {
 
-        //        b_D1 = bar_D1 == "" ? false : true;
-        //        b_D2 = bar_D2 == "" ? false : true;
-        //        b_D3 = bar_D3 == "" ? false : true;
-        //        b_D4 = bar_D4 == "" ? false : true;
-        //        b_D5 = bar_D5 == "" ? false : true;
-        //        b_D6 = bar_D6 == "" ? false : true;
-        //        b_D7 = bar_D7 == "" ? false : true;
+                }
+                try
+                {
+                    SoundPlayer dump_wave_file = new SoundPlayer();
+                    dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\noserver.wav");
+                    dump_wave_file.PlaySync();
+                }
+                catch
+                {
 
+                }
+            }
 
-        //        if (datas.Count > 0)
-        //        {
-        //            ShowDisplay(truck_license1, truck_date1, cane_type1, truck_type1, datas, "1", b_D1);
-        //            ShowDisplay(truck_license2, truck_date2, cane_type2, truck_type2, datas, "2", b_D2);
-        //            ShowDisplay(truck_license3, truck_date3, cane_type3, truck_type3, datas, "3", b_D3);
-        //            ShowDisplay(truck_license4, truck_date4, cane_type4, truck_type4, datas, "4", b_D4);
-        //            ShowDisplay(truck_license5, truck_date5, cane_type5, truck_type5, datas, "5", b_D5);
-        //            ShowDisplay(truck_license6, truck_date6, cane_type6, truck_type6, datas, "6", b_D6);
-        //            ShowDisplay(truck_license7, truck_date7, cane_type7, truck_type7, datas, "7", b_D7);
-        //        }
+            //Insert Data RFID Log
 
-        //        bool auto_d1 = (bool)cj2.ReadVariable("Call_D1");
-        //        bool auto_d2 = (bool)cj2.ReadVariable("Call_D2");
-        //        bool auto_d3 = (bool)cj2.ReadVariable("Call_D3");
-        //        bool auto_d4 = (bool)cj2.ReadVariable("Call_D4");
-        //        bool auto_d5 = (bool)cj2.ReadVariable("Call_D5");
-        //        bool auto_d6 = (bool)cj2.ReadVariable("Call_D6");
-        //        bool auto_d7 = (bool)cj2.ReadVariable("Call_D7");
+            DateTime now = DateTime.Now;
+            DataModel data_rfid = new DataModel()
+            {
+                queue = queue,
+                dump_id = dump.ToString(),
+                area_id = rfid.area_id,
+                crop_year = rfid.crop_year,
+                allergen = rfid.allergen,
+                truck_number = rfid.truck_number,
+                farmer_name = rfid.farmer_name,
+                barcode = rfid.barcode,
+                cane_type = Convert.ToInt32(rfid.cane_type),
+                weight_type = Convert.ToInt32(rfid.weight_type),
+                truck_type = Convert.ToInt32(rfid.truck_type),
+                rfid = rfid.rfid,
+                queue_status = 3,
+                rfid_lastdate = now
+            };
 
-        //        int sound_d = (int)cj2.ReadVariable("NUM_SOUND_D");
-
-        //        if (sound_d > 0)
-        //        {
-        //            // Call Dump
-        //            try
-        //            {
-        //                string path = Directory.GetCurrentDirectory();
-        //                SoundPlayer dump_wave_file = new SoundPlayer();
-        //                dump_wave_file.SoundLocation = Path.Combine(path, $"voice\\dump{sound_d}.wav");
-        //                dump_wave_file.PlaySync();
-        //            }
-        //            catch
-        //            {
-
-        //            }
-        //        }
-
-        //        //Check Manual except kill program ; false
-        //        isManual = isManuals.Any(a => a == true);
-        //        if (!isManual)
-        //        {
-        //            Process[] process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("AUTO DUMP")).ToArray();
-
-        //            setting = Setting.GetSetting();
-
-        //            if (auto_d1) // Detect AUTO 1
-        //            {
-        //                StartProcess("AUTO", setting.ip1, "1", phase);
-        //            }
-        //            else // NOT Detect AUTO 1
-        //            {
-        //                foreach (var p in process)
-        //                {
-        //                    if (p.MainWindowTitle == "AUTO DUMP 1")
-        //                    {
-        //                        p.Kill();
-        //                    }
-        //                }
-        //            }
-
-        //            if (auto_d2)
-        //            {
-        //                StartProcess("AUTO", setting.ip1, "2", phase);
-        //            }
-        //            else
-        //            {
-        //                foreach (var p in process)
-        //                {
-        //                    if (p.MainWindowTitle == "AUTO DUMP 2")
-        //                    {
-        //                        p.Kill();
-        //                    }
-        //                }
-        //            }
-
-        //            if (auto_d3)
-        //            {
-        //                StartProcess("AUTO", setting.ip1, "3", phase);
-        //            }
-        //            else
-        //            {
-        //                foreach (var p in process)
-        //                {
-        //                    if (p.MainWindowTitle == "AUTO DUMP 3")
-        //                    {
-        //                        p.Kill();
-        //                    }
-        //                }
-        //            }
-
-        //            if (auto_d4)
-        //            {
-        //                StartProcess("AUTO", setting.ip1, "4", phase);
-        //            }
-        //            else
-        //            {
-        //                foreach (var p in process)
-        //                {
-        //                    if (p.MainWindowTitle == "AUTO DUMP 4")
-        //                    {
-        //                        p.Kill();
-        //                    }
-        //                }
-        //            }
-
-        //            if (auto_d5)
-        //            {
-        //                StartProcess("AUTO", setting.ip2, "5", phase);
-        //            }
-        //            else
-        //            {
-        //                foreach (var p in process)
-        //                {
-        //                    if (p.MainWindowTitle == "AUTO DUMP 5")
-        //                    {
-        //                        p.Kill();
-        //                    }
-        //                }
-        //            }
-
-        //            if (auto_d6)
-        //            {
-        //                StartProcess("AUTO", setting.ip2, "6", phase);
-        //            }
-        //            else
-        //            {
-        //                foreach (var p in process)
-        //                {
-        //                    if (p.MainWindowTitle == "AUTO DUMP 6")
-        //                    {
-        //                        p.Kill();
-        //                    }
-        //                }
-        //            }
-
-        //            if (auto_d7)
-        //            {
-        //                StartProcess("AUTO", setting.ip2, "7", phase);
-        //            }
-        //            else
-        //            {
-        //                foreach (var p in process)
-        //                {
-        //                    if (p.MainWindowTitle == "AUTO DUMP 7")
-        //                    {
-        //                        p.Kill();
-        //                    }
-        //                }
-        //            }
-        //        }
-
-        //        isManuals = new List<bool>();
-        //    }
-
-        //    catch (Exception ex)
-        //    {
-        //        //Weite Data to text file
-        //        string loca = @"D:\log_plc.txt";
-        //        File.AppendAllText(loca, DateTime.Now + " " + ex.Message + " " + Environment.NewLine);
-        //    }
-        //    finally
-        //    {
-        //        isManuals = new List<bool>();
-        //    }
-        //}
-
+            string message_insert = RFID.InsertRFIDLog(data_rfid);
+        }
         private void ShowDisplay(Label truck_license, Label truck_date, Label cane_type,Label truck_type, List<DataModel> datas ,string dump,bool isShow)
         {
             if (isShow)
@@ -790,15 +581,6 @@ namespace SKTRFID1
                 p.Start();
             }
         }
-
-        //private void StartProcessCommon(string dump, string phase)
-        //{
-        //    Process p = new Process();
-        //    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-        //    p.StartInfo.Arguments = dump + " " + phase;
-        //    p.Start();
-        //    p.WaitForExit();
-        //}
         private string CaneType(int n)
         {
             if (n == -1)
@@ -825,6 +607,23 @@ namespace SKTRFID1
             trucks_type.Add("พ่วงแม่");
             trucks_type.Add("พ่วงลูก");
             return trucks_type[n];
+        }
+        bool checkInternet()
+        {
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    using (client.OpenRead("http://10.43.6.33/"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
     public class LabelModel

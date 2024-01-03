@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CIPCompolet, Version=1.3.1.1, Culture=neutral, PublicKeyToken=f3505d5782c23c5d" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -96,6 +97,10 @@
     <ProjectReference Include="..\SKTDATABASE\SKTDATABASE.csproj">
       <Project>{911A97E6-B63C-4C20-9E5F-0A3563A766E8}</Project>
       <Name>SKTDATABASE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SKTRFIDLIBRARY\SKTRFIDLIBRARY.csproj">
+      <Project>{DD8D93AE-145A-46CD-BB6F-22B931EA4453}</Project>
+      <Name>SKTRFIDLIBRARY</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

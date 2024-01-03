@@ -227,6 +227,31 @@ namespace SKTRFIDLIBRARY.Service
             }
         }
 
+        public string InsertRFIDLog(DataModel data)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+
+                    SqlCommand cmd = new SqlCommand($@"INSERT INTO tb_rfid_log VALUES('{data.queue}','{data.dump_id}','{data.area_id}',
+                                                                                      '{data.crop_year}','{data.rfid}','{data.barcode}',N'{data.farmer_name}',
+                                                                                      '{data.cane_type}','{data.allergen}',N'{data.truck_number}',
+                                                                                      '{data.truck_type}','{data.weight_type}','{data.queue_status}','{data.rfid_lastdate}')", cn);
+                    cmd.ExecuteNonQuery();
+                }
+                return "Success";
+            }
+            catch
+            {
+                return "Fail";
+            }
+        }
+
         public string UpdateRFID(DataModel data)
         {
             try

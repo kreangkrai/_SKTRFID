@@ -68,20 +68,18 @@ namespace SKTRFIDMONITOR
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1038, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(778, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 31);
+            this.label3.Size = new System.Drawing.Size(78, 26);
             this.label3.TabIndex = 19;
             this.label3.Text = "บาร์โค้ด";
             // 
             // txtSearchBarcode
             // 
             this.txtSearchBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBarcode.Location = new System.Drawing.Point(1156, 14);
-            this.txtSearchBarcode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchBarcode.Location = new System.Drawing.Point(867, 11);
             this.txtSearchBarcode.Name = "txtSearchBarcode";
-            this.txtSearchBarcode.Size = new System.Drawing.Size(201, 34);
+            this.txtSearchBarcode.Size = new System.Drawing.Size(152, 29);
             this.txtSearchBarcode.TabIndex = 18;
             this.txtSearchBarcode.TextChanged += new System.EventHandler(this.txtSearchBarcode_TextChanged);
             // 
@@ -90,10 +88,9 @@ namespace SKTRFIDMONITOR
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(737, 7);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Location = new System.Drawing.Point(553, 6);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(280, 49);
+            this.btnRefresh.Size = new System.Drawing.Size(210, 40);
             this.btnRefresh.TabIndex = 16;
             this.btnRefresh.Text = "รีเฟรช";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -103,10 +100,9 @@ namespace SKTRFIDMONITOR
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(371, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(278, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 31);
+            this.label2.Size = new System.Drawing.Size(87, 26);
             this.label2.TabIndex = 15;
             this.label2.Text = "วันสิ้นสุด";
             // 
@@ -114,10 +110,9 @@ namespace SKTRFIDMONITOR
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(11, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 31);
+            this.label1.Size = new System.Drawing.Size(93, 26);
             this.label1.TabIndex = 14;
             this.label1.Text = "วันเริ่มต้น";
             // 
@@ -126,10 +121,9 @@ namespace SKTRFIDMONITOR
             this.dateTimePickerStop.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerStop.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerStop.Location = new System.Drawing.Point(508, 17);
-            this.dateTimePickerStop.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerStop.Location = new System.Drawing.Point(381, 14);
             this.dateTimePickerStop.Name = "dateTimePickerStop";
-            this.dateTimePickerStop.Size = new System.Drawing.Size(207, 38);
+            this.dateTimePickerStop.Size = new System.Drawing.Size(156, 32);
             this.dateTimePickerStop.TabIndex = 11;
             // 
             // dateTimePickerStat
@@ -137,10 +131,9 @@ namespace SKTRFIDMONITOR
             this.dateTimePickerStat.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerStat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerStat.Location = new System.Drawing.Point(147, 17);
-            this.dateTimePickerStat.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerStat.Location = new System.Drawing.Point(110, 14);
             this.dateTimePickerStat.Name = "dateTimePickerStat";
-            this.dateTimePickerStat.Size = new System.Drawing.Size(189, 38);
+            this.dateTimePickerStat.Size = new System.Drawing.Size(143, 32);
             this.dateTimePickerStat.TabIndex = 10;
             // 
             // dataGridView1
@@ -176,12 +169,11 @@ namespace SKTRFIDMONITOR
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 64);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 52);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1809, 790);
+            this.dataGridView1.Size = new System.Drawing.Size(1588, 642);
             this.dataGridView1.TabIndex = 17;
             // 
             // no
@@ -265,7 +257,7 @@ namespace SKTRFIDMONITOR
             this.farmer_name.Name = "farmer_name";
             this.farmer_name.ReadOnly = true;
             this.farmer_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.farmer_name.Width = 350;
+            this.farmer_name.Width = 300;
             // 
             // cane_type
             // 
@@ -317,9 +309,9 @@ namespace SKTRFIDMONITOR
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1855, 863);
+            this.ClientSize = new System.Drawing.Size(1616, 701);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearchBarcode);
             this.Controls.Add(this.btnRefresh);
@@ -328,7 +320,6 @@ namespace SKTRFIDMONITOR
             this.Controls.Add(this.dateTimePickerStop);
             this.Controls.Add(this.dateTimePickerStat);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

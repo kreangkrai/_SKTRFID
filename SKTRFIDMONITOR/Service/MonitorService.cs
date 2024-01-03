@@ -215,5 +215,10 @@ namespace SKTRFIDMONITOR.Service
                 return datas;
             }
         }
+
+        public List<DataModel> GetLastUpdate(string crop_year)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

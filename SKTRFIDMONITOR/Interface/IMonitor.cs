@@ -12,5 +12,6 @@ namespace SKTRFIDMONITOR.Interface
         List<DataModel> GetDatas();
         List<DataModel> GetDatasByBarCode(string barcode);
         List<DataModel> GetDatasByDate(DateTime start,DateTime stop);
+        List<DataModel> GetLastUpdate(string crop_year);
     }
 }

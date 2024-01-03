@@ -122,7 +122,7 @@ namespace SKTRFIDSHIFT
                     }
                     var frm = (Form1)this.Owner;
                     if (frm != null)
-                        frm.btnRefresh.PerformClick();
+                        frm.btnManual.PerformClick();
                     this.Dispose();
                 }
             }

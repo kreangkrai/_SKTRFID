@@ -144,20 +144,23 @@ namespace SKTRFIDREPORT.Service
 
                 datas = datas.OrderBy(o => o.rfid_lastdate).ThenBy(t => t.dump_id).ToList();
 
-                int current_round = 1;
+                int current_round = 0;
                 int current_dump = datas[0].dump_id;
+                int current_queue = datas[0].queue;
+                int last_dump = current_dump;
                 for (int i = 0; i < datas.Count; i++)
                 {
-                   
-                    int last_dump = reports.Count> 0 ? reports.LastOrDefault().dump_id : current_dump;
-                    if (current_dump > last_dump)
+                    //int last_queue = reports.Count > 0 ? reports.LastOrDefault().queue : current_queue;
+                    //if (current_queue < last_queue)
+                    //{
+                    //    current_round = 1;
+                    //}
+                    //int last_dump = reports.Count > 0 ? reports.LastOrDefault().dump_id : current_dump;
+                    current_dump = datas[i].dump_id;
+                    if (current_dump <= last_dump)
                     {
-                        
+
                         current_round++;
-                    }
-                    else
-                    {
-                        current_round = 1;
                     }
                     reports.Add(new ReportModel()
                     {
@@ -174,7 +177,7 @@ namespace SKTRFIDREPORT.Service
                         truck_number = datas[i].truck_number,
                         round = current_round
                     });
-
+                    last_dump = current_dump;
                 }
                 //int current_round = 1;
                 //for (int i = 0; i < shifts.Count; i++)
