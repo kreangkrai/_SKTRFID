@@ -43,7 +43,10 @@ namespace SKTRFIDREPORT
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            txtSearchBarcode.Text = "";
+            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date.AddDays(1));
 
+            LoadData(reports);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -60,27 +63,26 @@ namespace SKTRFIDREPORT
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
                 row.Height = 35;
-                row.Cells[0].Value = (i + 1);
-                row.Cells[1].Value = reports[i].dump_id;
-                row.Cells[2].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
-                row.Cells[3].Value = reports[i].round;
-                row.Cells[4].Value = reports[i].area_id;
-                row.Cells[5].Value = reports[i].crop_year;
-                row.Cells[6].Value = reports[i].barcode;
-                row.Cells[7].Value = reports[i].farmer_name;
-                row.Cells[8].Value = CaneType(reports[i].cane_type);
+                row.Cells[0].Value = reports[i].queue;
+                row.Cells[1].Value = reports[i].barcode;
+                row.Cells[2].Value = reports[i].farmer_name;
+                row.Cells[3].Value = reports[i].dump_id;
+                row.Cells[4].Value = reports[i].round;
+                row.Cells[5].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
+                row.Cells[6].Value = reports[i].truck_number;
+                row.Cells[7].Value = CaneType(reports[i].cane_type);
                 string allergen = reports[i].allergen;
-                row.Cells[9].Value = allergenType(allergen);
-                if (allergen == "No")
+                row.Cells[8].Value = allergenType(allergen);
+                if (allergen == "No" || allergen.Trim() == "")
                 {
-                    row.Cells[9].Style.BackColor = Color.GreenYellow;
+                    row.Cells[8].Style.BackColor = Color.GreenYellow;
                 }
                 else
                 {
-                    row.Cells[9].Style.BackColor = Color.Red;
+                    row.Cells[8].Style.BackColor = Color.Red;
                 }
-                row.Cells[10].Value = reports[i].truck_number;
-                row.Cells[11].Value = reports[i].rfid;
+                //row.Cells[9].Value = reports[i].area_id;
+                //row.Cells[10].Value = reports[i].crop_year;
                 dataGridView1.Rows.Add(row);
             }
         }
@@ -90,17 +92,17 @@ namespace SKTRFIDREPORT
             {
                 return "";
             }
-            List<string> canes_type = new List<string>();
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
+            List<string> canes_type = new List<string>();           
             canes_type.Add("สดลำ");
             canes_type.Add("ไฟไหม้ลำ");
+            canes_type.Add("สดท่อน");
+            canes_type.Add("ไฟไหม้ท่อน");
 
             return canes_type[n];
         }
         private string allergenType(string n)
         {
-            if (n == "No")
+            if (n == "No" || n.Trim() == "")
             {
                 return "ไม่มี";
             }

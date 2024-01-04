@@ -31,6 +31,7 @@ namespace SKTRFID1
         private IAPI API;
 
         string last_queue = string.Empty;
+    
         public Form1()
         {
             InitializeComponent();
@@ -95,7 +96,8 @@ namespace SKTRFID1
                 List<DataModel> datas = RFID.GetDatas(setting.crop_year);
 
                 string queue_trig = (string)cj2.ReadVariable("Queue_Running");
-                if (last_queue != queue_trig)
+
+                if (last_queue != queue_trig )
                 {
                     bool trig_D1 = (bool)cj2.ReadVariable("Trig_D1");
                     bool trig_D2 = (bool)cj2.ReadVariable("Trig_D2");
@@ -110,38 +112,59 @@ namespace SKTRFID1
                     if (trig_D1)
                     {
                         data_trig = datas.Where(w => w.dump_id == "1").FirstOrDefault();
-                        SendData(Int32.Parse(queue_trig), data_trig, 1, 1);
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 1, 1);
+                        }
                     }
                     else if (trig_D2)
                     {
                         data_trig = datas.Where(w => w.dump_id == "2").FirstOrDefault();
-                        SendData(Int32.Parse(queue_trig), data_trig, 1, 2);
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 1, 2);
+                        }
                     }
                     else if(trig_D3)
                     {
                         data_trig = datas.Where(w => w.dump_id == "3").FirstOrDefault();
-                        SendData(Int32.Parse(queue_trig), data_trig, 1, 3);
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 1, 3);
+                        }
                     }
                     else if (trig_D4)
                     {
                         data_trig = datas.Where(w => w.dump_id == "4").FirstOrDefault();
-                        SendData(Int32.Parse(queue_trig), data_trig, 1, 4);
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 1, 4);
+                        }
                     }
                     else if (trig_D5)
                     {
                         data_trig = datas.Where(w => w.dump_id == "5").FirstOrDefault();
-                        SendData(Int32.Parse(queue_trig), data_trig, 1, 5);
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 1, 5);
+                        }
                     }
                     else if (trig_D6)
                     {
                         data_trig = datas.Where(w => w.dump_id == "6").FirstOrDefault();
-                        SendData(Int32.Parse(queue_trig), data_trig, 1, 6);
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 1, 6);
+                        }
                     }
                     else if (trig_D7)
                     {
                         data_trig = datas.Where(w => w.dump_id == "7").FirstOrDefault();
-                        SendData(Int32.Parse(queue_trig), data_trig, 1, 7);
-                    }
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 1, 7);
+                        }
+                    }                   
                 }
                 last_queue = queue_trig;
 
@@ -460,7 +483,8 @@ namespace SKTRFID1
                 DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
                 if (dataInsert.Data[0].StatusDb != 0) // Send Complete
                 {
-
+                    //string loca = @"D:\log_api.txt";
+                    //File.AppendAllText(loca, DateTime.Now + " " + "Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
                 }
             }
             else
@@ -587,11 +611,11 @@ namespace SKTRFID1
             {
                 return "";
             }
-            List<string> canes_type = new List<string>();
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
+            List<string> canes_type = new List<string>();           
             canes_type.Add("สดลำ");
             canes_type.Add("ไฟไหม้ลำ");
+            canes_type.Add("สดท่อน");
+            canes_type.Add("ไฟไหม้ท่อน");
 
             return canes_type[n];
         }

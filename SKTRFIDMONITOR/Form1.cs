@@ -1,4 +1,7 @@
-﻿using SKTRFIDMONITOR.Interface;
+﻿using SKTRFIDLIBRARY.Interface;
+using SKTRFIDLIBRARY.Model;
+using SKTRFIDLIBRARY.Service;
+using SKTRFIDMONITOR.Interface;
 using SKTRFIDMONITOR.Model;
 using SKTRFIDMONITOR.Service;
 using System;
@@ -11,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataModel = SKTRFIDMONITOR.Model.DataModel;
 
 namespace SKTRFIDMONITOR
 {
@@ -18,29 +22,38 @@ namespace SKTRFIDMONITOR
     {
         int phase = 0;
         private IMonitor Monitor;
+        private ISetting Setting;
+        SettingModel setting;
         public Form1(string _phase)
         {
             InitializeComponent();
             phase = Int32.Parse(_phase);
             Monitor = new MonitorService(phase);
+            Setting = new SettingService(phase);
+            setting = Setting.GetSetting();
             this.Text = "SKT RFID MONITOR PHASE " + phase;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            List<DataModel> datas = Monitor.GetDatasByDate(dateTimePickerStat.Value.Date,dateTimePickerStop.Value.Date.AddDays(1));
-            LoadData(datas);
-        }
-
-        private void txtSearchBarcode_TextChanged(object sender, EventArgs e)
-        {
-            List<DataModel> datas = Monitor.GetDatasByBarCode(txtSearchBarcode.Text);
+            List<DataModel> datas = Monitor.GetLastUpdate(setting.crop_year);
             LoadData(datas);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<DataModel> datas = Monitor.GetDatasByDate(DateTime.Now.Date,DateTime.Now.Date);
+            Timer timer = new Timer();
+            timer.Interval = 30000;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
+            List<DataModel> datas = Monitor.GetLastUpdate(setting.crop_year);
+            LoadData(datas);
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            List<DataModel> datas = Monitor.GetLastUpdate(setting.crop_year);
             LoadData(datas);
         }
 
@@ -51,30 +64,45 @@ namespace SKTRFIDMONITOR
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
                 row.Height = 35;
-                row.Cells[0].Value = datas[i].queue;
-                row.Cells[1].Value = datas[i].dump_id;
-                row.Cells[2].Value = datas[i].date + " " + datas[i].time;
-                row.Cells[3].Value = datas[i].area_id;
-                row.Cells[4].Value = datas[i].crop_year;
-                row.Cells[5].Value = datas[i].barcode;
-                row.Cells[6].Value = datas[i].farmer_name;
-                row.Cells[7].Value = CaneType(datas[i].cane_type);
-                string allergen = datas[i].allergen;
-                row.Cells[8].Value = allergenType(allergen);
-                if (allergen == "No")
+                row.Cells[0].Value = datas[i].barcode;
+                row.Cells[1].Value = datas[i].farmer_name;
+                row.Cells[2].Value = datas[i].dump_id;
+                row.Cells[3].Value = datas[i].rfid_lastdate.ToString("dd/MM/yyyy HH:mm:ss");
+                double diff_minute = DateTime.Now.Subtract(datas[i].rfid_lastdate).TotalMinutes;
+                if (diff_minute >= 10.0)
                 {
-                    row.Cells[8].Style.BackColor = Color.GreenYellow;
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                }
+                row.Cells[4].Value = datas[i].truck_number;
+                row.Cells[5].Value = CaneType(datas[i].cane_type);
+                string allergen = datas[i].allergen;
+                row.Cells[6].Value = allergenType(allergen);
+                if (allergen == "No" || allergen == "")
+                {
+                    row.Cells[6].Style.BackColor = Color.GreenYellow;
                 }
                 else
                 {
-                    row.Cells[8].Style.BackColor = Color.Red;
+                    row.Cells[6].Style.BackColor = Color.Red;
                 }
-                row.Cells[9].Value = datas[i].truck_number;
-                row.Cells[10].Value = datas[i].rfid;
+                row.Cells[7].Value = truckType(datas[i].truck_type);
                 dataGridView1.Rows.Add(row);
             }
         }
+        private string truckType(int n)
+        {
+            if (n < 0)
+            {
+                return "";
+            }
+            List<string> truck_type = new List<string>();
+            truck_type.Add("");
+            truck_type.Add("รถเดี่ยว");
+            truck_type.Add("พ่วงแม่");
+            truck_type.Add("พ่วงลูก");
 
+            return truck_type[n];
+        }
         private string CaneType(int n)
         {
             if (n < 0)
@@ -91,7 +119,7 @@ namespace SKTRFIDMONITOR
         }
         private string allergenType(string n)
         {
-            if (n == "No")
+            if (n == "No" || n.Trim() =="")
             {
                 return "ไม่มี";
             }

@@ -211,7 +211,7 @@ namespace SKTRFIDLIBRARY.Service
                     }
                     for (int i = 0; i < datas.Count; i++)
                     {
-                        SqlCommand cmd = new SqlCommand($@"INSERT INTO tb_rfid_log VALUES('{datas[i].queue}', '{datas[i].dump_id}','{datas[i].area_id}',
+                        SqlCommand cmd = new SqlCommand($@"INSERT INTO tb_rfid VALUES('{datas[i].dump_id}','{datas[i].area_id}',
                                                                                       '{datas[i].crop_year}','{datas[i].rfid}','{datas[i].barcode}',N'{datas[i].farmer_name}',
                                                                                       '{datas[i].cane_type}','{datas[i].allergen}',N'{datas[i].truck_number}',
                                                                                       '{datas[i].truck_type}','{datas[i].weight_type}','{datas[i].queue_status}','{datas[i].rfid_lastdate}')", cn);

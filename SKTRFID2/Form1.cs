@@ -456,11 +456,11 @@ namespace SKTRFID2
             {
                 return "";
             }
-            List<string> canes_type = new List<string>();
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
+            List<string> canes_type = new List<string>();           
             canes_type.Add("สดลำ");
             canes_type.Add("ไฟไหม้ลำ");
+            canes_type.Add("สดท่อน");
+            canes_type.Add("ไฟไหม้ท่อน");
 
             return canes_type[n];
         }

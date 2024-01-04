@@ -62,6 +62,7 @@ namespace SKTRFIDCCS1
             this.lblDSP_04 = new System.Windows.Forms.Label();
             this.lblDSP_03 = new System.Windows.Forms.Label();
             this.lblDSP_02 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -77,6 +78,7 @@ namespace SKTRFIDCCS1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox17
@@ -435,12 +437,24 @@ namespace SKTRFIDCCS1
             this.lblDSP_02.TabIndex = 51;
             this.lblDSP_02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Black;
+            this.pictureBox13.Image = global::SKTRFIDCCS1.Properties.Resources.green_red;
+            this.pictureBox13.Location = new System.Drawing.Point(319, 881);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 52;
+            this.pictureBox13.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.lblDSP_02);
             this.Controls.Add(this.lblDSP_03);
             this.Controls.Add(this.lblDSP_04);
@@ -495,6 +509,7 @@ namespace SKTRFIDCCS1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -533,6 +548,7 @@ namespace SKTRFIDCCS1
         private System.Windows.Forms.Label lblDSP_04;
         private System.Windows.Forms.Label lblDSP_03;
         private System.Windows.Forms.Label lblDSP_02;
+        private System.Windows.Forms.PictureBox pictureBox13;
     }
 }
 

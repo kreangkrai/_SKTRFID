@@ -23,8 +23,7 @@ namespace SKTRFIDCENTER
             Process p = new Process();
             p.StartInfo.FileName = "Program\\SETTING\\SKTRFIDSETTING.exe";
             p.StartInfo.Arguments = txtPhase.Text;
-            p.Start();
-            p.WaitForExit();
+            p.Start();  
         }
 
         private void btnReport_Click(object sender, EventArgs e)
@@ -33,7 +32,6 @@ namespace SKTRFIDCENTER
             p.StartInfo.FileName = "Program\\REPORT\\SKTRFIDREPORT.exe";
             p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
-            p.WaitForExit();
         }
 
         private void btnShift_Click(object sender, EventArgs e)
@@ -42,7 +40,6 @@ namespace SKTRFIDCENTER
             p.StartInfo.FileName = "Program\\SHIFT\\SKTRFIDSHIFT.exe";
             p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
-            p.WaitForExit();
         }
 
         private void btnEditDump_Click(object sender, EventArgs e)
@@ -50,7 +47,6 @@ namespace SKTRFIDCENTER
             Process p = new Process();
             p.StartInfo.FileName = "Program\\BARCODE\\SKTCLEARBARCODE1.exe";
             p.Start();
-            p.WaitForExit();
         }
 
         private void btnMonitor_Click(object sender, EventArgs e)
@@ -59,7 +55,6 @@ namespace SKTRFIDCENTER
             p.StartInfo.FileName = "Program\\MONITOR\\SKTRFIDMONITOR.exe";
             p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
-            p.WaitForExit();
         }
 
         private void btnReadWriteRFID_Click(object sender, EventArgs e)
@@ -68,7 +63,25 @@ namespace SKTRFIDCENTER
             p.StartInfo.FileName = "Program\\TAG\\SKTRFIDTAG.exe";
             p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
-            p.WaitForExit();
+        }
+
+        private void btnKill_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Program\\KILL\\SKTRFIDCLEARPROGRAM.exe";
+            p.Start();
+        }
+
+        private void btnCheckHardware_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Program\\HARDWARE\\SKTRFIDCHECKHARDWAREPHASE.exe";
+            p.Start();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

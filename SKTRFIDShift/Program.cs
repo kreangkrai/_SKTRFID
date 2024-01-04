@@ -16,8 +16,8 @@ namespace SKTRFIDSHIFT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1(args[0])); // phase
-            Application.Run(new Form1("1"));
+            Application.Run(new Form1(args[0])); // phase
+            //Application.Run(new Form1("1"));
         }
     }
 }

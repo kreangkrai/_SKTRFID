@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CFCBE7E-6254-4206-B311-4F19AE77D9DF}</ProjectGuid>
+    <ProjectGuid>{9C9F7833-975F-4B85-9A39-482C871F27E4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SKTRFIDMONITOR</RootNamespace>
-    <AssemblyName>SKTRFIDMONITOR</AssemblyName>
+    <RootNamespace>SKTRFIDCLEARPROGRAM</RootNamespace>
+    <AssemblyName>SKTRFIDCLEARPROGRAM</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,11 +52,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IMonitor.cs" />
-    <Compile Include="Model\DataModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\MonitorService.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,17 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\SKTDATABASE\SKTDATABASE.csproj">
-      <Project>{911a97e6-b63c-4c20-9e5f-0a3563a766e8}</Project>
-      <Name>SKTDATABASE</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SKTRFIDLIBRARY\SKTRFIDLIBRARY.csproj">
-      <Project>{DD8D93AE-145A-46CD-BB6F-22B931EA4453}</Project>
-      <Name>SKTRFIDLIBRARY</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

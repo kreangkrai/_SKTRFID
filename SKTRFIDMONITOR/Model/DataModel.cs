@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SKTRFIDMONITOR.Model
 {
-    class DataModel
+    public class DataModel
     {
         public int dump_id { get; set; }
         public int queue { get; set; }       
@@ -18,7 +18,7 @@ namespace SKTRFIDMONITOR.Model
         public int cane_type { get; set; }
         public string allergen { get; set; }
         public string truck_number { get; set; }
-        public string date { get; set; }
-        public string time { get; set; }
+        public int truck_type { get; set; }
+        public DateTime rfid_lastdate { get; set; }
     }
 }
