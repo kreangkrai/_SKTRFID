@@ -97,9 +97,8 @@ namespace SKTRFIDLIBRARY.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM (SELECT * , RANK() OVER(partition by truck_number ORDER BY rfid_lastdate DESC) as rank  
-                                                       from tb_rfid where crop_year='{crop_year}') as temp
-                                                       WHERE temp.rank = 1", cn);
+                    SqlCommand cmd = new SqlCommand($@"SELECT * , RANK() OVER(partition by truck_number ORDER BY rfid_lastdate DESC) as rank  from tb_rfid where crop_year = '{crop_year}' and barcode not like '9%' union all
+                                                    SELECT * , '1'  from tb_rfid where crop_year = '{crop_year}' and barcode like '9%'", cn);
 
                     SqlDataReader dr = cmd.ExecuteReader();
 
