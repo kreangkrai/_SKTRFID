@@ -307,7 +307,7 @@ namespace SKTRFIDCCS2
             this.lblDSP_12.BackColor = System.Drawing.Color.Black;
             this.lblDSP_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_12.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_12.Location = new System.Drawing.Point(529, 145);
+            this.lblDSP_12.Location = new System.Drawing.Point(532, 143);
             this.lblDSP_12.Name = "lblDSP_12";
             this.lblDSP_12.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_12.TabIndex = 43;
@@ -329,7 +329,7 @@ namespace SKTRFIDCCS2
             this.lblDSP_10.BackColor = System.Drawing.Color.Black;
             this.lblDSP_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_10.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_10.Location = new System.Drawing.Point(249, 180);
+            this.lblDSP_10.Location = new System.Drawing.Point(250, 180);
             this.lblDSP_10.Name = "lblDSP_10";
             this.lblDSP_10.Size = new System.Drawing.Size(45, 55);
             this.lblDSP_10.TabIndex = 45;
@@ -440,7 +440,7 @@ namespace SKTRFIDCCS2
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(1896, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(24, 28);
             this.btnExit.TabIndex = 55;

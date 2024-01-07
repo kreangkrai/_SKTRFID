@@ -11,10 +11,11 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace SKTRFID2
 {
     public partial class Form1 : Form
@@ -27,13 +28,19 @@ namespace SKTRFID2
         bool isManual = false;
         List<bool> isManuals;
         SettingModel setting;
-        Process[] process;
+        private IAPI API;
+        private ICodeType CodeType;
+        string last_queue = string.Empty;
+
         public Form1()
         {
             InitializeComponent();
             RFID = new RFIDService(2);
             labels = new LabelModel();
             Setting = new SettingService(2);
+            setting = Setting.GetSetting();
+            API = new APIService();
+            CodeType = new CodeTypeService();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,23 +76,88 @@ namespace SKTRFID2
 
             setting = Setting.GetSetting();
 
+
             cj2 = new CJ2Compolet();
             cj2.HeartBeatTimer = 3000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
             cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
-            cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
+            cj2.OnHeartBeatTimer += Cj3_OnHeartBeatTimer;
             cj2.Active = true;
 
             isManuals = new List<bool>();
         }
 
-        private void Cj2_OnHeartBeatTimer(object sender, EventArgs e)
+
+        private void Cj3_OnHeartBeatTimer(object sender, EventArgs e)
         {
             try
             {
                 List<DataModel> datas = RFID.GetDatas(setting.crop_year);
+
+                string queue_trig = (string)cj2.ReadVariable("Queue_Running");
+
+                if (last_queue != queue_trig)
+                {
+                    bool trig_D8 = (bool)cj2.ReadVariable("Trig_D8");
+                    bool trig_D9 = (bool)cj2.ReadVariable("Trig_D9");
+                    bool trig_D10 = (bool)cj2.ReadVariable("Trig_D10");
+                    bool trig_D11 = (bool)cj2.ReadVariable("Trig_D11");
+                    bool trig_D12 = (bool)cj2.ReadVariable("Trig_D12");
+                    bool trig_D13 = (bool)cj2.ReadVariable("Trig_D13");
+
+                    DataModel data_trig = new DataModel();
+                    if (trig_D8)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "8").FirstOrDefault();
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 2, 8);
+                        }
+                    }
+                    else if (trig_D9)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "9").FirstOrDefault();
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 2, 9);
+                        }
+                    }
+                    else if (trig_D10)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "10").FirstOrDefault();
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 2, 10);
+                        }
+                    }
+                    else if (trig_D11)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "11").FirstOrDefault();
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 2, 11);
+                        }
+                    }
+                    else if (trig_D12)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "12").FirstOrDefault();
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 2, 12);
+                        }
+                    }
+                    else if (trig_D13)
+                    {
+                        data_trig = datas.Where(w => w.dump_id == "13").FirstOrDefault();
+                        if (data_trig != null)
+                        {
+                            SendData(Int32.Parse(queue_trig), data_trig, 2, 13);
+                        }
+                    }  
+                }
+                last_queue = queue_trig;
 
                 //Read Barcode
                 bool b_D8 = true;
@@ -94,7 +166,7 @@ namespace SKTRFID2
                 bool b_D11 = true;
                 bool b_D12 = true;
                 bool b_D13 = true;
-
+       
                 string bar_D8 = (string)cj2.ReadVariable("Bar_ID8");
                 string bar_D9 = (string)cj2.ReadVariable("Bar_ID9");
                 string bar_D10 = (string)cj2.ReadVariable("Bar_ID10");
@@ -119,7 +191,6 @@ namespace SKTRFID2
                     ShowDisplay(truck_license12, truck_date12, cane_type12, truck_type12, datas, "12", b_D12);
                     ShowDisplay(truck_license13, truck_date13, cane_type13, truck_type13, datas, "13", b_D13);
                 }
-
                 bool manual_d8 = (bool)cj2.ReadVariable("MN_SCAN_D8");
                 bool manual_d9 = (bool)cj2.ReadVariable("MN_SCAN_D9");
                 bool manual_d10 = (bool)cj2.ReadVariable("MN_SCAN_D10");
@@ -127,11 +198,11 @@ namespace SKTRFID2
                 bool manual_d12 = (bool)cj2.ReadVariable("MN_SCAN_D12");
                 bool manual_d13 = (bool)cj2.ReadVariable("MN_SCAN_D13");
 
-                process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
+                Process[] process_common = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
 
                 if (manual_d8)
                 {
-                    foreach (var p in process)
+                    foreach (var p in process_common)
                     {
                         if (p.MainWindowTitle != "COMMON DUMP 8")
                         {
@@ -146,7 +217,7 @@ namespace SKTRFID2
 
                 if (manual_d9)
                 {
-                    foreach (var p in process)
+                    foreach (var p in process_common)
                     {
                         if (p.MainWindowTitle != "COMMON DUMP 9")
                         {
@@ -161,7 +232,7 @@ namespace SKTRFID2
 
                 if (manual_d10)
                 {
-                    foreach (var p in process)
+                    foreach (var p in process_common)
                     {
                         if (p.MainWindowTitle != "COMMON DUMP 10")
                         {
@@ -176,7 +247,7 @@ namespace SKTRFID2
 
                 if (manual_d11)
                 {
-                    foreach (var p in process)
+                    foreach (var p in process_common)
                     {
                         if (p.MainWindowTitle != "COMMON DUMP 11")
                         {
@@ -191,7 +262,7 @@ namespace SKTRFID2
 
                 if (manual_d12)
                 {
-                    foreach (var p in process)
+                    foreach (var p in process_common)
                     {
                         if (p.MainWindowTitle != "COMMON DUMP 12")
                         {
@@ -206,7 +277,7 @@ namespace SKTRFID2
 
                 if (manual_d13)
                 {
-                    foreach (var p in process)
+                    foreach (var p in process_common)
                     {
                         if (p.MainWindowTitle != "COMMON DUMP 13")
                         {
@@ -218,7 +289,6 @@ namespace SKTRFID2
                     cj2.WriteVariable("MN_SCAN_D13", false);
                     StartProcess("COMMON", setting.ip2, "13", phase);
                 }
-
 
                 bool auto_d8 = (bool)cj2.ReadVariable("Call_D8");
                 bool auto_d9 = (bool)cj2.ReadVariable("Call_D9");
@@ -249,7 +319,7 @@ namespace SKTRFID2
                 isManual = isManuals.Any(a => a == true);
                 if (!isManual)
                 {
-                    process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("AUTO DUMP")).ToArray();
+                    Process[] process_auto = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("AUTO DUMP")).ToArray();
 
                     setting = Setting.GetSetting();
 
@@ -259,11 +329,12 @@ namespace SKTRFID2
                     }
                     else // NOT Detect AUTO 8
                     {
-                        foreach (var p in process)
+                        foreach (var p in process_auto)
                         {
                             if (p.MainWindowTitle == "AUTO DUMP 8")
                             {
                                 p.Kill();
+
                             }
                         }
                     }
@@ -274,7 +345,7 @@ namespace SKTRFID2
                     }
                     else
                     {
-                        foreach (var p in process)
+                        foreach (var p in process_auto)
                         {
                             if (p.MainWindowTitle == "AUTO DUMP 9")
                             {
@@ -289,7 +360,7 @@ namespace SKTRFID2
                     }
                     else
                     {
-                        foreach (var p in process)
+                        foreach (var p in process_auto)
                         {
                             if (p.MainWindowTitle == "AUTO DUMP 10")
                             {
@@ -304,7 +375,7 @@ namespace SKTRFID2
                     }
                     else
                     {
-                        foreach (var p in process)
+                        foreach (var p in process_auto)
                         {
                             if (p.MainWindowTitle == "AUTO DUMP 11")
                             {
@@ -319,7 +390,7 @@ namespace SKTRFID2
                     }
                     else
                     {
-                        foreach (var p in process)
+                        foreach (var p in process_auto)
                         {
                             if (p.MainWindowTitle == "AUTO DUMP 12")
                             {
@@ -334,7 +405,7 @@ namespace SKTRFID2
                     }
                     else
                     {
-                        foreach (var p in process)
+                        foreach (var p in process_auto)
                         {
                             if (p.MainWindowTitle == "AUTO DUMP 13")
                             {
@@ -346,7 +417,6 @@ namespace SKTRFID2
 
                 isManuals = new List<bool>();
             }
-
             catch (Exception ex)
             {
                 //Weite Data to text file
@@ -357,7 +427,70 @@ namespace SKTRFID2
             {
                 isManuals = new List<bool>();
             }
-        }           
+        }
+
+        private async void SendData(int queue, DataModel rfid, int phase, int dump)
+        {
+            bool CheckInternet = API.checkInternet();
+            //Check Local Internet
+            if (CheckInternet)  // Online Read data from api
+            {
+                //Insert Data to API
+                DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
+                if (dataInsert.Data[0].StatusDb != 0) // Send Complete
+                {
+                    //string loca = @"D:\log_api.txt";
+                    //File.AppendAllText(loca, DateTime.Now + " " + "Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
+                }
+            }
+            else
+            {
+                string path = Directory.GetCurrentDirectory();
+                try
+                {
+                    SoundPlayer dump_wave_file = new SoundPlayer();
+                    dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\d{dump}.wav");
+                    dump_wave_file.PlaySync();
+                }
+                catch
+                {
+
+                }
+                try
+                {
+                    SoundPlayer dump_wave_file = new SoundPlayer();
+                    dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\noserver.wav");
+                    dump_wave_file.PlaySync();
+                }
+                catch
+                {
+
+                }
+            }
+
+            //Insert Data RFID Log
+
+            DateTime now = DateTime.Now;
+            DataModel data_rfid = new DataModel()
+            {
+                queue = queue,
+                dump_id = dump.ToString(),
+                area_id = rfid.area_id,
+                crop_year = rfid.crop_year,
+                allergen = rfid.allergen,
+                truck_number = rfid.truck_number,
+                farmer_name = rfid.farmer_name,
+                barcode = rfid.barcode,
+                cane_type = Convert.ToInt32(rfid.cane_type),
+                weight_type = Convert.ToInt32(rfid.weight_type),
+                truck_type = Convert.ToInt32(rfid.truck_type),
+                rfid = rfid.rfid,
+                queue_status = 3,
+                rfid_lastdate = now
+            };
+
+            string message_insert = RFID.InsertRFIDLog(data_rfid);
+        }
         private void ShowDisplay(Label truck_license, Label truck_date, Label cane_type, Label truck_type, List<DataModel> datas, string dump, bool isShow)
         {
             if (isShow)
@@ -378,8 +511,8 @@ namespace SKTRFID2
                             data.truck_number.Substring(check_trailer_truck + 1, data.truck_number.Length - (check_trailer_truck + 1));
                     }
                     truck_date.Text = data.rfid_lastdate == DateTime.MinValue ? "" : data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type.Text = CaneType(data.cane_type);
-                    truck_type.Text = truckType(data.truck_type);
+                    cane_type.Text = CodeType.CaneType(data.cane_type);
+                    truck_type.Text = CodeType.truckType(data.truck_type);
                 }
                 else
                 {
@@ -397,21 +530,7 @@ namespace SKTRFID2
                 truck_type.Text = "";
             }
         }
-        //private void LastUpdateDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType, Label labelLastDate)
-        //{
-        //    labelDump.BackColor = Color.FromArgb(47, 216, 54);
-        //    labelTruckLicense.ForeColor = Color.Red;
-        //    labelCaneType.ForeColor = Color.Red;
-        //    labelLastDate.ForeColor = Color.Red;
-        //}
-        //private void ClearLastDisplay(Label labelDump, Label labelTruckLicense, Label labelCaneType, Label labelLastDate)
-        //{
-        //    labelDump.BackColor = Color.FromArgb(28, 184, 185);
-        //    labelTruckLicense.ForeColor = Color.Black;
-        //    labelCaneType.ForeColor = Color.Black;
-        //    labelLastDate.ForeColor = Color.Black;
-        //}
-        private void StartProcess(string mode,string server, string dump, string phase)
+        private void StartProcess(string mode, string server, string dump, string phase)
         {
             // Check duplicate Program
             List<string> windows_titles = new List<string>();
@@ -441,42 +560,7 @@ namespace SKTRFID2
                 p.StartInfo.Arguments = mode + " " + server + " " + dump + " " + phase;
                 p.Start();
             }
-        }
-        //private void StartProcessCommon(string dump, string phase)
-        //{
-        //    Process p = new Process();
-        //    p.StartInfo.FileName = "Server\\SKTRFIDCOMMON.exe";
-        //    p.StartInfo.Arguments = dump + " " + phase;
-        //    p.Start();
-        //    p.WaitForExit();
-        //}
-        private string CaneType(int n)
-        {
-            if (n == -1)
-            {
-                return "";
-            }
-            List<string> canes_type = new List<string>();           
-            canes_type.Add("สดลำ");
-            canes_type.Add("ไฟไหม้ลำ");
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
-
-            return canes_type[n];
-        }
-        private string truckType(int n)
-        {
-            if (n == -1)
-            {
-                return "";
-            }
-            List<string> trucks_type = new List<string>();
-            trucks_type.Add("");
-            trucks_type.Add("รถเดี่ยว");
-            trucks_type.Add("พ่วงแม่");
-            trucks_type.Add("พ่วงลูก");
-            return trucks_type[n];
-        }
+        }       
     }
     public class LabelModel
     {

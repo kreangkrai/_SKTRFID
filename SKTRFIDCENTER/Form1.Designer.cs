@@ -144,7 +144,7 @@ namespace SKTRFIDCENTER
             this.txtPhase.ReadOnly = true;
             this.txtPhase.Size = new System.Drawing.Size(20, 31);
             this.txtPhase.TabIndex = 7;
-            this.txtPhase.Text = "1";
+            this.txtPhase.Text = "2";
             // 
             // btnKill
             // 

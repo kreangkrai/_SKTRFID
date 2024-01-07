@@ -20,9 +20,9 @@ namespace SKTRFIDCCS2
 
             Form1 f = new Form1();
             Screen[] screen = Screen.AllScreens.OrderBy(o => o.WorkingArea.X).ToArray();
-            if (screen.Length > 1)
+            if (screen.Length > 2)
             {
-                f.Location = screen[1].WorkingArea.Location;
+                f.Location = screen[2].WorkingArea.Location;
             }
             else
             {

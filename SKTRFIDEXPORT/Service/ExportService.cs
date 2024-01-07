@@ -1,5 +1,7 @@
 ﻿using OfficeOpenXml;
 using SKTDATABASE;
+using SKTRFIDLIBRARY.Interface;
+using SKTRFIDLIBRARY.Service;
 using SKTRFIDREPORT.Interface;
 using SKTRFIDREPORT.Model;
 using System;
@@ -17,11 +19,11 @@ namespace SKTRFIDREPORT.Service
 {
     class ExportService : IExport
     {
-        private IShift Shift;
+        private ICodeType CodeType;
         string connectionString = "";
         public ExportService(int phase)
         {
-            Shift = new ShiftService();
+            CodeType = new CodeTypeService();
             if (phase == 1)
             {
                 connectionString = DBPHASE1ConnectService.data_source();
@@ -55,8 +57,8 @@ namespace SKTRFIDREPORT.Service
                             worksheet.Cells["E" + (i + startRows)].Value = _reports[i].round;
                             worksheet.Cells["F" + (i + startRows)].Value = _reports[i].date;
                             worksheet.Cells["G" + (i + startRows)].Value = _reports[i].truck_number;
-                            worksheet.Cells["H" + (i + startRows)].Value = CaneType(_reports[i].cane_type);
-                            worksheet.Cells["I" + (i + startRows)].Value = allergenType(_reports[i].allergen);
+                            worksheet.Cells["H" + (i + startRows)].Value = CodeType.CaneType(_reports[i].cane_type);
+                            worksheet.Cells["I" + (i + startRows)].Value = CodeType.allergenType(_reports[i].allergen);
                         }
                     }
                     package.SaveAs(new FileInfo("D:\\Report\\skt_report_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsm"));
@@ -71,8 +73,6 @@ namespace SKTRFIDREPORT.Service
 
         public List<ReportModel> GetReportByDate(DateTime start, DateTime stop)
         {
-            List<ShiftModel> shifts = Shift.GetShiftByDate(start.Date.Date, stop.Date.Date);
-
             List<ReportModel> reports = new List<ReportModel>();
             try
             {
@@ -85,22 +85,6 @@ namespace SKTRFIDREPORT.Service
                     {
                         cn.Open();
                     }
-
-                    //SqlCommand cmd = new SqlCommand($@"SELECT rfid.dump_id,
-	                   //                                CCS.Queue as queue,
-	                   //                                rfid.area_id,
-	                   //                                rfid.barcode,
-                    //                                   rfid.farmer_name,
-	                   //                                rfid.crop_year,
-	                   //                                rfid.cane_type,
-	                   //                                rfid.rfid,
-	                   //                                rfid.truck_number,
-	                   //                                rfid.allergen,
-	                   //                                rfid.rfid_lastdate FROM tb_rfid_log as rfid 
-                    //                            LEFT JOIN
-                    //                            (SELECT * FROM [192.168.250.2,1798].[CCS].[dbo].[Loading]) as CCS ON rfid.barcode = CCS.Barcode
-                    //                            WHERE rfid.rfid_lastdate BETWEEN '{start.ToString("yyyy-MM-dd 00:00:00")}' AND '{stop.Date.ToString("yyyy-MM-dd 23:59:59")}' AND CCS.queue IS NOT NULL
-                    //                            ORDER BY rfid.rfid_lastdate", cn);
                     SqlCommand cmd = new SqlCommand($@"SELECT rfid.dump_id,
 	                                                   rfid.queue,
 	                                                   rfid.area_id,
@@ -142,8 +126,10 @@ namespace SKTRFIDREPORT.Service
 
                 datas = datas.OrderBy(o => o.rfid_lastdate).ThenBy(t => t.dump_id).ToList();
                 int intdex_first_1 = datas.FindIndex(a => a.queue == 1);
-                datas.RemoveRange(0,intdex_first_1); // Start Queue 1  , Remove
-                
+                if (datas.Count > 0)
+                {
+                    datas.RemoveRange(0, intdex_first_1); // Start Queue 1  , Remove
+                }
                 int current_round = 0;
                 int current_dump = datas[0].dump_id;
                 int current_queue = datas[0].queue;
@@ -181,58 +167,14 @@ namespace SKTRFIDREPORT.Service
                 }              
                 return reports;
             }
-            catch(Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 return reports;
             }
         }
-
-        private string CaneType(int n)
-        {
-            if (n < 1)
-            {
-                return "";
-            }
-            List<string> canes_type = new List<string>();           
-            canes_type.Add("สดลำ");
-            canes_type.Add("ไฟไหม้ลำ");
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
-
-            return canes_type[n];
-        }
-        private string allergenType(string n)
-        {
-            if(n == "No" || n.Trim() == "")
-            {
-                return "ไม่มี";
-            }
-            else
-            {
-                return "มี";
-            }
-        }
-        int typeCaneIndex(string s)
-        {
-            List<string> canes = new List<string>();            
-            canes.Add("สดลำ");
-            canes.Add("ไฟไหม้ลำ");
-            canes.Add("สดท่อน");
-            canes.Add("ไฟไหม้ท่อน");
-            return canes.FindIndex(w => w == s);
-        }
-        int typeAllergenIndex(string s)
-        {
-            List<string> contaminants = new List<string>();
-            contaminants.Add("ไม่มี");
-            contaminants.Add("มี");
-            return contaminants.FindIndex(w => w == s);
-        }
         public List<ReportModel> GetReportByDBarCode(string barcode)
         {
-            List<ShiftModel> shifts = Shift.GetShiftByDate(DateTime.Now.AddYears(-3).Date, DateTime.Now.Date);
-
             List<ReportModel> reports = new List<ReportModel>();
             try
             {
@@ -313,9 +255,9 @@ namespace SKTRFIDREPORT.Service
                 }
                 return reports;
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 return reports;
             }
         }

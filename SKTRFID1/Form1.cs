@@ -23,6 +23,7 @@ namespace SKTRFID1
         private ISetting Setting;
         CJ2Compolet cj2;
         private IRFID RFID;
+        private ICodeType CodeType;
         LabelModel labels;
         string phase = "1";
         bool isManual = false;
@@ -40,6 +41,7 @@ namespace SKTRFID1
             Setting = new SettingService(1);
             setting = Setting.GetSetting();
             API = new APIService();
+            CodeType = new CodeTypeService();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -475,7 +477,7 @@ namespace SKTRFID1
 
         private async void SendData(int queue, DataModel rfid, int phase, int dump)
         {
-            bool CheckInternet = checkInternet();
+            bool CheckInternet = API.checkInternet();
             //Check Local Internet
             if (CheckInternet)  // Online Read data from api
             {
@@ -555,8 +557,8 @@ namespace SKTRFID1
                             data.truck_number.Substring(check_trailer_truck + 1, data.truck_number.Length - (check_trailer_truck + 1));
                     }
                     truck_date.Text = data.rfid_lastdate == DateTime.MinValue ? "" : data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type.Text = CaneType(data.cane_type);
-                    truck_type.Text = truckType(data.truck_type);
+                    cane_type.Text = CodeType.CaneType(data.cane_type);
+                    truck_type.Text = CodeType.truckType(data.truck_type);
                 }
                 else
                 {
@@ -604,51 +606,7 @@ namespace SKTRFID1
                 p.StartInfo.Arguments = mode + " " + server + " " + dump + " " + phase;
                 p.Start();
             }
-        }
-        private string CaneType(int n)
-        {
-            if (n == -1)
-            {
-                return "";
-            }
-            List<string> canes_type = new List<string>();           
-            canes_type.Add("สดลำ");
-            canes_type.Add("ไฟไหม้ลำ");
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
-
-            return canes_type[n];
-        }
-        private string truckType(int n)
-        {
-            if (n == -1)
-            {
-                return "";
-            }
-            List<string> trucks_type = new List<string>();
-            trucks_type.Add("");
-            trucks_type.Add("รถเดี่ยว");
-            trucks_type.Add("พ่วงแม่");
-            trucks_type.Add("พ่วงลูก");
-            return trucks_type[n];
-        }
-        bool checkInternet()
-        {
-            try
-            {
-                using (WebClient client = new WebClient())
-                {
-                    using (client.OpenRead("http://10.43.6.33/"))
-                    {
-                        return true;
-                    }
-                }
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        }         
     }
     public class LabelModel
     {

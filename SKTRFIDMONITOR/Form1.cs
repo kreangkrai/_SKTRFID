@@ -24,6 +24,7 @@ namespace SKTRFIDMONITOR
         private IMonitor Monitor;
         private ISetting Setting;
         SettingModel setting;
+        private ICodeType CodeType;
         public Form1(string _phase)
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace SKTRFIDMONITOR
             Monitor = new MonitorService(phase);
             Setting = new SettingService(phase);
             setting = Setting.GetSetting();
+            CodeType = new CodeTypeService();
             this.Text = "SKT RFID MONITOR PHASE " + phase;
         }
 
@@ -74,9 +76,9 @@ namespace SKTRFIDMONITOR
                     row.DefaultCellStyle.BackColor = Color.Red;
                 }
                 row.Cells[4].Value = datas[i].truck_number;
-                row.Cells[5].Value = CaneType(datas[i].cane_type);
+                row.Cells[5].Value = CodeType.CaneType(datas[i].cane_type);
                 string allergen = datas[i].allergen;
-                row.Cells[6].Value = allergenType(allergen);
+                row.Cells[6].Value = CodeType.allergenType(allergen);
                 if (allergen == "No" || allergen == "")
                 {
                     row.Cells[6].Style.BackColor = Color.GreenYellow;
@@ -85,47 +87,8 @@ namespace SKTRFIDMONITOR
                 {
                     row.Cells[6].Style.BackColor = Color.Red;
                 }
-                row.Cells[7].Value = truckType(datas[i].truck_type);
+                row.Cells[7].Value = CodeType.truckType(datas[i].truck_type);
                 dataGridView1.Rows.Add(row);
-            }
-        }
-        private string truckType(int n)
-        {
-            if (n < 0)
-            {
-                return "";
-            }
-            List<string> truck_type = new List<string>();
-            truck_type.Add("");
-            truck_type.Add("รถเดี่ยว");
-            truck_type.Add("พ่วงแม่");
-            truck_type.Add("พ่วงลูก");
-
-            return truck_type[n];
-        }
-        private string CaneType(int n)
-        {
-            if (n < 0)
-            {
-                return "";
-            }
-            List<string> canes_type = new List<string>();           
-            canes_type.Add("สดลำ");
-            canes_type.Add("ไฟไหม้ลำ");
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
-
-            return canes_type[n];
-        }
-        private string allergenType(string n)
-        {
-            if (n == "No" || n.Trim() =="")
-            {
-                return "ไม่มี";
-            }
-            else
-            {
-                return "มี";
             }
         }
     }

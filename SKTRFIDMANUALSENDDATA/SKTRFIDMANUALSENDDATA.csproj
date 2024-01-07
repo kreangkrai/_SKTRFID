@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD2A4AFC-2207-4DE7-B426-FF3949CC5AEE}</ProjectGuid>
+    <ProjectGuid>{1C30039E-2A30-44D5-BE3D-78B92CB3AD8B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SKTRFIDREPORT</RootNamespace>
-    <AssemblyName>SKTRFIDREPORT</AssemblyName>
+    <RootNamespace>SKTRFIDMANUALSENDDATA</RootNamespace>
+    <AssemblyName>SKTRFIDMANUALSENDDATA</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,14 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,15 +52,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IExport.cs" />
-    <Compile Include="Interface\IShift.cs" />
-    <Compile Include="Model\DataModel.cs" />
-    <Compile Include="Model\ReportModel.cs" />
-    <Compile Include="Model\ShiftModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\ExportService.cs" />
-    <Compile Include="Service\ShiftService.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,9 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,16 +75,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="template\skt_report.xlsm" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SKTDATABASE\SKTDATABASE.csproj">
-      <Project>{911A97E6-B63C-4C20-9E5F-0A3563A766E8}</Project>
-      <Name>SKTDATABASE</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SKTRFIDLIBRARY\SKTRFIDLIBRARY.csproj">
       <Project>{DD8D93AE-145A-46CD-BB6F-22B931EA4453}</Project>
       <Name>SKTRFIDLIBRARY</Name>

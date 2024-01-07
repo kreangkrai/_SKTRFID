@@ -11,5 +11,6 @@ namespace SKTRFIDLIBRARY.Interface
     {
         Task<RFIDModel> CallAPI(DataModel data);
         Task<DataUpdateModel> InsertDataAPI(int areaid, string cropyear, string barcode, int phase, int dump, string type);
+        bool checkInternet();
     }
 }

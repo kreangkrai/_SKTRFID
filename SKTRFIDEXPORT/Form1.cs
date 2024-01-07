@@ -1,4 +1,6 @@
-﻿using SKTRFIDREPORT.Interface;
+﻿using SKTRFIDLIBRARY.Interface;
+using SKTRFIDLIBRARY.Service;
+using SKTRFIDREPORT.Interface;
 using SKTRFIDREPORT.Model;
 using SKTRFIDREPORT.Service;
 using System;
@@ -18,11 +20,13 @@ namespace SKTRFIDREPORT
     {
         int phase = 0;
         private IExport Export;
+        private ICodeType CodeType;
         public Form1(string _phase)
         {
             InitializeComponent();
             phase = Int32.Parse(_phase);
             Export = new ExportService(phase);
+            CodeType = new CodeTypeService();
             this.Text = "SKT RFID EXPORT PHASE " + phase;
         }
 
@@ -70,9 +74,9 @@ namespace SKTRFIDREPORT
                 row.Cells[4].Value = reports[i].round;
                 row.Cells[5].Value = reports[i].date.ToString("dd/MM/yyyy HH:mm:ss");
                 row.Cells[6].Value = reports[i].truck_number;
-                row.Cells[7].Value = CaneType(reports[i].cane_type);
+                row.Cells[7].Value = CodeType.CaneType(reports[i].cane_type);
                 string allergen = reports[i].allergen;
-                row.Cells[8].Value = allergenType(allergen);
+                row.Cells[8].Value = CodeType.allergenType(allergen);
                 if (allergen == "No" || allergen.Trim() == "")
                 {
                     row.Cells[8].Style.BackColor = Color.GreenYellow;
@@ -84,31 +88,6 @@ namespace SKTRFIDREPORT
                 //row.Cells[9].Value = reports[i].area_id;
                 //row.Cells[10].Value = reports[i].crop_year;
                 dataGridView1.Rows.Add(row);
-            }
-        }
-        private string CaneType(int n)
-        {
-            if (n < 0)
-            {
-                return "";
-            }
-            List<string> canes_type = new List<string>();           
-            canes_type.Add("สดลำ");
-            canes_type.Add("ไฟไหม้ลำ");
-            canes_type.Add("สดท่อน");
-            canes_type.Add("ไฟไหม้ท่อน");
-
-            return canes_type[n];
-        }
-        private string allergenType(string n)
-        {
-            if (n == "No" || n.Trim() == "")
-            {
-                return "ไม่มี";
-            }
-            else
-            {
-                return "มี";
             }
         }
 

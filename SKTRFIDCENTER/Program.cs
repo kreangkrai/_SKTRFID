@@ -16,19 +16,7 @@ namespace SKTRFIDCENTER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-
-            Form1 f = new Form1();
-            Screen[] screen = Screen.AllScreens.OrderBy(o => o.WorkingArea.X).ToArray();
-            if (screen.Length > 1)
-            {
-                f.Location = screen[1].WorkingArea.Location;
-            }
-            else
-            {
-                f.Location = screen[screen.Length - 1].WorkingArea.Location;
-            }
-            Application.Run(f);
+            Application.Run(new Form1());
         }
     }
 }
