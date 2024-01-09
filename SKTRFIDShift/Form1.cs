@@ -29,7 +29,7 @@ namespace SKTRFIDSHIFT
         {
             InitializeComponent();
             phase = Int32.Parse(_phase);
-            Setting = new SettingService(2);
+            Setting = new SettingService(phase);
             setting = Setting.GetSetting();
             this.Text = "SKT RFID SHIFT PHASE " + phase;
         }

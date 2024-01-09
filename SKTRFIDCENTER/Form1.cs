@@ -45,7 +45,7 @@ namespace SKTRFIDCENTER
         private void btnEditDump_Click(object sender, EventArgs e)
         {
             Process p = new Process();
-            p.StartInfo.FileName = "Program\\BARCODE\\SKTCLEARBARCODE1.exe";
+            p.StartInfo.FileName = "Program\\BARCODE\\SKTCLEARBARCODE2.exe";
             p.Start();
         }
 

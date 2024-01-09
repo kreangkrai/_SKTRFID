@@ -19,7 +19,13 @@ namespace SKTRFIDLIBRARY.Service
             try
             {
                 HttpClient client = new HttpClient();
+
+                //PRODUCTION
                 string url = $"http://10.43.6.41:81/jsonforandroidskt/getRfidDump?areaid={data.area_id}&cropyear={data.crop_year}&card={data.rfid}";
+
+                //DEVELOP
+                //string url = $"http://10.43.6.33/jsonforandroidskt/getRfidDump?areaid={data.area_id}&cropyear={data.crop_year}&card={data.rfid}";
+
                 HttpResponseMessage response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {
@@ -40,10 +46,17 @@ namespace SKTRFIDLIBRARY.Service
             {
                 using (WebClient client = new WebClient())
                 {
+                    //PRODUCTION
                     using (client.OpenRead("http://10.43.6.41:81/"))
                     {
                         return true;
                     }
+
+                    //DEVELOP
+                    //using (client.OpenRead("http://10.43.6.33/"))
+                    //{
+                    //    return true;
+                    //}
                 }
             }
             catch
@@ -58,7 +71,13 @@ namespace SKTRFIDLIBRARY.Service
             try
             {
                 HttpClient client = new HttpClient();
+
+                //PRODUCION
                 string url = $"http://10.43.6.41:81/jsonforandroidskt/insertDump?areaid={areaid}&cropyear={cropyear}&barcode={barcode}&phase={phase}&dump={dump}&type={type}";
+
+                //DEVELOP
+                //string url = $"http://10.43.6.33/jsonforandroidskt/insertDump?areaid={areaid}&cropyear={cropyear}&barcode={barcode}&phase={phase}&dump={dump}&type={type}";
+
                 HttpResponseMessage response = await client.PostAsync(url, null);
                 if (response.IsSuccessStatusCode)
                 {
