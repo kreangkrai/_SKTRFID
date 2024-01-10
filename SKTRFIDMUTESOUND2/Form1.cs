@@ -13,7 +13,7 @@ namespace SKTRFIDMUTESOUND2
 {
     public partial class Form1 : Form
     {
-        string path = @"D:\SKT PROGRAM\RFID\Voice\";
+        string path = @"D:\SKT PROGRAM\RFID\Debug\Voice\";
         public Form1()
         {
             InitializeComponent();
