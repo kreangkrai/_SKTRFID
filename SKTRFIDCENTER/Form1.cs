@@ -83,5 +83,12 @@ namespace SKTRFIDCENTER
         {
 
         }
+
+        private void btnMuteSound_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Program\\SOUND\\SKTRFIDMUTESOUND2.exe";
+            p.Start();
+        }
     }
 }

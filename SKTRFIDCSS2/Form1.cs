@@ -91,7 +91,7 @@ namespace SKTRFIDCCS2
                 int DSP_15 = (int)cj2.ReadVariable("DSP_15");
                 int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
-                if (DSP_01 > 9)
+                if (DSP_01 + 7 > 9)
                 {
                     lblDSP_01.Font =  new Font("Microsoft Sans Serif", 20);
                 }
@@ -100,7 +100,7 @@ namespace SKTRFIDCCS2
                     lblDSP_01.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_02 > 9)
+                if (DSP_02 + 7 > 9)
                 {
                     lblDSP_02.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -109,7 +109,7 @@ namespace SKTRFIDCCS2
                     lblDSP_02.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_03 > 9)
+                if (DSP_03 + 7 > 9)
                 {
                     lblDSP_03.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -118,7 +118,7 @@ namespace SKTRFIDCCS2
                     lblDSP_03.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_04 > 9)
+                if (DSP_04 + 7 > 9)
                 {
                     lblDSP_04.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -127,7 +127,7 @@ namespace SKTRFIDCCS2
                     lblDSP_04.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_05 > 9)
+                if (DSP_05 + 7 > 9)
                 {
                     lblDSP_05.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -136,7 +136,7 @@ namespace SKTRFIDCCS2
                     lblDSP_05.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_06 > 9)
+                if (DSP_06 + 7 > 9)
                 {
                     lblDSP_06.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -145,7 +145,7 @@ namespace SKTRFIDCCS2
                     lblDSP_06.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_07 > 9)
+                if (DSP_07 + 7 > 9)
                 {
                     lblDSP_07.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -154,7 +154,7 @@ namespace SKTRFIDCCS2
                     lblDSP_07.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_08 > 9)
+                if (DSP_08 + 7 > 9)
                 {
                     lblDSP_08.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -163,7 +163,7 @@ namespace SKTRFIDCCS2
                     lblDSP_08.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_09 > 9)
+                if (DSP_09 + 7 > 9)
                 {
                     lblDSP_09.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -172,7 +172,7 @@ namespace SKTRFIDCCS2
                     lblDSP_09.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_10 > 9)
+                if (DSP_10 + 7 > 9)
                 {
                     lblDSP_10.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -181,7 +181,7 @@ namespace SKTRFIDCCS2
                     lblDSP_10.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_11 > 9)
+                if (DSP_11 + 7 > 9)
                 {
                     lblDSP_11.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -190,7 +190,7 @@ namespace SKTRFIDCCS2
                     lblDSP_11.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_12 > 9)
+                if (DSP_12 + 7 > 9)
                 {
                     lblDSP_12.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -199,7 +199,7 @@ namespace SKTRFIDCCS2
                     lblDSP_12.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_13 > 9)
+                if (DSP_13 + 7 > 9)
                 {
                     lblDSP_13.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -208,7 +208,7 @@ namespace SKTRFIDCCS2
                     lblDSP_13.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_14 > 9)
+                if (DSP_14 + 7 > 9)
                 {
                     lblDSP_14.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -217,7 +217,7 @@ namespace SKTRFIDCCS2
                     lblDSP_14.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_15 > 9)
+                if (DSP_15 + 7 > 9)
                 {
                     lblDSP_15.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -226,7 +226,7 @@ namespace SKTRFIDCCS2
                     lblDSP_15.Font = new Font("Microsoft Sans Serif", 30);
                 }
 
-                if (DSP_16 > 9)
+                if (DSP_16 + 7 > 9)
                 {
                     lblDSP_16.Font = new Font("Microsoft Sans Serif", 20);
                 }
@@ -236,22 +236,22 @@ namespace SKTRFIDCCS2
                 }
 
 
-                lblDSP_01.Text = DSP_01 == 0 ? "" : DSP_01.ToString();
-                lblDSP_02.Text = DSP_02 == 0 ? "" : DSP_02.ToString();
-                lblDSP_03.Text = DSP_03 == 0 ? "" : DSP_03.ToString();
-                lblDSP_04.Text = DSP_04 == 0 ? "" : DSP_04.ToString();
-                lblDSP_05.Text = DSP_05 == 0 ? "" : DSP_05.ToString();
-                lblDSP_06.Text = DSP_06 == 0 ? "" : DSP_06.ToString();
-                lblDSP_07.Text = DSP_07 == 0 ? "" : DSP_07.ToString();
-                lblDSP_08.Text = DSP_08 == 0 ? "" : DSP_08.ToString();
-                lblDSP_09.Text = DSP_09 == 0 ? "" : DSP_09.ToString();
-                lblDSP_10.Text = DSP_10 == 0 ? "" : DSP_10.ToString();
-                lblDSP_11.Text = DSP_11 == 0 ? "" : DSP_11.ToString();
-                lblDSP_12.Text = DSP_12 == 0 ? "" : DSP_12.ToString();
-                lblDSP_13.Text = DSP_13 == 0 ? "" : DSP_13.ToString();
-                lblDSP_14.Text = DSP_14 == 0 ? "" : DSP_14.ToString();
-                lblDSP_15.Text = DSP_15 == 0 ? "" : DSP_15.ToString();
-                lblDSP_16.Text = DSP_16 == 0 ? "" : DSP_16.ToString();
+                lblDSP_01.Text = DSP_01 == 0 ? "" : (DSP_01 + 7).ToString();
+                lblDSP_02.Text = DSP_02 == 0 ? "" : (DSP_02 + 7).ToString();
+                lblDSP_03.Text = DSP_03 == 0 ? "" : (DSP_03 + 7).ToString();
+                lblDSP_04.Text = DSP_04 == 0 ? "" : (DSP_04 + 7).ToString();
+                lblDSP_05.Text = DSP_05 == 0 ? "" : (DSP_05 + 7).ToString();
+                lblDSP_06.Text = DSP_06 == 0 ? "" : (DSP_06 + 7).ToString();
+                lblDSP_07.Text = DSP_07 == 0 ? "" : (DSP_07 + 7).ToString();
+                lblDSP_08.Text = DSP_08 == 0 ? "" : (DSP_08 + 7).ToString();
+                lblDSP_09.Text = DSP_09 == 0 ? "" : (DSP_09 + 7).ToString();
+                lblDSP_10.Text = DSP_10 == 0 ? "" : (DSP_10 + 7).ToString();
+                lblDSP_11.Text = DSP_11 == 0 ? "" : (DSP_11 + 7).ToString();
+                lblDSP_12.Text = DSP_12 == 0 ? "" : (DSP_12 + 7).ToString();
+                lblDSP_13.Text = DSP_13 == 0 ? "" : (DSP_13 + 7).ToString();
+                lblDSP_14.Text = DSP_14 == 0 ? "" : (DSP_14 + 7).ToString();
+                lblDSP_15.Text = DSP_15 == 0 ? "" : (DSP_15 + 7).ToString();
+                lblDSP_16.Text = DSP_16 == 0 ? "" : (DSP_16 + 7).ToString();
             }
             catch
             {

@@ -41,6 +41,7 @@ namespace SKTRFIDCENTER
             this.btnCheckHardware = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnMuteSound = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,7 @@ namespace SKTRFIDCENTER
             this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReport.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(45, 240);
+            this.btnReport.Location = new System.Drawing.Point(45, 154);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(192, 123);
             this.btnReport.TabIndex = 1;
@@ -102,7 +103,7 @@ namespace SKTRFIDCENTER
             this.btnMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnMonitor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonitor.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonitor.Location = new System.Drawing.Point(45, 56);
+            this.btnMonitor.Location = new System.Drawing.Point(45, 25);
             this.btnMonitor.Name = "btnMonitor";
             this.btnMonitor.Size = new System.Drawing.Size(192, 123);
             this.btnMonitor.TabIndex = 4;
@@ -190,6 +191,7 @@ namespace SKTRFIDCENTER
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnMuteSound);
             this.groupBox2.Controls.Add(this.btnReport);
             this.groupBox2.Controls.Add(this.btnMonitor);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,6 +201,19 @@ namespace SKTRFIDCENTER
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Monitor";
+            // 
+            // btnMuteSound
+            // 
+            this.btnMuteSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnMuteSound.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMuteSound.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuteSound.Location = new System.Drawing.Point(45, 283);
+            this.btnMuteSound.Name = "btnMuteSound";
+            this.btnMuteSound.Size = new System.Drawing.Size(192, 123);
+            this.btnMuteSound.TabIndex = 5;
+            this.btnMuteSound.Text = "เปิด-ปิด เสียง";
+            this.btnMuteSound.UseVisualStyleBackColor = false;
+            this.btnMuteSound.Click += new System.EventHandler(this.btnMuteSound_Click);
             // 
             // Form1
             // 
@@ -235,6 +250,7 @@ namespace SKTRFIDCENTER
         private System.Windows.Forms.Button btnCheckHardware;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnMuteSound;
     }
 }
 

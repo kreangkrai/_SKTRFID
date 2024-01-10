@@ -96,7 +96,7 @@ namespace SKTRFIDREPORT.Service
 	                                                   rfid.truck_number,
 	                                                   rfid.allergen,
 	                                                   rfid.rfid_lastdate FROM tb_rfid_log as rfid 
-                                                WHERE rfid.rfid_lastdate BETWEEN '{start.ToString("yyyy-MM-dd 00:00:00")}' AND '{stop.Date.ToString("yyyy-MM-dd 23:59:59")}'
+                                                WHERE rfid.rfid_lastdate BETWEEN '{start.ToString("yyyy-MM-dd 00:00:00")}' AND '{stop.Date.ToString("yyyy-MM-dd 23:59:59")}' AND queue is not null
                                                 ORDER BY rfid.rfid_lastdate", cn);
                     SqlDataReader dr = cmd.ExecuteReader();
 
@@ -187,7 +187,7 @@ namespace SKTRFIDREPORT.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM tb_rfid_log WHERE barcode LIKE '%{barcode}%' ", cn);
+                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM tb_rfid_log WHERE barcode LIKE '%{barcode}%'  AND queue is not null ", cn);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     if (dr.HasRows)

@@ -73,6 +73,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump11.TabIndex = 17;
             this.btnDump11.Text = "ดัมพ์ 11";
             this.btnDump11.UseVisualStyleBackColor = false;
+            this.btnDump11.Click += new System.EventHandler(this.btnDump11_Click);
             // 
             // btnDump9
             // 
@@ -87,6 +88,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump9.TabIndex = 18;
             this.btnDump9.Text = "ดัมพ์ 9";
             this.btnDump9.UseVisualStyleBackColor = false;
+            this.btnDump9.Click += new System.EventHandler(this.btnDump9_Click);
             // 
             // btnDump12
             // 
@@ -101,6 +103,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump12.TabIndex = 19;
             this.btnDump12.Text = "ดัมพ์ 12";
             this.btnDump12.UseVisualStyleBackColor = false;
+            this.btnDump12.Click += new System.EventHandler(this.btnDump12_Click);
             // 
             // btnDump13
             // 
@@ -115,6 +118,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump13.TabIndex = 20;
             this.btnDump13.Text = "ดัมพ์ 13";
             this.btnDump13.UseVisualStyleBackColor = false;
+            this.btnDump13.Click += new System.EventHandler(this.btnDump13_Click);
             // 
             // btnDump10
             // 
@@ -129,6 +133,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump10.TabIndex = 21;
             this.btnDump10.Text = "ดัมพ์ 10";
             this.btnDump10.UseVisualStyleBackColor = false;
+            this.btnDump10.Click += new System.EventHandler(this.btnDump10_Click);
             // 
             // btnRefresh
             // 
