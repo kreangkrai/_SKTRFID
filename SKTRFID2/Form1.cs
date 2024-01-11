@@ -436,8 +436,8 @@ namespace SKTRFID2
             if (CheckInternet)  // Online Read data from api
             {
                 //Insert Data to API
-                //DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
-                //if (dataInsert.Data[0].StatusDb != 0) // Send Complete
+                DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
+                if (dataInsert.Data[0].StatusDb != 0) // Send Complete
                 {
                     //string loca = @"D:\log_api.txt";
                     //File.AppendAllText(loca, DateTime.Now + " " + "Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
