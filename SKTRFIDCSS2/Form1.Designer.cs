@@ -261,176 +261,176 @@ namespace SKTRFIDCCS2
             // lblDSP_01
             // 
             this.lblDSP_01.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_01.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_01.Location = new System.Drawing.Point(249, 878);
+            this.lblDSP_01.Location = new System.Drawing.Point(243, 878);
             this.lblDSP_01.Name = "lblDSP_01";
-            this.lblDSP_01.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_01.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_01.TabIndex = 39;
             this.lblDSP_01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_02
             // 
             this.lblDSP_02.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_02.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_02.Location = new System.Drawing.Point(250, 815);
+            this.lblDSP_02.Location = new System.Drawing.Point(243, 813);
             this.lblDSP_02.Name = "lblDSP_02";
-            this.lblDSP_02.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_02.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_02.TabIndex = 40;
             this.lblDSP_02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_14
             // 
             this.lblDSP_14.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_14.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_14.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_14.Location = new System.Drawing.Point(847, 74);
+            this.lblDSP_14.Location = new System.Drawing.Point(840, 69);
             this.lblDSP_14.Name = "lblDSP_14";
-            this.lblDSP_14.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_14.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_14.TabIndex = 41;
             this.lblDSP_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_13
             // 
             this.lblDSP_13.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_13.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_13.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_13.Location = new System.Drawing.Point(682, 110);
+            this.lblDSP_13.Location = new System.Drawing.Point(677, 107);
             this.lblDSP_13.Name = "lblDSP_13";
-            this.lblDSP_13.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_13.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_13.TabIndex = 42;
             this.lblDSP_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_12
             // 
             this.lblDSP_12.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_12.ForeColor = System.Drawing.Color.White;
             this.lblDSP_12.Location = new System.Drawing.Point(532, 143);
             this.lblDSP_12.Name = "lblDSP_12";
-            this.lblDSP_12.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_12.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_12.TabIndex = 43;
             this.lblDSP_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_11
             // 
             this.lblDSP_11.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_11.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_11.Location = new System.Drawing.Point(366, 162);
+            this.lblDSP_11.Location = new System.Drawing.Point(357, 160);
             this.lblDSP_11.Name = "lblDSP_11";
-            this.lblDSP_11.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_11.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_11.TabIndex = 44;
             this.lblDSP_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_10
             // 
             this.lblDSP_10.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_10.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_10.Location = new System.Drawing.Point(250, 180);
+            this.lblDSP_10.Location = new System.Drawing.Point(242, 178);
             this.lblDSP_10.Name = "lblDSP_10";
-            this.lblDSP_10.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_10.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_10.TabIndex = 45;
             this.lblDSP_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_09
             // 
             this.lblDSP_09.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_09.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_09.Location = new System.Drawing.Point(250, 280);
+            this.lblDSP_09.Location = new System.Drawing.Point(242, 276);
             this.lblDSP_09.Name = "lblDSP_09";
-            this.lblDSP_09.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_09.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_09.TabIndex = 46;
             this.lblDSP_09.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_08
             // 
             this.lblDSP_08.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_08.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_08.Location = new System.Drawing.Point(249, 365);
+            this.lblDSP_08.Location = new System.Drawing.Point(242, 362);
             this.lblDSP_08.Name = "lblDSP_08";
-            this.lblDSP_08.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_08.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_08.TabIndex = 47;
             this.lblDSP_08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_07
             // 
             this.lblDSP_07.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_07.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_07.Location = new System.Drawing.Point(250, 455);
+            this.lblDSP_07.Location = new System.Drawing.Point(243, 452);
             this.lblDSP_07.Name = "lblDSP_07";
-            this.lblDSP_07.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_07.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_07.TabIndex = 48;
             this.lblDSP_07.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_06
             // 
             this.lblDSP_06.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_06.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_06.Location = new System.Drawing.Point(249, 543);
+            this.lblDSP_06.Location = new System.Drawing.Point(244, 541);
             this.lblDSP_06.Name = "lblDSP_06";
-            this.lblDSP_06.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_06.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_06.TabIndex = 49;
             this.lblDSP_06.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_05
             // 
             this.lblDSP_05.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_05.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_05.Location = new System.Drawing.Point(249, 610);
+            this.lblDSP_05.Location = new System.Drawing.Point(244, 611);
             this.lblDSP_05.Name = "lblDSP_05";
-            this.lblDSP_05.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_05.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_05.TabIndex = 50;
             this.lblDSP_05.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_04
             // 
             this.lblDSP_04.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_04.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_04.Location = new System.Drawing.Point(250, 679);
+            this.lblDSP_04.Location = new System.Drawing.Point(244, 679);
             this.lblDSP_04.Name = "lblDSP_04";
-            this.lblDSP_04.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_04.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_04.TabIndex = 51;
             this.lblDSP_04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_03
             // 
             this.lblDSP_03.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_03.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_03.Location = new System.Drawing.Point(250, 748);
+            this.lblDSP_03.Location = new System.Drawing.Point(243, 745);
             this.lblDSP_03.Name = "lblDSP_03";
-            this.lblDSP_03.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_03.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_03.TabIndex = 52;
             this.lblDSP_03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_15
             // 
             this.lblDSP_15.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_15.ForeColor = System.Drawing.Color.White;
             this.lblDSP_15.Location = new System.Drawing.Point(976, 337);
             this.lblDSP_15.Name = "lblDSP_15";
-            this.lblDSP_15.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_15.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_15.TabIndex = 53;
             this.lblDSP_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDSP_16
             // 
             this.lblDSP_16.BackColor = System.Drawing.Color.Black;
-            this.lblDSP_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSP_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSP_16.ForeColor = System.Drawing.Color.White;
-            this.lblDSP_16.Location = new System.Drawing.Point(1510, 242);
+            this.lblDSP_16.Location = new System.Drawing.Point(1506, 240);
             this.lblDSP_16.Name = "lblDSP_16";
-            this.lblDSP_16.Size = new System.Drawing.Size(45, 55);
+            this.lblDSP_16.Size = new System.Drawing.Size(60, 60);
             this.lblDSP_16.TabIndex = 54;
             this.lblDSP_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

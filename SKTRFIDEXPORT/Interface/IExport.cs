@@ -12,6 +12,6 @@ namespace SKTRFIDREPORT.Interface
     {
         string Export(List<ReportModel> reports);
         List<ReportModel> GetReportByDate(DateTime start, DateTime stop);
-        List<ReportModel> GetReportByDBarCode(string barcode);
+        List<ReportModel> GetReportByDBarCode(string barcode,string crop_year);
     }
 }

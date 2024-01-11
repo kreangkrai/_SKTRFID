@@ -62,33 +62,106 @@ namespace SKTRFIDMONITOR
         void LoadData(List<DataModel> datas)
         {
             dataGridView1.Rows.Clear();
-            for (int i = 0; i < datas.Count; i++)
+            if (phase == 1)
             {
-                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
-                row.Height = 35;
-                row.Cells[0].Value = datas[i].barcode;
-                row.Cells[1].Value = datas[i].farmer_name;
-                row.Cells[2].Value = datas[i].dump_id;
-                row.Cells[3].Value = datas[i].rfid_lastdate.ToString("dd/MM/yyyy HH:mm:ss");
-                double diff_minute = DateTime.Now.Subtract(datas[i].rfid_lastdate).TotalMinutes;
-                if (diff_minute >= 10.0)
+                for (int j = 1; j <= 7; j++)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Red;
+                    DataModel data = datas.Where(w => w.dump_id == j).FirstOrDefault();
+                    if (data != null)
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[j - 1].Clone();
+                        row.Height = 35;
+                        row.Cells[0].Value = data.barcode;
+                        row.Cells[1].Value = data.farmer_name;
+                        row.Cells[2].Value = data.dump_id;
+                        row.Cells[3].Value = data.rfid_lastdate.ToString("dd/MM/yyyy HH:mm:ss");
+                        double diff_minute = DateTime.Now.Subtract(data.rfid_lastdate).TotalMinutes;
+                        if (diff_minute >= 10.0)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Red;
+                        }
+                        row.Cells[4].Value = data.truck_number;
+                        row.Cells[5].Value = CodeType.CaneType(data.cane_type);
+                        string allergen = data.allergen;
+                        row.Cells[6].Value = CodeType.allergenType(allergen);
+                        if (allergen == "No" || allergen == "")
+                        {
+                            row.Cells[6].Style.BackColor = Color.GreenYellow;
+                        }
+                        else
+                        {
+                            row.Cells[6].Style.BackColor = Color.Red;
+                        }
+                        row.Cells[7].Value = CodeType.truckType(data.truck_type);
+                        dataGridView1.Rows.Add(row);
+                    }
+                    else
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[j - 1].Clone();
+                        row.Height = 35;
+                        row.Cells[0].Value = "";
+                        row.Cells[1].Value = "";
+                        row.Cells[2].Value = j;
+                        row.Cells[3].Value = "";
+                        row.Cells[4].Value = "";
+                        row.Cells[5].Value = "";
+                        row.Cells[6].Value = "";
+                        row.Cells[7].Value = "";
+                        row.DefaultCellStyle.BackColor = Color.White;
+                        dataGridView1.Rows.Add(row);
+                    }
                 }
-                row.Cells[4].Value = datas[i].truck_number;
-                row.Cells[5].Value = CodeType.CaneType(datas[i].cane_type);
-                string allergen = datas[i].allergen;
-                row.Cells[6].Value = CodeType.allergenType(allergen);
-                if (allergen == "No" || allergen == "")
+            }
+        
+            if (phase == 2)
+            {
+                for (int j = 8; j <= 13; j++)
                 {
-                    row.Cells[6].Style.BackColor = Color.GreenYellow;
+                    DataModel data = datas.Where(w => w.dump_id == j).FirstOrDefault();
+                    if (data != null)
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[j - 8].Clone();
+                        row.Height = 35;
+                        row.Cells[0].Value = data.barcode;
+                        row.Cells[1].Value = data.farmer_name;
+                        row.Cells[2].Value = data.dump_id;
+                        row.Cells[3].Value = data.rfid_lastdate.ToString("dd/MM/yyyy HH:mm:ss");
+                        double diff_minute = DateTime.Now.Subtract(data.rfid_lastdate).TotalMinutes;
+                        if (diff_minute >= 10.0)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Red;
+                        }
+                        row.Cells[4].Value = data.truck_number;
+                        row.Cells[5].Value = CodeType.CaneType(data.cane_type);
+                        string allergen = data.allergen;
+                        row.Cells[6].Value = CodeType.allergenType(allergen);
+                        if (allergen == "No" || allergen == "")
+                        {
+                            row.Cells[6].Style.BackColor = Color.GreenYellow;
+                        }
+                        else
+                        {
+                            row.Cells[6].Style.BackColor = Color.Red;
+                        }
+                        row.Cells[7].Value = CodeType.truckType(data.truck_type);
+                        dataGridView1.Rows.Add(row);
+                    }
+                    else
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[j - 8].Clone();
+                        row.Height = 35;
+                        row.Cells[0].Value = "";
+                        row.Cells[1].Value = "";
+                        row.Cells[2].Value = j;
+                        row.Cells[3].Value = "";
+                        row.Cells[4].Value = "";
+                        row.Cells[5].Value = "";
+                        row.Cells[6].Value = "";
+                        row.Cells[7].Value = "";
+                        row.DefaultCellStyle.BackColor = Color.White;
+                        dataGridView1.Rows.Add(row);
+                    }
                 }
-                else
-                {
-                    row.Cells[6].Style.BackColor = Color.Red;
-                }
-                row.Cells[7].Value = CodeType.truckType(datas[i].truck_type);
-                dataGridView1.Rows.Add(row);
             }
         }
     }

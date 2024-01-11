@@ -1,4 +1,5 @@
 ﻿using SKTRFIDLIBRARY.Interface;
+using SKTRFIDLIBRARY.Model;
 using SKTRFIDLIBRARY.Service;
 using SKTRFIDREPORT.Interface;
 using SKTRFIDREPORT.Model;
@@ -21,12 +22,16 @@ namespace SKTRFIDREPORT
         int phase = 0;
         private IExport Export;
         private ICodeType CodeType;
+        private ISetting Setting;
+        SettingModel setting;
         public Form1(string _phase)
         {
             InitializeComponent();
             phase = Int32.Parse(_phase);
             Export = new ExportService(phase);
             CodeType = new CodeTypeService();
+            Setting = new SettingService(phase);
+            setting = Setting.GetSetting();
             this.Text = "SKT RFID EXPORT PHASE " + phase;
         }
 
@@ -48,7 +53,7 @@ namespace SKTRFIDREPORT
         private void Form1_Load(object sender, EventArgs e)
         {
             txtSearchBarcode.Text = "";
-            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date.AddDays(1));
+            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date);
 
             LoadData(reports);
         }
@@ -56,7 +61,7 @@ namespace SKTRFIDREPORT
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             txtSearchBarcode.Text = "";
-            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date.AddDays(1));
+            List<ReportModel> reports = Export.GetReportByDate(dateTimePickerStat.Value.Date, dateTimePickerStop.Value.Date);
 
             LoadData(reports);
         }
@@ -95,7 +100,7 @@ namespace SKTRFIDREPORT
         {
             if (txtSearchBarcode.Text.Trim() != "")
             {
-                List<ReportModel> reports = Export.GetReportByDBarCode(txtSearchBarcode.Text);
+                List<ReportModel> reports = Export.GetReportByDBarCode(txtSearchBarcode.Text,setting.crop_year);
                 LoadData(reports);
             }
             else

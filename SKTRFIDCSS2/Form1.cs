@@ -93,7 +93,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_01 + 7 > 9)
                 {
-                    lblDSP_01.Font =  new Font("Microsoft Sans Serif", 20);
+                    lblDSP_01.Font =  new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -102,7 +102,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_02 + 7 > 9)
                 {
-                    lblDSP_02.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_02.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -111,7 +111,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_03 + 7 > 9)
                 {
-                    lblDSP_03.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_03.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -120,7 +120,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_04 + 7 > 9)
                 {
-                    lblDSP_04.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_04.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -129,7 +129,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_05 + 7 > 9)
                 {
-                    lblDSP_05.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_05.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -138,7 +138,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_06 + 7 > 9)
                 {
-                    lblDSP_06.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_06.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -147,7 +147,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_07 + 7 > 9)
                 {
-                    lblDSP_07.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_07.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -156,7 +156,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_08 + 7 > 9)
                 {
-                    lblDSP_08.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_08.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -165,7 +165,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_09 + 7 > 9)
                 {
-                    lblDSP_09.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_09.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -174,7 +174,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_10 + 7 > 9)
                 {
-                    lblDSP_10.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_10.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -183,7 +183,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_11 + 7 > 9)
                 {
-                    lblDSP_11.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_11.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -192,7 +192,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_12 + 7 > 9)
                 {
-                    lblDSP_12.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_12.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -201,7 +201,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_13 + 7 > 9)
                 {
-                    lblDSP_13.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_13.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -210,7 +210,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_14 + 7 > 9)
                 {
-                    lblDSP_14.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_14.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -219,7 +219,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_15 + 7 > 9)
                 {
-                    lblDSP_15.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_15.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {
@@ -228,7 +228,7 @@ namespace SKTRFIDCCS2
 
                 if (DSP_16 + 7 > 9)
                 {
-                    lblDSP_16.Font = new Font("Microsoft Sans Serif", 20);
+                    lblDSP_16.Font = new Font("Microsoft Sans Serif", 25);
                 }
                 else
                 {

@@ -173,7 +173,7 @@ namespace SKTRFIDREPORT.Service
                 return reports;
             }
         }
-        public List<ReportModel> GetReportByDBarCode(string barcode)
+        public List<ReportModel> GetReportByDBarCode(string barcode,string crop_year)
         {
             List<ReportModel> reports = new List<ReportModel>();
             try
@@ -187,7 +187,7 @@ namespace SKTRFIDREPORT.Service
                         cn.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM tb_rfid_log WHERE barcode LIKE '%{barcode}%'  AND queue is not null ", cn);
+                    SqlCommand cmd = new SqlCommand($@"SELECT * FROM tb_rfid_log WHERE barcode LIKE '%{barcode}%' AND crop_year='{crop_year}' AND queue is not null ", cn);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     if (dr.HasRows)
@@ -215,26 +215,10 @@ namespace SKTRFIDREPORT.Service
                 }
 
                 datas = datas.OrderBy(o => o.rfid_lastdate).ThenBy(t => t.dump_id).ToList();
-                int intdex_first_1 = datas.FindIndex(a => a.queue == 1);
-                datas.RemoveRange(0, intdex_first_1); // Start Queue 1  , Remove
 
-                int current_round = 0;
-                int current_dump = datas[0].dump_id;
-                int current_queue = datas[0].queue;
-                int last_dump = current_dump;
-                int last_queue = current_queue;
                 for (int i = 0; i < datas.Count; i++)
                 {
-                    current_dump = datas[i].dump_id;
-                    if (current_dump <= last_dump)
-                    {
-                        current_round++;
-                    }
-                    current_queue = datas[i].queue;
-                    if (current_queue < last_queue)
-                    {
-                        current_round = 1;
-                    }
+                    
                     reports.Add(new ReportModel()
                     {
                         queue = datas[i].queue,
@@ -248,16 +232,14 @@ namespace SKTRFIDREPORT.Service
                         allergen = datas[i].allergen,
                         rfid = datas[i].rfid,
                         truck_number = datas[i].truck_number,
-                        round = current_round
+                        round = 0
                     });
-                    last_dump = current_dump;
-                    last_queue = current_queue;
+
                 }
                 return reports;
             }
             catch
             {
-                //MessageBox.Show(ex.Message);
                 return reports;
             }
         }
