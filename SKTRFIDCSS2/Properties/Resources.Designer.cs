@@ -63,6 +63,26 @@ namespace SKTRFIDCCS2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _11922846 {
+            get {
+                object obj = ResourceManager.GetObject("_11922846", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b {
+            get {
+                object obj = ResourceManager.GetObject("b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_red {
             get {
                 object obj = ResourceManager.GetObject("green_red", resourceCulture);

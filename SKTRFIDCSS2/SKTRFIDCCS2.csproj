@@ -104,5 +104,14 @@
       <Name>SKTRFIDLIBRARY</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11922846.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
