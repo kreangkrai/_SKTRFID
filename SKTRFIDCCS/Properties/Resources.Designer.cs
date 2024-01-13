@@ -63,9 +63,9 @@ namespace SKTRFIDCCS1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap graphic_rev_1__Dump1_7 {
+        internal static System.Drawing.Bitmap ccs1 {
             get {
-                object obj = ResourceManager.GetObject("graphic-rev.1-_Dump1-7", resourceCulture);
+                object obj = ResourceManager.GetObject("ccs1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

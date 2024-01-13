@@ -97,6 +97,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ccs.ico" />
+    <None Include="Resources\ccs1.JPG" />
+    <None Include="Resources\ccs1.gif" />
+    <Content Include="Resources\ccs1.png" />
+    <None Include="Resources\Slide3.JPG" />
+    <None Include="Resources\ccs11.png" />
     <None Include="Resources\graphic-rev.1-_Dump1-7.gif" />
     <None Include="Resources\phase1.gif" />
     <None Include="Resources\green_red.gif" />

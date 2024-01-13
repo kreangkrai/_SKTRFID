@@ -83,9 +83,9 @@ namespace SKTRFIDCCS2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap green_red {
+        internal static System.Drawing.Bitmap ccs2 {
             get {
-                object obj = ResourceManager.GetObject("green_red", resourceCulture);
+                object obj = ResourceManager.GetObject("ccs2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace SKTRFIDCCS2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phase2 {
+        internal static System.Drawing.Bitmap green_red {
             get {
-                object obj = ResourceManager.GetObject("phase2", resourceCulture);
+                object obj = ResourceManager.GetObject("green_red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
