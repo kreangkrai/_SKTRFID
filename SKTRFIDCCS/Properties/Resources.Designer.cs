@@ -63,6 +63,16 @@ namespace SKTRFIDCCS1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ccs1 {
             get {
                 object obj = ResourceManager.GetObject("ccs1", resourceCulture);
@@ -76,6 +86,26 @@ namespace SKTRFIDCCS1.Properties {
         internal static System.Drawing.Bitmap green_red {
             get {
                 object obj = ResourceManager.GetObject("green_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap truck {
+            get {
+                object obj = ResourceManager.GetObject("truck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap truck7 {
+            get {
+                object obj = ResourceManager.GetObject("truck7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -89,6 +89,138 @@ namespace SKTRFIDCCS1
                 int DSP_15 = (int)cj2.ReadVariable("DSP_15");
                 int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
+                if (DSP_01 != 0) // DUMP 6,7
+                {
+                    if (DSP_01 == 6)
+                    {
+                        picDump6.Visible = false;
+                    }
+                    if (DSP_01 == 7)
+                    {
+                        picDump7.Visible = false;
+                    }
+                }
+                else
+                {
+                    picDump6.Visible = true;
+                    picDump7.Visible = true;
+                }
+
+                if (DSP_02 != 0) // DUMP 5
+                {
+                    picDump5.Visible = false;
+                }
+                else
+                {
+                    picDump5.Visible = true;
+                }
+
+                if (DSP_03 != 0) // DUMP 4
+                {
+                    picDump4.Visible = false;
+                }
+                else
+                {
+                    picDump4.Visible = true;
+                }
+
+                if (DSP_04 != 0) // DUMP 3
+                {
+                    picDump3.Visible = false;
+                }
+                else
+                {
+                    picDump3.Visible = true;
+                }
+
+                if (DSP_05 != 0) // DUMP 2
+                {
+                    picDump2.Visible = false;
+                }
+                else
+                {
+                    picDump2.Visible = true;
+                }
+
+
+                if (DSP_06 != 0) // DUMP 1
+                {
+                    picDump1.Visible = false;
+                }
+                else
+                {
+                    picDump1.Visible = true;
+                }
+
+
+                if (DSP_09 != 0) //
+                {
+                    picLamp2_1.Visible = true;
+                    picLamp2_2.Visible = true;
+                    picLamp2_3.Visible = true;
+                }
+                else
+                {
+                    picLamp2_1.Visible = false;
+                    picLamp2_2.Visible = false;
+                    picLamp2_3.Visible = false;
+                }
+
+                if (DSP_12 != 0) //
+                {
+                    picLamp3.Visible = true;
+                }
+                else
+                {
+                    picLamp3.Visible = false;
+                }
+
+                if (DSP_13 != 0) //
+                {
+                    picLamp4.Visible = true;
+                }
+                else
+                {
+                    picLamp4.Visible = false;
+                }
+
+                if (DSP_14 != 0) //
+                {
+                    picLamp5_1.Visible = true;
+                    picLamp5_2.Visible = true;
+                    picLamp5_3.Visible = true;
+                }
+                else
+                {
+                    picLamp5_1.Visible = false;
+                    picLamp5_2.Visible = false;
+                    picLamp5_3.Visible = false;
+                }
+
+                if (DSP_15 != 0) //
+                {
+                    picLamp6_1.Visible = true;
+                    picLamp6_2.Visible = true;
+                }
+                else
+                {
+                    picLamp6_1.Visible = false;
+                    picLamp6_2.Visible = false;
+                }
+
+                if (DSP_16 != 0) //
+                {
+                    picLamp7_1.Visible = true;
+                    picLamp7_2.Visible = true;
+                    picLamp7_3.Visible = true;
+                }
+                else
+                {
+                    picLamp7_1.Visible = false;
+                    picLamp7_2.Visible = false;
+                    picLamp7_3.Visible = false;
+                }
+
                 lblDSP_01.Text = DSP_01 == 0 ? "" : DSP_01.ToString();
                 lblDSP_02.Text = DSP_02 == 0 ? "" : DSP_02.ToString();
                 lblDSP_03.Text = DSP_03 == 0 ? "" : DSP_03.ToString();

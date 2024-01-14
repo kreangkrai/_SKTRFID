@@ -91,6 +91,135 @@ namespace SKTRFIDCCS2
                 int DSP_15 = (int)cj2.ReadVariable("DSP_15");
                 int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
+
+
+                if (DSP_01 != 0) // DUMP 13
+                {
+                    picDump13.Visible = false;
+
+                }
+                else
+                {
+                    picDump13.Visible = true;
+                }
+
+                if (DSP_02 != 0) // DUMP 12
+                {
+                    picDump12.Visible = false;
+                }
+                else
+                {
+                    picDump12.Visible = true;
+                }
+
+                if (DSP_03 != 0) // DUMP 11
+                {
+                    picDump11.Visible = false;
+                }
+                else
+                {
+                    picDump11.Visible = true;
+                }
+
+                if (DSP_04 != 0) // DUMP 10
+                {
+                    picDump10.Visible = false;
+                }
+                else
+                {
+                    picDump10.Visible = true;
+                }
+
+                if (DSP_05 != 0) // DUMP 9
+                {
+                    picDump9.Visible = false;
+                }
+                else
+                {
+                    picDump9.Visible = true;
+                }
+
+
+                if (DSP_06 != 0) // DUMP 8
+                {
+                    picDump8.Visible = false;
+                }
+                else
+                {
+                    picDump8.Visible = true;
+                }
+
+
+                if (DSP_09 != 0) //
+                {
+                    picLamp2_1.Visible = true;
+                    picLamp2_2.Visible = true;
+                    picLamp2_3.Visible = true;
+                }
+                else
+                {
+                    picLamp2_1.Visible = false;
+                    picLamp2_2.Visible = false;
+                    picLamp2_3.Visible = false;
+                }
+
+                if (DSP_12 != 0) //
+                {
+                    picLamp3.Visible = true;
+                }
+                else
+                {
+                    picLamp3.Visible = false;
+                }
+
+                if (DSP_13 != 0) //
+                {
+                    picLamp4.Visible = true;
+                }
+                else
+                {
+                    picLamp4.Visible = false;
+                }
+
+                if (DSP_14 != 0) //
+                {
+                    picLamp5_1.Visible = true;
+                    picLamp5_2.Visible = true;
+                    picLamp5_3.Visible = true;
+                }
+                else
+                {
+                    picLamp5_1.Visible = false;
+                    picLamp5_2.Visible = false;
+                    picLamp5_3.Visible = false;
+                }
+
+                if (DSP_15 != 0) //
+                {
+                    picLamp6_1.Visible = true;
+                    picLamp6_2.Visible = true;
+                }
+                else
+                {
+                    picLamp6_1.Visible = false;
+                    picLamp6_2.Visible = false;
+                }
+
+                if (DSP_16 != 0) //
+                {
+                    picLamp7_1.Visible = true;
+                    picLamp7_2.Visible = true;
+                    picLamp7_3.Visible = true;
+                }
+                else
+                {
+                    picLamp7_1.Visible = false;
+                    picLamp7_2.Visible = false;
+                    picLamp7_3.Visible = false;
+                }
+
+
+
                 if (DSP_01 + 7 > 9)
                 {
                     lblDSP_01.Font =  new Font("Microsoft Sans Serif", 25);
