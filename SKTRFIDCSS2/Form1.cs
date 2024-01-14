@@ -93,7 +93,7 @@ namespace SKTRFIDCCS2
 
 
 
-                if (DSP_01 != 0) // DUMP 13
+                if (DSP_01 + 7 == 13) // DUMP 13
                 {
                     picDump13.Visible = false;
 
@@ -103,7 +103,7 @@ namespace SKTRFIDCCS2
                     picDump13.Visible = true;
                 }
 
-                if (DSP_02 != 0) // DUMP 12
+                if (DSP_02 + 7 == 12) // DUMP 12
                 {
                     picDump12.Visible = false;
                 }
@@ -112,7 +112,7 @@ namespace SKTRFIDCCS2
                     picDump12.Visible = true;
                 }
 
-                if (DSP_03 != 0) // DUMP 11
+                if (DSP_03 + 7 == 11) // DUMP 11
                 {
                     picDump11.Visible = false;
                 }
@@ -121,7 +121,7 @@ namespace SKTRFIDCCS2
                     picDump11.Visible = true;
                 }
 
-                if (DSP_04 != 0) // DUMP 10
+                if (DSP_04 + 7 == 10) // DUMP 10
                 {
                     picDump10.Visible = false;
                 }
@@ -130,7 +130,7 @@ namespace SKTRFIDCCS2
                     picDump10.Visible = true;
                 }
 
-                if (DSP_05 != 0) // DUMP 9
+                if (DSP_05 + 7 == 9) // DUMP 9
                 {
                     picDump9.Visible = false;
                 }
@@ -140,7 +140,7 @@ namespace SKTRFIDCCS2
                 }
 
 
-                if (DSP_06 != 0) // DUMP 8
+                if (DSP_06 + 7 == 8) // DUMP 8
                 {
                     picDump8.Visible = false;
                 }
