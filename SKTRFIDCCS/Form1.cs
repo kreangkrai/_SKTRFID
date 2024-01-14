@@ -89,7 +89,7 @@ namespace SKTRFIDCCS1
                 int DSP_15 = (int)cj2.ReadVariable("DSP_15");
                 int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
-                if (DSP_01 != 0) // DUMP 6,7
+                if (DSP_01 == 6 || DSP_01 == 7) // DUMP 6,7
                 {
                     if (DSP_01 == 6)
                     {
@@ -106,7 +106,7 @@ namespace SKTRFIDCCS1
                     picDump7.Visible = true;
                 }
 
-                if (DSP_02 != 0) // DUMP 5
+                if (DSP_02 == 5) // DUMP 5
                 {
                     picDump5.Visible = false;
                 }
@@ -115,7 +115,7 @@ namespace SKTRFIDCCS1
                     picDump5.Visible = true;
                 }
 
-                if (DSP_03 != 0) // DUMP 4
+                if (DSP_03 == 4) // DUMP 4
                 {
                     picDump4.Visible = false;
                 }
@@ -124,7 +124,7 @@ namespace SKTRFIDCCS1
                     picDump4.Visible = true;
                 }
 
-                if (DSP_04 != 0) // DUMP 3
+                if (DSP_04 == 3) // DUMP 3
                 {
                     picDump3.Visible = false;
                 }
@@ -133,7 +133,7 @@ namespace SKTRFIDCCS1
                     picDump3.Visible = true;
                 }
 
-                if (DSP_05 != 0) // DUMP 2
+                if (DSP_05 == 2) // DUMP 2
                 {
                     picDump2.Visible = false;
                 }
@@ -143,7 +143,7 @@ namespace SKTRFIDCCS1
                 }
 
 
-                if (DSP_06 != 0) // DUMP 1
+                if (DSP_06 == 1) // DUMP 1
                 {
                     picDump1.Visible = false;
                 }
