@@ -154,12 +154,19 @@ namespace SKTRFIDCCS2
                 {
                     picLamp2_1.Visible = true;
                     picLamp2_2.Visible = true;
-                    picLamp2_3.Visible = true;
                 }
                 else
                 {
                     picLamp2_1.Visible = false;
                     picLamp2_2.Visible = false;
+                }
+
+                if (DSP_11 != 0)
+                {
+                    picLamp2_3.Visible = true;
+                }
+                else
+                {
                     picLamp2_3.Visible = false;
                 }
 
