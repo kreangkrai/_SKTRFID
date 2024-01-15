@@ -90,5 +90,13 @@ namespace SKTRFIDCENTER
             p.StartInfo.FileName = "Program\\SOUND\\SKTRFIDMUTESOUND1.exe";
             p.Start();
         }
+
+        private void btnReadAPI_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Program\\READAPI\\SKTRFIDREADAPI.exe";
+            p.StartInfo.Arguments = txtPhase.Text;
+            p.Start();
+        }
     }
 }

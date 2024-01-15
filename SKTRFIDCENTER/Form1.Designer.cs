@@ -42,6 +42,7 @@ namespace SKTRFIDCENTER
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnMuteSound = new System.Windows.Forms.Button();
+            this.btnReadAPI = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,7 @@ namespace SKTRFIDCENTER
             this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReport.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(45, 154);
+            this.btnReport.Location = new System.Drawing.Point(231, 26);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(192, 123);
             this.btnReport.TabIndex = 1;
@@ -103,7 +104,7 @@ namespace SKTRFIDCENTER
             this.btnMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnMonitor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonitor.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonitor.Location = new System.Drawing.Point(45, 25);
+            this.btnMonitor.Location = new System.Drawing.Point(21, 25);
             this.btnMonitor.Name = "btnMonitor";
             this.btnMonitor.Size = new System.Drawing.Size(192, 123);
             this.btnMonitor.TabIndex = 4;
@@ -145,7 +146,7 @@ namespace SKTRFIDCENTER
             this.txtPhase.ReadOnly = true;
             this.txtPhase.Size = new System.Drawing.Size(20, 31);
             this.txtPhase.TabIndex = 7;
-            this.txtPhase.Text = "1";
+            this.txtPhase.Text = "2";
             // 
             // btnKill
             // 
@@ -182,7 +183,7 @@ namespace SKTRFIDCENTER
             this.groupBox1.Controls.Add(this.btnEditDump);
             this.groupBox1.Controls.Add(this.btnShift);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(353, 41);
+            this.groupBox1.Location = new System.Drawing.Point(481, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(436, 419);
             this.groupBox1.TabIndex = 10;
@@ -191,13 +192,14 @@ namespace SKTRFIDCENTER
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnReadAPI);
             this.groupBox2.Controls.Add(this.btnMuteSound);
             this.groupBox2.Controls.Add(this.btnReport);
             this.groupBox2.Controls.Add(this.btnMonitor);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(30, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(275, 419);
+            this.groupBox2.Size = new System.Drawing.Size(445, 419);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Monitor";
@@ -207,7 +209,7 @@ namespace SKTRFIDCENTER
             this.btnMuteSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnMuteSound.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMuteSound.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMuteSound.Location = new System.Drawing.Point(45, 283);
+            this.btnMuteSound.Location = new System.Drawing.Point(21, 167);
             this.btnMuteSound.Name = "btnMuteSound";
             this.btnMuteSound.Size = new System.Drawing.Size(192, 123);
             this.btnMuteSound.TabIndex = 5;
@@ -215,11 +217,24 @@ namespace SKTRFIDCENTER
             this.btnMuteSound.UseVisualStyleBackColor = false;
             this.btnMuteSound.Click += new System.EventHandler(this.btnMuteSound_Click);
             // 
+            // btnReadAPI
+            // 
+            this.btnReadAPI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnReadAPI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReadAPI.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReadAPI.Location = new System.Drawing.Point(231, 167);
+            this.btnReadAPI.Name = "btnReadAPI";
+            this.btnReadAPI.Size = new System.Drawing.Size(192, 123);
+            this.btnReadAPI.TabIndex = 6;
+            this.btnReadAPI.Text = "อ่านบัตรออนไลน์";
+            this.btnReadAPI.UseVisualStyleBackColor = false;
+            this.btnReadAPI.Click += new System.EventHandler(this.btnReadAPI_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 476);
+            this.ClientSize = new System.Drawing.Size(949, 476);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtPhase);
@@ -251,6 +266,7 @@ namespace SKTRFIDCENTER
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnMuteSound;
+        private System.Windows.Forms.Button btnReadAPI;
     }
 }
 
