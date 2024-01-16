@@ -35,22 +35,29 @@ namespace SKTRFIDREADAPI
             data.area_id = setting.area_id;
             data.crop_year = setting.crop_year;
             data.rfid = txtxRFID.Text.Trim();
-            RFIDModel rfid = await API.CallAPI(data);
-
-            if (rfid.Data.Count > 0)
+            if (API.checkInternet())
             {
-                if (rfid.Data[0].Barcode != "1")
+                RFIDModel rfid = await API.CallAPI(data);
+
+                if (rfid.Data.Count > 0)
                 {
-                    txtBarcode.Text = rfid.Data[0].Barcode;
-                    txtCane.Text = CodeType.CaneType(Int32.Parse(rfid.Data[0].CaneType));
-                    txtTruck.Text = rfid.Data[0].TruckNumber;
-                    txtFamerName.Text = rfid.Data[0].FarmerName;
-                    txtAllergen.Text = CodeType.allergenType(rfid.Data[0].Allergen);
+                    if (rfid.Data[0].Barcode != "1")
+                    {
+                        txtBarcode.Text = rfid.Data[0].Barcode;
+                        txtCane.Text = CodeType.CaneType(Int32.Parse(rfid.Data[0].CaneType));
+                        txtTruck.Text = rfid.Data[0].TruckNumber;
+                        txtFamerName.Text = rfid.Data[0].FarmerName;
+                        txtAllergen.Text = CodeType.allergenType(rfid.Data[0].Allergen);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ไม่พบข้อมูล", "SKT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("ไม่พบข้อมูล","SKT",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
+            }
+            else
+            {
+                MessageBox.Show("ไม่สามารถติดต่อกับเซิร์ฟเวอร์", "SKT", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
