@@ -41,8 +41,8 @@ namespace SKTRFIDCENTER
             this.btnCheckHardware = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnMuteSound = new System.Windows.Forms.Button();
             this.btnReadAPI = new System.Windows.Forms.Button();
+            this.btnMuteSound = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -146,7 +146,7 @@ namespace SKTRFIDCENTER
             this.txtPhase.ReadOnly = true;
             this.txtPhase.Size = new System.Drawing.Size(20, 31);
             this.txtPhase.TabIndex = 7;
-            this.txtPhase.Text = "2";
+            this.txtPhase.Text = "1";
             // 
             // btnKill
             // 
@@ -204,19 +204,6 @@ namespace SKTRFIDCENTER
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Monitor";
             // 
-            // btnMuteSound
-            // 
-            this.btnMuteSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnMuteSound.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMuteSound.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMuteSound.Location = new System.Drawing.Point(21, 167);
-            this.btnMuteSound.Name = "btnMuteSound";
-            this.btnMuteSound.Size = new System.Drawing.Size(192, 123);
-            this.btnMuteSound.TabIndex = 5;
-            this.btnMuteSound.Text = "เปิด-ปิด เสียง";
-            this.btnMuteSound.UseVisualStyleBackColor = false;
-            this.btnMuteSound.Click += new System.EventHandler(this.btnMuteSound_Click);
-            // 
             // btnReadAPI
             // 
             this.btnReadAPI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -229,6 +216,19 @@ namespace SKTRFIDCENTER
             this.btnReadAPI.Text = "อ่านบัตรออนไลน์";
             this.btnReadAPI.UseVisualStyleBackColor = false;
             this.btnReadAPI.Click += new System.EventHandler(this.btnReadAPI_Click);
+            // 
+            // btnMuteSound
+            // 
+            this.btnMuteSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnMuteSound.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMuteSound.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuteSound.Location = new System.Drawing.Point(21, 167);
+            this.btnMuteSound.Name = "btnMuteSound";
+            this.btnMuteSound.Size = new System.Drawing.Size(192, 123);
+            this.btnMuteSound.TabIndex = 5;
+            this.btnMuteSound.Text = "เปิด-ปิด เสียง";
+            this.btnMuteSound.UseVisualStyleBackColor = false;
+            this.btnMuteSound.Click += new System.EventHandler(this.btnMuteSound_Click);
             // 
             // Form1
             // 
