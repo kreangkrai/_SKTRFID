@@ -127,8 +127,6 @@ namespace SKTCLEARBARCODE1
         {
             List<DataModel> rfid = RFID.GetDatas(setting.crop_year);
 
-
-
             string barcode1 = (string)cj2.ReadVariable("Bar_ID1");
             string barcode2 = (string)cj2.ReadVariable("Bar_ID2");
             string barcode3 = (string)cj2.ReadVariable("Bar_ID3");
@@ -141,77 +139,91 @@ namespace SKTCLEARBARCODE1
             if (barcode1 != "" && barcode1 != "000000")
             {
                 txtDump1.Text = rfid.Where(w=>w.barcode == barcode1).Select(s=>s.truck_number).FirstOrDefault();
+                txtBar1.Text = barcode1;
                 btnDump1.Enabled = true;
             }
             else
             {
                 txtDump1.Text = "";
+                txtBar1.Text = "";
                 btnDump1.Enabled = false;
             }
 
             if (barcode2 != "" && barcode2 != "000000")
             {
                 txtDump2.Text = rfid.Where(w => w.barcode == barcode2).Select(s => s.truck_number).FirstOrDefault();
+                txtBar2.Text = barcode2;
                 btnDump2.Enabled = true;
             }
             else
             {
                 txtDump2.Text = "";
+                txtBar2.Text = "";
                 btnDump2.Enabled = false;
             }
 
             if (barcode3 != "" && barcode3 != "000000")
             {
                 txtDump3.Text = rfid.Where(w => w.barcode == barcode3).Select(s => s.truck_number).FirstOrDefault();
+                txtBar3.Text = barcode3;
                 btnDump3.Enabled = true;
             }
             else
             {
                 txtDump3.Text = "";
+                txtBar3.Text = "";
                 btnDump3.Enabled = false;
             }
 
             if (barcode4 != "" && barcode4 != "000000")
             {
                 txtDump4.Text = rfid.Where(w => w.barcode == barcode4).Select(s => s.truck_number).FirstOrDefault();
+                txtBar4.Text = barcode4;
                 btnDump4.Enabled = true;
             }
             else
             {
                 txtDump4.Text = "";
+                txtBar4.Text = "";
                 btnDump4.Enabled = false;
             }
 
             if (barcode5 != "" && barcode5 != "000000")
             {
                 txtDump5.Text = rfid.Where(w => w.barcode == barcode5).Select(s => s.truck_number).FirstOrDefault();
+                txtBar5.Text = barcode5;
                 btnDump5.Enabled = true;
             }
             else
             {
                 txtDump5.Text = "";
+                txtBar5.Text = "";
                 btnDump5.Enabled = false;
             }
 
             if (barcode6 != "" && barcode6 != "000000")
             {
                 txtDump6.Text = rfid.Where(w => w.barcode == barcode6).Select(s => s.truck_number).FirstOrDefault();
+                txtBar6.Text = barcode6;
                 btnDump6.Enabled = true;
             }
             else
             {
                 txtDump6.Text = "";
+                txtBar6.Text = "";
                 btnDump6.Enabled = false;
             }
 
             if (barcode7 != "" && barcode7 != "000000")
             {
                 txtDump7.Text = rfid.Where(w => w.barcode == barcode7).Select(s => s.truck_number).FirstOrDefault();
+                txtBar7.Text = barcode7;
                 btnDump7.Enabled = true;
             }
             else
             {
                 txtDump7.Text = "";
+                txtBar7.Text = "";
                 btnDump7.Enabled = false;
             }
         }
@@ -232,9 +244,13 @@ namespace SKTCLEARBARCODE1
             cj2.WriteVariable("Clear_BarID1", false);
         }
 
-        private void btnDump1_MouseUp(object sender, MouseEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            if (cj2.IsConnected)
+            {
+                cj2.Active = false;
+                cj2.Dispose();
+            }
         }
     }
 }

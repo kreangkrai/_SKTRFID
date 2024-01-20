@@ -560,7 +560,16 @@ namespace SKTRFID2
                 p.StartInfo.Arguments = mode + " " + server + " " + dump + " " + phase;
                 p.Start();
             }
-        }       
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (cj2.IsConnected)
+            {
+                cj2.Active = false;
+                cj2.Dispose();
+            }
+        }
     }
     public class LabelModel
     {

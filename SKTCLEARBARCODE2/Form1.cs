@@ -125,72 +125,93 @@ namespace SKTCLEARBARCODE2
             if (barcode8 != "" && barcode8 != "000000")
             {
                 txtDump8.Text = rfid.Where(w => w.barcode == barcode8).Select(s => s.truck_number).FirstOrDefault();
+                txtBar8.Text = barcode8;
                 btnDump8.Enabled = true;
             }
             else
             {
                 txtDump8.Text = "";
+                txtBar8.Text = "";
                 btnDump8.Enabled = false;
             }
 
             if (barcode9 != "" && barcode9 != "000000")
             {
                 txtDump9.Text = rfid.Where(w => w.barcode == barcode9).Select(s => s.truck_number).FirstOrDefault();
+                txtBar9.Text = barcode9;
                 btnDump9.Enabled = true;
             }
             else
             {
                 txtDump9.Text = "";
+                txtBar9.Text = "";
                 btnDump9.Enabled = false;
             }
 
             if (barcode10 != "" && barcode10 != "000000")
             {
                 txtDump10.Text = rfid.Where(w => w.barcode == barcode10).Select(s => s.truck_number).FirstOrDefault();
+                txtBar10.Text = barcode10;
                 btnDump10.Enabled = true;
             }
             else
             {
                 txtDump10.Text = "";
+                txtBar10.Text = "";
                 btnDump10.Enabled = false;
             }
 
             if (barcode11 != "" && barcode11 != "000000")
             {
                 txtDump11.Text = rfid.Where(w => w.barcode == barcode11).Select(s => s.truck_number).FirstOrDefault();
+                txtBar11.Text = barcode11;
                 btnDump11.Enabled = true;
             }
             else
             {
                 txtDump11.Text = "";
+                txtBar11.Text = "";
                 btnDump11.Enabled = false;
             }
 
             if (barcode12 != "" && barcode12 != "000000")
             {
                 txtDump12.Text = rfid.Where(w => w.barcode == barcode12).Select(s => s.truck_number).FirstOrDefault();
+                txtBar12.Text = barcode12;
                 btnDump12.Enabled = true;
             }
             else
             {
                 txtDump12.Text = "";
+                txtBar12.Text = "";
                 btnDump12.Enabled = false;
             }
 
             if (barcode13 != "" && barcode13 != "000000")
             {
                 txtDump13.Text = rfid.Where(w => w.barcode == barcode13).Select(s => s.truck_number).FirstOrDefault();
+                txtBar13.Text = barcode13;
                 btnDump13.Enabled = true;
             }
             else
             {
                 txtDump13.Text = "";
+                txtBar13.Text = "";
                 btnDump13.Enabled = false;
             }
         }
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshBarcode();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (cj2.IsConnected)
+            {
+                cj2.Active = false;
+                cj2.Dispose();
+            }
         }
     }
 }

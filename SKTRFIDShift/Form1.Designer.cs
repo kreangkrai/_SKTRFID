@@ -32,6 +32,8 @@ namespace SKTRFIDSHIFT
             this.components = new System.ComponentModel.Container();
             this.btnManual = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtQueueRunning = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnManualConfirm = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -42,8 +44,6 @@ namespace SKTRFIDSHIFT
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtQueueRunning = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -75,6 +75,26 @@ namespace SKTRFIDSHIFT
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MANUAL";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(65, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 26);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Queue Running";
+            // 
+            // txtQueueRunning
+            // 
+            this.txtQueueRunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQueueRunning.Location = new System.Drawing.Point(80, 69);
+            this.txtQueueRunning.Name = "txtQueueRunning";
+            this.txtQueueRunning.Size = new System.Drawing.Size(131, 32);
+            this.txtQueueRunning.TabIndex = 13;
+            this.txtQueueRunning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -176,26 +196,6 @@ namespace SKTRFIDSHIFT
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Latest Data";
             // 
-            // txtQueueRunning
-            // 
-            this.txtQueueRunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQueueRunning.Location = new System.Drawing.Point(80, 69);
-            this.txtQueueRunning.Name = "txtQueueRunning";
-            this.txtQueueRunning.Size = new System.Drawing.Size(131, 32);
-            this.txtQueueRunning.TabIndex = 13;
-            this.txtQueueRunning.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(65, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 26);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Queue Running";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +208,7 @@ namespace SKTRFIDSHIFT
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SKT RFID SHIFT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

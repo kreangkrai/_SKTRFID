@@ -43,6 +43,12 @@ namespace SKTCLEARBARCODE2
             this.txtDump11 = new System.Windows.Forms.TextBox();
             this.txtDump12 = new System.Windows.Forms.TextBox();
             this.txtDump13 = new System.Windows.Forms.TextBox();
+            this.txtBar13 = new System.Windows.Forms.TextBox();
+            this.txtBar12 = new System.Windows.Forms.TextBox();
+            this.txtBar11 = new System.Windows.Forms.TextBox();
+            this.txtBar10 = new System.Windows.Forms.TextBox();
+            this.txtBar9 = new System.Windows.Forms.TextBox();
+            this.txtBar8 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnDump8
@@ -52,7 +58,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump8.Enabled = false;
             this.btnDump8.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump8.ForeColor = System.Drawing.Color.Blue;
-            this.btnDump8.Location = new System.Drawing.Point(16, 205);
+            this.btnDump8.Location = new System.Drawing.Point(16, 237);
             this.btnDump8.Name = "btnDump8";
             this.btnDump8.Size = new System.Drawing.Size(168, 94);
             this.btnDump8.TabIndex = 16;
@@ -67,7 +73,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump11.Enabled = false;
             this.btnDump11.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump11.ForeColor = System.Drawing.Color.Blue;
-            this.btnDump11.Location = new System.Drawing.Point(538, 205);
+            this.btnDump11.Location = new System.Drawing.Point(538, 237);
             this.btnDump11.Name = "btnDump11";
             this.btnDump11.Size = new System.Drawing.Size(168, 94);
             this.btnDump11.TabIndex = 17;
@@ -82,7 +88,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump9.Enabled = false;
             this.btnDump9.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump9.ForeColor = System.Drawing.Color.Blue;
-            this.btnDump9.Location = new System.Drawing.Point(190, 205);
+            this.btnDump9.Location = new System.Drawing.Point(190, 237);
             this.btnDump9.Name = "btnDump9";
             this.btnDump9.Size = new System.Drawing.Size(168, 94);
             this.btnDump9.TabIndex = 18;
@@ -97,7 +103,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump12.Enabled = false;
             this.btnDump12.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump12.ForeColor = System.Drawing.Color.Blue;
-            this.btnDump12.Location = new System.Drawing.Point(712, 205);
+            this.btnDump12.Location = new System.Drawing.Point(712, 237);
             this.btnDump12.Name = "btnDump12";
             this.btnDump12.Size = new System.Drawing.Size(168, 94);
             this.btnDump12.TabIndex = 19;
@@ -112,7 +118,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump13.Enabled = false;
             this.btnDump13.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump13.ForeColor = System.Drawing.Color.Blue;
-            this.btnDump13.Location = new System.Drawing.Point(886, 205);
+            this.btnDump13.Location = new System.Drawing.Point(886, 237);
             this.btnDump13.Name = "btnDump13";
             this.btnDump13.Size = new System.Drawing.Size(168, 94);
             this.btnDump13.TabIndex = 20;
@@ -127,7 +133,7 @@ namespace SKTCLEARBARCODE2
             this.btnDump10.Enabled = false;
             this.btnDump10.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDump10.ForeColor = System.Drawing.Color.Blue;
-            this.btnDump10.Location = new System.Drawing.Point(364, 205);
+            this.btnDump10.Location = new System.Drawing.Point(364, 237);
             this.btnDump10.Name = "btnDump10";
             this.btnDump10.Size = new System.Drawing.Size(168, 94);
             this.btnDump10.TabIndex = 21;
@@ -140,7 +146,7 @@ namespace SKTCLEARBARCODE2
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(561, 11);
+            this.btnRefresh.Location = new System.Drawing.Point(583, 11);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(342, 79);
@@ -154,7 +160,7 @@ namespace SKTCLEARBARCODE2
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(15, 11);
+            this.label1.Location = new System.Drawing.Point(11, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(542, 54);
@@ -165,62 +171,128 @@ namespace SKTCLEARBARCODE2
             // txtDump8
             // 
             this.txtDump8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDump8.Location = new System.Drawing.Point(16, 115);
+            this.txtDump8.Location = new System.Drawing.Point(16, 148);
             this.txtDump8.Multiline = true;
             this.txtDump8.Name = "txtDump8";
             this.txtDump8.Size = new System.Drawing.Size(168, 80);
             this.txtDump8.TabIndex = 25;
+            this.txtDump8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDump9
             // 
             this.txtDump9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDump9.Location = new System.Drawing.Point(190, 115);
+            this.txtDump9.Location = new System.Drawing.Point(190, 148);
             this.txtDump9.Multiline = true;
             this.txtDump9.Name = "txtDump9";
             this.txtDump9.Size = new System.Drawing.Size(168, 80);
             this.txtDump9.TabIndex = 26;
+            this.txtDump9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDump10
             // 
             this.txtDump10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDump10.Location = new System.Drawing.Point(364, 115);
+            this.txtDump10.Location = new System.Drawing.Point(364, 148);
             this.txtDump10.Multiline = true;
             this.txtDump10.Name = "txtDump10";
             this.txtDump10.Size = new System.Drawing.Size(168, 80);
             this.txtDump10.TabIndex = 27;
+            this.txtDump10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDump11
             // 
             this.txtDump11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDump11.Location = new System.Drawing.Point(538, 115);
+            this.txtDump11.Location = new System.Drawing.Point(538, 148);
             this.txtDump11.Multiline = true;
             this.txtDump11.Name = "txtDump11";
             this.txtDump11.Size = new System.Drawing.Size(168, 80);
             this.txtDump11.TabIndex = 28;
+            this.txtDump11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDump12
             // 
             this.txtDump12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDump12.Location = new System.Drawing.Point(712, 115);
+            this.txtDump12.Location = new System.Drawing.Point(712, 148);
             this.txtDump12.Multiline = true;
             this.txtDump12.Name = "txtDump12";
             this.txtDump12.Size = new System.Drawing.Size(168, 80);
             this.txtDump12.TabIndex = 29;
+            this.txtDump12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDump13
             // 
             this.txtDump13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDump13.Location = new System.Drawing.Point(886, 115);
+            this.txtDump13.Location = new System.Drawing.Point(886, 148);
             this.txtDump13.Multiline = true;
             this.txtDump13.Name = "txtDump13";
             this.txtDump13.Size = new System.Drawing.Size(168, 80);
             this.txtDump13.TabIndex = 30;
+            this.txtDump13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBar13
+            // 
+            this.txtBar13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBar13.Location = new System.Drawing.Point(886, 102);
+            this.txtBar13.Name = "txtBar13";
+            this.txtBar13.Size = new System.Drawing.Size(168, 38);
+            this.txtBar13.TabIndex = 36;
+            this.txtBar13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBar12
+            // 
+            this.txtBar12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBar12.Location = new System.Drawing.Point(712, 102);
+            this.txtBar12.Name = "txtBar12";
+            this.txtBar12.Size = new System.Drawing.Size(168, 38);
+            this.txtBar12.TabIndex = 35;
+            this.txtBar12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBar11
+            // 
+            this.txtBar11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBar11.Location = new System.Drawing.Point(538, 102);
+            this.txtBar11.Name = "txtBar11";
+            this.txtBar11.Size = new System.Drawing.Size(168, 38);
+            this.txtBar11.TabIndex = 34;
+            this.txtBar11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBar10
+            // 
+            this.txtBar10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBar10.Location = new System.Drawing.Point(364, 102);
+            this.txtBar10.Name = "txtBar10";
+            this.txtBar10.Size = new System.Drawing.Size(168, 38);
+            this.txtBar10.TabIndex = 33;
+            this.txtBar10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBar9
+            // 
+            this.txtBar9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBar9.Location = new System.Drawing.Point(190, 102);
+            this.txtBar9.Name = "txtBar9";
+            this.txtBar9.Size = new System.Drawing.Size(168, 38);
+            this.txtBar9.TabIndex = 32;
+            this.txtBar9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBar8
+            // 
+            this.txtBar8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBar8.Location = new System.Drawing.Point(16, 102);
+            this.txtBar8.Name = "txtBar8";
+            this.txtBar8.Size = new System.Drawing.Size(168, 38);
+            this.txtBar8.TabIndex = 31;
+            this.txtBar8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 329);
+            this.ClientSize = new System.Drawing.Size(1071, 344);
+            this.Controls.Add(this.txtBar13);
+            this.Controls.Add(this.txtBar12);
+            this.Controls.Add(this.txtBar11);
+            this.Controls.Add(this.txtBar10);
+            this.Controls.Add(this.txtBar9);
+            this.Controls.Add(this.txtBar8);
             this.Controls.Add(this.txtDump13);
             this.Controls.Add(this.txtDump12);
             this.Controls.Add(this.txtDump11);
@@ -240,6 +312,7 @@ namespace SKTCLEARBARCODE2
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SKT RFID CLEAR BARCODE PHASE 2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,6 +335,12 @@ namespace SKTCLEARBARCODE2
         private System.Windows.Forms.TextBox txtDump11;
         private System.Windows.Forms.TextBox txtDump12;
         private System.Windows.Forms.TextBox txtDump13;
+        private System.Windows.Forms.TextBox txtBar13;
+        private System.Windows.Forms.TextBox txtBar12;
+        private System.Windows.Forms.TextBox txtBar11;
+        private System.Windows.Forms.TextBox txtBar10;
+        private System.Windows.Forms.TextBox txtBar9;
+        private System.Windows.Forms.TextBox txtBar8;
     }
 }
 

@@ -94,5 +94,14 @@ namespace SKTRFIDSHIFT
                 cj2.WriteVariable("Mode_Cut_Queue", false); // Manual
             }
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (cj2.IsConnected)
+            {
+                cj2.Active = false;
+                cj2.Dispose();
+            }
+        }
     }
 }
