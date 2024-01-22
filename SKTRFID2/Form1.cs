@@ -440,8 +440,8 @@ namespace SKTRFID2
                 DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
                 if (dataInsert.Data[0].StatusDb != 0) // Send Complete
                 {
-                    //string loca = @"D:\log_api.txt";
-                    //File.AppendAllText(loca, DateTime.Now + " " + "Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
+                    string loca = @"D:\log_api.txt";
+                    File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
                 }
             }
             else
