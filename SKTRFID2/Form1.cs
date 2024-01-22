@@ -83,6 +83,7 @@ namespace SKTRFID2
             cj2.UseRoutePath = false;
             cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
+            cj2.ReceiveTimeLimit = (long)2000;
             cj2.OnHeartBeatTimer += Cj3_OnHeartBeatTimer;
             cj2.Active = true;
 
@@ -421,7 +422,7 @@ namespace SKTRFID2
             {
                 //Weite Data to text file
                 string loca = @"D:\log_plc.txt";
-                File.AppendAllText(loca, DateTime.Now + " " + ex.Message + " " + Environment.NewLine);
+                File.AppendAllText(loca, DateTime.Now + " SKTRFID2 " + ex.Message + " " + Environment.NewLine);
             }
             finally
             {

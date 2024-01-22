@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,11 +62,12 @@ namespace SKTRFIDCCS2
         {
             SettingModel setting = Setting.GetSetting();
             cj2 = new CJ2Compolet();
-            cj2.HeartBeatTimer = 3000;
+            cj2.HeartBeatTimer = 5000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
             cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
+            cj2.ReceiveTimeLimit = (long)3000;
             cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
             cj2.Active = true;
         }
@@ -389,9 +391,10 @@ namespace SKTRFIDCCS2
                 lblDSP_15.Text = DSP_15 == 0 ? "" : (DSP_15 + 7).ToString();
                 lblDSP_16.Text = DSP_16 == 0 ? "" : (DSP_16 + 7).ToString();
             }
-            catch
+            catch(Exception ex)
             {
-
+                string loca = @"D:\log_plc.txt";
+                File.AppendAllText(loca, DateTime.Now + " CCS2 " + ex.Message + " " + Environment.NewLine);
             }
         }
 

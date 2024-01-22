@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using SKTRFIDLIBRARY.Interface;
 using SKTRFIDLIBRARY.Service;
 using SKTRFIDLIBRARY.Model;
+using System.IO;
 
 namespace SKTRFIDCCS1
 {
@@ -59,11 +60,12 @@ namespace SKTRFIDCCS1
         {
             SettingModel setting = Setting.GetSetting();
             cj2 = new CJ2Compolet();
-            cj2.HeartBeatTimer = 3000;
+            cj2.HeartBeatTimer = 5000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
             cj2.PeerAddress = setting.ip_plc;
             cj2.LocalPort = 2;
+            cj2.ReceiveTimeLimit = (long)3000;
             cj2.OnHeartBeatTimer += Cj2_OnHeartBeatTimer;
             cj2.Active = true;
         }
@@ -245,9 +247,10 @@ namespace SKTRFIDCCS1
                 lblDSP_15.Text = DSP_15 == 0 ? "" : DSP_15.ToString();
                 lblDSP_16.Text = DSP_16 == 0 ? "" : DSP_16.ToString();
             }
-            catch
+            catch(Exception ex)
             {
-                
+                string loca = @"D:\log_plc.txt";
+                File.AppendAllText(loca, DateTime.Now + " CCS1 " + ex.Message + " " + Environment.NewLine);
             }
         }
         private void btnExit_Click(object sender, EventArgs e)
