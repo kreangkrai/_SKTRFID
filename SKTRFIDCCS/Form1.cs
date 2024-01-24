@@ -12,6 +12,7 @@ using SKTRFIDLIBRARY.Interface;
 using SKTRFIDLIBRARY.Service;
 using SKTRFIDLIBRARY.Model;
 using System.IO;
+using System.Threading;
 
 namespace SKTRFIDCCS1
 {
@@ -80,16 +81,6 @@ namespace SKTRFIDCCS1
                 int DSP_04 = (int)cj2.ReadVariable("DSP_04");
                 int DSP_05 = (int)cj2.ReadVariable("DSP_05");
                 int DSP_06 = (int)cj2.ReadVariable("DSP_06");
-                int DSP_07 = (int)cj2.ReadVariable("DSP_07");
-                int DSP_08 = (int)cj2.ReadVariable("DSP_08");
-                int DSP_09 = (int)cj2.ReadVariable("DSP_09");
-                int DSP_10 = (int)cj2.ReadVariable("DSP_10");
-                int DSP_11 = (int)cj2.ReadVariable("DSP_11");
-                int DSP_12 = (int)cj2.ReadVariable("DSP_12");
-                int DSP_13 = (int)cj2.ReadVariable("DSP_13");
-                int DSP_14 = (int)cj2.ReadVariable("DSP_14");
-                int DSP_15 = (int)cj2.ReadVariable("DSP_15");
-                int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
                 if (DSP_01 == 6 || DSP_01 == 7) // DUMP 6,7
                 {
@@ -153,8 +144,14 @@ namespace SKTRFIDCCS1
                 {
                     picDump1.Visible = true;
                 }
+                Thread.Sleep(200);
 
-
+                int DSP_07 = (int)cj2.ReadVariable("DSP_07");
+                int DSP_08 = (int)cj2.ReadVariable("DSP_08");
+                int DSP_09 = (int)cj2.ReadVariable("DSP_09");
+                int DSP_10 = (int)cj2.ReadVariable("DSP_10");
+                int DSP_11 = (int)cj2.ReadVariable("DSP_11");
+                
                 if (DSP_09 != 0) //
                 {
                     picLamp2_1.Visible = true;
@@ -174,6 +171,13 @@ namespace SKTRFIDCCS1
                 {
                     picLamp2_3.Visible = false;
                 }
+                Thread.Sleep(200);
+
+                int DSP_12 = (int)cj2.ReadVariable("DSP_12");
+                int DSP_13 = (int)cj2.ReadVariable("DSP_13");
+                int DSP_14 = (int)cj2.ReadVariable("DSP_14");
+                int DSP_15 = (int)cj2.ReadVariable("DSP_15");
+                int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
                 if (DSP_12 != 0) //
                 {

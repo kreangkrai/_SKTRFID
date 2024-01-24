@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -81,19 +82,7 @@ namespace SKTRFIDCCS2
                 int DSP_03 = (int)cj2.ReadVariable("DSP_03");
                 int DSP_04 = (int)cj2.ReadVariable("DSP_04");
                 int DSP_05 = (int)cj2.ReadVariable("DSP_05");
-                int DSP_06 = (int)cj2.ReadVariable("DSP_06");
-                int DSP_07 = (int)cj2.ReadVariable("DSP_07");
-                int DSP_08 = (int)cj2.ReadVariable("DSP_08");
-                int DSP_09 = (int)cj2.ReadVariable("DSP_09");
-                int DSP_10 = (int)cj2.ReadVariable("DSP_10");
-                int DSP_11 = (int)cj2.ReadVariable("DSP_11");
-                int DSP_12 = (int)cj2.ReadVariable("DSP_12");
-                int DSP_13 = (int)cj2.ReadVariable("DSP_13");
-                int DSP_14 = (int)cj2.ReadVariable("DSP_14");
-                int DSP_15 = (int)cj2.ReadVariable("DSP_15");
-                int DSP_16 = (int)cj2.ReadVariable("DSP_16");
-
-
+                int DSP_06 = (int)cj2.ReadVariable("DSP_06");              
 
                 if (DSP_01 + 7 == 13) // DUMP 13
                 {
@@ -151,6 +140,14 @@ namespace SKTRFIDCCS2
                     picDump8.Visible = true;
                 }
 
+                Thread.Sleep(200);
+
+                int DSP_07 = (int)cj2.ReadVariable("DSP_07");
+                int DSP_08 = (int)cj2.ReadVariable("DSP_08");
+                int DSP_09 = (int)cj2.ReadVariable("DSP_09");
+                int DSP_10 = (int)cj2.ReadVariable("DSP_10");
+                int DSP_11 = (int)cj2.ReadVariable("DSP_11");
+                
 
                 if (DSP_09 != 0) //
                 {
@@ -171,6 +168,14 @@ namespace SKTRFIDCCS2
                 {
                     picLamp2_3.Visible = false;
                 }
+
+                Thread.Sleep(200);
+
+                int DSP_12 = (int)cj2.ReadVariable("DSP_12");
+                int DSP_13 = (int)cj2.ReadVariable("DSP_13");
+                int DSP_14 = (int)cj2.ReadVariable("DSP_14");
+                int DSP_15 = (int)cj2.ReadVariable("DSP_15");
+                int DSP_16 = (int)cj2.ReadVariable("DSP_16");
 
                 if (DSP_12 != 0) //
                 {
@@ -226,8 +231,6 @@ namespace SKTRFIDCCS2
                     picLamp7_2.Visible = false;
                     picLamp7_3.Visible = false;
                 }
-
-
 
                 if (DSP_01 + 7 > 9)
                 {
