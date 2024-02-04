@@ -169,17 +169,16 @@ namespace SKTRFID2
                 bool b_D13 = true;
        
                 string bar_D8 = (string)cj2.ReadVariable("Bar_ID8");
-                string bar_D9 = (string)cj2.ReadVariable("Bar_ID9");
-                string bar_D10 = (string)cj2.ReadVariable("Bar_ID10");
-                string bar_D11 = (string)cj2.ReadVariable("Bar_ID11");
-                string bar_D12 = (string)cj2.ReadVariable("Bar_ID12");
-                string bar_D13 = (string)cj2.ReadVariable("Bar_ID13");
-
                 b_D8 = bar_D8 == "" ? false : true;
+                string bar_D9 = (string)cj2.ReadVariable("Bar_ID9");
                 b_D9 = bar_D9 == "" ? false : true;
+                string bar_D10 = (string)cj2.ReadVariable("Bar_ID10");
                 b_D10 = bar_D10 == "" ? false : true;
+                string bar_D11 = (string)cj2.ReadVariable("Bar_ID11");
                 b_D11 = bar_D11 == "" ? false : true;
+                string bar_D12 = (string)cj2.ReadVariable("Bar_ID12");
                 b_D12 = bar_D12 == "" ? false : true;
+                string bar_D13 = (string)cj2.ReadVariable("Bar_ID13");
                 b_D13 = bar_D13 == "" ? false : true;
 
 
@@ -192,15 +191,10 @@ namespace SKTRFID2
                     ShowDisplay(truck_license12, truck_date12, cane_type12, truck_type12, datas, "12", b_D12);
                     ShowDisplay(truck_license13, truck_date13, cane_type13, truck_type13, datas, "13", b_D13);
                 }
-                bool manual_d8 = (bool)cj2.ReadVariable("MN_SCAN_D8");
-                bool manual_d9 = (bool)cj2.ReadVariable("MN_SCAN_D9");
-                bool manual_d10 = (bool)cj2.ReadVariable("MN_SCAN_D10");
-                bool manual_d11 = (bool)cj2.ReadVariable("MN_SCAN_D11");
-                bool manual_d12 = (bool)cj2.ReadVariable("MN_SCAN_D12");
-                bool manual_d13 = (bool)cj2.ReadVariable("MN_SCAN_D13");
-
+                
                 Process[] process_common = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
-
+                
+                bool manual_d8 = (bool)cj2.ReadVariable("MN_SCAN_D8");
                 if (manual_d8)
                 {
                     foreach (var p in process_common)
@@ -216,6 +210,7 @@ namespace SKTRFID2
                     StartProcess("COMMON", setting.ip2, "8", phase);
                 }
 
+                bool manual_d9 = (bool)cj2.ReadVariable("MN_SCAN_D9");
                 if (manual_d9)
                 {
                     foreach (var p in process_common)
@@ -231,6 +226,7 @@ namespace SKTRFID2
                     StartProcess("COMMON", setting.ip2, "9", phase);
                 }
 
+                bool manual_d10 = (bool)cj2.ReadVariable("MN_SCAN_D10");
                 if (manual_d10)
                 {
                     foreach (var p in process_common)
@@ -246,6 +242,7 @@ namespace SKTRFID2
                     StartProcess("COMMON", setting.ip2, "10", phase);
                 }
 
+                bool manual_d11 = (bool)cj2.ReadVariable("MN_SCAN_D11");
                 if (manual_d11)
                 {
                     foreach (var p in process_common)
@@ -261,6 +258,7 @@ namespace SKTRFID2
                     StartProcess("COMMON", setting.ip2, "11", phase);
                 }
 
+                bool manual_d12 = (bool)cj2.ReadVariable("MN_SCAN_D12");
                 if (manual_d12)
                 {
                     foreach (var p in process_common)
@@ -276,6 +274,7 @@ namespace SKTRFID2
                     StartProcess("COMMON", setting.ip2, "12", phase);
                 }
 
+                bool manual_d13 = (bool)cj2.ReadVariable("MN_SCAN_D13");
                 if (manual_d13)
                 {
                     foreach (var p in process_common)
@@ -290,13 +289,6 @@ namespace SKTRFID2
                     cj2.WriteVariable("MN_SCAN_D13", false);
                     StartProcess("COMMON", setting.ip2, "13", phase);
                 }
-
-                bool auto_d8 = (bool)cj2.ReadVariable("Call_D8");
-                bool auto_d9 = (bool)cj2.ReadVariable("Call_D9");
-                bool auto_d10 = (bool)cj2.ReadVariable("Call_D10");
-                bool auto_d11 = (bool)cj2.ReadVariable("Call_D11");
-                bool auto_d12 = (bool)cj2.ReadVariable("Call_D12");
-                bool auto_d13 = (bool)cj2.ReadVariable("Call_D13");
 
                 int sound_d = (int)cj2.ReadVariable("NUM_SOUND_D");
 
@@ -324,6 +316,7 @@ namespace SKTRFID2
 
                     setting = Setting.GetSetting();
 
+                    bool auto_d8 = (bool)cj2.ReadVariable("Call_D8");
                     if (auto_d8) // Detect AUTO 8
                     {
                         StartProcess("AUTO", setting.ip1, "8", phase);
@@ -340,6 +333,7 @@ namespace SKTRFID2
                         }
                     }
 
+                    bool auto_d9 = (bool)cj2.ReadVariable("Call_D9");
                     if (auto_d9)
                     {
                         StartProcess("AUTO", setting.ip1, "9", phase);
@@ -355,6 +349,7 @@ namespace SKTRFID2
                         }
                     }
 
+                    bool auto_d10 = (bool)cj2.ReadVariable("Call_D10");
                     if (auto_d10)
                     {
                         StartProcess("AUTO", setting.ip1, "10", phase);
@@ -370,6 +365,7 @@ namespace SKTRFID2
                         }
                     }
 
+                    bool auto_d11 = (bool)cj2.ReadVariable("Call_D11");
                     if (auto_d11)
                     {
                         StartProcess("AUTO", setting.ip1, "11", phase);
@@ -385,6 +381,7 @@ namespace SKTRFID2
                         }
                     }
 
+                    bool auto_d12 = (bool)cj2.ReadVariable("Call_D12");
                     if (auto_d12)
                     {
                         StartProcess("AUTO", setting.ip2, "12", phase);
@@ -400,6 +397,7 @@ namespace SKTRFID2
                         }
                     }
 
+                    bool auto_d13 = (bool)cj2.ReadVariable("Call_D13");
                     if (auto_d13)
                     {
                         StartProcess("AUTO", setting.ip2, "13", phase);

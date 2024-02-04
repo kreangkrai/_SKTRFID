@@ -180,19 +180,18 @@ namespace SKTRFID1
                 bool b_D6 = true;
                 bool b_D7 = true;
                 string bar_D1 = (string)cj2.ReadVariable("Bar_ID1");
-                string bar_D2 = (string)cj2.ReadVariable("Bar_ID2");
-                string bar_D3 = (string)cj2.ReadVariable("Bar_ID3");
-                string bar_D4 = (string)cj2.ReadVariable("Bar_ID4");
-                string bar_D5 = (string)cj2.ReadVariable("Bar_ID5");
-                string bar_D6 = (string)cj2.ReadVariable("Bar_ID6");
-                string bar_D7 = (string)cj2.ReadVariable("Bar_ID7");
-
                 b_D1 = bar_D1 == "" ? false : true;
+                string bar_D2 = (string)cj2.ReadVariable("Bar_ID2");
                 b_D2 = bar_D2 == "" ? false : true;
+                string bar_D3 = (string)cj2.ReadVariable("Bar_ID3");
                 b_D3 = bar_D3 == "" ? false : true;
+                string bar_D4 = (string)cj2.ReadVariable("Bar_ID4");
                 b_D4 = bar_D4 == "" ? false : true;
+                string bar_D5 = (string)cj2.ReadVariable("Bar_ID5");
                 b_D5 = bar_D5 == "" ? false : true;
+                string bar_D6 = (string)cj2.ReadVariable("Bar_ID6");
                 b_D6 = bar_D6 == "" ? false : true;
+                string bar_D7 = (string)cj2.ReadVariable("Bar_ID7");
                 b_D7 = bar_D7 == "" ? false : true;
 
                 
@@ -206,16 +205,10 @@ namespace SKTRFID1
                     ShowDisplay(truck_license6, truck_date6, cane_type6, truck_type6, datas, "6", b_D6);
                     ShowDisplay(truck_license7, truck_date7, cane_type7, truck_type7, datas, "7", b_D7);
                 }
-                bool manual_d1 = (bool)cj2.ReadVariable("MN_SCAN_D1");
-                bool manual_d2 = (bool)cj2.ReadVariable("MN_SCAN_D2");
-                bool manual_d3 = (bool)cj2.ReadVariable("MN_SCAN_D3");
-                bool manual_d4 = (bool)cj2.ReadVariable("MN_SCAN_D4");
-                bool manual_d5 = (bool)cj2.ReadVariable("MN_SCAN_D5");
-                bool manual_d6 = (bool)cj2.ReadVariable("MN_SCAN_D6");
-                bool manual_d7 = (bool)cj2.ReadVariable("MN_SCAN_D7");
-
+                
                 Process[] process_common = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
-
+                
+                bool manual_d1 = (bool)cj2.ReadVariable("MN_SCAN_D1");
                 if (manual_d1)
                 {
                     foreach (var p in process_common)
@@ -231,6 +224,7 @@ namespace SKTRFID1
                     StartProcess("COMMON", setting.ip2, "1", phase);
                 }
 
+                bool manual_d2 = (bool)cj2.ReadVariable("MN_SCAN_D2");
                 if (manual_d2)
                 {
                     foreach (var p in process_common)
@@ -246,6 +240,7 @@ namespace SKTRFID1
                     StartProcess("COMMON", setting.ip2, "2", phase);
                 }
 
+                bool manual_d3 = (bool)cj2.ReadVariable("MN_SCAN_D3");
                 if (manual_d3)
                 {
                     foreach (var p in process_common)
@@ -261,6 +256,7 @@ namespace SKTRFID1
                     StartProcess("COMMON", setting.ip2, "3", phase);
                 }
 
+                bool manual_d4 = (bool)cj2.ReadVariable("MN_SCAN_D4");
                 if (manual_d4)
                 {
                     foreach (var p in process_common)
@@ -276,6 +272,7 @@ namespace SKTRFID1
                     StartProcess("COMMON", setting.ip2, "4", phase);
                 }
 
+                bool manual_d5 = (bool)cj2.ReadVariable("MN_SCAN_D5");
                 if (manual_d5)
                 {
                     foreach (var p in process_common)
@@ -291,6 +288,7 @@ namespace SKTRFID1
                     StartProcess("COMMON", setting.ip2, "5", phase);
                 }
 
+                bool manual_d6 = (bool)cj2.ReadVariable("MN_SCAN_D6");
                 if (manual_d6)
                 {
                     foreach (var p in process_common)
@@ -306,6 +304,7 @@ namespace SKTRFID1
                     StartProcess("COMMON", setting.ip2, "6", phase);
                 }
 
+                bool manual_d7 = (bool)cj2.ReadVariable("MN_SCAN_D7");
                 if (manual_d7)
                 {
                     foreach (var p in process_common)
@@ -320,14 +319,6 @@ namespace SKTRFID1
                     cj2.WriteVariable("MN_SCAN_D7", false);
                     StartProcess("COMMON", setting.ip2, "7", phase);
                 }
-
-                bool auto_d1 = (bool)cj2.ReadVariable("Call_D1");
-                bool auto_d2 = (bool)cj2.ReadVariable("Call_D2");
-                bool auto_d3 = (bool)cj2.ReadVariable("Call_D3");
-                bool auto_d4 = (bool)cj2.ReadVariable("Call_D4");
-                bool auto_d5 = (bool)cj2.ReadVariable("Call_D5");
-                bool auto_d6 = (bool)cj2.ReadVariable("Call_D6");
-                bool auto_d7 = (bool)cj2.ReadVariable("Call_D7");
 
                 int sound_d = (int)cj2.ReadVariable("NUM_SOUND_D");
 
@@ -355,6 +346,7 @@ namespace SKTRFID1
 
                     setting = Setting.GetSetting();
 
+                    bool auto_d1 = (bool)cj2.ReadVariable("Call_D1");                  
                     if (auto_d1) // Detect AUTO 1
                     {
                         StartProcess("AUTO",setting.ip1, "1", phase);
@@ -371,6 +363,7 @@ namespace SKTRFID1
                         }
                     }
 
+                    bool auto_d2 = (bool)cj2.ReadVariable("Call_D2");
                     if (auto_d2)
                     {
                         StartProcess("AUTO", setting.ip1, "2", phase);
@@ -386,6 +379,7 @@ namespace SKTRFID1
                         }
                     }
 
+                    bool auto_d3 = (bool)cj2.ReadVariable("Call_D3");
                     if (auto_d3)
                     {
                         StartProcess("AUTO", setting.ip1, "3", phase);
@@ -401,6 +395,7 @@ namespace SKTRFID1
                         }
                     }
 
+                    bool auto_d4 = (bool)cj2.ReadVariable("Call_D4");
                     if (auto_d4)
                     {
                         StartProcess("AUTO", setting.ip1, "4", phase);
@@ -416,6 +411,7 @@ namespace SKTRFID1
                         }
                     }
 
+                    bool auto_d5 = (bool)cj2.ReadVariable("Call_D5");
                     if (auto_d5)
                     {
                         StartProcess("AUTO", setting.ip2, "5", phase);
@@ -431,6 +427,7 @@ namespace SKTRFID1
                         }
                     }
 
+                    bool auto_d6 = (bool)cj2.ReadVariable("Call_D6");
                     if (auto_d6)
                     {
                         StartProcess("AUTO", setting.ip2, "6", phase);
@@ -446,6 +443,7 @@ namespace SKTRFID1
                         }
                     }
 
+                    bool auto_d7 = (bool)cj2.ReadVariable("Call_D7");
                     if (auto_d7)
                     {
                         StartProcess("AUTO", setting.ip2, "7", phase);
