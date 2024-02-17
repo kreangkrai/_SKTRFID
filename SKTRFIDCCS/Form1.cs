@@ -61,7 +61,7 @@ namespace SKTRFIDCCS1
         {
             SettingModel setting = Setting.GetSetting();
             cj2 = new CJ2Compolet();
-            cj2.HeartBeatTimer = 10000;
+            cj2.HeartBeatTimer = 15000;
             cj2.ConnectionType = ConnectionType.UCMM;
             cj2.UseRoutePath = false;
             cj2.PeerAddress = setting.ip_plc;
