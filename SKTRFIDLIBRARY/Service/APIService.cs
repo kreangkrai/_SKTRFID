@@ -91,5 +91,31 @@ namespace SKTRFIDLIBRARY.Service
                 return null;
             }
         }
+        public async Task<ResultUpdateAlledModel> UpdateAlled(string area_id, string crop_year, string barcode, string alled)
+        {
+            ResultUpdateAlledModel result = new ResultUpdateAlledModel();
+            try
+            {
+                HttpClient client = new HttpClient();
+
+                //PRODUCTION
+                string url = $"http://10.43.6.41:81/jsonforandroidskt/AllergenDump?areaid={area_id}&cropyear={crop_year}&barcode={barcode}&alled={alled}";
+
+                //DEVELOP
+                //string url = $"http://10.43.6.33/jsonforandroidskt/AllergenDump?areaid={area_id}&cropyear={crop_year}&barcode={barcode}&alled={alled}";
+
+                HttpResponseMessage response = await client.PutAsync(url, null);
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    result = JsonConvert.DeserializeObject<ResultUpdateAlledModel>(responseBody);
+                }
+                return result;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

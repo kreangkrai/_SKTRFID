@@ -487,6 +487,14 @@ namespace SKTRFID1
                     string loca = @"D:\log_api.txt";
                     File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
                 }
+
+                //Update Data To API Alled
+                ResultUpdateAlledModel dataUpdate = await API.UpdateAlled(rfid.area_id.ToString(), rfid.crop_year, rfid.barcode, "0");
+                if (dataUpdate.Data[0].StatusDb != 0) // Send Complete
+                {
+                    string loca = @"D:\log_alled.txt";
+                    File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " " + " Code " + dataUpdate.Data[0].StatusDb + " " + Environment.NewLine);
+                }
             }
             else
             {

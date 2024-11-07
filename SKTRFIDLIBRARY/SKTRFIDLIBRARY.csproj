@@ -50,6 +50,7 @@
     <Compile Include="Interface\ISetting.cs" />
     <Compile Include="Model\DataModel.cs" />
     <Compile Include="Model\DataUpdateModel.cs" />
+    <Compile Include="Model\ResultUpdateAlledModel.cs" />
     <Compile Include="Model\RFIDModel.cs" />
     <Compile Include="Model\SettingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
