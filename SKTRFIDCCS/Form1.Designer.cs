@@ -292,18 +292,18 @@ namespace SKTRFIDCCS1
             // pictureBoxCarierStop
             // 
             this.pictureBoxCarierStop.Image = global::SKTRFIDCCS1.Properties.Resources.stop;
-            this.pictureBoxCarierStop.Location = new System.Drawing.Point(760, 620);
+            this.pictureBoxCarierStop.Location = new System.Drawing.Point(761, 570);
             this.pictureBoxCarierStop.Name = "pictureBoxCarierStop";
-            this.pictureBoxCarierStop.Size = new System.Drawing.Size(368, 107);
+            this.pictureBoxCarierStop.Size = new System.Drawing.Size(368, 100);
             this.pictureBoxCarierStop.TabIndex = 61;
             this.pictureBoxCarierStop.TabStop = false;
             // 
             // pictureBoxCarierStart
             // 
             this.pictureBoxCarierStart.Image = global::SKTRFIDCCS1.Properties.Resources.start;
-            this.pictureBoxCarierStart.Location = new System.Drawing.Point(760, 620);
+            this.pictureBoxCarierStart.Location = new System.Drawing.Point(761, 570);
             this.pictureBoxCarierStart.Name = "pictureBoxCarierStart";
-            this.pictureBoxCarierStart.Size = new System.Drawing.Size(368, 107);
+            this.pictureBoxCarierStart.Size = new System.Drawing.Size(368, 100);
             this.pictureBoxCarierStart.TabIndex = 60;
             this.pictureBoxCarierStart.TabStop = false;
             // 
