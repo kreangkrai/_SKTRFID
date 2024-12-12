@@ -47,6 +47,8 @@ namespace SKTRFIDCCS1
             this.lblDSP_04 = new System.Windows.Forms.Label();
             this.lblDSP_03 = new System.Windows.Forms.Label();
             this.lblDSP_02 = new System.Windows.Forms.Label();
+            this.pictureBoxCarierStop = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCarierStart = new System.Windows.Forms.PictureBox();
             this.picDump5 = new System.Windows.Forms.PictureBox();
             this.picDump4 = new System.Windows.Forms.PictureBox();
             this.picDump3 = new System.Windows.Forms.PictureBox();
@@ -70,6 +72,8 @@ namespace SKTRFIDCCS1
             this.picLamp5_3 = new System.Windows.Forms.PictureBox();
             this.picLamp5_2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump3)).BeginInit();
@@ -284,6 +288,24 @@ namespace SKTRFIDCCS1
             this.lblDSP_02.Size = new System.Drawing.Size(45, 60);
             this.lblDSP_02.TabIndex = 51;
             this.lblDSP_02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxCarierStop
+            // 
+            this.pictureBoxCarierStop.Image = global::SKTRFIDCCS1.Properties.Resources.stop;
+            this.pictureBoxCarierStop.Location = new System.Drawing.Point(760, 620);
+            this.pictureBoxCarierStop.Name = "pictureBoxCarierStop";
+            this.pictureBoxCarierStop.Size = new System.Drawing.Size(368, 107);
+            this.pictureBoxCarierStop.TabIndex = 61;
+            this.pictureBoxCarierStop.TabStop = false;
+            // 
+            // pictureBoxCarierStart
+            // 
+            this.pictureBoxCarierStart.Image = global::SKTRFIDCCS1.Properties.Resources.start;
+            this.pictureBoxCarierStart.Location = new System.Drawing.Point(760, 620);
+            this.pictureBoxCarierStart.Name = "pictureBoxCarierStart";
+            this.pictureBoxCarierStart.Size = new System.Drawing.Size(368, 107);
+            this.pictureBoxCarierStart.TabIndex = 60;
+            this.pictureBoxCarierStart.TabStop = false;
             // 
             // picDump5
             // 
@@ -552,6 +574,8 @@ namespace SKTRFIDCCS1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.pictureBoxCarierStop);
+            this.Controls.Add(this.pictureBoxCarierStart);
             this.Controls.Add(this.picDump5);
             this.Controls.Add(this.picDump4);
             this.Controls.Add(this.picDump3);
@@ -600,6 +624,8 @@ namespace SKTRFIDCCS1
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump3)).EndInit();
@@ -669,6 +695,8 @@ namespace SKTRFIDCCS1
         private System.Windows.Forms.PictureBox picDump3;
         private System.Windows.Forms.PictureBox picDump4;
         private System.Windows.Forms.PictureBox picDump5;
+        private System.Windows.Forms.PictureBox pictureBoxCarierStart;
+        private System.Windows.Forms.PictureBox pictureBoxCarierStop;
     }
 }
 

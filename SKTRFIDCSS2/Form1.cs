@@ -374,6 +374,23 @@ namespace SKTRFIDCCS2
                 }
 
 
+                bool Carier = (bool)cj2.ReadVariable("AL_Carier");
+
+                if(Carier) // หยุดสะพาน
+                {
+                    pictureBoxCarierStop.Visible = true;
+                    pictureBoxCarierStart.Visible = false;
+                    picLamp1_1.Visible = false;
+                    picLamp1_2.Visible = false;
+                }
+                else
+                {
+                    pictureBoxCarierStop.Visible = false;
+                    pictureBoxCarierStart.Visible = true;
+                    picLamp1_1.Visible = true;
+                    picLamp1_2.Visible = true;
+                }
+
                 lblDSP_01.Text = DSP_01 == 0 ? "" : (DSP_01 + 7).ToString();
                 lblDSP_02.Text = DSP_02 == 0 ? "" : (DSP_02 + 7).ToString();
                 lblDSP_03.Text = DSP_03 == 0 ? "" : (DSP_03 + 7).ToString();

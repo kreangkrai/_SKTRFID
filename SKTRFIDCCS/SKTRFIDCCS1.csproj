@@ -97,6 +97,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ccs.ico" />
+    <None Include="Resources\stop.PNG" />
+    <None Include="Resources\start.png" />
     <None Include="Resources\truck7.png" />
     <None Include="Resources\truck1.png" />
     <None Include="Resources\truck.png" />

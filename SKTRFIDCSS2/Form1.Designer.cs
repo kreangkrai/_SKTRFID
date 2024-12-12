@@ -46,6 +46,8 @@ namespace SKTRFIDCCS2
             this.lblDSP_15 = new System.Windows.Forms.Label();
             this.lblDSP_16 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBoxCarierStart = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCarierStop = new System.Windows.Forms.PictureBox();
             this.picDump9 = new System.Windows.Forms.PictureBox();
             this.picDump10 = new System.Windows.Forms.PictureBox();
             this.picDump11 = new System.Windows.Forms.PictureBox();
@@ -68,6 +70,8 @@ namespace SKTRFIDCCS2
             this.picLamp4 = new System.Windows.Forms.PictureBox();
             this.picLamp5_2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump11)).BeginInit();
@@ -282,6 +286,26 @@ namespace SKTRFIDCCS2
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pictureBoxCarierStart
+            // 
+            this.pictureBoxCarierStart.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCarierStart.Image = global::SKTRFIDCCS2.Properties.Resources.start;
+            this.pictureBoxCarierStart.Location = new System.Drawing.Point(790, 616);
+            this.pictureBoxCarierStart.Name = "pictureBoxCarierStart";
+            this.pictureBoxCarierStart.Size = new System.Drawing.Size(373, 99);
+            this.pictureBoxCarierStart.TabIndex = 63;
+            this.pictureBoxCarierStart.TabStop = false;
+            // 
+            // pictureBoxCarierStop
+            // 
+            this.pictureBoxCarierStop.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCarierStop.Image = global::SKTRFIDCCS2.Properties.Resources.stop;
+            this.pictureBoxCarierStop.Location = new System.Drawing.Point(790, 616);
+            this.pictureBoxCarierStop.Name = "pictureBoxCarierStop";
+            this.pictureBoxCarierStop.Size = new System.Drawing.Size(373, 99);
+            this.pictureBoxCarierStop.TabIndex = 62;
+            this.pictureBoxCarierStop.TabStop = false;
             // 
             // picDump9
             // 
@@ -516,6 +540,7 @@ namespace SKTRFIDCCS2
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::SKTRFIDCCS2.Properties.Resources.ccs2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -532,6 +557,8 @@ namespace SKTRFIDCCS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.pictureBoxCarierStart);
+            this.Controls.Add(this.pictureBoxCarierStop);
             this.Controls.Add(this.picDump9);
             this.Controls.Add(this.picDump10);
             this.Controls.Add(this.picDump11);
@@ -578,6 +605,8 @@ namespace SKTRFIDCCS2
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarierStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDump11)).EndInit();
@@ -645,6 +674,8 @@ namespace SKTRFIDCCS2
         private System.Windows.Forms.PictureBox picDump11;
         private System.Windows.Forms.PictureBox picDump10;
         private System.Windows.Forms.PictureBox picDump9;
+        private System.Windows.Forms.PictureBox pictureBoxCarierStop;
+        private System.Windows.Forms.PictureBox pictureBoxCarierStart;
     }
 }
 
