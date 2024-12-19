@@ -76,17 +76,25 @@ namespace SKTRFID2
 
             setting = Setting.GetSetting();
 
+            try
+            {
+                cj2 = new CJ2Compolet();
+                cj2.HeartBeatTimer = 3000;
+                cj2.ConnectionType = ConnectionType.UCMM;
+                cj2.UseRoutePath = false;
+                cj2.PeerAddress = setting.ip_plc;
+                cj2.LocalPort = 2;
+                cj2.ReceiveTimeLimit = (long)2000;
+                cj2.OnHeartBeatTimer += Cj3_OnHeartBeatTimer;
+                cj2.Active = true;
 
-            cj2 = new CJ2Compolet();
-            cj2.HeartBeatTimer = 3000;
-            cj2.ConnectionType = ConnectionType.UCMM;
-            cj2.UseRoutePath = false;
-            cj2.PeerAddress = setting.ip_plc;
-            cj2.LocalPort = 2;
-            cj2.ReceiveTimeLimit = (long)2000;
-            cj2.OnHeartBeatTimer += Cj3_OnHeartBeatTimer;
-            cj2.Active = true;
-
+            }
+            catch(Exception ex)
+            {
+                //Weite Data to text file
+                string loca = @"D:\log_plc.txt";
+                File.AppendAllText(loca, DateTime.Now + " SKTRFID2 " + ex.Message + " " + Environment.NewLine);
+            }
             isManuals = new List<bool>();
         }
 
@@ -430,91 +438,110 @@ namespace SKTRFID2
 
         private async void SendData(int queue, DataModel rfid, int phase, int dump)
         {
-            bool CheckInternet = API.checkInternet();
-            //Check Local Internet
-            if (CheckInternet)  // Online Read data from api
+            try
             {
-                //Insert Data to API
-                if (rfid.barcode != "")
+                bool CheckInternet = API.checkInternet();
+                //Check Local Internet
+                if (CheckInternet)  // Online Read data from api
                 {
-                    DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
-                    if (dataInsert.Data[0].StatusDb != 0) // Send Complete
+                    //Insert Data to API
+                    if (rfid.barcode != "")
                     {
-                        string loca = @"D:\log_api.txt";
-                        File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
+                        DataUpdateModel dataInsert = await API.InsertDataAPI(rfid.area_id, rfid.crop_year, rfid.barcode, phase, dump, "ADD");
+                        if (dataInsert.Data[0].StatusDb != 0) // Send Complete
+                        {
+                            string loca = @"D:\log_api.txt";
+                            File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
+                        }
                     }
                 }
+                else
+                {
+                    string path = Directory.GetCurrentDirectory();
+                    try
+                    {
+                        SoundPlayer dump_wave_file = new SoundPlayer();
+                        dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\d{dump}.wav");
+                        dump_wave_file.PlaySync();
+                    }
+                    catch
+                    {
+
+                    }
+                    try
+                    {
+                        SoundPlayer dump_wave_file = new SoundPlayer();
+                        dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\noserver.wav");
+                        dump_wave_file.PlaySync();
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+                //Insert Data RFID Log
+
+                DateTime now = DateTime.Now;
+                DataModel data_rfid = new DataModel()
+                {
+                    queue = queue,
+                    dump_id = dump.ToString(),
+                    area_id = rfid.area_id,
+                    crop_year = rfid.crop_year,
+                    allergen = rfid.allergen,
+                    truck_number = rfid.truck_number,
+                    farmer_name = rfid.farmer_name,
+                    barcode = rfid.barcode,
+                    cane_type = Convert.ToInt32(rfid.cane_type),
+                    weight_type = Convert.ToInt32(rfid.weight_type),
+                    truck_type = Convert.ToInt32(rfid.truck_type),
+                    rfid = rfid.rfid,
+                    queue_status = 3,
+                    rfid_lastdate = now
+                };
+
+                string message_insert = RFID.InsertRFIDLog(data_rfid);
             }
-            else
+            catch(Exception ex)
             {
-                string path = Directory.GetCurrentDirectory();
-                try
-                {
-                    SoundPlayer dump_wave_file = new SoundPlayer();
-                    dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\d{dump}.wav");
-                    dump_wave_file.PlaySync();
-                }
-                catch
-                {
-
-                }
-                try
-                {
-                    SoundPlayer dump_wave_file = new SoundPlayer();
-                    dump_wave_file.SoundLocation = Path.Combine(path, $"VOICE_DUMP\\noserver.wav");
-                    dump_wave_file.PlaySync();
-                }
-                catch
-                {
-
-                }
+                //Weite Data to text file
+                string loca = @"D:\log_net.txt";
+                File.AppendAllText(loca, DateTime.Now + " SKTRFID2 " + ex.Message + " " + Environment.NewLine);
             }
-
-            //Insert Data RFID Log
-
-            DateTime now = DateTime.Now;
-            DataModel data_rfid = new DataModel()
-            {
-                queue = queue,
-                dump_id = dump.ToString(),
-                area_id = rfid.area_id,
-                crop_year = rfid.crop_year,
-                allergen = rfid.allergen,
-                truck_number = rfid.truck_number,
-                farmer_name = rfid.farmer_name,
-                barcode = rfid.barcode,
-                cane_type = Convert.ToInt32(rfid.cane_type),
-                weight_type = Convert.ToInt32(rfid.weight_type),
-                truck_type = Convert.ToInt32(rfid.truck_type),
-                rfid = rfid.rfid,
-                queue_status = 3,
-                rfid_lastdate = now
-            };
-
-            string message_insert = RFID.InsertRFIDLog(data_rfid);
         }
         private void ShowDisplay(Label truck_license, Label truck_date, Label cane_type, Label truck_type, List<DataModel> datas, string dump, bool isShow)
         {
-            if (isShow)
+            try
             {
-                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("th-TH");
-                var data = datas.Where(w => w.dump_id == dump).FirstOrDefault();
-                if (data != null)
+                if (isShow)
                 {
-                    int check_trailer_truck = data.truck_number.IndexOf('/');
-                    if (check_trailer_truck == -1) // truck
+                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("th-TH");
+                    var data = datas.Where(w => w.dump_id == dump).FirstOrDefault();
+                    if (data != null)
                     {
-                        truck_license.Text = data.truck_number;
+                        int check_trailer_truck = data.truck_number.IndexOf('/');
+                        if (check_trailer_truck == -1) // truck
+                        {
+                            truck_license.Text = data.truck_number;
+                        }
+                        else // trailer truck
+                        {
+                            truck_license.Text = data.truck_number.Substring(0, check_trailer_truck) +
+                                Environment.NewLine +
+                                data.truck_number.Substring(check_trailer_truck + 1, data.truck_number.Length - (check_trailer_truck + 1));
+                        }
+                        truck_date.Text = data.rfid_lastdate == DateTime.MinValue ? "" : data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
+                        cane_type.Text = CodeType.CaneType(data.cane_type);
+                        truck_type.Text = CodeType.truckType(data.truck_type);
                     }
-                    else // trailer truck
+                    else
                     {
-                        truck_license.Text = data.truck_number.Substring(0, check_trailer_truck) +
-                            Environment.NewLine +
-                            data.truck_number.Substring(check_trailer_truck + 1, data.truck_number.Length - (check_trailer_truck + 1));
+                        truck_license.Text = "";
+                        truck_date.Text = "";
+                        cane_type.Text = "";
+                        truck_type.Text = "";
                     }
-                    truck_date.Text = data.rfid_lastdate == DateTime.MinValue ? "" : data.rfid_lastdate.ToString("dd MMM yyyy HH:mm:ss", culture);
-                    cane_type.Text = CodeType.CaneType(data.cane_type);
-                    truck_type.Text = CodeType.truckType(data.truck_type);
                 }
                 else
                 {
@@ -524,12 +551,11 @@ namespace SKTRFID2
                     truck_type.Text = "";
                 }
             }
-            else
+            catch(Exception ex)
             {
-                truck_license.Text = "";
-                truck_date.Text = "";
-                cane_type.Text = "";
-                truck_type.Text = "";
+                //Weite Data to text file
+                string loca = @"D:\log_display.txt";
+                File.AppendAllText(loca, DateTime.Now + " SKTRFID2 " + ex.Message + " " + Environment.NewLine);
             }
         }
         private void StartProcess(string mode, string server, string dump, string phase)
