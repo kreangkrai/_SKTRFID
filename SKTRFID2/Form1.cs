@@ -599,20 +599,12 @@ namespace SKTRFID2
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Do you want to exit?", "SKT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialog == DialogResult.OK)
+            if (cj2.IsConnected)
             {
-                if (cj2.IsConnected)
-                {
-                    cj2.Active = false;
-                    cj2.Dispose();
-                }
-                Application.Exit();
+                cj2.Active = false;
+                cj2.Dispose();
             }
-            else
-            {
-                e.Cancel = true;
-            } 
+            Application.Exit();
         }
     }
     public class LabelModel
