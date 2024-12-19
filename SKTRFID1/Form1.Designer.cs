@@ -215,7 +215,8 @@ namespace SKTRFID1
             this.tableLayoutPanel1.Controls.Add(this.panel6, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel7, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-3, -1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-4, -1);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.57731F));
@@ -223,7 +224,7 @@ namespace SKTRFID1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.03605F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.29714F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.49523F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1440, 878);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 1081);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox25
@@ -233,9 +234,11 @@ namespace SKTRFID1
             this.groupBox25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox25.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox25.Location = new System.Drawing.Point(1233, 521);
+            this.groupBox25.Location = new System.Drawing.Point(1648, 642);
+            this.groupBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(204, 128);
+            this.groupBox25.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox25.Size = new System.Drawing.Size(268, 157);
             this.groupBox25.TabIndex = 69;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "ประเภทรถ";
@@ -245,9 +248,10 @@ namespace SKTRFID1
             this.truck_type7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type7.ForeColor = System.Drawing.Color.Black;
-            this.truck_type7.Location = new System.Drawing.Point(3, 34);
+            this.truck_type7.Location = new System.Drawing.Point(4, 42);
+            this.truck_type7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type7.Name = "truck_type7";
-            this.truck_type7.Size = new System.Drawing.Size(198, 91);
+            this.truck_type7.Size = new System.Drawing.Size(260, 111);
             this.truck_type7.TabIndex = 2;
             this.truck_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -258,9 +262,11 @@ namespace SKTRFID1
             this.groupBox24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox24.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox24.Location = new System.Drawing.Point(1028, 521);
+            this.groupBox24.Location = new System.Drawing.Point(1374, 642);
+            this.groupBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(199, 128);
+            this.groupBox24.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox24.Size = new System.Drawing.Size(266, 157);
             this.groupBox24.TabIndex = 68;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "ประเภทรถ";
@@ -270,9 +276,10 @@ namespace SKTRFID1
             this.truck_type6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type6.ForeColor = System.Drawing.Color.Black;
-            this.truck_type6.Location = new System.Drawing.Point(3, 34);
+            this.truck_type6.Location = new System.Drawing.Point(4, 42);
+            this.truck_type6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type6.Name = "truck_type6";
-            this.truck_type6.Size = new System.Drawing.Size(193, 91);
+            this.truck_type6.Size = new System.Drawing.Size(258, 111);
             this.truck_type6.TabIndex = 2;
             this.truck_type6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -283,9 +290,11 @@ namespace SKTRFID1
             this.groupBox23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox23.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox23.Location = new System.Drawing.Point(823, 521);
+            this.groupBox23.Location = new System.Drawing.Point(1100, 642);
+            this.groupBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(199, 128);
+            this.groupBox23.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox23.Size = new System.Drawing.Size(266, 157);
             this.groupBox23.TabIndex = 67;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "ประเภทรถ";
@@ -295,9 +304,10 @@ namespace SKTRFID1
             this.truck_type5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type5.ForeColor = System.Drawing.Color.Black;
-            this.truck_type5.Location = new System.Drawing.Point(3, 34);
+            this.truck_type5.Location = new System.Drawing.Point(4, 42);
+            this.truck_type5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type5.Name = "truck_type5";
-            this.truck_type5.Size = new System.Drawing.Size(193, 91);
+            this.truck_type5.Size = new System.Drawing.Size(258, 111);
             this.truck_type5.TabIndex = 2;
             this.truck_type5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -308,9 +318,11 @@ namespace SKTRFID1
             this.groupBox22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox22.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox22.Location = new System.Drawing.Point(618, 521);
+            this.groupBox22.Location = new System.Drawing.Point(826, 642);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(199, 128);
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox22.Size = new System.Drawing.Size(266, 157);
             this.groupBox22.TabIndex = 66;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "ประเภทรถ";
@@ -320,9 +332,10 @@ namespace SKTRFID1
             this.truck_type4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type4.ForeColor = System.Drawing.Color.Black;
-            this.truck_type4.Location = new System.Drawing.Point(3, 34);
+            this.truck_type4.Location = new System.Drawing.Point(4, 42);
+            this.truck_type4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type4.Name = "truck_type4";
-            this.truck_type4.Size = new System.Drawing.Size(193, 91);
+            this.truck_type4.Size = new System.Drawing.Size(258, 111);
             this.truck_type4.TabIndex = 2;
             this.truck_type4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -333,9 +346,11 @@ namespace SKTRFID1
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox5.Location = new System.Drawing.Point(413, 521);
+            this.groupBox5.Location = new System.Drawing.Point(552, 642);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(199, 128);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(266, 157);
             this.groupBox5.TabIndex = 65;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "ประเภทรถ";
@@ -345,9 +360,10 @@ namespace SKTRFID1
             this.truck_type3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type3.ForeColor = System.Drawing.Color.Black;
-            this.truck_type3.Location = new System.Drawing.Point(3, 34);
+            this.truck_type3.Location = new System.Drawing.Point(4, 42);
+            this.truck_type3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type3.Name = "truck_type3";
-            this.truck_type3.Size = new System.Drawing.Size(193, 91);
+            this.truck_type3.Size = new System.Drawing.Size(258, 111);
             this.truck_type3.TabIndex = 2;
             this.truck_type3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -358,9 +374,11 @@ namespace SKTRFID1
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox2.Location = new System.Drawing.Point(208, 521);
+            this.groupBox2.Location = new System.Drawing.Point(278, 642);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(199, 128);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(266, 157);
             this.groupBox2.TabIndex = 64;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ประเภทรถ";
@@ -370,9 +388,10 @@ namespace SKTRFID1
             this.truck_type2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type2.ForeColor = System.Drawing.Color.Black;
-            this.truck_type2.Location = new System.Drawing.Point(3, 34);
+            this.truck_type2.Location = new System.Drawing.Point(4, 42);
+            this.truck_type2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type2.Name = "truck_type2";
-            this.truck_type2.Size = new System.Drawing.Size(193, 91);
+            this.truck_type2.Size = new System.Drawing.Size(258, 111);
             this.truck_type2.TabIndex = 1;
             this.truck_type2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -383,9 +402,11 @@ namespace SKTRFID1
             this.groupBox45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox45.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox45.Location = new System.Drawing.Point(1233, 655);
+            this.groupBox45.Location = new System.Drawing.Point(1648, 807);
+            this.groupBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Size = new System.Drawing.Size(204, 220);
+            this.groupBox45.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox45.Size = new System.Drawing.Size(268, 270);
             this.groupBox45.TabIndex = 62;
             this.groupBox45.TabStop = false;
             this.groupBox45.Text = "เวลาสแกน";
@@ -395,9 +416,10 @@ namespace SKTRFID1
             this.truck_date7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_date7.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date7.ForeColor = System.Drawing.Color.Black;
-            this.truck_date7.Location = new System.Drawing.Point(3, 34);
+            this.truck_date7.Location = new System.Drawing.Point(4, 42);
+            this.truck_date7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date7.Name = "truck_date7";
-            this.truck_date7.Size = new System.Drawing.Size(198, 183);
+            this.truck_date7.Size = new System.Drawing.Size(260, 224);
             this.truck_date7.TabIndex = 4;
             this.truck_date7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -408,9 +430,11 @@ namespace SKTRFID1
             this.groupBox44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox44.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox44.Location = new System.Drawing.Point(1028, 655);
+            this.groupBox44.Location = new System.Drawing.Point(1374, 807);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Size = new System.Drawing.Size(199, 220);
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox44.Size = new System.Drawing.Size(266, 270);
             this.groupBox44.TabIndex = 61;
             this.groupBox44.TabStop = false;
             this.groupBox44.Text = "เวลาสแกน";
@@ -420,9 +444,10 @@ namespace SKTRFID1
             this.truck_date6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_date6.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date6.ForeColor = System.Drawing.Color.Black;
-            this.truck_date6.Location = new System.Drawing.Point(3, 34);
+            this.truck_date6.Location = new System.Drawing.Point(4, 42);
+            this.truck_date6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date6.Name = "truck_date6";
-            this.truck_date6.Size = new System.Drawing.Size(193, 183);
+            this.truck_date6.Size = new System.Drawing.Size(258, 224);
             this.truck_date6.TabIndex = 4;
             this.truck_date6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -433,9 +458,11 @@ namespace SKTRFID1
             this.groupBox43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox43.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox43.Location = new System.Drawing.Point(823, 655);
+            this.groupBox43.Location = new System.Drawing.Point(1100, 807);
+            this.groupBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Size = new System.Drawing.Size(199, 220);
+            this.groupBox43.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox43.Size = new System.Drawing.Size(266, 270);
             this.groupBox43.TabIndex = 60;
             this.groupBox43.TabStop = false;
             this.groupBox43.Text = "เวลาสแกน";
@@ -445,9 +472,10 @@ namespace SKTRFID1
             this.truck_date5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_date5.Font = new System.Drawing.Font("Angsana New", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date5.ForeColor = System.Drawing.Color.Black;
-            this.truck_date5.Location = new System.Drawing.Point(3, 34);
+            this.truck_date5.Location = new System.Drawing.Point(4, 42);
+            this.truck_date5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date5.Name = "truck_date5";
-            this.truck_date5.Size = new System.Drawing.Size(193, 183);
+            this.truck_date5.Size = new System.Drawing.Size(258, 224);
             this.truck_date5.TabIndex = 4;
             this.truck_date5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -458,9 +486,11 @@ namespace SKTRFID1
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox3.Location = new System.Drawing.Point(618, 655);
+            this.groupBox3.Location = new System.Drawing.Point(826, 807);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(199, 220);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(266, 270);
             this.groupBox3.TabIndex = 59;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "เวลาสแกน";
@@ -470,9 +500,10 @@ namespace SKTRFID1
             this.truck_date4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_date4.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date4.ForeColor = System.Drawing.Color.Black;
-            this.truck_date4.Location = new System.Drawing.Point(3, 34);
+            this.truck_date4.Location = new System.Drawing.Point(4, 42);
+            this.truck_date4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date4.Name = "truck_date4";
-            this.truck_date4.Size = new System.Drawing.Size(193, 183);
+            this.truck_date4.Size = new System.Drawing.Size(258, 224);
             this.truck_date4.TabIndex = 4;
             this.truck_date4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -483,9 +514,11 @@ namespace SKTRFID1
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox4.Location = new System.Drawing.Point(413, 655);
+            this.groupBox4.Location = new System.Drawing.Point(552, 807);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(199, 220);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(266, 270);
             this.groupBox4.TabIndex = 58;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "เวลาสแกน";
@@ -495,9 +528,10 @@ namespace SKTRFID1
             this.truck_date3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_date3.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date3.ForeColor = System.Drawing.Color.Black;
-            this.truck_date3.Location = new System.Drawing.Point(3, 34);
+            this.truck_date3.Location = new System.Drawing.Point(4, 42);
+            this.truck_date3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date3.Name = "truck_date3";
-            this.truck_date3.Size = new System.Drawing.Size(193, 183);
+            this.truck_date3.Size = new System.Drawing.Size(258, 224);
             this.truck_date3.TabIndex = 4;
             this.truck_date3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -508,9 +542,11 @@ namespace SKTRFID1
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox7.Location = new System.Drawing.Point(208, 655);
+            this.groupBox7.Location = new System.Drawing.Point(278, 807);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(199, 220);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Size = new System.Drawing.Size(266, 270);
             this.groupBox7.TabIndex = 57;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "เวลาสแกน";
@@ -520,9 +556,10 @@ namespace SKTRFID1
             this.truck_date2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_date2.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date2.ForeColor = System.Drawing.Color.Black;
-            this.truck_date2.Location = new System.Drawing.Point(3, 34);
+            this.truck_date2.Location = new System.Drawing.Point(4, 42);
+            this.truck_date2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date2.Name = "truck_date2";
-            this.truck_date2.Size = new System.Drawing.Size(193, 183);
+            this.truck_date2.Size = new System.Drawing.Size(258, 224);
             this.truck_date2.TabIndex = 4;
             this.truck_date2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -533,9 +570,11 @@ namespace SKTRFID1
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox6.Location = new System.Drawing.Point(3, 655);
+            this.groupBox6.Location = new System.Drawing.Point(4, 807);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(199, 220);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Size = new System.Drawing.Size(266, 270);
             this.groupBox6.TabIndex = 56;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "เวลาสแกน";
@@ -545,9 +584,10 @@ namespace SKTRFID1
             this.truck_date1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_date1.Font = new System.Drawing.Font("Angsana New", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_date1.ForeColor = System.Drawing.Color.Black;
-            this.truck_date1.Location = new System.Drawing.Point(3, 34);
+            this.truck_date1.Location = new System.Drawing.Point(4, 42);
+            this.truck_date1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date1.Name = "truck_date1";
-            this.truck_date1.Size = new System.Drawing.Size(193, 183);
+            this.truck_date1.Size = new System.Drawing.Size(258, 224);
             this.truck_date1.TabIndex = 4;
             this.truck_date1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -556,9 +596,10 @@ namespace SKTRFID1
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel21.Controls.Add(this.groupBox14);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(1233, 381);
+            this.panel21.Location = new System.Drawing.Point(1648, 469);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(204, 134);
+            this.panel21.Size = new System.Drawing.Size(268, 165);
             this.panel21.TabIndex = 20;
             // 
             // groupBox14
@@ -568,8 +609,10 @@ namespace SKTRFID1
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox14.ForeColor = System.Drawing.Color.Blue;
             this.groupBox14.Location = new System.Drawing.Point(0, 0);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(204, 134);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Size = new System.Drawing.Size(268, 165);
             this.groupBox14.TabIndex = 1;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "ประเภทอ้อย";
@@ -579,9 +622,10 @@ namespace SKTRFID1
             this.cane_type7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cane_type7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cane_type7.ForeColor = System.Drawing.Color.Black;
-            this.cane_type7.Location = new System.Drawing.Point(3, 34);
+            this.cane_type7.Location = new System.Drawing.Point(4, 42);
+            this.cane_type7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type7.Name = "cane_type7";
-            this.cane_type7.Size = new System.Drawing.Size(198, 97);
+            this.cane_type7.Size = new System.Drawing.Size(260, 119);
             this.cane_type7.TabIndex = 3;
             this.cane_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -590,9 +634,10 @@ namespace SKTRFID1
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel20.Controls.Add(this.groupBox13);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(1028, 381);
+            this.panel20.Location = new System.Drawing.Point(1374, 469);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(199, 134);
+            this.panel20.Size = new System.Drawing.Size(266, 165);
             this.panel20.TabIndex = 19;
             // 
             // groupBox13
@@ -602,8 +647,10 @@ namespace SKTRFID1
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.ForeColor = System.Drawing.Color.Blue;
             this.groupBox13.Location = new System.Drawing.Point(0, 0);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(199, 134);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Size = new System.Drawing.Size(266, 165);
             this.groupBox13.TabIndex = 1;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "ประเภทอ้อย";
@@ -613,9 +660,10 @@ namespace SKTRFID1
             this.cane_type6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cane_type6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cane_type6.ForeColor = System.Drawing.Color.Black;
-            this.cane_type6.Location = new System.Drawing.Point(3, 34);
+            this.cane_type6.Location = new System.Drawing.Point(4, 42);
+            this.cane_type6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type6.Name = "cane_type6";
-            this.cane_type6.Size = new System.Drawing.Size(193, 97);
+            this.cane_type6.Size = new System.Drawing.Size(258, 119);
             this.cane_type6.TabIndex = 3;
             this.cane_type6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -624,9 +672,10 @@ namespace SKTRFID1
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel19.Controls.Add(this.groupBox12);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(823, 381);
+            this.panel19.Location = new System.Drawing.Point(1100, 469);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(199, 134);
+            this.panel19.Size = new System.Drawing.Size(266, 165);
             this.panel19.TabIndex = 18;
             // 
             // groupBox12
@@ -636,8 +685,10 @@ namespace SKTRFID1
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox12.ForeColor = System.Drawing.Color.Blue;
             this.groupBox12.Location = new System.Drawing.Point(0, 0);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(199, 134);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Size = new System.Drawing.Size(266, 165);
             this.groupBox12.TabIndex = 1;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "ประเภทอ้อย";
@@ -647,9 +698,10 @@ namespace SKTRFID1
             this.cane_type5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cane_type5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cane_type5.ForeColor = System.Drawing.Color.Black;
-            this.cane_type5.Location = new System.Drawing.Point(3, 34);
+            this.cane_type5.Location = new System.Drawing.Point(4, 42);
+            this.cane_type5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type5.Name = "cane_type5";
-            this.cane_type5.Size = new System.Drawing.Size(193, 97);
+            this.cane_type5.Size = new System.Drawing.Size(258, 119);
             this.cane_type5.TabIndex = 3;
             this.cane_type5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -658,9 +710,10 @@ namespace SKTRFID1
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel18.Controls.Add(this.groupBox11);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(618, 381);
+            this.panel18.Location = new System.Drawing.Point(826, 469);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(199, 134);
+            this.panel18.Size = new System.Drawing.Size(266, 165);
             this.panel18.TabIndex = 17;
             // 
             // groupBox11
@@ -670,8 +723,10 @@ namespace SKTRFID1
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.ForeColor = System.Drawing.Color.Blue;
             this.groupBox11.Location = new System.Drawing.Point(0, 0);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(199, 134);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Size = new System.Drawing.Size(266, 165);
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "ประเภทอ้อย";
@@ -681,9 +736,10 @@ namespace SKTRFID1
             this.cane_type4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cane_type4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cane_type4.ForeColor = System.Drawing.Color.Black;
-            this.cane_type4.Location = new System.Drawing.Point(3, 34);
+            this.cane_type4.Location = new System.Drawing.Point(4, 42);
+            this.cane_type4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type4.Name = "cane_type4";
-            this.cane_type4.Size = new System.Drawing.Size(193, 97);
+            this.cane_type4.Size = new System.Drawing.Size(258, 119);
             this.cane_type4.TabIndex = 3;
             this.cane_type4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -692,9 +748,10 @@ namespace SKTRFID1
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel17.Controls.Add(this.groupBox10);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(413, 381);
+            this.panel17.Location = new System.Drawing.Point(552, 469);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(199, 134);
+            this.panel17.Size = new System.Drawing.Size(266, 165);
             this.panel17.TabIndex = 16;
             // 
             // groupBox10
@@ -704,8 +761,10 @@ namespace SKTRFID1
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.ForeColor = System.Drawing.Color.Blue;
             this.groupBox10.Location = new System.Drawing.Point(0, 0);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(199, 134);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Size = new System.Drawing.Size(266, 165);
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "ประเภทอ้อย";
@@ -715,9 +774,10 @@ namespace SKTRFID1
             this.cane_type3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cane_type3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cane_type3.ForeColor = System.Drawing.Color.Black;
-            this.cane_type3.Location = new System.Drawing.Point(3, 34);
+            this.cane_type3.Location = new System.Drawing.Point(4, 42);
+            this.cane_type3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type3.Name = "cane_type3";
-            this.cane_type3.Size = new System.Drawing.Size(193, 97);
+            this.cane_type3.Size = new System.Drawing.Size(258, 119);
             this.cane_type3.TabIndex = 3;
             this.cane_type3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -726,9 +786,10 @@ namespace SKTRFID1
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel16.Controls.Add(this.groupBox9);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(208, 381);
+            this.panel16.Location = new System.Drawing.Point(278, 469);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(199, 134);
+            this.panel16.Size = new System.Drawing.Size(266, 165);
             this.panel16.TabIndex = 15;
             // 
             // groupBox9
@@ -738,8 +799,10 @@ namespace SKTRFID1
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.ForeColor = System.Drawing.Color.Blue;
             this.groupBox9.Location = new System.Drawing.Point(0, 0);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(199, 134);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Size = new System.Drawing.Size(266, 165);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "ประเภทอ้อย";
@@ -749,9 +812,10 @@ namespace SKTRFID1
             this.cane_type2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cane_type2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cane_type2.ForeColor = System.Drawing.Color.Black;
-            this.cane_type2.Location = new System.Drawing.Point(3, 34);
+            this.cane_type2.Location = new System.Drawing.Point(4, 42);
+            this.cane_type2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type2.Name = "cane_type2";
-            this.cane_type2.Size = new System.Drawing.Size(193, 97);
+            this.cane_type2.Size = new System.Drawing.Size(258, 119);
             this.cane_type2.TabIndex = 3;
             this.cane_type2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -760,9 +824,10 @@ namespace SKTRFID1
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel15.Controls.Add(this.groupBox8);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(3, 381);
+            this.panel15.Location = new System.Drawing.Point(4, 469);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(199, 134);
+            this.panel15.Size = new System.Drawing.Size(266, 165);
             this.panel15.TabIndex = 14;
             // 
             // groupBox8
@@ -772,8 +837,10 @@ namespace SKTRFID1
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.ForeColor = System.Drawing.Color.Blue;
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(199, 134);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Size = new System.Drawing.Size(266, 165);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "ประเภทอ้อย";
@@ -783,9 +850,10 @@ namespace SKTRFID1
             this.cane_type1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cane_type1.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cane_type1.ForeColor = System.Drawing.Color.Black;
-            this.cane_type1.Location = new System.Drawing.Point(3, 34);
+            this.cane_type1.Location = new System.Drawing.Point(4, 42);
+            this.cane_type1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type1.Name = "cane_type1";
-            this.cane_type1.Size = new System.Drawing.Size(193, 97);
+            this.cane_type1.Size = new System.Drawing.Size(258, 119);
             this.cane_type1.TabIndex = 2;
             this.cane_type1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -794,9 +862,10 @@ namespace SKTRFID1
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel14.Controls.Add(this.groupBox21);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(1233, 113);
+            this.panel14.Location = new System.Drawing.Point(1648, 139);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(204, 262);
+            this.panel14.Size = new System.Drawing.Size(268, 322);
             this.panel14.TabIndex = 13;
             // 
             // groupBox21
@@ -806,8 +875,10 @@ namespace SKTRFID1
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox21.ForeColor = System.Drawing.Color.Blue;
             this.groupBox21.Location = new System.Drawing.Point(0, 0);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(204, 262);
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox21.Size = new System.Drawing.Size(268, 322);
             this.groupBox21.TabIndex = 1;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "ทะเบียนรถ";
@@ -817,9 +888,10 @@ namespace SKTRFID1
             this.truck_license7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_license7.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_license7.ForeColor = System.Drawing.Color.Black;
-            this.truck_license7.Location = new System.Drawing.Point(3, 34);
+            this.truck_license7.Location = new System.Drawing.Point(4, 42);
+            this.truck_license7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license7.Name = "truck_license7";
-            this.truck_license7.Size = new System.Drawing.Size(198, 225);
+            this.truck_license7.Size = new System.Drawing.Size(260, 276);
             this.truck_license7.TabIndex = 3;
             this.truck_license7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -828,9 +900,10 @@ namespace SKTRFID1
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel13.Controls.Add(this.groupBox20);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(1028, 113);
+            this.panel13.Location = new System.Drawing.Point(1374, 139);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(199, 262);
+            this.panel13.Size = new System.Drawing.Size(266, 322);
             this.panel13.TabIndex = 12;
             // 
             // groupBox20
@@ -840,8 +913,10 @@ namespace SKTRFID1
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox20.ForeColor = System.Drawing.Color.Blue;
             this.groupBox20.Location = new System.Drawing.Point(0, 0);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(199, 262);
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox20.Size = new System.Drawing.Size(266, 322);
             this.groupBox20.TabIndex = 1;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "ทะเบียนรถ";
@@ -851,9 +926,10 @@ namespace SKTRFID1
             this.truck_license6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_license6.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_license6.ForeColor = System.Drawing.Color.Black;
-            this.truck_license6.Location = new System.Drawing.Point(3, 34);
+            this.truck_license6.Location = new System.Drawing.Point(4, 42);
+            this.truck_license6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license6.Name = "truck_license6";
-            this.truck_license6.Size = new System.Drawing.Size(193, 225);
+            this.truck_license6.Size = new System.Drawing.Size(258, 276);
             this.truck_license6.TabIndex = 3;
             this.truck_license6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -862,9 +938,10 @@ namespace SKTRFID1
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel12.Controls.Add(this.groupBox19);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(823, 113);
+            this.panel12.Location = new System.Drawing.Point(1100, 139);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(199, 262);
+            this.panel12.Size = new System.Drawing.Size(266, 322);
             this.panel12.TabIndex = 11;
             // 
             // groupBox19
@@ -874,8 +951,10 @@ namespace SKTRFID1
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox19.ForeColor = System.Drawing.Color.Blue;
             this.groupBox19.Location = new System.Drawing.Point(0, 0);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(199, 262);
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox19.Size = new System.Drawing.Size(266, 322);
             this.groupBox19.TabIndex = 1;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "ทะเบียนรถ";
@@ -885,9 +964,10 @@ namespace SKTRFID1
             this.truck_license5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_license5.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_license5.ForeColor = System.Drawing.Color.Black;
-            this.truck_license5.Location = new System.Drawing.Point(3, 34);
+            this.truck_license5.Location = new System.Drawing.Point(4, 42);
+            this.truck_license5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license5.Name = "truck_license5";
-            this.truck_license5.Size = new System.Drawing.Size(193, 225);
+            this.truck_license5.Size = new System.Drawing.Size(258, 276);
             this.truck_license5.TabIndex = 3;
             this.truck_license5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -896,9 +976,10 @@ namespace SKTRFID1
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel11.Controls.Add(this.groupBox18);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(618, 113);
+            this.panel11.Location = new System.Drawing.Point(826, 139);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(199, 262);
+            this.panel11.Size = new System.Drawing.Size(266, 322);
             this.panel11.TabIndex = 10;
             // 
             // groupBox18
@@ -908,8 +989,10 @@ namespace SKTRFID1
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox18.ForeColor = System.Drawing.Color.Blue;
             this.groupBox18.Location = new System.Drawing.Point(0, 0);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(199, 262);
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox18.Size = new System.Drawing.Size(266, 322);
             this.groupBox18.TabIndex = 1;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "ทะเบียนรถ";
@@ -919,9 +1002,10 @@ namespace SKTRFID1
             this.truck_license4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_license4.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_license4.ForeColor = System.Drawing.Color.Black;
-            this.truck_license4.Location = new System.Drawing.Point(3, 34);
+            this.truck_license4.Location = new System.Drawing.Point(4, 42);
+            this.truck_license4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license4.Name = "truck_license4";
-            this.truck_license4.Size = new System.Drawing.Size(193, 225);
+            this.truck_license4.Size = new System.Drawing.Size(258, 276);
             this.truck_license4.TabIndex = 3;
             this.truck_license4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -930,9 +1014,10 @@ namespace SKTRFID1
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel10.Controls.Add(this.groupBox17);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(413, 113);
+            this.panel10.Location = new System.Drawing.Point(552, 139);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(199, 262);
+            this.panel10.Size = new System.Drawing.Size(266, 322);
             this.panel10.TabIndex = 9;
             // 
             // groupBox17
@@ -942,8 +1027,10 @@ namespace SKTRFID1
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox17.ForeColor = System.Drawing.Color.Blue;
             this.groupBox17.Location = new System.Drawing.Point(0, 0);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(199, 262);
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox17.Size = new System.Drawing.Size(266, 322);
             this.groupBox17.TabIndex = 1;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "ทะเบียนรถ";
@@ -953,9 +1040,10 @@ namespace SKTRFID1
             this.truck_license3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_license3.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_license3.ForeColor = System.Drawing.Color.Black;
-            this.truck_license3.Location = new System.Drawing.Point(3, 34);
+            this.truck_license3.Location = new System.Drawing.Point(4, 42);
+            this.truck_license3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license3.Name = "truck_license3";
-            this.truck_license3.Size = new System.Drawing.Size(193, 225);
+            this.truck_license3.Size = new System.Drawing.Size(258, 276);
             this.truck_license3.TabIndex = 3;
             this.truck_license3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -964,9 +1052,10 @@ namespace SKTRFID1
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel9.Controls.Add(this.groupBox16);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(208, 113);
+            this.panel9.Location = new System.Drawing.Point(278, 139);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(199, 262);
+            this.panel9.Size = new System.Drawing.Size(266, 322);
             this.panel9.TabIndex = 8;
             // 
             // groupBox16
@@ -976,8 +1065,10 @@ namespace SKTRFID1
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox16.ForeColor = System.Drawing.Color.Blue;
             this.groupBox16.Location = new System.Drawing.Point(0, 0);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(199, 262);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox16.Size = new System.Drawing.Size(266, 322);
             this.groupBox16.TabIndex = 1;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "ทะเบียนรถ";
@@ -987,9 +1078,10 @@ namespace SKTRFID1
             this.truck_license2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_license2.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_license2.ForeColor = System.Drawing.Color.Black;
-            this.truck_license2.Location = new System.Drawing.Point(3, 34);
+            this.truck_license2.Location = new System.Drawing.Point(4, 42);
+            this.truck_license2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license2.Name = "truck_license2";
-            this.truck_license2.Size = new System.Drawing.Size(193, 225);
+            this.truck_license2.Size = new System.Drawing.Size(258, 276);
             this.truck_license2.TabIndex = 3;
             this.truck_license2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -998,9 +1090,10 @@ namespace SKTRFID1
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel8.Controls.Add(this.groupBox15);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 113);
+            this.panel8.Location = new System.Drawing.Point(4, 139);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(199, 262);
+            this.panel8.Size = new System.Drawing.Size(266, 322);
             this.panel8.TabIndex = 7;
             // 
             // groupBox15
@@ -1010,8 +1103,10 @@ namespace SKTRFID1
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.ForeColor = System.Drawing.Color.Blue;
             this.groupBox15.Location = new System.Drawing.Point(0, 0);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(199, 262);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox15.Size = new System.Drawing.Size(266, 322);
             this.groupBox15.TabIndex = 0;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "ทะเบียนรถ";
@@ -1021,9 +1116,10 @@ namespace SKTRFID1
             this.truck_license1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_license1.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_license1.ForeColor = System.Drawing.Color.Black;
-            this.truck_license1.Location = new System.Drawing.Point(3, 34);
+            this.truck_license1.Location = new System.Drawing.Point(4, 42);
+            this.truck_license1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license1.Name = "truck_license1";
-            this.truck_license1.Size = new System.Drawing.Size(193, 225);
+            this.truck_license1.Size = new System.Drawing.Size(258, 276);
             this.truck_license1.TabIndex = 3;
             this.truck_license1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1032,9 +1128,10 @@ namespace SKTRFID1
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.labelDump1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 104);
+            this.panel1.Size = new System.Drawing.Size(266, 127);
             this.panel1.TabIndex = 0;
             // 
             // labelDump1
@@ -1043,8 +1140,9 @@ namespace SKTRFID1
             this.labelDump1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDump1.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDump1.Location = new System.Drawing.Point(0, 0);
+            this.labelDump1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump1.Name = "labelDump1";
-            this.labelDump1.Size = new System.Drawing.Size(199, 104);
+            this.labelDump1.Size = new System.Drawing.Size(266, 127);
             this.labelDump1.TabIndex = 0;
             this.labelDump1.Text = "ดัมพ์ 1";
             this.labelDump1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1054,9 +1152,10 @@ namespace SKTRFID1
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.labelDump2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(208, 3);
+            this.panel2.Location = new System.Drawing.Point(278, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(199, 104);
+            this.panel2.Size = new System.Drawing.Size(266, 127);
             this.panel2.TabIndex = 1;
             // 
             // labelDump2
@@ -1065,8 +1164,9 @@ namespace SKTRFID1
             this.labelDump2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDump2.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDump2.Location = new System.Drawing.Point(0, 0);
+            this.labelDump2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump2.Name = "labelDump2";
-            this.labelDump2.Size = new System.Drawing.Size(199, 104);
+            this.labelDump2.Size = new System.Drawing.Size(266, 127);
             this.labelDump2.TabIndex = 1;
             this.labelDump2.Text = "ดัมพ์ 2";
             this.labelDump2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1076,9 +1176,10 @@ namespace SKTRFID1
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.labelDump3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(413, 3);
+            this.panel3.Location = new System.Drawing.Point(552, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(199, 104);
+            this.panel3.Size = new System.Drawing.Size(266, 127);
             this.panel3.TabIndex = 2;
             // 
             // labelDump3
@@ -1087,8 +1188,9 @@ namespace SKTRFID1
             this.labelDump3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDump3.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDump3.Location = new System.Drawing.Point(0, 0);
+            this.labelDump3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump3.Name = "labelDump3";
-            this.labelDump3.Size = new System.Drawing.Size(199, 104);
+            this.labelDump3.Size = new System.Drawing.Size(266, 127);
             this.labelDump3.TabIndex = 1;
             this.labelDump3.Text = "ดัมพ์ 3";
             this.labelDump3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1098,9 +1200,10 @@ namespace SKTRFID1
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.labelDump4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(618, 3);
+            this.panel4.Location = new System.Drawing.Point(826, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(199, 104);
+            this.panel4.Size = new System.Drawing.Size(266, 127);
             this.panel4.TabIndex = 3;
             // 
             // labelDump4
@@ -1109,8 +1212,9 @@ namespace SKTRFID1
             this.labelDump4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDump4.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDump4.Location = new System.Drawing.Point(0, 0);
+            this.labelDump4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump4.Name = "labelDump4";
-            this.labelDump4.Size = new System.Drawing.Size(199, 104);
+            this.labelDump4.Size = new System.Drawing.Size(266, 127);
             this.labelDump4.TabIndex = 1;
             this.labelDump4.Text = "ดัมพ์ 4";
             this.labelDump4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1120,9 +1224,10 @@ namespace SKTRFID1
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel5.Controls.Add(this.labelDump5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(823, 3);
+            this.panel5.Location = new System.Drawing.Point(1100, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(199, 104);
+            this.panel5.Size = new System.Drawing.Size(266, 127);
             this.panel5.TabIndex = 4;
             // 
             // labelDump5
@@ -1131,8 +1236,9 @@ namespace SKTRFID1
             this.labelDump5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDump5.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDump5.Location = new System.Drawing.Point(0, 0);
+            this.labelDump5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump5.Name = "labelDump5";
-            this.labelDump5.Size = new System.Drawing.Size(199, 104);
+            this.labelDump5.Size = new System.Drawing.Size(266, 127);
             this.labelDump5.TabIndex = 1;
             this.labelDump5.Text = "ดัมพ์ 5";
             this.labelDump5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1142,9 +1248,10 @@ namespace SKTRFID1
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel6.Controls.Add(this.labelDump6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(1028, 3);
+            this.panel6.Location = new System.Drawing.Point(1374, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(199, 104);
+            this.panel6.Size = new System.Drawing.Size(266, 127);
             this.panel6.TabIndex = 5;
             // 
             // labelDump6
@@ -1153,8 +1260,9 @@ namespace SKTRFID1
             this.labelDump6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDump6.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDump6.Location = new System.Drawing.Point(0, 0);
+            this.labelDump6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump6.Name = "labelDump6";
-            this.labelDump6.Size = new System.Drawing.Size(199, 104);
+            this.labelDump6.Size = new System.Drawing.Size(266, 127);
             this.labelDump6.TabIndex = 1;
             this.labelDump6.Text = "ดัมพ์ 6";
             this.labelDump6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1164,9 +1272,10 @@ namespace SKTRFID1
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel7.Controls.Add(this.labelDump7);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(1233, 3);
+            this.panel7.Location = new System.Drawing.Point(1648, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(204, 104);
+            this.panel7.Size = new System.Drawing.Size(268, 127);
             this.panel7.TabIndex = 6;
             // 
             // labelDump7
@@ -1175,8 +1284,9 @@ namespace SKTRFID1
             this.labelDump7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDump7.Font = new System.Drawing.Font("Angsana New", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDump7.Location = new System.Drawing.Point(0, 0);
+            this.labelDump7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump7.Name = "labelDump7";
-            this.labelDump7.Size = new System.Drawing.Size(204, 104);
+            this.labelDump7.Size = new System.Drawing.Size(268, 127);
             this.labelDump7.TabIndex = 1;
             this.labelDump7.Text = "ดัมพ์ 7";
             this.labelDump7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1188,9 +1298,11 @@ namespace SKTRFID1
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(3, 521);
+            this.groupBox1.Location = new System.Drawing.Point(4, 642);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(199, 128);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(266, 157);
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ประเภทรถ";
@@ -1200,18 +1312,21 @@ namespace SKTRFID1
             this.truck_type1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.truck_type1.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_type1.ForeColor = System.Drawing.Color.Black;
-            this.truck_type1.Location = new System.Drawing.Point(3, 34);
+            this.truck_type1.Location = new System.Drawing.Point(4, 42);
+            this.truck_type1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type1.Name = "truck_type1";
-            this.truck_type1.Size = new System.Drawing.Size(193, 91);
+            this.truck_type1.Size = new System.Drawing.Size(258, 111);
             this.truck_type1.TabIndex = 0;
             this.truck_type1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 839);
+            this.ClientSize = new System.Drawing.Size(1901, 1033);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SKT RFID PHASE 1";
