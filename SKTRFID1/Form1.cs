@@ -607,33 +607,40 @@ namespace SKTRFID1
         }
         private void StartProcess(string mode, string server, string dump, string phase)
         {
-            // Check duplicate Program
-            List<string> windows_titles = new List<string>();
-            Process[] process;
-            if (mode == "AUTO") // AUTO MODE
+            try
             {
-                process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("AUTO DUMP")).ToArray();
-                foreach (var p in process)
+                // Check duplicate Program
+                List<string> windows_titles = new List<string>();
+                Process[] process;
+                if (mode == "AUTO") // AUTO MODE
                 {
-                    windows_titles.Add(p.MainWindowTitle);                   
+                    process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("AUTO DUMP")).ToArray();
+                    foreach (var p in process)
+                    {
+                        windows_titles.Add(p.MainWindowTitle);
+                    }
+                }
+                else //COMMON MODE
+                {
+                    process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
+                    foreach (var p in process)
+                    {
+                        windows_titles.Add(p.MainWindowTitle);
+                    }
+                }
+
+                string title = mode + " DUMP " + dump;
+                if (!windows_titles.Any(a => a == title))
+                {
+                    Process p = new Process();
+                    p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
+                    p.StartInfo.Arguments = mode + " " + server + " " + dump + " " + phase;
+                    p.Start();
                 }
             }
-            else //COMMON MODE
+            catch(Exception ex)
             {
-                process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
-                foreach (var p in process)
-                {
-                    windows_titles.Add(p.MainWindowTitle);
-                }
-            }
-            
-            string title = mode + " DUMP " + dump;
-            if (!windows_titles.Any(a => a == title))
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = "Server\\SKTRFIDSERVER.exe";
-                p.StartInfo.Arguments = mode + " " + server + " " + dump + " " + phase;
-                p.Start();
+                MessageBox.Show(ex.Message);
             }
         }
 
