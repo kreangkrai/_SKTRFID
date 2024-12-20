@@ -224,7 +224,7 @@ namespace SKTRFID1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.03605F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.29714F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.49523F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 1081);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1921, 1081);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox25
@@ -238,7 +238,7 @@ namespace SKTRFID1
             this.groupBox25.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox25.Size = new System.Drawing.Size(268, 157);
+            this.groupBox25.Size = new System.Drawing.Size(269, 157);
             this.groupBox25.TabIndex = 69;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "ประเภทรถ";
@@ -251,7 +251,7 @@ namespace SKTRFID1
             this.truck_type7.Location = new System.Drawing.Point(4, 42);
             this.truck_type7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_type7.Name = "truck_type7";
-            this.truck_type7.Size = new System.Drawing.Size(260, 111);
+            this.truck_type7.Size = new System.Drawing.Size(261, 111);
             this.truck_type7.TabIndex = 2;
             this.truck_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -406,7 +406,7 @@ namespace SKTRFID1
             this.groupBox45.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox45.Name = "groupBox45";
             this.groupBox45.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox45.Size = new System.Drawing.Size(268, 270);
+            this.groupBox45.Size = new System.Drawing.Size(269, 270);
             this.groupBox45.TabIndex = 62;
             this.groupBox45.TabStop = false;
             this.groupBox45.Text = "เวลาสแกน";
@@ -419,7 +419,7 @@ namespace SKTRFID1
             this.truck_date7.Location = new System.Drawing.Point(4, 42);
             this.truck_date7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_date7.Name = "truck_date7";
-            this.truck_date7.Size = new System.Drawing.Size(260, 224);
+            this.truck_date7.Size = new System.Drawing.Size(261, 224);
             this.truck_date7.TabIndex = 4;
             this.truck_date7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -599,7 +599,7 @@ namespace SKTRFID1
             this.panel21.Location = new System.Drawing.Point(1648, 469);
             this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(268, 165);
+            this.panel21.Size = new System.Drawing.Size(269, 165);
             this.panel21.TabIndex = 20;
             // 
             // groupBox14
@@ -612,7 +612,7 @@ namespace SKTRFID1
             this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox14.Size = new System.Drawing.Size(268, 165);
+            this.groupBox14.Size = new System.Drawing.Size(269, 165);
             this.groupBox14.TabIndex = 1;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "ประเภทอ้อย";
@@ -625,7 +625,7 @@ namespace SKTRFID1
             this.cane_type7.Location = new System.Drawing.Point(4, 42);
             this.cane_type7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cane_type7.Name = "cane_type7";
-            this.cane_type7.Size = new System.Drawing.Size(260, 119);
+            this.cane_type7.Size = new System.Drawing.Size(261, 119);
             this.cane_type7.TabIndex = 3;
             this.cane_type7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -865,7 +865,7 @@ namespace SKTRFID1
             this.panel14.Location = new System.Drawing.Point(1648, 139);
             this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(268, 322);
+            this.panel14.Size = new System.Drawing.Size(269, 322);
             this.panel14.TabIndex = 13;
             // 
             // groupBox21
@@ -878,7 +878,7 @@ namespace SKTRFID1
             this.groupBox21.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox21.Size = new System.Drawing.Size(268, 322);
+            this.groupBox21.Size = new System.Drawing.Size(269, 322);
             this.groupBox21.TabIndex = 1;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "ทะเบียนรถ";
@@ -891,7 +891,7 @@ namespace SKTRFID1
             this.truck_license7.Location = new System.Drawing.Point(4, 42);
             this.truck_license7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.truck_license7.Name = "truck_license7";
-            this.truck_license7.Size = new System.Drawing.Size(260, 276);
+            this.truck_license7.Size = new System.Drawing.Size(261, 276);
             this.truck_license7.TabIndex = 3;
             this.truck_license7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1275,7 +1275,7 @@ namespace SKTRFID1
             this.panel7.Location = new System.Drawing.Point(1648, 4);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(268, 127);
+            this.panel7.Size = new System.Drawing.Size(269, 127);
             this.panel7.TabIndex = 6;
             // 
             // labelDump7
@@ -1286,7 +1286,7 @@ namespace SKTRFID1
             this.labelDump7.Location = new System.Drawing.Point(0, 0);
             this.labelDump7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDump7.Name = "labelDump7";
-            this.labelDump7.Size = new System.Drawing.Size(268, 127);
+            this.labelDump7.Size = new System.Drawing.Size(269, 127);
             this.labelDump7.TabIndex = 1;
             this.labelDump7.Text = "ดัมพ์ 7";
             this.labelDump7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1323,7 +1323,7 @@ namespace SKTRFID1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1901, 1033);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
