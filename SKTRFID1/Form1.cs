@@ -499,6 +499,7 @@ namespace SKTRFID1
                         {
                             string loca = @"D:\log_api.txt";
                             File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
+                          
                         }
                     }
                 }
@@ -549,6 +550,26 @@ namespace SKTRFID1
                 };
 
                 string message_insert = RFID.InsertRFIDLog(data_rfid);
+
+                //Update Clear Barcode Data to Local Database
+                DataModel dataDump = new DataModel()
+                {
+                    queue = queue,
+                    dump_id = dump.ToString(),
+                    area_id = rfid.area_id,
+                    crop_year = rfid.crop_year,
+                    allergen = rfid.allergen,
+                    truck_number = rfid.truck_number,
+                    farmer_name = rfid.farmer_name,
+                    barcode = "000000",
+                    cane_type = Convert.ToInt32(rfid.cane_type),
+                    weight_type = Convert.ToInt32(rfid.weight_type),
+                    truck_type = Convert.ToInt32(rfid.truck_type),
+                    rfid = rfid.rfid,
+                    queue_status = 3,
+                    rfid_lastdate = now
+                };
+                string message_update = RFID.UpdateRFID(dataDump);
             }
             catch (Exception ex)
             {

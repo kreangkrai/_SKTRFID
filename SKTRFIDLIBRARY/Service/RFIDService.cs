@@ -271,8 +271,8 @@ namespace SKTRFIDLIBRARY.Service
                                                                           truck_type='{data.truck_type}',
                                                                           weight_type='{data.weight_type}',
                                                                           queue_status='{data.queue_status}'
-                                                                          WHERE dump_id='{data.dump_id}' ", cn);
-                    
+                                                                          WHERE dump_id='{data.dump_id}' AND area_id='{data.area_id}' AND crop_year='{data.crop_year}' ", cn);
+
                     cmd.ExecuteNonQuery();
                 }
                 return "Success";
