@@ -98,5 +98,13 @@ namespace SKTRFIDCENTER
             p.StartInfo.Arguments = txtPhase.Text;
             p.Start();
         }
+
+        private void btnSendRFID_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "Program\\SENDRFID\\SKTRFIDMANUALSENDDATA.exe";
+            p.StartInfo.Arguments = txtPhase.Text;
+            p.Start();
+        }
     }
 }

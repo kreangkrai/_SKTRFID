@@ -41,6 +41,7 @@ namespace SKTRFIDCENTER
             this.btnCheckHardware = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSendRFID = new System.Windows.Forms.Button();
             this.btnReadAPI = new System.Windows.Forms.Button();
             this.btnMuteSound = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -52,9 +53,10 @@ namespace SKTRFIDCENTER
             this.btnCropYear_AreaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCropYear_AreaId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCropYear_AreaId.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCropYear_AreaId.Location = new System.Drawing.Point(17, 154);
+            this.btnCropYear_AreaId.Location = new System.Drawing.Point(23, 190);
+            this.btnCropYear_AreaId.Margin = new System.Windows.Forms.Padding(4);
             this.btnCropYear_AreaId.Name = "btnCropYear_AreaId";
-            this.btnCropYear_AreaId.Size = new System.Drawing.Size(192, 123);
+            this.btnCropYear_AreaId.Size = new System.Drawing.Size(256, 151);
             this.btnCropYear_AreaId.TabIndex = 0;
             this.btnCropYear_AreaId.Text = "ตั้งค่าปี/พื้นที่";
             this.btnCropYear_AreaId.UseVisualStyleBackColor = false;
@@ -65,9 +67,10 @@ namespace SKTRFIDCENTER
             this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReport.Font = new System.Drawing.Font("Angsana New", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(231, 26);
+            this.btnReport.Location = new System.Drawing.Point(308, 32);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(192, 123);
+            this.btnReport.Size = new System.Drawing.Size(256, 151);
             this.btnReport.TabIndex = 1;
             this.btnReport.Text = "Report";
             this.btnReport.UseVisualStyleBackColor = false;
@@ -78,9 +81,10 @@ namespace SKTRFIDCENTER
             this.btnShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnShift.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShift.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShift.Location = new System.Drawing.Point(225, 154);
+            this.btnShift.Location = new System.Drawing.Point(300, 190);
+            this.btnShift.Margin = new System.Windows.Forms.Padding(4);
             this.btnShift.Name = "btnShift";
-            this.btnShift.Size = new System.Drawing.Size(192, 123);
+            this.btnShift.Size = new System.Drawing.Size(256, 151);
             this.btnShift.TabIndex = 2;
             this.btnShift.Text = "ตัดรอบอ้อย";
             this.btnShift.UseVisualStyleBackColor = false;
@@ -91,9 +95,10 @@ namespace SKTRFIDCENTER
             this.btnEditDump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnEditDump.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditDump.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDump.Location = new System.Drawing.Point(17, 283);
+            this.btnEditDump.Location = new System.Drawing.Point(23, 348);
+            this.btnEditDump.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditDump.Name = "btnEditDump";
-            this.btnEditDump.Size = new System.Drawing.Size(192, 123);
+            this.btnEditDump.Size = new System.Drawing.Size(256, 151);
             this.btnEditDump.TabIndex = 3;
             this.btnEditDump.Text = "รีเซตดัมพ์";
             this.btnEditDump.UseVisualStyleBackColor = false;
@@ -104,9 +109,10 @@ namespace SKTRFIDCENTER
             this.btnMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnMonitor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonitor.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonitor.Location = new System.Drawing.Point(21, 25);
+            this.btnMonitor.Location = new System.Drawing.Point(28, 31);
+            this.btnMonitor.Margin = new System.Windows.Forms.Padding(4);
             this.btnMonitor.Name = "btnMonitor";
-            this.btnMonitor.Size = new System.Drawing.Size(192, 123);
+            this.btnMonitor.Size = new System.Drawing.Size(256, 151);
             this.btnMonitor.TabIndex = 4;
             this.btnMonitor.Text = "จดบันทึกการดัมพ์";
             this.btnMonitor.UseVisualStyleBackColor = false;
@@ -117,9 +123,10 @@ namespace SKTRFIDCENTER
             this.btnReadWriteRFID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnReadWriteRFID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReadWriteRFID.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReadWriteRFID.Location = new System.Drawing.Point(225, 283);
+            this.btnReadWriteRFID.Location = new System.Drawing.Point(300, 348);
+            this.btnReadWriteRFID.Margin = new System.Windows.Forms.Padding(4);
             this.btnReadWriteRFID.Name = "btnReadWriteRFID";
-            this.btnReadWriteRFID.Size = new System.Drawing.Size(192, 123);
+            this.btnReadWriteRFID.Size = new System.Drawing.Size(256, 151);
             this.btnReadWriteRFID.TabIndex = 5;
             this.btnReadWriteRFID.Text = "อ่าน/เขียนบัตร";
             this.btnReadWriteRFID.UseVisualStyleBackColor = false;
@@ -129,10 +136,9 @@ namespace SKTRFIDCENTER
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(255, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(515, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 31);
+            this.label1.Size = new System.Drawing.Size(139, 39);
             this.label1.TabIndex = 6;
             this.label1.Text = "PHASE";
             // 
@@ -140,11 +146,11 @@ namespace SKTRFIDCENTER
             // 
             this.txtPhase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhase.Location = new System.Drawing.Point(370, 5);
-            this.txtPhase.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhase.Location = new System.Drawing.Point(664, 6);
+            this.txtPhase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhase.Name = "txtPhase";
             this.txtPhase.ReadOnly = true;
-            this.txtPhase.Size = new System.Drawing.Size(20, 31);
+            this.txtPhase.Size = new System.Drawing.Size(27, 38);
             this.txtPhase.TabIndex = 7;
             this.txtPhase.Text = "1";
             // 
@@ -153,9 +159,10 @@ namespace SKTRFIDCENTER
             this.btnKill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnKill.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKill.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKill.Location = new System.Drawing.Point(17, 25);
+            this.btnKill.Location = new System.Drawing.Point(23, 31);
+            this.btnKill.Margin = new System.Windows.Forms.Padding(4);
             this.btnKill.Name = "btnKill";
-            this.btnKill.Size = new System.Drawing.Size(192, 123);
+            this.btnKill.Size = new System.Drawing.Size(256, 151);
             this.btnKill.TabIndex = 8;
             this.btnKill.Text = "ลบโปรแกรมดัมพ์";
             this.btnKill.UseVisualStyleBackColor = false;
@@ -166,9 +173,10 @@ namespace SKTRFIDCENTER
             this.btnCheckHardware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCheckHardware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheckHardware.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckHardware.Location = new System.Drawing.Point(225, 25);
+            this.btnCheckHardware.Location = new System.Drawing.Point(300, 31);
+            this.btnCheckHardware.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckHardware.Name = "btnCheckHardware";
-            this.btnCheckHardware.Size = new System.Drawing.Size(192, 123);
+            this.btnCheckHardware.Size = new System.Drawing.Size(256, 151);
             this.btnCheckHardware.TabIndex = 9;
             this.btnCheckHardware.Text = "ตรวจสอบฮาร์ดแวร์";
             this.btnCheckHardware.UseVisualStyleBackColor = false;
@@ -183,35 +191,55 @@ namespace SKTRFIDCENTER
             this.groupBox1.Controls.Add(this.btnEditDump);
             this.groupBox1.Controls.Add(this.btnShift);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(481, 45);
+            this.groupBox1.Location = new System.Drawing.Point(641, 55);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 419);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(581, 516);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SETTING";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSendRFID);
             this.groupBox2.Controls.Add(this.btnReadAPI);
             this.groupBox2.Controls.Add(this.btnMuteSound);
             this.groupBox2.Controls.Add(this.btnReport);
             this.groupBox2.Controls.Add(this.btnMonitor);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(30, 41);
+            this.groupBox2.Location = new System.Drawing.Point(40, 50);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(445, 419);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(593, 516);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Monitor";
+            // 
+            // btnSendRFID
+            // 
+            this.btnSendRFID.BackColor = System.Drawing.Color.Olive;
+            this.btnSendRFID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendRFID.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendRFID.Location = new System.Drawing.Point(308, 357);
+            this.btnSendRFID.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSendRFID.Name = "btnSendRFID";
+            this.btnSendRFID.Size = new System.Drawing.Size(256, 151);
+            this.btnSendRFID.TabIndex = 7;
+            this.btnSendRFID.Text = "ส่งข้อมูลดัมพ์";
+            this.btnSendRFID.UseVisualStyleBackColor = false;
+            this.btnSendRFID.Click += new System.EventHandler(this.btnSendRFID_Click);
             // 
             // btnReadAPI
             // 
             this.btnReadAPI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnReadAPI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReadAPI.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReadAPI.Location = new System.Drawing.Point(231, 167);
+            this.btnReadAPI.Location = new System.Drawing.Point(307, 195);
+            this.btnReadAPI.Margin = new System.Windows.Forms.Padding(4);
             this.btnReadAPI.Name = "btnReadAPI";
-            this.btnReadAPI.Size = new System.Drawing.Size(192, 123);
+            this.btnReadAPI.Size = new System.Drawing.Size(256, 151);
             this.btnReadAPI.TabIndex = 6;
             this.btnReadAPI.Text = "อ่านบัตรออนไลน์";
             this.btnReadAPI.UseVisualStyleBackColor = false;
@@ -222,9 +250,10 @@ namespace SKTRFIDCENTER
             this.btnMuteSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnMuteSound.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMuteSound.Font = new System.Drawing.Font("Angsana New", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMuteSound.Location = new System.Drawing.Point(21, 167);
+            this.btnMuteSound.Location = new System.Drawing.Point(28, 195);
+            this.btnMuteSound.Margin = new System.Windows.Forms.Padding(4);
             this.btnMuteSound.Name = "btnMuteSound";
-            this.btnMuteSound.Size = new System.Drawing.Size(192, 123);
+            this.btnMuteSound.Size = new System.Drawing.Size(256, 151);
             this.btnMuteSound.TabIndex = 5;
             this.btnMuteSound.Text = "เปิด-ปิด เสียง";
             this.btnMuteSound.UseVisualStyleBackColor = false;
@@ -232,13 +261,14 @@ namespace SKTRFIDCENTER
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 476);
+            this.ClientSize = new System.Drawing.Size(1265, 586);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtPhase);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -267,6 +297,7 @@ namespace SKTRFIDCENTER
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnMuteSound;
         private System.Windows.Forms.Button btnReadAPI;
+        private System.Windows.Forms.Button btnSendRFID;
     }
 }
 
