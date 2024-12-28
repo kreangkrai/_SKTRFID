@@ -251,6 +251,29 @@ namespace SKTRFIDLIBRARY.Service
             }
         }
 
+        public string UpdateBarcodeRFID(DataModel data)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+                    SqlCommand cmd = new SqlCommand($@"UPDATE tb_rfid SET barcode=N'{data.barcode}'
+                                                                          WHERE dump_id='{data.dump_id}' AND area_id='{data.area_id}' AND crop_year='{data.crop_year}' ", cn);
+
+                    cmd.ExecuteNonQuery();
+                }
+                return "Success";
+            }
+            catch
+            {
+                return "Fail";
+            }
+        }
+
         public string UpdateRFID(DataModel data)
         {
             try
