@@ -561,7 +561,7 @@ namespace SKTRFID1
                     allergen = rfid.allergen,
                     truck_number = rfid.truck_number,
                     farmer_name = rfid.farmer_name,
-                    barcode = "000000",
+                    barcode = "0",
                     cane_type = Convert.ToInt32(rfid.cane_type),
                     weight_type = Convert.ToInt32(rfid.weight_type),
                     truck_type = Convert.ToInt32(rfid.truck_type),
