@@ -94,7 +94,7 @@ namespace SKTRFID1
             {
                 //Weite Data to text file
                 string loca = @"D:\log_plc.txt";
-                File.AppendAllText(loca, DateTime.Now + " SKTRFID2 " + ex.Message + " " + Environment.NewLine);
+                File.AppendAllText(loca, DateTime.Now + " SKTRFID1 " + ex.Message + " " + Environment.NewLine);
             }
             isManuals = new List<bool>();
         }
@@ -551,21 +551,21 @@ namespace SKTRFID1
 
                 string message_insert = RFID.InsertRFIDLog(data_rfid);
 
-                //Update Clear Barcode Data to Local Database
-                DataModel dataDump = new DataModel()
-                {
-                    dump_id = dump.ToString(),
-                    area_id = rfid.area_id,
-                    crop_year = rfid.crop_year,
-                    barcode = "0",
-                };
-                string message_update = RFID.UpdateBarcodeRFID(dataDump);
+                ////Update Clear Barcode Data to Local Database
+                //DataModel dataDump = new DataModel()
+                //{
+                //    dump_id = dump.ToString(),
+                //    area_id = rfid.area_id,
+                //    crop_year = rfid.crop_year,
+                //    barcode = "0",
+                //};
+                //string message_update = RFID.UpdateBarcodeRFID(dataDump);
             }
             catch (Exception ex)
             {
-                //Weite Data to text file
+                //Write Data to text file
                 string loca = @"D:\log_net.txt";
-                File.AppendAllText(loca, DateTime.Now + " SKTRFID2 " + ex.Message + " " + Environment.NewLine);
+                File.AppendAllText(loca, DateTime.Now + " SKTRFID1 " + ex.Message + " " + Environment.NewLine);
             }
         }
         private void ShowDisplay(Label truck_license, Label truck_date, Label cane_type,Label truck_type, List<DataModel> datas ,string dump,bool isShow)
@@ -613,7 +613,7 @@ namespace SKTRFID1
             {
                 //Weite Data to text file
                 string loca = @"D:\log_display.txt";
-                File.AppendAllText(loca, DateTime.Now + " SKTRFID2 " + ex.Message + " " + Environment.NewLine);
+                File.AppendAllText(loca, DateTime.Now + " SKTRFID1 " + ex.Message + " " + Environment.NewLine);
             }
         }
         private void StartProcess(string mode, string server, string dump, string phase)

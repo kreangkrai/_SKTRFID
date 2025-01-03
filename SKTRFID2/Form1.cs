@@ -503,15 +503,15 @@ namespace SKTRFID2
 
                 string message_insert = RFID.InsertRFIDLog(data_rfid);
 
-                //Update Clear Barcode Data to Local Database
-                DataModel dataDump = new DataModel()
-                {
-                    dump_id = dump.ToString(),
-                    area_id = rfid.area_id,
-                    crop_year = rfid.crop_year,
-                    barcode = "0",
-                };
-                string message_update = RFID.UpdateBarcodeRFID(dataDump);
+                ////Update Clear Barcode Data to Local Database
+                //DataModel dataDump = new DataModel()
+                //{
+                //    dump_id = dump.ToString(),
+                //    area_id = rfid.area_id,
+                //    crop_year = rfid.crop_year,
+                //    barcode = "0",
+                //};
+                //string message_update = RFID.UpdateBarcodeRFID(dataDump);
             }
             catch(Exception ex)
             {
