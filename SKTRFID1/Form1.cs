@@ -80,7 +80,7 @@ namespace SKTRFID1
             try
             {
                 cj2 = new CJ2Compolet();
-                cj2.HeartBeatTimer = 3000;
+                cj2.HeartBeatTimer = 3500;
                 cj2.ConnectionType = ConnectionType.UCMM;
                 cj2.UseRoutePath = false;
                 cj2.PeerAddress = setting.ip_plc;
