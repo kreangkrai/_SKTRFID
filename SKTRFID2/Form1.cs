@@ -79,7 +79,7 @@ namespace SKTRFID2
             try
             {
                 cj2 = new CJ2Compolet();
-                cj2.HeartBeatTimer = 3000;
+                cj2.HeartBeatTimer = 3500;
                 cj2.ConnectionType = ConnectionType.UCMM;
                 cj2.UseRoutePath = false;
                 cj2.PeerAddress = setting.ip_plc;
@@ -451,7 +451,7 @@ namespace SKTRFID2
                         if (dataInsert.Data[0].StatusDb != 0) // Send Complete
                         {
                             string loca = @"D:\log_api.txt";
-                            File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
+                            File.AppendAllText(loca, DateTime.Now + " RFID " + rfid.rfid + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
                         }
                     }
                 }
@@ -503,15 +503,15 @@ namespace SKTRFID2
 
                 string message_insert = RFID.InsertRFIDLog(data_rfid);
 
-                ////Update Clear Barcode Data to Local Database
-                //DataModel dataDump = new DataModel()
-                //{
-                //    dump_id = dump.ToString(),
-                //    area_id = rfid.area_id,
-                //    crop_year = rfid.crop_year,
-                //    barcode = "0",
-                //};
-                //string message_update = RFID.UpdateBarcodeRFID(dataDump);
+                //Update Clear Barcode Data to Local Database
+                DataModel dataDump = new DataModel()
+                {
+                    dump_id = dump.ToString(),
+                    area_id = rfid.area_id,
+                    crop_year = rfid.crop_year,
+                    barcode = "0",
+                };
+                string message_update = RFID.UpdateBarcodeRFID(dataDump);
             }
             catch(Exception ex)
             {

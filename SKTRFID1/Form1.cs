@@ -498,7 +498,7 @@ namespace SKTRFID1
                         if (dataInsert.Data[0].StatusDb != 0) // Send Complete
                         {
                             string loca = @"D:\log_api.txt";
-                            File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
+                            File.AppendAllText(loca, DateTime.Now + " RFID " +  rfid.rfid + " Barcode " + rfid.barcode + " Queue " + queue + " DUMP " + dump + " " + " Code " + dataInsert.Data[0].StatusDb + " " + Environment.NewLine);
                           
                         }
                     }
@@ -551,15 +551,15 @@ namespace SKTRFID1
 
                 string message_insert = RFID.InsertRFIDLog(data_rfid);
 
-                ////Update Clear Barcode Data to Local Database
-                //DataModel dataDump = new DataModel()
-                //{
-                //    dump_id = dump.ToString(),
-                //    area_id = rfid.area_id,
-                //    crop_year = rfid.crop_year,
-                //    barcode = "0",
-                //};
-                //string message_update = RFID.UpdateBarcodeRFID(dataDump);
+                //Update Clear Barcode Data to Local Database
+                DataModel dataDump = new DataModel()
+                {
+                    dump_id = dump.ToString(),
+                    area_id = rfid.area_id,
+                    crop_year = rfid.crop_year,
+                    barcode = "0",
+                };
+                string message_update = RFID.UpdateBarcodeRFID(dataDump);
             }
             catch (Exception ex)
             {
