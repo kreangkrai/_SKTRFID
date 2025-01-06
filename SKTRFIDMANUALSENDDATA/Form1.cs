@@ -218,7 +218,7 @@ namespace SKTRFIDMANUALSENDDATA
                     if (dataUpdate.Data[0].StatusDb != 0) // Send Complete
                     {
                         string loca = @"D:\log_alled.txt";
-                        File.AppendAllText(loca, DateTime.Now + " Barcode " + rfid.Data[0].Barcode + " " + " Code " + dataUpdate.Data[0].StatusDb + " " + Environment.NewLine);
+                        File.AppendAllText(loca, DateTime.Now + " RFID " + txtxRFID.Text.Trim() + " Barcode " + rfid.Data[0].Barcode + " DUMP " + dump + " Code " + dataUpdate.Data[0].StatusDb + " " + Environment.NewLine);
                     }
 
                     #endregion Allergen
