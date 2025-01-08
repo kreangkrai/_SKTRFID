@@ -207,6 +207,17 @@ namespace SKTRFIDMANUALSENDDATA
                     dataDump.queue_status = 3;
                     string message_update = RFID.UpdateRFID(dataDump);
                     txtStatusDatabase.Text = message_update;
+
+                    //Log Scan
+                    string loc = @"D:\log_scan.txt";
+                    File.AppendAllText(loc, DateTime.Now + " RFID " + txtxRFID.Text + " Barcode " + rfid.Data[0].Barcode + " DUMP " + dump + " " + Environment.NewLine);
+
+                    //Log Call API
+                    string loc1 = @"D:\log_call_api.txt";
+                    File.AppendAllText(loc1, DateTime.Now + " RFID " + txtxRFID.Text + " Barcode " + rfid.Data[0].Barcode + " DUMP " + dump + " Code " + rfid.Data[0].StatusDb + " " + Environment.NewLine);
+
+                    
+
                     #region Allergen
 
                     //Check Allergen
