@@ -147,7 +147,8 @@ namespace SKTRFIDMANUALSENDDATA
                                                                                         "Bar_ID5" ,
                                                                                         "Bar_ID6" ,
                                                                                         "Bar_ID7" };
-                                cj2.WriteVariable(dump_plc_Barcode[dump - 1], int.Parse(rfid.Data[0].Barcode, System.Globalization.NumberStyles.HexNumber).ToString());
+                                //cj2.WriteVariable(dump_plc_Barcode[dump - 1], int.Parse(rfid.Data[0].Barcode, System.Globalization.NumberStyles.HexNumber).ToString());
+                                cj2.WriteVariable(dump_plc_Barcode[dump - 1], rfid.Data[0].Barcode);
                             }
 
                             if (phase == 2)
@@ -171,7 +172,8 @@ namespace SKTRFIDMANUALSENDDATA
                                                                                         "Bar_ID11" ,
                                                                                         "Bar_ID12" ,
                                                                                         "Bar_ID13" };
-                                cj2.WriteVariable(dump_plc_Barcode[dump - (1 + 7)], int.Parse(rfid.Data[0].Barcode, System.Globalization.NumberStyles.HexNumber).ToString());
+                                //cj2.WriteVariable(dump_plc_Barcode[dump - (1 + 7)], int.Parse(rfid.Data[0].Barcode, System.Globalization.NumberStyles.HexNumber).ToString());
+                                cj2.WriteVariable(dump_plc_Barcode[dump - (1 + 7)], rfid.Data[0].Barcode);
                             }
 
                             cj2.Active = false;
