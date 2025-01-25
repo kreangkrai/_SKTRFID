@@ -20,13 +20,13 @@ namespace SKTRFIDCLEARPROGRAM
 
         private void btnKill_Click(object sender, EventArgs e)
         {
-            Process[] process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("AUTO DUMP")).ToArray();
+            Process[] process = Process.GetProcesses().Where(w => w.MainWindowTitle.Contains("AUTO DUMP") || w.MainWindowTitle.Contains("COMMON DUMP")).ToArray();
             DialogResult dialogResult = MessageBox.Show("Do you want to kill program?", "SKT", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.OK)
             {
                 foreach (var p in process)
                 {
-                    if (p.MainWindowTitle.Contains("AUTO DUMP"))
+                    if (p.MainWindowTitle.Contains("AUTO DUMP") || p.MainWindowTitle.Contains("COMMON DUMP"))
                     {
                         p.Kill();
                     }
